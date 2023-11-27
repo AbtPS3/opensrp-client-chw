@@ -142,6 +142,8 @@ public class LTFUReferralsDetailsViewActivity extends BaseReferralTaskViewActivi
                 return context.getString(R.string.ltfu_clinic_pmtct);
             case "tb":
                 return context.getString(R.string.ltfu_clinic_tb);
+            case "tepi":
+                return context.getString(R.string.ltfu_clinic_tepi);
             default:
                 return key.toUpperCase();
         }
@@ -154,36 +156,42 @@ public class LTFUReferralsDetailsViewActivity extends BaseReferralTaskViewActivi
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.record_feedback) {
-            JSONObject formJSONObject = FormUtils.getFormUtils().getFormJson("ltfu_community_followup_feedback");
-            try {
-                formJSONObject.put(Constants.REFERRAL_TASK_FOCUS, "LTFU Community Followup Feedback");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-
             String referralType = Utils.getValue(commonPersonObjectClient.getColumnmaps(), "REFERRAL_CLINIC", false);
-
-            if (!referralType.equalsIgnoreCase("ctc") && !referralType.equalsIgnoreCase("pmtct")) {
+            JSONObject formJSONObject;
+            if (referralType.equalsIgnoreCase("tepi")) {
+                formJSONObject = FormUtils.getFormUtils().getFormJson("tepi_community_followup_feedback");
                 try {
-                    JSONArray fields = ((JSONObject) formJSONObject.getJSONArray("steps").get(0)).getJSONArray("fields");
-
-                    for (int i = fields.length() - 1; i >= 0; i--) {
-                        JSONObject field = fields.getJSONObject(i);
-                        if (field.getString("name").equals("reasons_why_the_client_is_not_ready_to_return_to_clinic")) {
-                            fields.remove(i);
-                        }
-
-                        if (field.getString("name").equals("other_reason_for_not_being_ready_to_return_to_clinic")) {
-                            fields.remove(i);
-                        }
-                    }
-                } catch (Exception e) {
-                    Timber.e(e);
+                    formJSONObject.put(Constants.REFERRAL_TASK_FOCUS, "LTFU Community Followup Feedback");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                formJSONObject = FormUtils.getFormUtils().getFormJson("ltfu_community_followup_feedback");
+                try {
+                    formJSONObject.put(Constants.REFERRAL_TASK_FOCUS, "LTFU Community Followup Feedback");
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
 
-            }
+                if (!referralType.equalsIgnoreCase("ctc") && !referralType.equalsIgnoreCase("pmtct")) {
+                    try {
+                        JSONArray fields = ((JSONObject) formJSONObject.getJSONArray("steps").get(0)).getJSONArray("fields");
 
+                        for (int i = fields.length() - 1; i >= 0; i--) {
+                            JSONObject field = fields.getJSONObject(i);
+                            if (field.getString("name").equals("reasons_why_the_client_is_not_ready_to_return_to_clinic")) {
+                                fields.remove(i);
+                            }
+
+                            if (field.getString("name").equals("other_reason_for_not_being_ready_to_return_to_clinic")) {
+                                fields.remove(i);
+                            }
+                        }
+                    } catch (Exception e) {
+                        Timber.e(e);
+                    }
+                }
+            }
 
             LTFURecordFeedbackActivity.startFeedbackFormActivityForResults(this, baseEntityId, formJSONObject, false, locationId, taskId);
         }

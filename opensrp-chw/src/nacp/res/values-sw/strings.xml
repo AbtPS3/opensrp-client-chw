@@ -133,6 +133,7 @@
     <string name="ltfu_clinic_pmtct">PMTCT</string>
     <string name="ltfu_clinic_tb">TB</string>
     <string name="referred_clinic">Kitengo kilichotoa rufaa</string>
+    <string name="ltfu_clinic_tepi">Ufwatiliaji kwa ajili ya kuorodhesha washirika (TEPI)</string>
 
     <string name="height_in_cm">Urefu: {0} cm</string>
     <string name="fundal_height">Kimo cha mimba: {0} cm</string>

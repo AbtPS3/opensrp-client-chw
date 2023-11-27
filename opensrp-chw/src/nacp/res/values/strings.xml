@@ -127,6 +127,7 @@
     <string name="ltfu_clinic_pmtct">PMTCT</string>
     <string name="ltfu_clinic_tb">TB</string>
     <string name="referred_clinic">Referred Clinic</string>
+    <string name="ltfu_clinic_tepi">TEPI Elicitation</string>
     <!-- String resources for CBHS report -->
     <!-- Sababu za usajili -->
     <string name="reason_for_registration_hiv_aids">Maambukizi ya VVU</string>
