@@ -619,4 +619,6 @@
 
     <string name="malnutrition_screening_subtitle">MUAC: %s Anemia: %s</string>
     <string name="malnutrition_screening">Kuchunguza utapia mlo na upungufu wa damu</string>
+    <string name="map_cue">Alama ya eneo la makazi</string>
+    <string name="street_name">Jina la mtaa au Kitongoji</string>
 </resources>
