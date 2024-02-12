@@ -34,6 +34,7 @@ import org.smartregister.chw.core.utils.ChwNotificationUtil;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.CoreConstants.JSON_FORM;
 import org.smartregister.chw.custom_view.FamilyMemberFloatingMenu;
+import org.smartregister.chw.gbv.dao.GbvDao;
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.chw.presenter.ChildProfilePresenter;
 import org.smartregister.chw.schedulers.ChwScheduleTaskExecutor;
@@ -181,6 +182,11 @@ public class ChildProfileActivity extends CoreChildProfileActivity implements On
                 && flavor.isChildOverTwoMonths(((CoreChildProfilePresenter) presenter).getChildClient()));
         if (ChwApplication.getApplicationFlavor().hasMalaria())
             UtilsFlv.updateMalariaMenuItems(memberObject.getBaseEntityId(), menu);
+
+        if (ChwApplication.getApplicationFlavor().hasGbv()) {
+            menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(memberObject.getBaseEntityId()));
+        }
+
         return true;
     }
 
@@ -281,6 +287,11 @@ public class ChildProfileActivity extends CoreChildProfileActivity implements On
         layoutFamilyHasRow.setVisibility(View.VISIBLE);
         viewFamilyRow.setVisibility(View.VISIBLE);
         textViewFamilyHas.setText(getString(R.string.family_has_nothing_else_due));
+    }
+
+    @Override
+    protected void startVacRegistration() {
+        GbvRegisterActivity.startRegistration(ChildProfileActivity.this, memberObject.getBaseEntityId());
     }
 
     public interface Flavor {
