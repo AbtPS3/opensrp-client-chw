@@ -11,6 +11,8 @@ import com.vijay.jsonwizard.domain.Form;
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.smartregister.AllConstants;
+import org.smartregister.Context;
 import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.R;
 import org.smartregister.chw.core.dao.AncDao;
@@ -22,9 +24,12 @@ import org.smartregister.chw.domain.GbvRegistrationObject;
 import org.smartregister.chw.gbv.GbvLibrary;
 import org.smartregister.chw.gbv.activity.BaseGbvProfileActivity;
 import org.smartregister.chw.gbv.domain.MemberObject;
+import org.smartregister.chw.gbv.interactor.BaseGbvProfileInteractor;
+import org.smartregister.chw.gbv.presenter.BaseGbvProfilePresenter;
 import org.smartregister.chw.gbv.util.Constants;
 import org.smartregister.chw.gbv.util.GbvJsonFormUtils;
 import org.smartregister.chw.gbv.util.VisitUtils;
+import org.smartregister.chw.interactor.GbvProfileInteractor;
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
@@ -83,10 +88,21 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
             if (memberObject.getAge() > 15) {
                 indicationOfNeglect.getJSONArray("options").remove(0);
             }
+
+            String locationId = Context.getInstance().allSharedPreferences().getPreference(AllConstants.CURRENT_LOCATION_ID);
+            GbvJsonFormUtils.getRegistrationForm(jsonObject, memberObject.getBaseEntityId(), locationId);
             startFormActivity(jsonObject);
         } catch (Exception e) {
             Timber.e(e);
         }
+    }
+
+    @Override
+    protected void initializePresenter() {
+        showProgressBar(true);
+        profilePresenter = new BaseGbvProfilePresenter(this, new GbvProfileInteractor(), memberObject);
+        fetchProfileData();
+        profilePresenter.refreshProfileBottom();
     }
 
     public void startFormActivity(JSONObject jsonForm) {
@@ -111,7 +127,7 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
 
     @Override
     public void openMedicalHistory() {
-
+        GbvMedicalHistoryActivity.startMe(this, memberObject);
     }
 
     @Override

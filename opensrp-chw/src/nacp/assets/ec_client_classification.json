@@ -758,6 +758,13 @@
             "creates_case": [
               "ec_gbv_register"
             ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "GBV Home Visit",
+            "creates_case": [
+              "ec_gbv_home_visit"
+            ]
           }
         ]
       }

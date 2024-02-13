@@ -5956,6 +5956,120 @@
           }
         }
       ]
+    },
+    {
+      "name": "ec_gbv_home_visit",
+      "columns": [
+        {
+          "column_name": "entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "formSubmissionId"
+          }
+        },
+        {
+          "column_name": "type_of_violence_experienced",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "type_of_violence_experienced"
+          }
+        },
+        {
+          "column_name": "indication_of_sexual_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_sexual_violence"
+          }
+        },
+        {
+          "column_name": "indication_of_physical_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_physical_violence"
+          }
+        },
+        {
+          "column_name": "indication_of_neglect",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_neglect"
+          }
+        },
+        {
+          "column_name": "indication_of_exploitation",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_exploitation"
+          }
+        },
+        {
+          "column_name": "indication_of_emotional_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_emotional_violence"
+          }
+        },
+        {
+          "column_name": "time_since_incident",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "time_since_incident"
+          }
+        },
+        {
+          "column_name": "location_where_the_incident_occurred",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "location_where_the_incident_occurred"
+          }
+        },
+        {
+          "column_name": "was_education_provided",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "was_education_provided"
+          }
+        },
+        {
+          "column_name": "emergency_services_offered",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "emergency_services_offered"
+          }
+        },
+        {
+          "column_name": "referral_to_other_services",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "referral_to_other_services"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
     }
   ]
 }

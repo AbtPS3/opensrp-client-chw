@@ -468,9 +468,15 @@ public class ChwRepositoryFlv {
 
     private static void upgradeToVersion28(SQLiteDatabase db) {
         try {
+            // setup reporting
+            ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
+            String gbvReportIndicatorConfigFile = "config/gbv-monthly-report.yml";
+            for (String configFile : Collections.singletonList(gbvReportIndicatorConfigFile)) {
+                reportingLibrary.readConfigFile(configFile, db);
+            }
 
             DatabaseMigrationUtils.createAddedECTables(db,
-                    new HashSet<>(Collections.singletonList("ec_gbv_register")),
+                    new HashSet<>(Arrays.asList("ec_gbv_register", "ec_gbv_home_visit")),
                     ChwApplication.createCommonFtsObject());
 
         } catch (Exception e) {

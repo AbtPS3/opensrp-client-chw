@@ -678,6 +678,26 @@
     <string name="fp_number_male_condoms_refilled">Specify quantity (Male):</string>
     <string name="fp_number_female_condoms_refilled">Specify quantity (Female):</string>
 
+    <!--    GBV-->
+    <string name="gbv_type_of_violence_experienced">Type of violence experienced:</string>
+    <string name="gbv_indication_of_sexual_violence">Indication of Sexual violence (rape/sexual assault):</string>
+    <string name="gbv_indication_of_physical_violence">Indication of Physical Violence:</string>
+    <string name="gbv_indication_of_neglect">Indication of Neglect:</string>
+    <string name="gbv_indication_of_exploitation">Indication of Exploitation:</string>
+    <string name="gbv_indication_of_emotional_violence">Indication of Emotional violence:</string>
+    <string name="gbv_time_since_incident">Time since the incident occurred:</string>
+    <string name="gbv_location_where_the_incident_occurred">Location where incident occurred:</string>
+    <string name="gbv_was_education_provided">Was Education on violence provided:</string>
+    <string name="gbv_emergency_services_offered">Emergency Services offered:</string>
+    <string name="gbv_referral_to_other_services">Referral(s) to Other Services Provided:</string>
+
+    <string name="gbv_edit_home_visit">Edit GBV Home Visit</string>
+
+
+    <string name="gbv_reports_title">GBV Report</string>
+    <string name="gbv_reports_subtitle">View GBV Report</string>
+
+
 
 
 
