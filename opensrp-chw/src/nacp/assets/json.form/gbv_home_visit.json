@@ -156,12 +156,6 @@
             "text": "Bruises around the mouth",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "bruises_around_the_mouth"
-          },
-          {
-            "key": "other",
-            "text": "Other",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "other"
           }
         ],
         "relevance": {
@@ -222,12 +216,6 @@
             "text": "Unexplained bruises and wounds",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "unexplained_bruises_and_wounds"
-          },
-          {
-            "key": "other",
-            "text": "Other",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "other"
           }
         ],
         "relevance": {
@@ -306,12 +294,6 @@
             "text": "Has rashes and sores",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "has_rashes_and_sores"
-          },
-          {
-            "key": "other",
-            "text": "Other",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "other"
           }
         ],
         "relevance": {
@@ -360,12 +342,6 @@
             "text": "Cigarette burns",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "cigarette_burns"
-          },
-          {
-            "key": "others",
-            "text": "Others",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "others"
           }
         ],
         "relevance": {
@@ -420,12 +396,6 @@
             "text": "Dressing differently from other children in the household",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "dressing_differently_from_other_children"
-          },
-          {
-            "key": "others",
-            "text": "Others",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "others"
           }
         ],
         "relevance": {
