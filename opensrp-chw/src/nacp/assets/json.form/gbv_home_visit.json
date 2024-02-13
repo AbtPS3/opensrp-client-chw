@@ -585,6 +585,29 @@
             "openmrs_entity_id": "none"
           }
         ]
+      },
+      {
+        "key": "other_referral_to_other_services",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_referral_to_other_services",
+        "type": "edit_text",
+        "hint": "Specify other referrals to Other Services offered",
+        "v_required": {
+          "value": "true",
+          "err": "Please enter the reason"
+        },
+        "relevance": {
+          "step1:referral_to_other_services": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
+        }
       }
     ]
   }
