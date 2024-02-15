@@ -606,4 +606,68 @@
     <string name="iccm_visit">Matembeleo ya huduma za iCCM</string>
 
 
+    <!--    GBV-->
+    <string name="gbv_type_of_violence_experienced">Aina ya ukatili aliofanyiwa:</string>
+    <string name="gbv_indication_of_sexual_violence">Viashiria vya ukatili Ukatili wa kingono (kubakwa/kulawatiwa):</string>
+    <string name="gbv_indication_of_physical_violence">Viashiria vya ukatili wa kimwili:</string>
+    <string name="gbv_indication_of_neglect">Viashiria vya Kutelekezwa:</string>
+    <string name="gbv_indication_of_exploitation">Viashiria vya Unyonywaji:</string>
+    <string name="gbv_indication_of_emotional_violence">Viashiria vya Ukatili wa kihisia:</string>
+    <string name="gbv_time_since_incident">Muda tangu tukio limetokea:</string>
+    <string name="gbv_location_where_the_incident_occurred">Mahali tukio la ukatili lilipotokea:</string>
+    <string name="gbv_was_education_provided">Je Elimu ya ukatili imetolewa:</string>
+    <string name="gbv_emergency_services_offered">Huduma zinazotolewa:</string>
+    <string name="gbv_referral_to_other_services">Rufaa zilizotolewa (Ambazo sio za kwenda kituo cha kutolea huduma za Afya):</string>
+    <string name="gbv_sexual_violence">Ukatili wa kingono (kubakwa/kulawatiwa)</string>
+    <string name="gbv_physical_violence">Ukatili wa kimwili</string>
+    <string name="gbv_fgm">Kukeketwa</string>
+    <string name="gbv_neglect">Kutelekezwa</string>
+    <string name="gbv_emotional">Ukatili wa kihisia</string>
+    <string name="gbv_child_exploitation">Unyonywaji</string>
+    <string name="gbv_difficulty_walking">Kutembea kwa shida</string>
+    <string name="gbv_torn_clothing">TNguo kuchanika</string>
+    <string name="gbv_blood_on_clothing">Damu kwenye nguo</string>
+    <string name="gbv_pain_in_intimate_areas">Maumivu au muwasho sehemu za siri</string>
+    <string name="gbv_bruises_in_intimate_areas">Michubuko sehemu za siri</string>
+    <string name="gbv_bruises_around_the_mouth">Michubuko sehemu za mdomo</string>
+    <string name="gbv_unexplained_bruises_and_wounds">Michubuko isiyoelezeka na vidonda</string>
+    <string name="gbv_cigarette_burns_on_the_palms">Vidonda vya kuchomwa na sigara viganjani</string>
+    <string name="gbv_marks_resembling_needle_electrical_burns">Alama kama za kuchomwa na pasi au umeme</string>
+    <string name="gbv_signs_of_being_tied_up_with_a_rope">Alama za kufungwa na kamba mwilini</string>
+    <string name="gbv_wounds_around_the_mouth">Vidonda au michubuko mdomoni</string>
+    <string name="gbv_dirty_child">Mtoto mchafu</string>
+    <string name="gbv_often_hungry">Kuwa na njaa muda mwingi</string>
+    <string name="gbv_wearing_inappropriate_or_worn_out_clothes">Kuvaa nguo zisizofaa/dhaifu</string>
+    <string name="gbv_lack_of_supervision">Kukosa usimamizi muda mwingi</string>
+    <string name="gbv_clothing_not_suitable_for_the_weather">Mavazi yasiyoendana na hali ya hewa</string>
+    <string name="gbv_excessive_dirtiness">Mchafu kupindukia na asiyeoga</string>
+    <string name="gbv_limited_supervision">Uangalizi mdogo</string>
+    <string name="gbv_malnourished">Ana utapiamlo</string>
+    <string name="gbv_has_rashes_and_sores">Ana vipele na ukurutu</string>
+    <string name="gbv_not_being_seing_at_home_for_a_long_time">Kutoonekana nyumbani kwa muda mrefu</string>
+    <string name="gbv_not_attending_school_or_being_disruptive_in_class">Kutohudhuria shuleni au msumbufu darasani</string>
+    <string name="gbv_having_gifts_of_unknown_origin">Kuwa na zawadi zisizojulikana chanzo chake</string>
+    <string name="gbv_cigarette_burns">Vidonda vya kuchomwa na sigara</string>
+    <string name="gbv_bedwetting_without_a_medical_reason">Kukojoa kitandani bila sababu ya kitaalam</string>
+    <string name="gbv_frequent_headaches_or_stomach_aches">Maumivu ya kichwa, tumbo mara kwa mara</string>
+    <string name="gbv_persistent_vomiting_or_diarrhea">Kutapika au kuharisha kwa muda mrefu</string>
+    <string name="gbv_not_thriving_or_not_doing_well">Kutokua vizuri</string>
+    <string name="gbv_dressing_differently_from_other_children_in_the_household">Kuvaa tofauti na watoto wengine kwenye kaya</string>
+    <string name="gbv_less_than_2_hours">Chini ya masaa 2</string>
+    <string name="gbv_2_to_36_hours">Masaa 2-36</string>
+    <string name="gbv_36_to_48_hours">Masaa 36-48</string>
+    <string name="gbv_48_to_72_hours">Masaa 48-72</string>
+    <string name="gbv_more_than_72_hours">Zaidi ya masaa 72</string>
+    <string name="gbv_yes">Ndio</string>
+    <string name="gbv_no">Hapana</string>
+    <string name="gbv_mental_health_care">Msaada wa afya ya akili/kisaikolojia na jamii</string>
+    <string name="gbv_paracetamol">Paracetamol</string>
+    <string name="gbv_social_welfare_officer">Afisa ustawi wa Jamii</string>
+    <string name="gbv_ward_community_development_officer">Afisa Maendeleo ya jamii kata</string>
+    <string name="gbv_police_station">Kituo cha Polisi</string>
+    <string name="gbv_safe_house">Nyumba salama</string>
+    <string name="gbv_mtakuwwa_committee">Kamati ya MTAKUWWA</string>
+    <string name="gbv_other">Nyingine</string>
+
+
 </resources>

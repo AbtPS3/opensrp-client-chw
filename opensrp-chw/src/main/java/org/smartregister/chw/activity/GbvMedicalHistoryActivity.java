@@ -4,7 +4,6 @@ import static com.vijay.jsonwizard.constants.JsonFormConstants.COUNT;
 import static org.smartregister.chw.core.utils.CoreJsonFormUtils.getEditEvent;
 import static org.smartregister.chw.core.utils.CoreJsonFormUtils.getFormWithMetaData;
 import static org.smartregister.chw.core.utils.CoreJsonFormUtils.updateValues;
-import static org.smartregister.chw.hivst.util.Constants.EVENT_TYPE.HIVST_MOBILIZATION;
 import static org.smartregister.chw.util.PmtctVisitUtils.deleteProcessedVisit;
 import static org.smartregister.opd.utils.OpdConstants.JSON_FORM_KEY.VISIT_ID;
 
@@ -50,9 +49,11 @@ import org.smartregister.family.util.Utils;
 import org.smartregister.repository.AllSharedPreferences;
 
 import java.text.MessageFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import timber.log.Timber;
@@ -119,7 +120,7 @@ public class GbvMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                         deleteProcessedVisit(deletedVisitId, memberObject.getBaseEntityId());
                     }
 
-                    Event baseEvent = org.smartregister.chw.anc.util.JsonFormUtils.processJsonForm(allSharedPreferences, CoreReferralUtils.setEntityId(jsonString,  memberObject.getBaseEntityId()), null);
+                    Event baseEvent = org.smartregister.chw.anc.util.JsonFormUtils.processJsonForm(allSharedPreferences, CoreReferralUtils.setEntityId(jsonString, memberObject.getBaseEntityId()), null);
                     org.smartregister.chw.anc.util.JsonFormUtils.tagEvent(allSharedPreferences, baseEvent);
                     NCUtils.processEvent(baseEvent.getBaseEntityId(), new JSONObject(org.smartregister.chw.anc.util.JsonFormUtils.gson.toJson(baseEvent)));
                     finish();
@@ -230,7 +231,7 @@ public class GbvMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                     View edit = view.findViewById(R.id.textview_edit);
                     LinearLayout visitDetailsLayout = view.findViewById(R.id.visit_details_layout);
 
-                    tvTitle.setText(visits.get(x).getVisitType() + " " + visits.get(x).getDate());
+                    tvTitle.setText(new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(visits.get(x).getDate()));
 
                     if (x == visits.size() - 1) {
                         int position = x;

@@ -337,7 +337,7 @@
           },
           {
             "key": "not_attending_school_or_being_disruptive_in_class",
-            "text": "Kutohudhuria shuleni au msumbufu darasan",
+            "text": "Kutohudhuria shuleni au msumbufu darasani",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "not_attending_school_or_being_disruptive_in_class"
           },
@@ -431,7 +431,7 @@
       {
         "key": "time_since_incident",
         "type": "native_radio",
-        "label": "Muda tangu tukio limetokea ",
+        "label": "Muda tangu tukio limetokea",
         "openmrs_entity_id": "time_since_incident",
         "openmrs_entity": "concept",
         "openmrs_entity_parent": "",
@@ -462,7 +462,7 @@
           },
           {
             "key": "more_than_72_hours",
-            "text": "Masaa  >72",
+            "text": "Masaa > 72",
             "openmrs_entity_id": "more_than_72_hours",
             "openmrs_entity": "concept"
           }
@@ -557,7 +557,7 @@
         "openmrs_entity_id": "referral_to_other_services",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
-        "label": "Rufaa zilizotolewa (Ambazo sio za kwenda hospitali)",
+        "label": "Rufaa zilizotolewa (Ambazo sio za kwenda kituo cha kutolea huduma za Afya)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "exclusive": [
