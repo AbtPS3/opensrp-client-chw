@@ -173,7 +173,7 @@
         "openmrs_entity_id": "nearest_facility",
         "openmrs_data_type": "text",
         "type": "tree",
-        "hint": "Kijiji/Mtaa",
+        "hint": "Kijiji",
         "tree": [],
         "v_required": {
           "value": true,
