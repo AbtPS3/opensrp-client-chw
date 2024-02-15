@@ -54,7 +54,7 @@
   },
   "steps": [
     {
-      "title": "Rufaa kwenda kwenye huduma ya kuzuia ukatili wa kijinsia (dawati la jinsia)",
+      "title": "Rufaa kwenda kwenye huduma ya kuzuia ukatili wa kijinsia na Ukatili dhidi ya watoto",
       "fields": [
         {
           "name": "problem",
@@ -69,74 +69,47 @@
           },
           "options": [
             {
-              "name": "rape",
-              "text": "Ubakaji (Rape)",
+              "name": "sexual_violence",
+              "text": "Ukatili wa kingono (kubakwa/kulawatiwa)",
               "meta_data": {
                 "openmrs_entity": "",
-                "openmrs_entity_id": "rape",
+                "openmrs_entity_id": "sexual_violence",
                 "openmrs_entity_parent": ""
               }
             },
             {
-              "name": "physical_abuse",
-              "text": "Unyanyasaji wa kimwili (Physical abuse)",
+              "name": "physical_violence",
+              "text": "Ukatili wa kimwili",
               "meta_data": {
                 "openmrs_entity": "",
-                "openmrs_entity_id": "physical_abuse",
+                "openmrs_entity_id": "physical_violence",
                 "openmrs_entity_parent": ""
               }
             },
             {
-              "name": "has_moved_out_from_home",
-              "text": "Amehama nyumbani",
+              "name": "emotional",
+              "text": "Ukatili wa kihisia",
               "meta_data": {
                 "openmrs_entity": "",
-                "openmrs_entity_id": "has_moved_out_from_home",
+                "openmrs_entity_id": "emotional",
                 "openmrs_entity_parent": ""
               }
             },
             {
-              "name": "ulcers_and_scars",
-              "text": "Vidonda na makovu",
+              "name": "neglect",
+              "text": "Kutelekezwa",
               "meta_data": {
                 "openmrs_entity": "",
-                "openmrs_entity_id": "ulcers_and_scars",
+                "openmrs_entity_id": "neglect",
                 "openmrs_entity_parent": ""
               }
             },
             {
-              "name": "is_weak",
-              "text": "Amedhoofika",
+              "name": "fgm",
+              "text": "Kukeketwa",
               "meta_data": {
                 "openmrs_entity": "",
-                "openmrs_entity_id": "is_weak",
-                "openmrs_entity_parent": ""
-              }
-            },
-            {
-              "name": "needs_more_services",
-              "text": "Anahitaji huduma zaidi",
-              "meta_data": {
-                "openmrs_entity": "",
-                "openmrs_entity_id": "needs_more_services",
-                "openmrs_entity_parent": ""
-              }
-            },
-            {
-              "name": "has_great_level_of_stress_and_fear",
-              "text": "Sonona (msongo wa mawazo)/ kuwa na woga mkuu",
-              "meta_data": {
-                "openmrs_entity": "",
-                "openmrs_entity_id": "has_great_level_of_stress_and_fear",
-                "openmrs_entity_parent": ""
-              }
-            },
-            {
-              "name": "threatened_to_be_killed",
-              "text": "Kutishiwa kuuawa",
-              "meta_data": {
-                "openmrs_entity": "",
-                "openmrs_entity_id": "threatened_to_be_killed",
+                "openmrs_entity_id": "fgm",
                 "openmrs_entity_parent": ""
               }
             },

@@ -87,11 +87,11 @@
               }
             },
             {
-              "name": "emotional_violence",
+              "name": "emotional",
               "text": "Emotional Violence",
               "meta_data": {
                 "openmrs_entity": "",
-                "openmrs_entity_id": "emotional_violence",
+                "openmrs_entity_id": "emotional",
                 "openmrs_entity_parent": ""
               }
             },
