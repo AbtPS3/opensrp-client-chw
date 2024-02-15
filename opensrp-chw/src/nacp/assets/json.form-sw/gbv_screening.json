@@ -1,0 +1,227 @@
+{
+  "count": "1",
+  "encounter_type": "GBV Screening",
+  "validate_on_submit": true,
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Tathmini ya ukatili wa kijinsia na ukatili dhidi ya watoto",
+    "fields": [
+      {
+        "key": "physical_violence",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "physical_violence",
+        "type": "native_radio",
+        "label": "Ndani ya miezi sita iliyopita, kuna mtu yeyote amekupiga ngumi, mateke, kukusukuma wewe/mtoto wako na kukusababishia madhara mwilini kama vidonda, kuungua sehemu ya mwili, alama za kung’atwa, kuvunjika au matatizo ya kiafya? (Mtu yeyote anaweza kuwa; mwenzi wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu  yeyote.)",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndio",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "prompt_for_physical_violence",
+        "type": "toaster_notes",
+        "text": "Mteja ni manusura wa ukatili wa kimwili",
+        "openmrs_entity_id": "",
+        "openmrs_entity": "",
+        "openmrs_entity_parent": "",
+        "toaster_type": "problem",
+        "relevance": {
+          "step1:physical_violence": {
+            "type": "string",
+            "ex": "equalTo(., \"yes\")"
+          }
+        }
+      },
+      {
+        "key": "emotional_violence",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "emotional_violence",
+        "type": "native_radio",
+        "label": "Ndani ya miezi sita iliyopita, kuna mtu yeyote amekudhalilisha, kukutukana, kukutishia jambo wewe/mtoto wako kiasi cha kukufanya ujisikie mpweke/kujitenga, kuanza kutoroka shule, kupatwa na msongo wa mawazo au kuwa na hasira muda wote? (‘Mtu  yeyote anaweza kuwa; mwenza wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote) ",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndio",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "prompt_for_emotional_violence",
+        "type": "toaster_notes",
+        "text": "Mteja ni manusura wa ukatili wa kihisia",
+        "openmrs_entity_id": "",
+        "openmrs_entity": "",
+        "openmrs_entity_parent": "",
+        "toaster_type": "problem",
+        "relevance": {
+          "step1:emotional_violence": {
+            "type": "string",
+            "ex": "equalTo(., \"yes\")"
+          }
+        }
+      },
+      {
+        "key": "sexual_violence",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "sexual_violence",
+        "type": "native_radio",
+        "label": "Ndani ya miezi sita iliyopita, kuna mtu yeyote amekulazimisha wewe/mtoto wako kufanya ngono au kufanya kitendo chochote cha ngono, au kwa kukugusa wewe/mtoto wako kwa namna ambayo wewe/mtoto wako kutotaka?  (‘Mtu yeyote anaweza kuwa; mwenza wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote.) ",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndio",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "prompt_for_sexual_violence",
+        "type": "toaster_notes",
+        "text": "Mteja ni manusura wa ukatili wa kingono ",
+        "openmrs_entity_id": "",
+        "openmrs_entity": "",
+        "openmrs_entity_parent": "",
+        "toaster_type": "problem",
+        "relevance": {
+          "step1:sexual_violence": {
+            "type": "string",
+            "ex": "equalTo(., \"yes\")"
+          }
+        }
+      },
+      {
+        "key": "exploitation_violence",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "exploitation_violence",
+        "type": "native_radio",
+        "label": "Ndani ya miezi sita iliyopita, kuna mtu amekufanya ujihisi unatumikishwa/unanyonywa mfano kulazimishwa kufanya kazi nyingi na ngumu za ndani, kufanyishwa kazi hatarishi  au kufanyishwa biashara za ngono? (‘Mtu yeyote anaweza kuwa; mwenza wako, mlezi  mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote) ",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndio",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "prompt_for_exploitation_violence",
+        "type": "toaster_notes",
+        "text": "Mteja ni manusura wa Unyonywaji",
+        "openmrs_entity_id": "",
+        "openmrs_entity": "",
+        "openmrs_entity_parent": "",
+        "toaster_type": "problem",
+        "relevance": {
+          "step1:exploitation_violence": {
+            "type": "string",
+            "ex": "equalTo(., \"yes\")"
+          }
+        }
+      }
+    ]
+  }
+}

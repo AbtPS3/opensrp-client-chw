@@ -70,15 +70,15 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
             }
 
             if (gbvRegistrationObject != null && gbvRegistrationObject.getEmotionalViolence() != null && gbvRegistrationObject.getEmotionalViolence().equalsIgnoreCase("yes")) {
-                typeOfViolenceExperienced.getJSONArray("options").getJSONObject(5).put("value", true);
+                typeOfViolenceExperienced.getJSONArray("options").getJSONObject(4).put("value", true);
             }
 
             if (gbvRegistrationObject != null && gbvRegistrationObject.getExploitationViolence() != null && gbvRegistrationObject.getExploitationViolence().equalsIgnoreCase("yes")) {
-                typeOfViolenceExperienced.getJSONArray("options").getJSONObject(6).put("value", true);
+                typeOfViolenceExperienced.getJSONArray("options").getJSONObject(5).put("value", true);
             }
 
             if (memberObject.getAge() >= 18) {
-                typeOfViolenceExperienced.getJSONArray("options").remove(6);
+                typeOfViolenceExperienced.getJSONArray("options").remove(5);
             }
 
             if (memberObject.getGender().equalsIgnoreCase("male")) {
