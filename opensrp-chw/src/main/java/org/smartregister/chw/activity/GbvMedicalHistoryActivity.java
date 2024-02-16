@@ -233,7 +233,7 @@ public class GbvMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
 
                     tvTitle.setText(new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(visits.get(x).getDate()));
 
-                    if (x == visits.size() - 1) {
+                    if (x == visits.size() - 1  && Days.daysBetween(new DateTime(visits.get(x).getDate()), new DateTime()).getDays() < 7) {
                         int position = x;
                         edit.setVisibility(View.VISIBLE);
                         edit.setOnClickListener(view1 -> {
