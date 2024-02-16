@@ -12,11 +12,13 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import timber.log.Timber;
+
 public class GbvReportObject extends ReportObject {
 
     private final List<String> indicatorCodesWithAgeGroups = new ArrayList<>();
 
-    private final String[] indicatorCodes = new String[]{"gbv-1", "gbv-2", "gbv-3","gbv-4", "gbv-5", "gbv-6"};
+    private final String[] indicatorCodes = new String[]{"gbv-1", "gbv-2", "gbv-3", "gbv-4", "gbv-5", "gbv-6"};
 
     private final String[] clientSex = new String[]{"F", "M"};
 
@@ -80,6 +82,14 @@ public class GbvReportObject extends ReportObject {
                 } else {
                     indicatorDataObject.put(indicatorCode + "-totalFemale", calculateGbvSpecificTotal(indicatorsValues, indicatorCode + "-" + sex));
                 }
+            }
+        }
+        for (String indicatorCode : indicatorCodes) {
+            try {
+                int grandTotal = indicatorDataObject.getInt(indicatorCode + "-totalMale") + indicatorDataObject.getInt(indicatorCode + "-totalFemale");
+                indicatorDataObject.put(indicatorCode + "-grandTotal", grandTotal);
+            } catch (Exception e) {
+                Timber.e(e);
             }
         }
 
