@@ -197,7 +197,7 @@
           },
           {
             "key": "marks_resembling_needle_electrical_burns",
-            "text": "Alama kama za kuchomwa na pasi au umeme",
+            "text": "Alama zinazoashiria kuchomwa na sindano au umeme",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "marks_resembling_needle_electrical_burns"
           },
