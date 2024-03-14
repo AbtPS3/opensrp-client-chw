@@ -346,11 +346,21 @@ dependencies {
         exclude group: 'com.google.guava', module: 'guava'
         exclude group: 'com.mcxiaoke.volley', module: 'library'
         exclude group: 'com.rengwuxian.materialedittext', module: 'library'
+        exclude group: 'org.smartregister', module: 'opensrp-client-core'
     }
+
     implementation 'com.mapbox.mapboxsdk:mapbox-sdk-turf:5.1.0'
     implementation('io.ona.kujaku:library:0.9.0') {
         exclude group: 'com.android.volley', module: 'volley'
         exclude group: 'stax', module: 'stax-api'
+    }
+
+    implementation('org.smartregister:opensrp-client-core:1.16.5-NACP-SNAPSHOT@aar') {
+        transitive = true
+        exclude group: 'org.smartregister', module: 'opensrp-client-native-form'
+        exclude group: 'org.smartregister', module: 'opensrp-client-configurable-views'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'id.zelory', module: 'compressor'
     }
 
     //Do not upgrade to 1.1.0 due to compatibility issues
