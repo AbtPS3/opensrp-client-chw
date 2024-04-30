@@ -34,6 +34,7 @@ import org.smartregister.chw.core.utils.ChwNotificationUtil;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.CoreConstants.JSON_FORM;
 import org.smartregister.chw.custom_view.FamilyMemberFloatingMenu;
+import org.smartregister.chw.malaria.dao.IccmDao;
 import org.smartregister.chw.gbv.dao.GbvDao;
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.chw.presenter.ChildProfilePresenter;
@@ -164,10 +165,17 @@ public class ChildProfileActivity extends CoreChildProfileActivity implements On
                         , ((ChildProfilePresenter) presenter()).getFamilyHeadID(), ((ChildProfilePresenter) presenter()).getPrimaryCareGiverID(), ChildRegisterActivity.class.getCanonicalName());
 
                 return true;
+            case R.id.action_iccm_registration:
+                    startIntegratedCommunityCaseManagementEnrollment();
+                return true;
             default:
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void startIntegratedCommunityCaseManagementEnrollment() {
+        IccmRegisterActivity.startIccmRegistrationActivity(ChildProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
     }
 
     @Override
@@ -182,6 +190,10 @@ public class ChildProfileActivity extends CoreChildProfileActivity implements On
                 && flavor.isChildOverTwoMonths(((CoreChildProfilePresenter) presenter).getChildClient()));
         if (ChwApplication.getApplicationFlavor().hasMalaria())
             UtilsFlv.updateMalariaMenuItems(memberObject.getBaseEntityId(), menu);
+
+        if (ChwApplication.getApplicationFlavor().hasICCM() && !IccmDao.isRegisteredForIccm(memberObject.getBaseEntityId())) {
+            menu.findItem(R.id.action_iccm_registration).setVisible(true);
+        }
 
         if (ChwApplication.getApplicationFlavor().hasGbv()) {
             menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(memberObject.getBaseEntityId()));

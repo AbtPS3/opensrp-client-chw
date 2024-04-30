@@ -214,7 +214,7 @@ public class AncMemberProfileActivity extends CoreAncMemberProfileActivity imple
             startCBHSRegister(commonPersonObject);
             return true;
         }
-        if(itemId == R.id.action_hivst_registration){
+        if (itemId == R.id.action_hivst_registration) {
             CommonRepository commonRepository = Utils.context().commonrepository(Utils.metadata().familyMemberRegister.tableName);
 
             final CommonPersonObject commonPersonObject = commonRepository.findByBaseEntityId(memberObject.getBaseEntityId());
@@ -224,7 +224,7 @@ public class AncMemberProfileActivity extends CoreAncMemberProfileActivity imple
             String gender = Utils.getValue(commonPersonObject.getColumnmaps(), org.smartregister.family.util.DBConstants.KEY.GENDER, false);
             HivstRegisterActivity.startHivstRegistrationActivity(this, baseEntityID, gender);
         }
-        if(itemId == R.id.action_kvp_prep_registration){
+        if (itemId == R.id.action_kvp_prep_registration) {
             String gender = getClientGender(baseEntityID);
             int age = memberObject.getAge();
             KvpPrEPRegisterActivity.startRegistration(AncMemberProfileActivity.this, baseEntityID, gender, age);
@@ -237,14 +237,20 @@ public class AncMemberProfileActivity extends CoreAncMemberProfileActivity imple
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         menu.findItem(R.id.anc_danger_signs_outcome).setVisible(false);
-        menu.findItem(R.id.action_malaria_diagnosis).setVisible(!MalariaDao.isRegisteredForMalaria(baseEntityID));
+
+        if (ChwApplication.getApplicationFlavor().hasMalaria()) {
+            menu.findItem(R.id.action_malaria_diagnosis).setVisible(!MalariaDao.isRegisteredForMalaria(baseEntityID));
+        } else {
+            menu.findItem(R.id.action_malaria_diagnosis).setVisible(false);
+        }
+
         menu.findItem(R.id.action_pregnancy_out_come).setVisible(true);
         menu.findItem(R.id.action_anc_registration).setVisible(false);
-        if(ChwApplication.getApplicationFlavor().hasHIVST()){
+        if (ChwApplication.getApplicationFlavor().hasHIVST()) {
             int age = memberObject.getAge();
             menu.findItem(R.id.action_hivst_registration).setVisible(!HivstDao.isRegisteredForHivst(baseEntityID) && age >= 15);
         }
-        if(ChwApplication.getApplicationFlavor().hasKvp()){
+        if (ChwApplication.getApplicationFlavor().hasKvp()) {
             menu.findItem(R.id.action_kvp_prep_registration).setVisible(!KvpDao.isRegisteredForKvpPrEP(baseEntityID));
         }
         UtilsFlv.updateHivMenuItems(baseEntityID, menu);
