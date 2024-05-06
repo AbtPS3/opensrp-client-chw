@@ -19,7 +19,7 @@ public class OvcRegisterActivity extends CoreOvcRegisterActivity {
         Intent intent = new Intent(activity, OvcRegisterActivity.class);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.BASE_ENTITY_ID, baseEntityId);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.ACTION, Constants.ACTIVITY_PAYLOAD_TYPE.REGISTRATION);
-        intent.putExtra(Constants.ACTIVITY_PAYLOAD.OVC_FORM_NAME, Constants.FORMS.GBV_SCREENING);
+        intent.putExtra(Constants.ACTIVITY_PAYLOAD.OVC_FORM_NAME, Constants.FORMS.MVC_EDUCATION_AND_PSYCHOSOCICAL_SUPPORT_FORM);
 
         activity.startActivity(intent);
     }
