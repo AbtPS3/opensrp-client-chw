@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
@@ -37,6 +38,7 @@ import org.smartregister.chw.hiv.dao.HivDao;
 import org.smartregister.chw.hivst.dao.HivstDao;
 import org.smartregister.chw.kvp.dao.KvpDao;
 import org.smartregister.chw.malaria.dao.IccmDao;
+import org.smartregister.chw.ovc.dao.OvcDao;
 import org.smartregister.chw.presenter.FamilyOtherMemberActivityPresenter;
 import org.smartregister.chw.sbc.dao.SbcDao;
 import org.smartregister.chw.util.Constants;
@@ -195,9 +197,24 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
             if (ChwApplication.getApplicationFlavor().hasGbv()) {
                 menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
             }
+
+            if (ChwApplication.getApplicationFlavor().hasOvc()) {
+                menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(baseEntityId));
+            }
         }
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int i = item.getItemId();
+        if (i == R.id.action_ovc_registration) {
+            startOvcRegistration();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     public FamilyOtherMemberActivityPresenter presenter() {
@@ -397,6 +414,11 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
     @Override
     protected void startGbvRegistration() {
         GbvRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId);
+    }
+
+
+    protected void startOvcRegistration() {
+        OvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId);
     }
 
     @Override

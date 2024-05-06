@@ -1,0 +1,136 @@
+{
+  "count": "1",
+  "encounter_type": "Head of Household Registration",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Head of Household Registration",
+    "fields": [
+      {
+        "key": "registration_number_of_head",
+        "type": "edit_text",
+        "label": "Registration number of Head of Household",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "registration_number_of_head",
+        "v_numeric": {
+          "value": "true",
+          "err": "Registration number must be numeric"
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Registration number is required"
+        }
+      },
+      {
+        "key": "head_of_household",
+        "type": "native_radio",
+        "label": "Head of Household",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "head_of_household",
+        "options": [
+          {
+            "key": "child",
+            "text": "Child",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "child"
+          },
+          {
+            "key": "adult",
+            "text": "Adult",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "adult"
+          },
+          {
+            "key": "elderly",
+            "text": "Elderly",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "elderly"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Select the Head of Household"
+        }
+      },
+      {
+        "key": "type_of_vulnerability_to_head",
+        "type": "check_box",
+        "label": "Type of vulnerability to the Head of Household",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "type_of_vulnerability_to_head",
+        "options": [
+          {
+            "key": "disability",
+            "text": "Disability",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "disability"
+          },
+          {
+            "key": "living_with_hiv",
+            "text": "Living with HIV",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "living_with_hiv"
+          },
+          {
+            "key": "chronic_disease",
+            "text": "Chronic disease",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "chronic_disease"
+          }
+        ]
+      }
+    ]
+  }
+}

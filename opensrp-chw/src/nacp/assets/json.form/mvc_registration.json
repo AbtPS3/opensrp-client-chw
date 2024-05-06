@@ -1,0 +1,332 @@
+{
+  "count": "1",
+  "encounter_type": "MVC Registration",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "MVC Registration",
+    "fields": [
+      {
+        "key": "registration_number_of_mvc",
+        "type": "edit_text",
+        "label": "Registration number of MVC",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "registration_number_of_mvc",
+        "v_numeric": {
+          "value": "true",
+          "err": "Registration number must be numeric"
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Registration number is required"
+        }
+      },
+      {
+        "key": "mvc_has_birth_certificate",
+        "type": "native_radio",
+        "label": "Does the MVC have a birth certificate?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "mvc_has_birth_certificate",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Select whether the MVC has a birth certificate"
+        }
+      },
+      {
+        "key": "if_yes_birth_certificate_provide_number",
+        "type": "edit_text",
+        "label": "If yes, provide Number",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "if_yes_birth_certificate_provide_number",
+        "v_numeric": {
+          "value": "true",
+          "err": "Birth certificate number must be numeric"
+        },
+        "v_display": {
+          "rules": "mvc_has_birth_certificate == 'yes_birth_certificate'"
+        }
+      },
+      {
+        "key": "reasons_of_vulnerability",
+        "type": "check_box",
+        "label": "Reason(s) of Vulnerability to the Head of Household",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_of_vulnerability",
+        "options": [
+          {
+            "key": "disability",
+            "text": "Disability",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "disability"
+          },
+          {
+            "key": "living_with_hiv",
+            "text": "Living with HIV",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "living_with_hiv"
+          },
+          {
+            "key": "chronic_disease",
+            "text": "Chronic disease",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "chronic_disease"
+          }
+          // Other options...
+        ]
+      },
+      {
+        "key": "is_child_in_school",
+        "type": "native_radio",
+        "label": "Is the child in school?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "is_child_in_school",
+        "options": [
+          {
+            "key": "yes_in_school",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes_in_school"
+          },
+          {
+            "key": "no_in_school",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_in_school"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Select whether the child is in school"
+        }
+      },
+      {
+        "key": "if_yes_select_level_of_education",
+        "type": "native_radio",
+        "label": "If Yes, select level of education",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "if_yes_select_level_of_education",
+        "options": [
+          {
+            "key": "ecd",
+            "text": "Early childhood development",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ecd"
+          },
+          {
+            "key": "pre_primary_school",
+            "text": "Pre-primary school",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "pre_primary_school"
+          },
+          {
+            "key": "primary_school",
+            "text": "Primary school (Specify the class)",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "primary_school"
+          },
+          {
+            "key": "secondary_school",
+            "text": "Secondary school (Specify the class)",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "secondary_school"
+          },
+          {
+            "key": "vocational_trainings",
+            "text": "Vocational trainings",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "vocational_trainings"
+          },
+          {
+            "key": "colleges",
+            "text": "Colleges",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "colleges"
+          }
+        ],
+        "v_display": {
+          "rules": "is_child_in_school == 'yes_in_school'"
+        }
+      },
+      {
+        "key": "if_no_select_reason_for_not_in_school",
+        "type": "native_radio",
+        "label": "If No, select reason for not in school",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "if_no_select_reason_for_not_in_school",
+        "options": [
+          {
+            "key": "dropout",
+            "text": "Dropout",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "dropout"
+          },
+          {
+            "key": "not_enrolled",
+            "text": "Not enrolled",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_enrolled"
+          },
+          {
+            "key": "graduated",
+            "text": "Graduated",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "graduated"
+          }
+        ],
+        "v_display": {
+          "rules": "is_child_in_school == 'no_in_school'"
+        }
+      },
+      {
+        "key": "care_of_household",
+        "type": "native_radio",
+        "label": "Care of Household",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "care_of_household",
+        "options": [
+          {
+            "key": "father",
+            "text": "Father",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "father"
+          },
+          {
+            "key": "mother",
+            "text": "Mother",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "mother"
+          },
+          {
+            "key": "grandfather",
+            "text": "Grandfather",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "grandfather"
+          },
+          {
+            "key": "grandmother",
+            "text": "Grandmother",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "grandmother"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Select the Care of Household"
+        }
+      },
+      {
+        "key": "case_opened",
+        "type": "native_radio",
+        "label": "Case opened",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "case_opened",
+        "options": [
+          {
+            "key": "yes_case_opened",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes_case_opened"
+          },
+          {
+            "key": "no_case_opened",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_case_opened"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Select whether the case is opened"
+        }
+      }
+    ]
+  }
+}
