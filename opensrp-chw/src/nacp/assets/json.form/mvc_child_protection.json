@@ -1,0 +1,108 @@
+{
+  "count": "1",
+  "encounter_type": "Child Protection",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Child Protection",
+    "fields": [
+      {
+        "key": "select_child_protection_service",
+        "type": "check_box",
+        "label": "Select child protection service provided",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_child_protection_service",
+        "options": [
+          {
+            "key": "supported_to_get_birth_certificates",
+            "text": "Supported to get birth certificates",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "supported_to_get_birth_certificates",
+            "value": "false"
+          },
+          {
+            "key": "provided_with_emergency_care_and_support_services",
+            "text": "Provided with emergency care and support services",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "provided_with_emergency_care_and_support_services",
+            "value": "false"
+          },
+          {
+            "key": "linked_with_social_welfare_office",
+            "text": "Linked with social welfare office",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "linked_with_social_welfare_office",
+            "value": "false"
+          },
+          {
+            "key": "linked_with_mvcc_child_protection_team",
+            "text": "Linked with MVCC/Child protection team",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "linked_with_mvcc_child_protection_team",
+            "value": "false"
+          },
+          {
+            "key": "provided_with_general_child_protection_awareness_creation",
+            "text": "Provided with general child protection awareness creation",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "provided_with_general_child_protection_awareness_creation",
+            "value": "false"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select at least one child protection service"
+        }
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "count": "1",
-  "encounter_type": "MVC Registration",
+  "encounter_type": "MVC Child Registration",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -52,7 +52,7 @@
       {
         "key": "registration_number_of_mvc",
         "type": "edit_text",
-        "label": "Registration number of MVC",
+        "hint": "Registration number of MVC",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "registration_number_of_mvc",
@@ -96,7 +96,7 @@
       {
         "key": "birth_certificate_number",
         "type": "edit_text",
-        "label": "Provide Birth Certificate Number",
+        "hint": "Provide Birth Certificate Number",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "birth_certificate_number",
@@ -114,6 +114,7 @@
       {
         "key": "reasons_of_vulnerability",
         "type": "check_box",
+        "combine_checkbox_option_values": "true",
         "label": "Reason(s) of Vulnerability to the Head of Household",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
@@ -544,6 +545,14 @@
           "value": "true",
           "err": "Select whether the case is opened"
         }
+      },
+      {
+        "key": "client_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "client_type",
+        "type": "hidden",
+        "value": "ovc_child"
       }
     ]
   }

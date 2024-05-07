@@ -1,6 +1,6 @@
 {
   "count": "1",
-  "encounter_type": "Head of Household Registration",
+  "encounter_type": "MVC Head of Household Enrollment",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -52,7 +52,7 @@
       {
         "key": "registration_number_of_head",
         "type": "edit_text",
-        "label": "Registration number of Head of Household",
+        "hint": "Registration number of Head of Household",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "registration_number_of_head",
@@ -101,12 +101,16 @@
         }
       },
       {
-        "key": "type_of_vulnerability_to_head",
+        "key": "type_of_vulnerability",
         "type": "check_box",
         "label": "Type of vulnerability to the Head of Household",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "type_of_vulnerability_to_head",
+        "combine_checkbox_option_values": "true",
+        "openmrs_entity_id": "type_of_vulnerability",
+        "exclusive": [
+          "none"
+        ],
         "options": [
           {
             "key": "disability",
@@ -128,8 +132,22 @@
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "chronic_disease"
+          },
+          {
+            "key": "none",
+            "text": "None",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
           }
         ]
+      },
+      {
+        "key": "client_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "client_type",
+        "type": "hidden",
+        "value": "family_head"
       }
     ]
   }

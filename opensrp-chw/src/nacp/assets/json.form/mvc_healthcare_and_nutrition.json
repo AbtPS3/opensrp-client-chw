@@ -1,0 +1,194 @@
+{
+  "count": "1",
+  "encounter_type": "Health Care & Nutrition",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Health Care & Nutrition",
+    "fields": [
+      {
+        "key": "child_received_vaccinations",
+        "type": "native_radio",
+        "label": "Has the child received all the required vaccinations?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "child_received_vaccinations",
+        "options": [
+          {
+            "key": "yes_vaccinated",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes_vaccinated"
+          },
+          {
+            "key": "no_vaccinated",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_vaccinated"
+          },
+          {
+            "key": "unknown_vaccinated",
+            "text": "Unknown",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "unknown_vaccinated"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please indicate if the child has received all the required vaccinations"
+        }
+      },
+      {
+        "key": "child_nutritional_status",
+        "type": "native_radio",
+        "label": "Select the child nutritional status",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "child_nutritional_status",
+        "options": [
+          {
+            "key": "severe_malnutrition",
+            "text": "Severe Malnutrition",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "severe_malnutrition"
+          },
+          {
+            "key": "moderate_malnutrition",
+            "text": "Moderate Malnutrition",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "moderate_malnutrition"
+          },
+          {
+            "key": "not_malnourished",
+            "text": "Not malnourished",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_malnourished"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select the child's nutritional status"
+        }
+      },
+      {
+        "key": "health_care_service_provided",
+        "type": "check_box",
+        "label": "Select the child nutritional status",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "health_care_service_provided",
+        "options": [
+          {
+            "key": "supported_to_join_chf_tika",
+            "text": "Supported to join CHF/TIKA",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "supported_to_join_chf_tika"
+          },
+          {
+            "key": "hiv_prevention_counseling_service",
+            "text": "HIV prevention counseling service",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_prevention_counseling_service"
+          },
+          {
+            "key": "disclosure_support",
+            "text": "Disclosure Support",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "disclosure_support"
+          },
+          {
+            "key": "hiv_support_group",
+            "text": "HIV support group",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_support_group"
+          },
+          {
+            "key": "art_adherence_counseling",
+            "text": "HIV adherence counseling",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "art_adherence_counseling"
+          },
+          {
+            "key": "hiv_risk_assessment",
+            "text": "HIV risk assessment",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_risk_assessment"
+          },
+          {
+            "key": "hiv_prevention_education",
+            "text": "HIV prevention education",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_prevention_education"
+          },
+          {
+            "key": "assessment_for_the_risk_of_hiv_infection",
+            "text": "Assessment for the risk of HIV infection",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "assessment_for_the_risk_of_hiv_infection"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select the healthcare service provided"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "count": "1",
+  "encounter_type": "Education & Psychosocial",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Education & Psychosocial",
+    "fields": [
+      {
+        "key": "select_education_vocational_training",
+        "type": "native_radio",
+        "label": "Select clients Education and Vocational Training",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_education_vocational_training",
+        "options": [
+          {
+            "key": "children_enrolled_in_school",
+            "text": "Children enrolled in school",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_enrolled_in_school"
+          },
+          {
+            "key": "missed_school_three_days",
+            "text": "Missed school for three or more days consecutively in a month",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "missed_school_three_days"
+          },
+          {
+            "key": "linked_to_education_support",
+            "text": "Linked to education support",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "linked_to_education_support"
+          },
+          {
+            "key": "supported_attend_vocational_training",
+            "text": "Supported to attend vocational training",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "supported_attend_vocational_training"
+          },
+          {
+            "key": "received_business_start_up_kit",
+            "text": "Received business start-up kit",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "received_business_start_up_kit"
+          },
+          {
+            "key": "linked_mainstreamed_education_program",
+            "text": "Linked to mainstreamed education program (MEMKWA)",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "linked_mainstreamed_education_program"
+          },
+          {
+            "key": "none",
+            "text": "None",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Selecting an option for education and vocational training is required"
+        }
+      },
+      {
+        "key": "select_ecd_psychosocial_support",
+        "type": "check_box",
+        "label": "Select ECD & Psychosocial Support provided",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_ecd_psychosocial_support",
+        "options": [
+          {
+            "key": "attended_ecd_centre",
+            "text": "Children (<5 years) attended ECD centre.",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "attended_ecd_centre",
+            "value": "false"
+          },
+          {
+            "key": "children_attended_childrens_clubs",
+            "text": "Children attended children's clubs.",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_attended_childrens_clubs",
+            "value": "false"
+          },
+          {
+            "key": "children_attended_teen_clubs",
+            "text": "Children attended teen clubs.",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_attended_teen_clubs",
+            "value": "false"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Selecting at least one option for ECD & Psychosocial Support is required"
+        }
+      }
+    ]
+  }
+}

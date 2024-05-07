@@ -1,0 +1,154 @@
+{
+  "count": "1",
+  "encounter_type": "Need & Risk Assessment",
+  "entity_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Need & Risk Assessment",
+    "fields": [
+      {
+        "key": "select_the_client_need",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_the_client_need",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
+        "label": "Select the client's need",
+        "options": [
+          {
+            "key": "health_and_nutrition",
+            "text": "Health and Nutrition",
+            "value": "false"
+          },
+          {
+            "key": "housing_and_care",
+            "text": "Housing and Care",
+            "value": "false"
+          },
+          {
+            "key": "security_and_safety",
+            "text": "Security and Safety",
+            "value": "false"
+          },
+          {
+            "key": "psychological_and_emotional_support",
+            "text": "Psychological and Emotional Support",
+            "value": "false"
+          },
+          {
+            "key": "education_and_life_skills",
+            "text": "Education and Life Skills",
+            "value": "false"
+          },
+          {
+            "key": "household_and_economic_strengthening",
+            "text": "Household and Economic Strengthening",
+            "value": "false"
+          },
+          {
+            "key": "others",
+            "text": "Others",
+            "value": "false"
+          }
+        ]
+      },
+      {
+        "key": "has_the_child_experienced_vac",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_the_child_experienced_vac",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
+        "label": "Has the child experienced VAC?",
+        "options": [
+          {
+            "key": "physical",
+            "text": "Physical"
+          },
+          {
+            "key": "sexual",
+            "text": "Sexual"
+          },
+          {
+            "key": "neglect",
+            "text": "Neglect"
+          },
+          {
+            "key": "exploitation",
+            "text": "Exploitation"
+          },
+          {
+            "key": "none",
+            "text": "None"
+          }
+        ]
+      },
+      {
+        "key": "is_the_child_in_conflict_and_contact_with_the_law",
+        "type": "native_radio",
+        "label": "Is the child in conflict and contact with the law?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "is_the_child_in_conflict_and_contact_with_the_law",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ]
+      }
+    ]
+  }
+}
