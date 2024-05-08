@@ -476,6 +476,24 @@
         <activity
             android:name=".activity.OvcRegisterActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.OvcFamilyProfileActivity"
+            android:label="@string/title_family_detail"
+            android:parentActivityName=".activity.OvcRegisterActivity"
+            android:theme="@style/ChwTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.smartregister.chw.activity.OvcRegisterActivity" />
+        </activity>
+        <activity
+            android:name=".activity.OvcProfileActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.OvcMedicalHistoryActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.OvcVisitActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="3f94f9c3caeff331b3a2bd8c2182b663ad6a955a" />

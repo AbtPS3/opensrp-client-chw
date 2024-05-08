@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 
 import com.vijay.jsonwizard.constants.JsonFormConstants;
@@ -29,29 +30,25 @@ import org.smartregister.chw.core.form_data.NativeFormsDataBinder;
 import org.smartregister.chw.core.listener.OnClickFloatingMenu;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.UpdateDetailsUtil;
-import org.smartregister.chw.custom_view.GbvFloatingMenu;
-import org.smartregister.chw.dao.GbvDao;
+import org.smartregister.chw.custom_view.OvcFloatingMenu;
 import org.smartregister.chw.dataloader.AncMemberDataLoader;
 import org.smartregister.chw.dataloader.FamilyMemberDataLoader;
-import org.smartregister.chw.domain.GbvRegistrationObject;
-import org.smartregister.chw.gbv.GbvLibrary;
-import org.smartregister.chw.gbv.activity.BaseGbvProfileActivity;
-import org.smartregister.chw.gbv.domain.MemberObject;
-import org.smartregister.chw.gbv.interactor.BaseGbvProfileInteractor;
-import org.smartregister.chw.gbv.presenter.BaseGbvProfilePresenter;
-import org.smartregister.chw.gbv.util.Constants;
-import org.smartregister.chw.gbv.util.GbvJsonFormUtils;
-import org.smartregister.chw.gbv.util.VisitUtils;
 import org.smartregister.chw.hivst.dao.HivstDao;
-import org.smartregister.chw.interactor.GbvProfileInteractor;
+import org.smartregister.chw.interactor.OvcProfileInteractor;
 import org.smartregister.chw.kvp.dao.KvpDao;
 import org.smartregister.chw.malaria.dao.IccmDao;
 import org.smartregister.chw.model.ReferralTypeModel;
+import org.smartregister.chw.ovc.OvcLibrary;
+import org.smartregister.chw.ovc.activity.BaseOvcProfileActivity;
+import org.smartregister.chw.ovc.domain.MemberObject;
+import org.smartregister.chw.ovc.presenter.BaseOvcProfilePresenter;
+import org.smartregister.chw.ovc.util.Constants;
+import org.smartregister.chw.ovc.util.OvcJsonFormUtils;
+import org.smartregister.chw.ovc.util.VisitUtils;
 import org.smartregister.chw.sbc.dao.SbcDao;
 import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.commonregistry.CommonRepository;
-import org.smartregister.family.util.DBConstants;
 import org.smartregister.family.util.JsonFormUtils;
 import org.smartregister.family.util.Utils;
 
@@ -60,67 +57,39 @@ import java.util.List;
 
 import timber.log.Timber;
 
-public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
+public class OvcProfileActivity extends BaseOvcProfileActivity {
     private final FamilyOtherMemberProfileActivity.Flavor flavor = new FamilyOtherMemberProfileActivityFlv();
 
     private final List<ReferralTypeModel> referralTypeModels = new ArrayList<>();
 
     public static void startMe(Activity activity, String baseEntityID) {
-        Intent intent = new Intent(activity, GbvMemberProfileActivity.class);
+        Intent intent = new Intent(activity, OvcProfileActivity.class);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.BASE_ENTITY_ID, baseEntityID);
         activity.startActivityForResult(intent, Constants.REQUEST_CODE_GET_JSON);
     }
 
     @Override
-    public void recordGbv(MemberObject memberObject) {
-        JSONObject jsonObject;
-        try {
-            jsonObject = GbvJsonFormUtils.getFormAsJson(Constants.FORMS.GBV_HOME_VISIT);
-            GbvRegistrationObject gbvRegistrationObject = GbvDao.getGbVRegistrationObject(memberObject.getBaseEntityId());
-            JSONArray fields = JsonFormUtils.fields(jsonObject);
-            JSONObject typeOfViolenceExperienced = org.smartregister.family.util.JsonFormUtils.getFieldJSONObject(fields, "type_of_violence_experienced");
-            JSONObject indicationOfNeglect = org.smartregister.family.util.JsonFormUtils.getFieldJSONObject(fields, "indication_of_neglect");
+    public void recordOvc(MemberObject memberObject) {
+        if (memberObject.getBaseEntityId().equals(memberObject.getFamilyHead())) {
+            JSONObject jsonObject;
+            try {
+                jsonObject = OvcJsonFormUtils.getFormAsJson(Constants.FORMS.MVC_HOUSEHOLD_SERVICES);
 
-            if (gbvRegistrationObject != null && gbvRegistrationObject.getSexualViolence() != null && gbvRegistrationObject.getSexualViolence().equalsIgnoreCase("yes")) {
-                typeOfViolenceExperienced.getJSONArray("options").getJSONObject(0).put("value", true);
+                String locationId = Context.getInstance().allSharedPreferences().getPreference(AllConstants.CURRENT_LOCATION_ID);
+                OvcJsonFormUtils.getRegistrationForm(jsonObject, memberObject.getBaseEntityId(), locationId);
+                startFormActivity(jsonObject);
+            } catch (Exception e) {
+                Timber.e(e);
             }
-
-            if (gbvRegistrationObject != null && gbvRegistrationObject.getPhysicalViolence() != null && gbvRegistrationObject.getPhysicalViolence().equalsIgnoreCase("yes")) {
-                typeOfViolenceExperienced.getJSONArray("options").getJSONObject(1).put("value", true);
-            }
-
-            if (gbvRegistrationObject != null && gbvRegistrationObject.getEmotionalViolence() != null && gbvRegistrationObject.getEmotionalViolence().equalsIgnoreCase("yes")) {
-                typeOfViolenceExperienced.getJSONArray("options").getJSONObject(4).put("value", true);
-            }
-
-            if (gbvRegistrationObject != null && gbvRegistrationObject.getExploitationViolence() != null && gbvRegistrationObject.getExploitationViolence().equalsIgnoreCase("yes")) {
-                typeOfViolenceExperienced.getJSONArray("options").getJSONObject(5).put("value", true);
-            }
-
-            if (memberObject.getAge() >= 18) {
-                typeOfViolenceExperienced.getJSONArray("options").remove(5);
-            }
-
-            if (memberObject.getGender().equalsIgnoreCase("male")) {
-                typeOfViolenceExperienced.getJSONArray("options").remove(2);
-            }
-
-            if (memberObject.getAge() > 15) {
-                indicationOfNeglect.getJSONArray("options").remove(0);
-            }
-
-            String locationId = Context.getInstance().allSharedPreferences().getPreference(AllConstants.CURRENT_LOCATION_ID);
-            GbvJsonFormUtils.getRegistrationForm(jsonObject, memberObject.getBaseEntityId(), locationId);
-            startFormActivity(jsonObject);
-        } catch (Exception e) {
-            Timber.e(e);
+        } else {
+            OvcVisitActivity.startMe(this, memberObject.getBaseEntityId(), false);
         }
     }
 
     @Override
     protected void initializePresenter() {
         showProgressBar(true);
-        profilePresenter = new BaseGbvProfilePresenter(this, new GbvProfileInteractor(), memberObject);
+        profilePresenter = new BaseOvcProfilePresenter(this, new OvcProfileInteractor(), memberObject);
         fetchProfileData();
         profilePresenter.refreshProfileBottom();
     }
@@ -132,14 +101,14 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
         Intent intent = new Intent(this, Utils.metadata().familyMemberFormActivity);
         intent.putExtra(Constants.JSON_FORM_EXTRA.JSON, jsonForm.toString());
         intent.putExtra(JsonFormConstants.JSON_FORM_KEY.FORM, form);
-        startActivityForResult(intent, org.smartregister.chw.gbv.util.Constants.REQUEST_CODE_GET_JSON);
+        startActivityForResult(intent, Constants.REQUEST_CODE_GET_JSON);
     }
 
     @Override
     protected void setupViews() {
         super.setupViews();
         try {
-            VisitUtils.processVisits(GbvLibrary.getInstance().visitRepository(), GbvLibrary.getInstance().visitDetailsRepository(), GbvMemberProfileActivity.this);
+            VisitUtils.processVisits(OvcLibrary.getInstance().visitRepository(), OvcLibrary.getInstance().visitDetailsRepository(), OvcProfileActivity.this);
         } catch (Exception e) {
             Timber.e(e);
         }
@@ -147,7 +116,7 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
 
     @Override
     public void openMedicalHistory() {
-        GbvMedicalHistoryActivity.startMe(this, memberObject);
+        OvcMedicalHistoryActivity.startMe(this, memberObject);
     }
 
     @Override
@@ -162,7 +131,7 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
         if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
 
             //HIV Testing referrals will only be issued to non positive clients
-            if (memberObject.getCtcNumber().isEmpty()) {
+            if (StringUtils.isBlank(memberObject.getCtcNumber())) {
                 referralTypeModels.add(new ReferralTypeModel(getString(R.string.hts_referral), CoreConstants.JSON_FORM.getHtsReferralForm(), CoreConstants.TASKS_FOCUS.CONVENTIONAL_HIV_TEST));
             } else { //HIV Treatment and care referrals will be issued to HIV Positive clients
                 referralTypeModels.add(new ReferralTypeModel(getString(R.string.hiv_referral), CoreConstants.JSON_FORM.getHivReferralForm(), CoreConstants.TASKS_FOCUS.SICK_HIV));
@@ -188,33 +157,33 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
 
     @Override
     public void initializeFloatingMenu() {
-        baseGbvFloatingMenu = new GbvFloatingMenu(this, memberObject);
-        baseGbvFloatingMenu.setGravity(Gravity.BOTTOM | Gravity.END);
+        baseOvcFloatingMenu = new OvcFloatingMenu(this, memberObject);
+        baseOvcFloatingMenu.setGravity(Gravity.BOTTOM | Gravity.END);
         LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        addContentView(baseGbvFloatingMenu, linearLayoutParams);
+        addContentView(baseOvcFloatingMenu, linearLayoutParams);
 
 
         OnClickFloatingMenu onClickFloatingMenu = viewId -> {
             if (viewId == R.id.gbv_fab) {
                 checkPhoneNumberProvided();
-                ((GbvFloatingMenu) baseGbvFloatingMenu).animateFAB();
+                ((OvcFloatingMenu) baseOvcFloatingMenu).animateFAB();
             } else if (viewId == R.id.gbv_call_layout) {
-                ((GbvFloatingMenu) baseGbvFloatingMenu).launchCallWidget();
-                ((GbvFloatingMenu) baseGbvFloatingMenu).animateFAB();
+                ((OvcFloatingMenu) baseOvcFloatingMenu).launchCallWidget();
+                ((OvcFloatingMenu) baseOvcFloatingMenu).animateFAB();
             } else if (viewId == R.id.gbv_refer_to_facility_layout) {
-                org.smartregister.chw.util.Utils.launchClientReferralActivity(GbvMemberProfileActivity.this, getReferralTypeModels(), memberObject.getBaseEntityId());
-                ((GbvFloatingMenu) baseGbvFloatingMenu).animateFAB();
+                org.smartregister.chw.util.Utils.launchClientReferralActivity(OvcProfileActivity.this, getReferralTypeModels(), memberObject.getBaseEntityId());
+                ((OvcFloatingMenu) baseOvcFloatingMenu).animateFAB();
             } else {
                 Timber.d("Unknown fab action");
             }
         };
 
-        ((GbvFloatingMenu) baseGbvFloatingMenu).setFloatMenuClickListener(onClickFloatingMenu);
+        ((OvcFloatingMenu) baseOvcFloatingMenu).setFloatMenuClickListener(onClickFloatingMenu);
     }
 
     private void checkPhoneNumberProvided() {
         boolean phoneNumberAvailable = (StringUtils.isNotBlank(memberObject.getPhoneNumber()));
-        ((GbvFloatingMenu) baseGbvFloatingMenu).redraw(phoneNumberAvailable);
+        ((OvcFloatingMenu) baseOvcFloatingMenu).redraw(phoneNumberAvailable);
     }
 
     protected boolean isClientEligibleForAnc(MemberObject hivMemberObject) {
@@ -234,7 +203,14 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
     @Override
     protected void onCreation() {
         super.onCreation();
-        textViewRecordGbv.setText(R.string.record_gbv_home_visit);
+        if (memberObject.getBaseEntityId().equals(memberObject.getFamilyHead())) {
+            findViewById(R.id.family_ovc_head).setVisibility(View.VISIBLE);
+            textViewRecordOvc.setText(R.string.record_mvc_household_services);
+        }
+
+        if (memberObject.getBaseEntityId().equals(memberObject.getPrimaryCareGiver())) {
+            findViewById(R.id.primary_ovc_caregiver).setVisibility(View.VISIBLE);
+        }
         addReferralTypes();
     }
 
@@ -349,7 +325,7 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
             return true;
         } else if (i == org.smartregister.chw.core.R.id.action_tb_registration) {
             startTbRegister();
-        }else if (i == org.smartregister.chw.core.R.id.action_hivst_registration) {
+        } else if (i == org.smartregister.chw.core.R.id.action_hivst_registration) {
             startHivstRegistration();
             return true;
         } else if (i == org.smartregister.chw.core.R.id.action_agyw_screening) {
@@ -360,24 +336,24 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
             return true;
         } else if (i == org.smartregister.chw.core.R.id.action_sbc_registration) {
             startSbcRegistration();
-        }else if (i == org.smartregister.chw.core.R.id.action_gbv_registration) {
+        } else if (i == org.smartregister.chw.core.R.id.action_gbv_registration) {
             startGbvRegistration();
         }
         return super.onOptionsItemSelected(item);
     }
 
     protected void startAncRegister() {
-        AncRegisterActivity.startAncRegistrationActivity(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getPhoneNumber(),
+        AncRegisterActivity.startAncRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getPhoneNumber(),
                 org.smartregister.chw.util.Constants.JSON_FORM.getAncRegistration(), null, memberObject.getFamilyBaseEntityId(), memberObject.getFamilyName());
     }
 
     protected void startPncRegister() {
-        PncRegisterActivity.startPncRegistrationActivity(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getPhoneNumber(),
+        PncRegisterActivity.startPncRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getPhoneNumber(),
                 CoreConstants.JSON_FORM.getPregnancyOutcome(), null, memberObject.getFamilyBaseEntityId(), memberObject.getFamilyName(), null);
     }
 
     protected void startMalariaRegister() {
-        MalariaRegisterActivity.startMalariaRegistrationActivity(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
+        MalariaRegisterActivity.startMalariaRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
     }
 
     protected void startVmmcRegister() {
@@ -385,7 +361,7 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
     }
 
     protected void startIntegratedCommunityCaseManagementEnrollment() {
-        IccmRegisterActivity.startIccmRegistrationActivity(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
+        IccmRegisterActivity.startIccmRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
     }
 
     protected void startHivRegister() {
@@ -395,14 +371,14 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
 
         try {
             String formName = org.smartregister.chw.util.Constants.JsonForm.getCbhsRegistrationForm();
-            JSONObject formJsonObject = (new FormUtils()).getFormJsonFromRepositoryOrAssets(GbvMemberProfileActivity.this, formName);
+            JSONObject formJsonObject = (new FormUtils()).getFormJsonFromRepositoryOrAssets(OvcProfileActivity.this, formName);
             JSONArray steps = formJsonObject.getJSONArray("steps");
             JSONObject step = steps.getJSONObject(0);
             JSONArray fields = step.getJSONArray("fields");
 
             updateAgeAndGender(fields, age, gender);
 
-            HivRegisterActivity.startHIVFormActivity(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), formName, formJsonObject.toString());
+            HivRegisterActivity.startHIVFormActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), formName, formJsonObject.toString());
         } catch (JSONException e) {
             Timber.e(e);
         } catch (Exception e) {
@@ -412,7 +388,7 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
 
     protected void startTbRegister() {
         try {
-            TbRegisterActivity.startTbFormActivity(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), org.smartregister.chw.util.Constants.JSON_FORM.getTbRegistration(), (new FormUtils()).getFormJsonFromRepositoryOrAssets(this, org.smartregister.chw.util.Constants.JSON_FORM.getTbRegistration()).toString());
+            TbRegisterActivity.startTbFormActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), org.smartregister.chw.util.Constants.JSON_FORM.getTbRegistration(), (new FormUtils()).getFormJsonFromRepositoryOrAssets(this, org.smartregister.chw.util.Constants.JSON_FORM.getTbRegistration()).toString());
         } catch (JSONException e) {
             Timber.e(e);
         }
@@ -431,29 +407,30 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
 
     protected void startHivstRegistration() {
         String gender = memberObject.getGender();
-        HivstRegisterActivity.startHivstRegistrationActivity(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), gender);
+        HivstRegisterActivity.startHivstRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), gender);
     }
 
     protected void startAgywScreening() {
         String dob = memberObject.getDob();
         int age = org.smartregister.chw.util.Utils.getAgeFromDate(dob);
-        AgywRegisterActivity.startRegistration(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), age);
+        AgywRegisterActivity.startRegistration(OvcProfileActivity.this, memberObject.getBaseEntityId(), age);
     }
 
     protected void startSbcRegistration() {
-        SbcRegisterActivity.startRegistration(GbvMemberProfileActivity.this, memberObject.getBaseEntityId());
+        SbcRegisterActivity.startRegistration(OvcProfileActivity.this, memberObject.getBaseEntityId());
     }
 
     protected void startGbvRegistration() {
-        GbvRegisterActivity.startRegistration(GbvMemberProfileActivity.this, memberObject.getBaseEntityId());
+        GbvRegisterActivity.startRegistration(OvcProfileActivity.this, memberObject.getBaseEntityId());
     }
 
     protected void startKvpPrEPRegistration() {
         String gender = getClientGender(memberObject.getBaseEntityId());
         String dob = memberObject.getDob();
         int age = org.smartregister.chw.util.Utils.getAgeFromDate(dob);
-        KvpPrEPRegisterActivity.startRegistration(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), gender, age);
+        KvpPrEPRegisterActivity.startRegistration(OvcProfileActivity.this, memberObject.getBaseEntityId(), gender, age);
     }
+
     public void startFormForEdit(Integer title_resource, String formName) {
         try {
             JSONObject form = null;

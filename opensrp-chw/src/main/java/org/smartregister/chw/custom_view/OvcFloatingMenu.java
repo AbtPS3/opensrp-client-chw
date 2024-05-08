@@ -14,11 +14,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.smartregister.chw.core.R;
 import org.smartregister.chw.core.listener.OnClickFloatingMenu;
-import org.smartregister.chw.gbv.custom_views.BaseGbvFloatingMenu;
-import org.smartregister.chw.gbv.domain.MemberObject;
-import org.smartregister.chw.gbv.fragment.BaseGbvCallDialogFragment;
+import org.smartregister.chw.ovc.domain.MemberObject;
+import org.smartregister.chw.ovc.fragment.BaseOvcCallDialogFragment;
+import org.smartregister.chw.ovc.custom_views.BaseOvcFloatingMenu;
 
-public class GbvFloatingMenu extends BaseGbvFloatingMenu {
+public class OvcFloatingMenu extends BaseOvcFloatingMenu {
     public FloatingActionButton fab;
 
     private Animation fabOpen;
@@ -44,7 +44,7 @@ public class GbvFloatingMenu extends BaseGbvFloatingMenu {
     private MemberObject MEMBER_OBJECT;
 
 
-    public GbvFloatingMenu(Context context, MemberObject MEMBER_OBJECT) {
+    public OvcFloatingMenu(Context context, MemberObject MEMBER_OBJECT) {
         super(context, MEMBER_OBJECT);
         this.MEMBER_OBJECT = MEMBER_OBJECT;
     }
@@ -117,7 +117,7 @@ public class GbvFloatingMenu extends BaseGbvFloatingMenu {
 
 
     public void launchCallWidget() {
-        BaseGbvCallDialogFragment.launchDialog((Activity) this.getContext(), MEMBER_OBJECT);
+        BaseOvcCallDialogFragment.launchDialog((Activity) this.getContext(), MEMBER_OBJECT);
     }
 
     public void redraw(boolean hasPhoneNumber) {

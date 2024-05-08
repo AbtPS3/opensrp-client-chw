@@ -15,11 +15,11 @@ import org.smartregister.view.fragment.BaseRegisterFragment;
 
 public class OvcRegisterActivity extends CoreOvcRegisterActivity {
 
-    public static void startRegistration(Activity activity, String baseEntityId) {
+    public static void startRegistration(Activity activity, String baseEntityId, String formName) {
         Intent intent = new Intent(activity, OvcRegisterActivity.class);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.BASE_ENTITY_ID, baseEntityId);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.ACTION, Constants.ACTIVITY_PAYLOAD_TYPE.REGISTRATION);
-        intent.putExtra(Constants.ACTIVITY_PAYLOAD.OVC_FORM_NAME, Constants.FORMS.MVC_EDUCATION_AND_PSYCHOSOCICAL_SUPPORT_FORM);
+        intent.putExtra(Constants.ACTIVITY_PAYLOAD.OVC_FORM_NAME, formName);
 
         activity.startActivity(intent);
     }

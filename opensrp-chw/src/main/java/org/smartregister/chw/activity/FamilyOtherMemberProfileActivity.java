@@ -418,7 +418,10 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
 
 
     protected void startOvcRegistration() {
-        OvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId);
+        if (familyHead.equals(baseEntityId))
+            OvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_HEAD_OF_HOUSEHOLD_ENROLLMENT);
+        else
+            OvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);
     }
 
     @Override

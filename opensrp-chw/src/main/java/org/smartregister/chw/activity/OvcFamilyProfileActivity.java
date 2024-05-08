@@ -1,7 +1,5 @@
 package org.smartregister.chw.activity;
 
-import static org.smartregister.chw.core.utils.Utils.passToolbarTitle;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -12,22 +10,16 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import org.joda.time.DateTime;
-import org.joda.time.Days;
 import org.smartregister.chw.R;
 import org.smartregister.chw.anc.activity.BaseAncMemberProfileActivity;
-import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.application.ChwApplication;
 import org.smartregister.chw.core.activity.CoreAboveFiveChildProfileActivity;
 import org.smartregister.chw.core.activity.CoreChildProfileActivity;
 import org.smartregister.chw.core.activity.CoreFamilyProfileActivity;
 import org.smartregister.chw.core.activity.CoreFamilyProfileMenuActivity;
 import org.smartregister.chw.core.activity.CoreFamilyRemoveMemberActivity;
+import org.smartregister.chw.core.utils.ChildDBConstants;
 import org.smartregister.chw.core.utils.CoreConstants;
-import org.smartregister.chw.dao.ChwChildDao;
-import org.smartregister.chw.fp.dao.FpDao;
-import org.smartregister.chw.fragment.FamilyProfileActivityFragment;
-import org.smartregister.chw.fragment.FamilyProfileDueFragment;
 import org.smartregister.chw.fragment.FamilyProfileMemberFragment;
 import org.smartregister.chw.hiv.dao.HivDao;
 import org.smartregister.chw.model.FamilyProfileModel;
@@ -37,26 +29,20 @@ import org.smartregister.chw.tb.dao.TbDao;
 import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.family.adapter.ViewPagerAdapter;
-import org.smartregister.family.fragment.BaseFamilyProfileDueFragment;
 import org.smartregister.family.util.Constants;
-import org.smartregister.family.util.DBConstants;
 import org.smartregister.family.util.Utils;
 import org.smartregister.view.fragment.BaseRegisterFragment;
 
 import java.util.HashMap;
 import java.util.Objects;
 
-public class FamilyProfileActivity extends CoreFamilyProfileActivity {
-    private BaseFamilyProfileDueFragment profileDueFragment;
+public class OvcFamilyProfileActivity extends CoreFamilyProfileActivity {
     private TextView tvEventDate;
     private TextView tvInterpunct;
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK && profileDueFragment != null) {
-            profileDueFragment.onActivityResult(requestCode, resultCode, data);
-        }
     }
 
     @Override
@@ -89,16 +75,6 @@ public class FamilyProfileActivity extends CoreFamilyProfileActivity {
                 if (familyProfileMemberFragment.presenter() != null) {
                     familyProfileMemberFragment.refreshListView();
                 }
-            } else if (fragment instanceof FamilyProfileDueFragment) {
-                FamilyProfileDueFragment familyProfileDueFragment = ((FamilyProfileDueFragment) fragment);
-                if (familyProfileDueFragment.presenter() != null) {
-                    familyProfileDueFragment.refreshListView();
-                }
-            } else if (fragment instanceof FamilyProfileActivityFragment) {
-                FamilyProfileActivityFragment familyProfileActivityFragment = ((FamilyProfileActivityFragment) fragment);
-                if (familyProfileActivityFragment.presenter() != null) {
-                    familyProfileActivityFragment.refreshListView();
-                }
             }
         }
     }
@@ -127,13 +103,7 @@ public class FamilyProfileActivity extends CoreFamilyProfileActivity {
     protected ViewPager setupViewPager(ViewPager viewPager) {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         FamilyProfileMemberFragment profileMemberFragment = (FamilyProfileMemberFragment) FamilyProfileMemberFragment.newInstance(this.getIntent().getExtras());
-        profileDueFragment = FamilyProfileDueFragment.newInstance(this.getIntent().getExtras());
-        FamilyProfileActivityFragment profileActivityFragment = (FamilyProfileActivityFragment) FamilyProfileActivityFragment.newInstance(this.getIntent().getExtras());
-
         adapter.addFragment(profileMemberFragment, this.getString(org.smartregister.family.R.string.member).toUpperCase());
-        adapter.addFragment(profileDueFragment, this.getString(org.smartregister.family.R.string.due).toUpperCase());
-        adapter.addFragment(profileActivityFragment, this.getString(org.smartregister.family.R.string.activity).toUpperCase());
-
         viewPager.setAdapter(adapter);
 
         if (getIntent().getBooleanExtra(CoreConstants.INTENT_KEY.SERVICE_DUE, false) || getIntent().getBooleanExtra(Constants.INTENT_KEY.GO_TO_DUE_PAGE, false)) {
@@ -145,7 +115,7 @@ public class FamilyProfileActivity extends CoreFamilyProfileActivity {
 
     @Override
     protected Class<?> getFamilyOtherMemberProfileActivityClass() {
-        return FamilyOtherMemberProfileActivity.class;
+        return OvcProfileActivity.class;
     }
 
     @Override
@@ -165,7 +135,7 @@ public class FamilyProfileActivity extends CoreFamilyProfileActivity {
 
     @Override
     public void goToAncProfileActivity(CommonPersonObjectClient patient, Bundle bundle) {
-        AncMemberProfileActivity.startMe(this,patient.getCaseId());
+        AncMemberProfileActivity.startMe(this, patient.getCaseId());
     }
 
     @Override
@@ -219,47 +189,11 @@ public class FamilyProfileActivity extends CoreFamilyProfileActivity {
         return this;
     }
 
-    private Intent getDefaultChildrenIntent(int age) {
-        if (age < 5) {
-            return new Intent(this, getChildProfileActivityClass());
-        } else {
-            return new Intent(this, getAboveFiveChildProfileActivityClass());
-        }
-    }
-
-    private Intent getIntentForChildrenUnderFiveAndGirlsAgeNineToEleven(int age, String gender) {
-        if (age < 5 || (gender.equalsIgnoreCase("Female") && (age >= 9 && age < 11))) {
-            return new Intent(this, getChildProfileActivityClass());
-        } else {
-            return new Intent(this, getAboveFiveChildProfileActivityClass());
-        }
-    }
-
-    private Intent getChildIntent(CommonPersonObjectClient patient) {
-        String dobString = Utils.getValue(patient.getColumnmaps(), DBConstants.KEY.DOB, false);
-
-        int age = (int) Math.floor(Days.daysBetween(new DateTime(dobString).toLocalDate(), new DateTime().toLocalDate()).getDays() / 365.4);
-
-        String gender = ChwChildDao.getChildGender(patient.entityId());
-        if (ChwApplication.getApplicationFlavor().showChildrenUnderFiveAndGirlsAgeNineToEleven()) {
-            return getIntentForChildrenUnderFiveAndGirlsAgeNineToEleven(age, gender);
-        } else {
-            return getDefaultChildrenIntent(age);
-        }
-    }
-
     @Override
-    public void goToChildProfileActivity(CommonPersonObjectClient patient, Bundle bundle) {
-        Intent intent = getChildIntent(patient);
-
-        if (bundle != null) {
-            intent.putExtras(bundle);
+    public void goToProfileActivity(View view, Bundle fragmentArguments) {
+        if (view.getTag() instanceof CommonPersonObjectClient) {
+            CommonPersonObjectClient commonPersonObjectClient = (CommonPersonObjectClient) view.getTag();
+            OvcProfileActivity.startMe(this, commonPersonObjectClient.getCaseId());
         }
-        MemberObject memberObject = new MemberObject(patient);
-        memberObject.setFamilyName(familyName);
-        passToolbarTitle(this, intent);
-        intent.putExtra(Constants.INTENT_KEY.BASE_ENTITY_ID, patient.getCaseId());
-        intent.putExtra(org.smartregister.chw.anc.util.Constants.ANC_MEMBER_OBJECTS.MEMBER_PROFILE_OBJECT, memberObject);
-        startActivity(intent);
     }
 }

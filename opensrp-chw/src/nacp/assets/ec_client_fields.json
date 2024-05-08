@@ -6090,6 +6090,30 @@
           }
         },
         {
+          "column_name": "client_type",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "client_type"
+          }
+        },
+        {
+          "column_name": "registration_number_of_head",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "registration_number_of_head"
+          }
+        },
+        {
+          "column_name": "type_of_vulnerability",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "type_of_vulnerability"
+          }
+        },
+        {
           "column_name": "last_interacted_with",
           "type": "Event",
           "json_mapping": {
