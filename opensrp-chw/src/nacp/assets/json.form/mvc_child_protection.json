@@ -52,6 +52,7 @@
       {
         "key": "select_child_protection_service",
         "type": "check_box",
+        "combine_checkbox_option_values": "true",
         "label": "Select child protection service provided",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",

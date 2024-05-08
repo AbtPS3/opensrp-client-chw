@@ -1,6 +1,8 @@
 package org.smartregister.chw.activity;
 
 import static com.vijay.jsonwizard.constants.JsonFormConstants.COUNT;
+import static org.smartregister.chw.core.utils.CoreJsonFormUtils.getEditEvent;
+import static org.smartregister.chw.core.utils.CoreJsonFormUtils.getFormWithMetaData;
 import static org.smartregister.chw.core.utils.CoreJsonFormUtils.updateValues;
 import static org.smartregister.chw.util.PmtctVisitUtils.deleteProcessedVisit;
 import static org.smartregister.opd.utils.OpdConstants.JSON_FORM_KEY.VISIT_ID;
@@ -17,6 +19,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.vijay.jsonwizard.constants.JsonFormConstants;
 import com.vijay.jsonwizard.domain.Form;
@@ -37,7 +41,7 @@ import org.smartregister.chw.core.activity.DefaultAncMedicalHistoryActivityFlv;
 import org.smartregister.chw.core.utils.CoreReferralUtils;
 import org.smartregister.chw.core.utils.FormUtils;
 import org.smartregister.chw.fp.util.FamilyPlanningConstants;
-import org.smartregister.chw.interactor.GbvMedicalHistoryInteractor;
+import org.smartregister.chw.interactor.OvcHistoryInteractor;
 import org.smartregister.chw.ovc.domain.MemberObject;
 import org.smartregister.chw.ovc.util.Constants;
 import org.smartregister.clientandeventmodel.Event;
@@ -57,21 +61,21 @@ import java.util.Map;
 import timber.log.Timber;
 
 public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
-    private static MemberObject gbvMemberObject;
+    private static MemberObject ovcMemberObject;
 
-    private final Flavor flavor = new FpMedicalHistoryActivityFlv();
+    private final Flavor flavor = new OvcHistoryActivityFlv();
 
     private ProgressBar progressBar;
 
     public static void startMe(Activity activity, MemberObject memberObject) {
         Intent intent = new Intent(activity, OvcMedicalHistoryActivity.class);
-        gbvMemberObject = memberObject;
+        ovcMemberObject = memberObject;
         activity.startActivity(intent);
     }
 
     @Override
     public void initializePresenter() {
-        presenter = new BaseAncMedicalHistoryPresenter(new GbvMedicalHistoryInteractor(), this, gbvMemberObject.getBaseEntityId());
+        presenter = new BaseAncMedicalHistoryPresenter(new OvcHistoryInteractor(), this, ovcMemberObject.getBaseEntityId());
     }
 
     @Override
@@ -80,7 +84,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
         progressBar = findViewById(org.smartregister.chw.opensrp_chw_anc.R.id.progressBarMedicalHistory);
 
         TextView tvTitle = findViewById(org.smartregister.chw.opensrp_chw_anc.R.id.tvTitle);
-        tvTitle.setText(getString(org.smartregister.chw.opensrp_chw_anc.R.string.back_to, gbvMemberObject.getFullName()));
+        tvTitle.setText(getString(org.smartregister.chw.opensrp_chw_anc.R.string.back_to, ovcMemberObject.getFullName()));
 
         ((TextView) findViewById(R.id.medical_history)).setText(getString(R.string.visits_history));
     }
@@ -111,7 +115,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                 String jsonString = data.getStringExtra(org.smartregister.chw.hivst.util.Constants.JSON_FORM_EXTRA.JSON);
                 JSONObject form = new JSONObject(jsonString);
                 String encounterType = form.getString(JsonFormUtils.ENCOUNTER_TYPE);
-                if (encounterType.equals(Constants.EVENT_TYPE.OVC_FOLLOW_UP_VISIT)) {
+                if (encounterType.equals(Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT) || encounterType.equals(Constants.EVENT_TYPE.MVC_SERVICES_VISIT)) {
                     if (form.has(VISIT_ID)) {
                         String deletedVisitId = form.getString(VISIT_ID);
                         form.remove(VISIT_ID);
@@ -129,7 +133,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
         }
     }
 
-    private class FpMedicalHistoryActivityFlv extends DefaultAncMedicalHistoryActivityFlv {
+    private class OvcHistoryActivityFlv extends DefaultAncMedicalHistoryActivityFlv {
         private final StyleSpan boldSpan = new StyleSpan(android.graphics.Typeface.BOLD);
 
         @Override
@@ -160,17 +164,11 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                     }
 
                     String[] params = {
-                            "type_of_violence_experienced",
-                            "indication_of_sexual_violence",
-                            "indication_of_physical_violence",
-                            "indication_of_neglect",
-                            "indication_of_exploitation",
-                            "indication_of_emotional_violence",
-                            "time_since_incident",
-                            "location_where_the_incident_occurred",
-                            "was_education_provided",
-                            "emergency_services_offered",
-                            "referral_to_other_services"
+                            "parenting_caregivers_with_children",
+                            "nutritional_status_assessment",
+                            "food_and_nutrition",
+                            "health_care_provided",
+                            "visit_type"
                     };
                     extractVisitDetails(visits, params, visitDetails, x, context);
 
@@ -193,7 +191,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                     List<VisitDetail> details = sourceVisits.get(iteration).getVisitDetails().get(param);
                     map.put(param, getTexts(context, details));
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    Timber.e(e);
                 }
 
             }
@@ -219,7 +217,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
 
 
         protected void processVisit(List<LinkedHashMap<String, String>> community_visits, Context context, List<Visit> visits) {
-            if (community_visits != null && community_visits.size() > 0) {
+            if (community_visits != null && !community_visits.isEmpty()) {
                 linearLayoutHealthFacilityVisit.setVisibility(View.VISIBLE);
 
                 int x = 0;
@@ -237,8 +235,11 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                         edit.setOnClickListener(view1 -> {
                             Visit visit = visits.get(position);
                             try {
-                                //TODO Finalize this implementation
-//                                startFormForEdit(R.string.ovc_edit_home_visit, Constants.FORMS.GBV_HOME_VISIT, visit.getBaseEntityId(), visit.getVisitId(), context);
+                                if (visit.getVisitType().equals(Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT)) {
+                                    startFormForEdit(R.string.ovc_edit_home_visit, Constants.FORMS.MVC_HOUSEHOLD_SERVICES, visit.getBaseEntityId(), visit.getVisitId(), context);
+                                } else {
+                                    OvcVisitActivity.startMe(OvcMedicalHistoryActivity.this, ovcMemberObject.getBaseEntityId(), true);
+                                }
                             } catch (Exception e) {
                                 Timber.e(e);
                             }
@@ -247,19 +248,12 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
 
 
                     for (LinkedHashMap.Entry<String, String> entry : vals.entrySet()) {
-                        TextView visitDetailTv = new TextView(context);
-                        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams
-                                ((int) LinearLayout.LayoutParams.MATCH_PARENT, (int) LinearLayout.LayoutParams.WRAP_CONTENT);
-
-                        visitDetailTv.setLayoutParams(params);
-                        float scale = context.getResources().getDisplayMetrics().density;
-                        int dpAsPixels = (int) (10 * scale + 0.5f);
-                        visitDetailTv.setPadding(dpAsPixels, 0, 0, 0);
+                        TextView visitDetailTv = getTextView(context);
                         visitDetailsLayout.addView(visitDetailTv);
 
 
                         try {
-                            int resource = context.getResources().getIdentifier("gbv_" + entry.getKey(), "string", context.getPackageName());
+                            int resource = context.getResources().getIdentifier("mvc_" + entry.getKey(), "string", context.getPackageName());
                             evaluateView(context, vals, visitDetailTv, entry.getKey(), resource);
                         } catch (Exception e) {
                             Timber.e(e);
@@ -272,16 +266,25 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
             }
         }
 
+        @NonNull
+        private TextView getTextView(Context context) {
+            TextView visitDetailTv = new TextView(context);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams
+                    ((int) LinearLayout.LayoutParams.MATCH_PARENT, (int) LinearLayout.LayoutParams.WRAP_CONTENT);
+
+            visitDetailTv.setLayoutParams(params);
+            float scale = context.getResources().getDisplayMetrics().density;
+            int dpAsPixels = (int) (10 * scale + 0.5f);
+            visitDetailTv.setPadding(dpAsPixels, 0, 0, 0);
+            return visitDetailTv;
+        }
+
         public void startFormForEdit(Integer title_resource, String formName, String baseEntityId, String deletedVisitId, Context context) {
             try {
-//                Finalize this implementation
-//                Event event = getEditEvent(baseEntityId, Constants.EVENT_TYPE.GBV_HOME_VISIT);
-                Event event = null;
+                Event event = getEditEvent(baseEntityId, Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT);
 
                 final List<Obs> observations = event.getObs();
-//                Finalize this implementation
-//                JSONObject form = getFormWithMetaData(baseEntityId, context, formName, Constants.EVENT_TYPE.GBV_HOME_VISIT);
-                JSONObject form = null;
+                JSONObject form = getFormWithMetaData(baseEntityId, context, formName, Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT);
 
                 if (form != null) {
                     JSONObject stepOne = form.getJSONObject(JsonFormUtils.STEP1);
@@ -354,7 +357,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
 
         private String getStringResource(Context context, String resourceName) {
             int resourceId = context.getResources().
-                    getIdentifier("gbv_" + resourceName.trim(), "string", context.getPackageName());
+                    getIdentifier("mvc_" + resourceName.trim(), "string", context.getPackageName());
             try {
                 return context.getString(resourceId);
             } catch (Exception e) {

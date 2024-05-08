@@ -56,75 +56,93 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_referrals_provided",
+        "exclusive": [
+          "no_referrals_provided"
+        ],
         "options": [
           {
             "key": "health_related_services_provided",
             "text": "Health Related Services",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "health_related_services_provided",
-            "value": "false"
+            "openmrs_entity_id": "health_related_services_provided"
           },
           {
             "key": "nutrition_provided",
             "text": "Nutrition",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "nutrition_provided",
-            "value": "false"
+            "openmrs_entity_id": "nutrition_provided"
           },
           {
             "key": "education_provided",
             "text": "Education",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "education_provided",
-            "value": "false"
+            "openmrs_entity_id": "education_provided"
           },
           {
             "key": "child_protection_provided",
             "text": "Child Protection",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "child_protection_provided",
-            "value": "false"
+            "openmrs_entity_id": "child_protection_provided"
           },
           {
             "key": "psychosocial_support_provided",
             "text": "Psychosocial Support",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "psychosocial_support_provided",
-            "value": "false"
+            "openmrs_entity_id": "psychosocial_support_provided"
           },
           {
             "key": "economic_strengthening_provided",
             "text": "Economic Strengthening",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "economic_strengthening_provided",
-            "value": "false"
+            "openmrs_entity_id": "economic_strengthening_provided"
           },
           {
-            "key": "other_services_provided",
+            "key": "other",
             "text": "Others",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "other_services_provided",
-            "value": "false"
+            "openmrs_entity_id": "other"
           },
           {
             "key": "no_referrals_provided",
             "text": "No referrals sent",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_referrals_provided",
-            "value": "false"
+            "openmrs_entity_id": "no_referrals_provided"
           }
         ],
         "v_required": {
           "value": "true",
           "err": "Please select at least one referral provided"
+        }
+      },
+      {
+        "key": "other_referral_provided",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_referral_provided",
+        "type": "edit_text",
+        "hint": "Specify other referrals Provided",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "step1:select_referrals_provided": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
         }
       },
       {
@@ -134,30 +152,30 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "support_provided_on_referrals",
+        "exclusive": [
+          "no_support_provided"
+        ],
         "options": [
           {
             "key": "accompanied_to_service",
             "text": "Accompanied to Service",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "accompanied_to_service",
-            "value": "false"
+            "openmrs_entity_id": "accompanied_to_service"
           },
           {
             "key": "assisted_with_transport",
             "text": "Assisted with Transport",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "assisted_with_transport",
-            "value": "false"
+            "openmrs_entity_id": "assisted_with_transport"
           },
           {
             "key": "no_support_provided",
             "text": "No support provided",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_support_provided",
-            "value": "false"
+            "openmrs_entity_id": "no_support_provided"
           }
         ],
         "v_required": {
@@ -171,6 +189,9 @@
         "label": "Select the referrals Completed by client",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
+        "exclusive": [
+          "no_referrals_sent_completed"
+        ],
         "openmrs_entity_id": "referrals_completed_by_client",
         "options": [
           {
@@ -178,69 +199,84 @@
             "text": "Health Related Services",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "health_related_services_completed",
-            "value": "false"
+            "openmrs_entity_id": "health_related_services_completed"
           },
           {
             "key": "nutrition_completed",
             "text": "Nutrition",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "nutrition_completed",
-            "value": "false"
+            "openmrs_entity_id": "nutrition_completed"
           },
           {
             "key": "education_completed",
             "text": "Education",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "education_completed",
-            "value": "false"
+            "openmrs_entity_id": "education_completed"
           },
           {
             "key": "child_protection_completed",
             "text": "Child Protection",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "child_protection_completed",
-            "value": "false"
+            "openmrs_entity_id": "child_protection_completed"
           },
           {
             "key": "psychosocial_support_completed",
             "text": "Psychosocial Support",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "psychosocial_support_completed",
-            "value": "false"
+            "openmrs_entity_id": "psychosocial_support_completed"
           },
           {
             "key": "economic_strengthening_completed",
             "text": "Economic Strengthening",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "economic_strengthening_completed",
-            "value": "false"
+            "openmrs_entity_id": "economic_strengthening_completed"
           },
           {
-            "key": "others_completed",
+            "key": "other",
             "text": "Others",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "others_completed",
-            "value": "false"
+            "openmrs_entity_id": "other"
           },
           {
             "key": "no_referrals_sent_completed",
             "text": "No referrals sent",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_referrals_sent_completed",
-            "value": "false"
+            "openmrs_entity_id": "no_referrals_sent_completed"
           }
         ],
         "v_required": {
           "value": "true",
           "err": "Please select at least one referral completed"
+        }
+      },
+      {
+        "key": "other_referrals_completed_by_client",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_referrals_completed_by_client",
+        "type": "edit_text",
+        "hint": "Specify other referrals Completed by the Client",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "step1:referrals_completed_by_client": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
         }
       }
     ]
