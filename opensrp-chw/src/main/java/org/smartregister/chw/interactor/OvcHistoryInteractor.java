@@ -12,16 +12,14 @@ import org.smartregister.chw.anc.contract.BaseAncMedicalHistoryContract;
 import org.smartregister.chw.anc.domain.Visit;
 import org.smartregister.chw.anc.domain.VisitDetail;
 import org.smartregister.chw.core.CoreBaseAncMedicalHistoryInteractor;
-import org.smartregister.chw.gbv.util.Constants;
 import org.smartregister.chw.domain.SortableVisit;
+import org.smartregister.chw.ovc.util.Constants;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class
-
-GbvMedicalHistoryInteractor extends CoreBaseAncMedicalHistoryInteractor {
+public class OvcHistoryInteractor extends CoreBaseAncMedicalHistoryInteractor {
     public static List<SortableVisit> getVisits(String memberID, String... eventTypes) {
 
         List<Visit> visits = new ArrayList<>();
@@ -56,7 +54,8 @@ GbvMedicalHistoryInteractor extends CoreBaseAncMedicalHistoryInteractor {
     public void getMemberHistory(final String memberID, final Context context, final BaseAncMedicalHistoryContract.InteractorCallBack callBack) {
         final Runnable runnable = () -> {
             String[] eventTypes = new String[]{
-                    Constants.EVENT_TYPE.GBV_HOME_VISIT
+                    Constants.EVENT_TYPE.MVC_SERVICES_VISIT,
+                    Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT,
             };
             List<SortableVisit> visits = getVisits(memberID, eventTypes);
             final List<Visit> all_visits = new ArrayList<>(visits);
