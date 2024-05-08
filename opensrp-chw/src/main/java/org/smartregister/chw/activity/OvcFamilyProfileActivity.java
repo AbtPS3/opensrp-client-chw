@@ -18,9 +18,9 @@ import org.smartregister.chw.core.activity.CoreChildProfileActivity;
 import org.smartregister.chw.core.activity.CoreFamilyProfileActivity;
 import org.smartregister.chw.core.activity.CoreFamilyProfileMenuActivity;
 import org.smartregister.chw.core.activity.CoreFamilyRemoveMemberActivity;
-import org.smartregister.chw.core.utils.ChildDBConstants;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.fragment.FamilyProfileMemberFragment;
+import org.smartregister.chw.fragment.OvcFamilyProfileMemberFragment;
 import org.smartregister.chw.hiv.dao.HivDao;
 import org.smartregister.chw.model.FamilyProfileModel;
 import org.smartregister.chw.pnc.activity.BasePncMemberProfileActivity;
@@ -29,8 +29,8 @@ import org.smartregister.chw.tb.dao.TbDao;
 import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.family.adapter.ViewPagerAdapter;
+import org.smartregister.family.fragment.BaseFamilyProfileMemberFragment;
 import org.smartregister.family.util.Constants;
-import org.smartregister.family.util.Utils;
 import org.smartregister.view.fragment.BaseRegisterFragment;
 
 import java.util.HashMap;
@@ -50,6 +50,7 @@ public class OvcFamilyProfileActivity extends CoreFamilyProfileActivity {
         super.setupViews();
         tvEventDate = findViewById(R.id.textview_event_date);
         tvInterpunct = findViewById(R.id.interpunct);
+        familyFloatingMenu.setVisibility(View.GONE);
     }
 
     @Override
@@ -102,7 +103,7 @@ public class OvcFamilyProfileActivity extends CoreFamilyProfileActivity {
     @Override
     protected ViewPager setupViewPager(ViewPager viewPager) {
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        FamilyProfileMemberFragment profileMemberFragment = (FamilyProfileMemberFragment) FamilyProfileMemberFragment.newInstance(this.getIntent().getExtras());
+        BaseFamilyProfileMemberFragment profileMemberFragment = OvcFamilyProfileMemberFragment.newInstance(this.getIntent().getExtras());
         adapter.addFragment(profileMemberFragment, this.getString(org.smartregister.family.R.string.member).toUpperCase());
         viewPager.setAdapter(adapter);
 
