@@ -56,6 +56,9 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_referrals_provided",
+        "exclusive": [
+          "no_referrals_provided"
+        ],
         "options": [
           {
             "key": "health_related_services_provided",
@@ -134,6 +137,9 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "support_provided_on_referrals",
+        "exclusive": [
+          "no_support_provided"
+        ],
         "options": [
           {
             "key": "accompanied_to_service",
@@ -171,6 +177,9 @@
         "label": "Select the referrals Completed by client",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
+        "exclusive": [
+          "no_referrals_sent_completed"
+        ],
         "openmrs_entity_id": "referrals_completed_by_client",
         "options": [
           {
