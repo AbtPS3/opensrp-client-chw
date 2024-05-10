@@ -115,7 +115,7 @@
         "key": "reasons_of_vulnerability",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
-        "label": "Reason(s) of Vulnerability to the Head of Household",
+        "label": "Reason(s) of vulnerability",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_of_vulnerability",
