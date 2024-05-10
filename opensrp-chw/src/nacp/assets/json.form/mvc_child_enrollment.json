@@ -56,10 +56,6 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "registration_number_of_mvc",
-        "v_numeric": {
-          "value": "true",
-          "err": "Registration number must be numeric"
-        },
         "v_required": {
           "value": "true",
           "err": "Registration number is required"
