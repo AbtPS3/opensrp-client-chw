@@ -1,5 +1,6 @@
 package org.smartregister.chw.activity;
 
+import static com.vijay.jsonwizard.constants.JsonFormConstants.JSON_FORM_KEY.GLOBAL;
 import static org.smartregister.chw.util.Utils.getClientGender;
 import static org.smartregister.chw.util.Utils.updateAgeAndGender;
 
@@ -40,6 +41,7 @@ import org.smartregister.chw.malaria.dao.IccmDao;
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.chw.ovc.OvcLibrary;
 import org.smartregister.chw.ovc.activity.BaseOvcProfileActivity;
+import org.smartregister.chw.ovc.dao.OvcDao;
 import org.smartregister.chw.ovc.domain.MemberObject;
 import org.smartregister.chw.ovc.presenter.BaseOvcProfilePresenter;
 import org.smartregister.chw.ovc.util.Constants;
@@ -74,6 +76,7 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
             JSONObject jsonObject;
             try {
                 jsonObject = OvcJsonFormUtils.getFormAsJson(Constants.FORMS.MVC_HOUSEHOLD_SERVICES);
+                jsonObject.getJSONObject(GLOBAL).put("hasChildrenUnderFive", OvcDao.hasChildrenUnder5(memberObject.getBaseEntityId()));
 
                 String locationId = Context.getInstance().allSharedPreferences().getPreference(AllConstants.CURRENT_LOCATION_ID);
                 OvcJsonFormUtils.getRegistrationForm(jsonObject, memberObject.getBaseEntityId(), locationId);
