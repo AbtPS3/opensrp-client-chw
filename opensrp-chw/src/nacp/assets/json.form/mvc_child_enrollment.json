@@ -192,6 +192,29 @@
         ]
       },
       {
+        "key": "other_reasons_of_vulnerability",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_reasons_of_vulnerability",
+        "type": "edit_text",
+        "hint": "Specify other reasons of vulnerability",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "step1:reasons_of_vulnerability": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
         "key": "type_of_disability",
         "openmrs_entity_parent": "disabilities",
         "openmrs_entity": "concept",
@@ -255,6 +278,29 @@
               {
                 "or": [
                   "disability"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "key": "other_type_of_disability",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_type_of_disability",
+        "type": "edit_text",
+        "hint": "Specify other Type of Disability",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "step1:type_of_disability": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
                 ]
               }
             ]
@@ -508,6 +554,29 @@
         "v_required": {
           "value": "true",
           "err": "Select the Care of Household"
+        }
+      },
+      {
+        "key": "other_care_of_household",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_care_of_household",
+        "type": "edit_text",
+        "hint": "Specify other Care of Household",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "step1:care_of_household": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
         }
       },
       {
