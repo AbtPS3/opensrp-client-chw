@@ -96,10 +96,6 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "birth_certificate_number",
-        "v_numeric": {
-          "value": "true",
-          "err": "Birth certificate number must be numeric"
-        },
         "relevance": {
           "step1:mvc_has_birth_certificate": {
             "type": "string",
