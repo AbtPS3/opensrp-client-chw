@@ -110,12 +110,42 @@
             "openmrs_entity_id": "chronic_disease"
           },
           {
+            "key": "other",
+            "text": "Other",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          },
+          {
             "key": "none",
             "text": "None",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none"
           }
         ]
+      },
+      {
+        "key": "other_type_of_vulnerability",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_type_of_vulnerability",
+        "type": "edit_text",
+        "hint": "Specify other type of vulnerability",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "step1:type_of_vulnerability": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
+        }
       },
       {
         "key": "client_type",
