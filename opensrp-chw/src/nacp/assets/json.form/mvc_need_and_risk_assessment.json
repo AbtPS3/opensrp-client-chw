@@ -49,48 +49,141 @@
     "title": "Need & Risk Assessment",
     "fields": [
       {
-        "key": "select_the_client_need",
+        "key": "has_need_assessment_been_conducted",
+        "type": "native_radio",
+        "label": "Has Need Assessment been conducted?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "select_the_client_need",
+        "openmrs_entity_id": "has_need_assessment_been_conducted",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ]
+      },
+      {
+        "key": "client_needs",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "client_needs",
         "type": "check_box",
         "combine_checkbox_option_values": true,
         "label": "Select the client's need",
+        "exclusive": [
+          "none"
+        ],
         "options": [
           {
             "key": "health_and_nutrition",
             "text": "Health and Nutrition",
-            "value": "false"
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "health_and_nutrition"
           },
           {
             "key": "housing_and_care",
             "text": "Housing and Care",
-            "value": "false"
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "housing_and_care"
           },
           {
             "key": "security_and_safety",
             "text": "Security and Safety",
-            "value": "false"
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "security_and_safety"
           },
           {
             "key": "psychological_and_emotional_support",
             "text": "Psychological and Emotional Support",
-            "value": "false"
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "psychological_and_emotional_support"
           },
           {
             "key": "education_and_life_skills",
             "text": "Education and Life Skills",
-            "value": "false"
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "education_and_life_skills"
           },
           {
             "key": "household_and_economic_strengthening",
             "text": "Household and Economic Strengthening",
-            "value": "false"
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "household_and_economic_strengthening"
           },
           {
-            "key": "others",
-            "text": "Others",
-            "value": "false"
+            "key": "other",
+            "text": "Other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          },
+          {
+            "key": "none",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none",
+            "text": "None"
+          }
+        ],
+        "relevance": {
+          "step1:has_need_assessment_been_conducted": {
+            "type": "string",
+            "ex": "equalTo(., \"yes\")"
+          }
+        }
+      },
+      {
+        "key": "other_client_needs",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_client_needs",
+        "type": "edit_text",
+        "hint": "Specify other Client Needs",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "step1:client_needs": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "key": "has_risk_assessment_been_conducted",
+        "type": "native_radio",
+        "label": "Has Risk Assessment been conducted?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_risk_assessment_been_conducted",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
           }
         ]
       },
@@ -102,28 +195,70 @@
         "type": "check_box",
         "combine_checkbox_option_values": true,
         "label": "Has the child experienced VAC?",
+        "exclusive": [
+          "none"
+        ],
         "options": [
           {
             "key": "physical",
-            "text": "Physical"
+            "text": "Physical",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "physical"
           },
           {
             "key": "sexual",
-            "text": "Sexual"
+            "text": "Sexual",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "sexual"
           },
           {
             "key": "neglect",
-            "text": "Neglect"
+            "text": "Neglect",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "neglect"
           },
           {
             "key": "exploitation",
-            "text": "Exploitation"
+            "text": "Exploitation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "exploitation"
           },
           {
             "key": "none",
-            "text": "None"
+            "text": "None",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
           }
-        ]
+        ],
+        "relevance": {
+          "step1:has_risk_assessment_been_conducted": {
+            "type": "string",
+            "ex": "equalTo(., \"yes\")"
+          }
+        }
+      },
+      {
+        "key": "refer_to_dcms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Refer the Child to DCMS",
+        "toaster_type": "problem",
+        "relevance": {
+          "step1:has_the_child_experienced_vac": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "physical",
+                  "sexual",
+                  "neglect",
+                  "exploitation"
+                ]
+              }
+            ]
+          }
+        }
       },
       {
         "key": "is_the_child_in_conflict_and_contact_with_the_law",

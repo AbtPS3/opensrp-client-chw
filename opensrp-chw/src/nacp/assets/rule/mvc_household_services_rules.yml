@@ -1,0 +1,22 @@
+---
+name: step1_other_referrals
+description: Only show specify other referrals if other is selected
+priority: 1
+condition: "step1_referrals.contains('other')"
+actions:
+  - "isRelevant = true"
+---
+name: step1_other_caregiver_referrals_completed
+description: Only show specify edit text other caregiver referrals has been checked
+priority: 1
+condition: "step1_caregiver_referrals_completed.contains('other')"
+actions:
+  - "isRelevant = true"
+---
+name: step1_parenting_caregivers_with_children
+description: Parenting (for Caregivers with Children of <5 years Old) Question should only be visible if the household has any child with less than 5 years
+priority: 1
+condition: "global_hasChildrenUnderFive"
+actions:
+  - "isRelevant = true"
+
