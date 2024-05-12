@@ -46,6 +46,8 @@
       "value": ""
     }
   },
+  "global": {
+  },
   "step1": {
     "title": "HIV Risk Assessment",
     "fields": [
@@ -58,25 +60,32 @@
         "openmrs_entity_id": "child_ever_tested_for_hiv",
         "options": [
           {
-            "key": "yes_tested",
+            "key": "yes",
             "text": "Yes",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes_tested"
+            "openmrs_entity_id": "yes"
           },
           {
-            "key": "not_tested",
+            "key": "no",
             "text": "No",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "not_tested"
+            "openmrs_entity_id": "no"
           },
           {
-            "key": "unknown_tested",
+            "key": "unknown",
             "text": "Unknown",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "unknown_tested"
+            "openmrs_entity_id": "unknown"
+          },
+          {
+            "key": "prefer_not_to_answer",
+            "text": "Prefers not to answer",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "prefer_not_to_answer"
           }
         ],
         "v_required": {
@@ -93,25 +102,25 @@
         "openmrs_entity_id": "hiv_results",
         "options": [
           {
-            "key": "positive_result",
+            "key": "positive",
             "text": "Positive",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "positive_result"
+            "openmrs_entity_id": "positive"
           },
           {
-            "key": "negative_result",
+            "key": "negative",
             "text": "Negative",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "negative_result"
+            "openmrs_entity_id": "negative"
           },
           {
-            "key": "do_not_know_result",
+            "key": "unknown",
             "text": "Do not know",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "do_not_know_result"
+            "openmrs_entity_id": "unknown"
           },
           {
             "key": "do_not_want_to_answer",
@@ -121,6 +130,38 @@
             "openmrs_entity_id": "do_not_want_to_answer"
           }
         ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_hiv_risk_assessment_relevance_rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ctc_number",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ctc_number",
+        "type": "mask_edit_text",
+        "mask": "##-##-####-######",
+        "mask_hint": "12345678912345",
+        "allowed_chars": "0123456789",
+        "hint": "CTC Number",
+        "edit_type": "number",
+        "v_regex": {
+          "value": "(\\d{2}-\\d{2}-\\d{4}-\\d{6})?",
+          "err": "CTC number should be of the format (XX-XX-XXXX-XXXXXX)"
+        },
+        "v_max_length": {
+          "value": "17",
+          "is_fixed_size": "true",
+          "err": "Please enter a valid CTC Number"
+        },
+        "v_required": {
+          "value": true,
+          "err": "Please enter a valid CTC Number"
+        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {

@@ -1,5 +1,7 @@
 {
   "count": "1",
+  "global": {
+  },
   "encounter_type": "Health Care & Nutrition",
   "entity_id": "",
   "relational_id": "",
@@ -79,6 +81,13 @@
             "openmrs_entity_id": "unknown_vaccinated"
           }
         ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_healthcare_and_nutrition.yml"
+            }
+          }
+        },
         "v_required": {
           "value": "true",
           "err": "Please indicate if the child has received all the required vaccinations"
@@ -122,7 +131,7 @@
       {
         "key": "health_care_service_provided",
         "type": "check_box",
-        "label": "Select Health Care Services provided",
+        "label": "Select the health services provided",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "health_care_service_provided",
@@ -163,18 +172,18 @@
             "openmrs_entity_id": "art_adherence_counseling"
           },
           {
-            "key": "hiv_prevention_education",
-            "text": "HIV prevention education",
-            "openmrs_entity_parent": "",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "hiv_prevention_education"
-          },
-          {
             "key": "hiv_risk_assessment",
             "text": "HIV risk assessment",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_risk_assessment"
+          },
+          {
+            "key": "hiv_prevention_education",
+            "text": "HIV prevention education",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_prevention_education"
           }
         ],
         "v_required": {

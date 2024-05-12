@@ -1,0 +1,8 @@
+---
+name: step1_child_received_vaccinations
+description: Only show the question "Did the child receive all Required Vaccination" if the client is under 5 years old
+priority: 1
+condition: "global_age < 5"
+actions:
+  - "isRelevant = true"
+

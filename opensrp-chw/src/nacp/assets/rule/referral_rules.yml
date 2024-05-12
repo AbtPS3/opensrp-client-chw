@@ -1,0 +1,8 @@
+---
+name: step1_support_provided_on_referrals
+description: Support provided to Child on Referrals should not be visible if No Referrals Were Sent is selected in Select Referrals provided to the client
+priority: 1
+condition: "!step1_select_referrals_provided.contains('no_referrals_provided')"
+actions:
+  - "isRelevant = true"
+

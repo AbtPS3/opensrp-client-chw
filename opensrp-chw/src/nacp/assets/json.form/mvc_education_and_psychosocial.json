@@ -3,6 +3,7 @@
   "encounter_type": "Education & Psychosocial",
   "entity_id": "",
   "relational_id": "",
+  "global": {},
   "metadata": {
     "start": {
       "openmrs_entity_parent": "",
@@ -109,16 +110,23 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Selecting an option for education and vocational training is required"
+          "err": "Selecting the clients Education and Vocational Training"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
         }
       },
       {
-        "key": "select_ecd_psychosocial_support",
+        "key": "select_ecd_psychosocial_support_less_than_5",
         "type": "check_box",
         "label": "Select ECD & Psychosocial Support provided",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "select_ecd_psychosocial_support",
+        "openmrs_entity_id": "select_ecd_psychosocial_support_less_than_5",
         "options": [
           {
             "key": "attended_ecd_centre",
@@ -145,9 +153,68 @@
             "value": "false"
           }
         ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
+        },
         "v_required": {
           "value": "true",
           "err": "Selecting at least one option for ECD & Psychosocial Support is required"
+        }
+      },
+      {
+        "key": "select_ecd_psychosocial_support_greater_than_5",
+        "type": "check_box",
+        "label": "Select ECD & Psychosocial Support provided",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_ecd_psychosocial_support_greater_than_5",
+        "options": [
+          {
+            "key": "children_attended_childrens_clubs",
+            "text": "Children attended children's clubs.",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_attended_childrens_clubs",
+            "value": "false"
+          },
+          {
+            "key": "children_attended_teen_clubs",
+            "text": "Children attended teen clubs.",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_attended_teen_clubs",
+            "value": "false"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Selecting at least one option for ECD & Psychosocial Support is required"
+        }
+      },
+      {
+        "key": "ecd_psychosocial_support",
+        "type": "hidden",
+        "editable": false,
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ecd_psychosocial_support",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
         }
       }
     ]
