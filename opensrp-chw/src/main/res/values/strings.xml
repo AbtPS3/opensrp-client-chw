@@ -492,4 +492,8 @@
     <string name="malnutrition_screening">Malnutrition/Anemia screening</string>
     <string name="map_cue">Landmark/Description of house location</string>
     <string name="street_name">Street / Hamlet Name</string>
+    <string name="mvc_registrations_summary_title">Registrations Summary</string>
+    <string name="mvc_children_registration_details_title">Children Registration Details</string>
+    <string name="mvc_services_provided_to_the_households_title">Services Provided to the Households</string>
+    <string name="mvc_services_provided_to_the_children_title">Services Provided to the Children</string>
 </resources>

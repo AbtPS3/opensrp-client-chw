@@ -13,10 +13,10 @@ import org.smartregister.chw.fragment.OvcRegisterFragment;
 import org.smartregister.chw.ovc.util.Constants;
 import org.smartregister.view.fragment.BaseRegisterFragment;
 
-public class OvcRegisterActivity extends CoreOvcRegisterActivity {
+public class MvcRegisterActivity extends CoreOvcRegisterActivity {
 
     public static void startRegistration(Activity activity, String baseEntityId, String formName) {
-        Intent intent = new Intent(activity, OvcRegisterActivity.class);
+        Intent intent = new Intent(activity, MvcRegisterActivity.class);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.BASE_ENTITY_ID, baseEntityId);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.ACTION, Constants.ACTIVITY_PAYLOAD_TYPE.REGISTRATION);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.OVC_FORM_NAME, formName);

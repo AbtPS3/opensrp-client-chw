@@ -22,8 +22,6 @@ import org.smartregister.util.Utils;
 import org.smartregister.view.activity.SecuredActivity;
 import org.smartregister.view.customcontrols.CustomFontTextView;
 
-import java.util.Arrays;
-
 public class InAppReportsActivity extends SecuredActivity implements View.OnClickListener {
     protected CustomFontTextView toolBarTextView;
 
@@ -42,6 +40,8 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
     protected ConstraintLayout sbcReports;
 
     protected ConstraintLayout gbvReports;
+
+    protected ConstraintLayout mvcReports;
 
     @Override
     protected void onCreation() {
@@ -65,6 +65,7 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
         iccmReports = findViewById(R.id.iccm_reports);
         sbcReports = findViewById(R.id.sbc_reports);
         gbvReports = findViewById(R.id.gbv_reports);
+        mvcReports = findViewById(R.id.mvc_reports);
 
         AllSharedPreferences allSharedPreferences = Utils.getAllSharedPreferences();
         SharedPreferences preferences = allSharedPreferences.getPreferences();
@@ -104,6 +105,12 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
                     if (ChwApplication.getApplicationFlavor().hasCdp()) {
                         condomDistributionReports.setVisibility(View.VISIBLE);
                     }
+                    if (ChwApplication.getApplicationFlavor().hasGbv()) {
+                        gbvReports.setVisibility(View.VISIBLE);
+                    }
+                    if (ChwApplication.getApplicationFlavor().hasMvc()) {
+                        mvcReports.setVisibility(View.VISIBLE);
+                    }
                     break;
             }
         } else {
@@ -134,6 +141,10 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
             if (ChwApplication.getApplicationFlavor().hasCdp()) {
                 condomDistributionReports.setVisibility(View.VISIBLE);
             }
+
+            if (ChwApplication.getApplicationFlavor().hasMvc()) {
+                mvcReports.setVisibility(View.VISIBLE);
+            }
         }
 
 
@@ -144,6 +155,7 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
         iccmReports.setOnClickListener(this);
         sbcReports.setOnClickListener(this);
         gbvReports.setOnClickListener(this);
+        mvcReports.setOnClickListener(this);
     }
 
     public void setUpToolbar() {
@@ -200,6 +212,10 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
         }
         if (id == R.id.gbv_reports) {
             Intent intent = new Intent(this, GbvReportsActivity.class);
+            startActivity(intent);
+        }
+        if (id == R.id.mvc_reports) {
+            Intent intent = new Intent(this, MvcReportsActivity.class);
             startActivity(intent);
         }
     }

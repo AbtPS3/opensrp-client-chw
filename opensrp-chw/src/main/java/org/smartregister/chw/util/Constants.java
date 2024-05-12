@@ -217,13 +217,20 @@ public class Constants extends CoreConstants {
 
         public interface ReportTypes {
            String CBHS_REPORT = "cbhs_report";
+
            String MOTHER_CHAMPION_REPORT = "mother_champion_report";
+
            String CONDOM_DISTRIBUTION_REPORT = "condom_distribution_report";
+
            String AGYW_REPORT = "agyw_report";
+
            String ICCM_REPORT = "iccm_report";
+
            String SBC_REPORT = "sbc_report";
 
            String GBV_REPORT = "gbv_report";
+
+           String MVC_REPORT = "mvc_report";
         }
 
         public interface CDPReportKeys {
@@ -238,6 +245,14 @@ public class Constants extends CoreConstants {
             String MALARIA_MONTHLY_REPORT = "iccm-malaria-monthly-report";
         }
 
+        public interface MvcReportKeys {
+            String REGISTRATION_SUMMARY = "mvc-registration-summary-report";
+            String CHILDREN_REGISTRATION_DETAILS = "mvc-children-registration-details-report";
+
+            String SERVICES_PROVIDED_TO_HOUSEHOLDS = "mvc-services-provided-to-households-report";
+            String SERVICES_PROVIDED_TO_CHILDREN = "mvc-services-provided-to-children-report";
+        }
+
         public interface ReportPaths {
             String CBHS_REPORT_PATH = "cbhs-taarifa-ya-mwezi";
             String MOTHER_CHAMPION_REPORT_PATH = "mother-champion-report";
@@ -248,6 +263,14 @@ public class Constants extends CoreConstants {
             String MALARIA_MONTHLY_REPORT_PATH = "iccm_reports/iccm-malaria-monthly-report";
             String SBC_REPORT_PATH = "sbc-report";
             String GBV_REPORT_PATH = "gbv-report";
+
+            String MVC_REGISTRATION_SUMMARY_REPORT = "mvc_reports/";
+
+            String MVC_CHILDREN_REGISTRATION_DETAILS_REPORT = "mvc_reports/";
+
+            String MVC_SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT = "mvc_reports/";
+
+            String MVC_SERVICES_PROVIDED_TO_CHILDREN_REPORT = "mvc_reports/mvc-services-provided-to-children-report";
         }
     }
 }

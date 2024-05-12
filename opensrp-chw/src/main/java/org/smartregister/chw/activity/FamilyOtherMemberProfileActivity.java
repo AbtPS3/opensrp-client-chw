@@ -198,7 +198,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
                 menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
             }
 
-            if (ChwApplication.getApplicationFlavor().hasOvc()) {
+            if (ChwApplication.getApplicationFlavor().hasMvc()) {
                 menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(baseEntityId));
             }
         }
@@ -422,9 +422,9 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         int age = Utils.getAgeFromDate(dob);
 
         if (familyHead.equals(baseEntityId))
-            OvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_HEAD_OF_HOUSEHOLD_ENROLLMENT);
+            MvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_HEAD_OF_HOUSEHOLD_ENROLLMENT);
         else if (age < 18) {
-            OvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);
+            MvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);
         }
     }
 

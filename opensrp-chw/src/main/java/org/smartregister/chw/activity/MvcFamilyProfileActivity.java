@@ -36,7 +36,7 @@ import org.smartregister.view.fragment.BaseRegisterFragment;
 import java.util.HashMap;
 import java.util.Objects;
 
-public class OvcFamilyProfileActivity extends CoreFamilyProfileActivity {
+public class MvcFamilyProfileActivity extends CoreFamilyProfileActivity {
     private TextView tvEventDate;
     private TextView tvInterpunct;
 
@@ -116,7 +116,7 @@ public class OvcFamilyProfileActivity extends CoreFamilyProfileActivity {
 
     @Override
     protected Class<?> getFamilyOtherMemberProfileActivityClass() {
-        return OvcProfileActivity.class;
+        return MvcProfileActivity.class;
     }
 
     @Override
@@ -194,7 +194,7 @@ public class OvcFamilyProfileActivity extends CoreFamilyProfileActivity {
     public void goToProfileActivity(View view, Bundle fragmentArguments) {
         if (view.getTag() instanceof CommonPersonObjectClient) {
             CommonPersonObjectClient commonPersonObjectClient = (CommonPersonObjectClient) view.getTag();
-            OvcProfileActivity.startMe(this, commonPersonObjectClient.getCaseId());
+            MvcProfileActivity.startMe(this, commonPersonObjectClient.getCaseId());
         }
     }
 }

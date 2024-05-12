@@ -75,6 +75,25 @@ public class ChwWebAppInterface {
             return ReportUtils.GbvReports.computeClientsReports(ReportUtils.getReportDate());
         }
 
+        if (reportType.equalsIgnoreCase(Constants.ReportConstants.ReportTypes.MVC_REPORT)){
+            switch (key) {
+                case Constants.ReportConstants.MvcReportKeys.REGISTRATION_SUMMARY:
+                    ReportUtils.setPrintJobName("MVC Registration Summary - " + ReportUtils.getReportPeriod() + ".pdf");
+                    return ReportUtils.MvcReports.computeRegistrationSummaryReports(ReportUtils.getReportDate());
+                case Constants.ReportConstants.MvcReportKeys.CHILDREN_REGISTRATION_DETAILS:
+                    ReportUtils.setPrintJobName("MVC Children Registration Details - " + ReportUtils.getReportPeriod() + ".pdf");
+                    return ReportUtils.MvcReports.computeChildrenRegistrationDetailsReports(ReportUtils.getReportDate());
+                case Constants.ReportConstants.MvcReportKeys.SERVICES_PROVIDED_TO_HOUSEHOLDS:
+                    ReportUtils.setPrintJobName("MVC Services Provided To Households - " + ReportUtils.getReportPeriod() + ".pdf");
+                    return ReportUtils.MvcReports.computeServicesProvidedToHouseholdsReports(ReportUtils.getReportDate());
+                case Constants.ReportConstants.MvcReportKeys.SERVICES_PROVIDED_TO_CHILDREN:
+                    ReportUtils.setPrintJobName("MVC Services Provided To Children -" + ReportUtils.getReportPeriod() + ".pdf");
+                    return ReportUtils.MvcReports.computeServicesProvidedToChildrenReports(ReportUtils.getReportDate());
+                default:
+                    return "";
+            }
+        }
+
         return "";
     }
 

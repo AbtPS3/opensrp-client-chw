@@ -181,7 +181,7 @@ public class ChildProfileActivity extends CoreChildProfileActivity implements On
     }
 
     protected void startOvcRegistration() {
-            OvcRegisterActivity.startRegistration(ChildProfileActivity.this, memberObject.getBaseEntityId(), org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);
+            MvcRegisterActivity.startRegistration(ChildProfileActivity.this, memberObject.getBaseEntityId(), org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);
     }
 
     protected void startIntegratedCommunityCaseManagementEnrollment() {
@@ -213,7 +213,7 @@ public class ChildProfileActivity extends CoreChildProfileActivity implements On
             menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(memberObject.getBaseEntityId()));
         }
 
-        if (ChwApplication.getApplicationFlavor().hasOvc()) {
+        if (ChwApplication.getApplicationFlavor().hasMvc()) {
             menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(memberObject.getBaseEntityId()));
         }
 

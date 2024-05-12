@@ -60,7 +60,7 @@ import java.util.Map;
 
 import timber.log.Timber;
 
-public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
+public class MvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
     private static MemberObject ovcMemberObject;
 
     private final Flavor flavor = new OvcHistoryActivityFlv();
@@ -68,7 +68,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
     private ProgressBar progressBar;
 
     public static void startMe(Activity activity, MemberObject memberObject) {
-        Intent intent = new Intent(activity, OvcMedicalHistoryActivity.class);
+        Intent intent = new Intent(activity, MvcMedicalHistoryActivity.class);
         ovcMemberObject = memberObject;
         activity.startActivity(intent);
     }
@@ -128,7 +128,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                     finish();
                 }
             } catch (Exception e) {
-                Timber.e(e, "OvcMedicalHistoryActivity -- > onActivityResult");
+                Timber.e(e, "MvcMedicalHistoryActivity -- > onActivityResult");
             }
         }
     }
@@ -238,7 +238,7 @@ public class OvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                                 if (visit.getVisitType().equals(Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT)) {
                                     startFormForEdit(R.string.ovc_edit_home_visit, Constants.FORMS.MVC_HOUSEHOLD_SERVICES, visit.getBaseEntityId(), visit.getVisitId(), context);
                                 } else {
-                                    OvcVisitActivity.startMe(OvcMedicalHistoryActivity.this, ovcMemberObject.getBaseEntityId(), true);
+                                    MvcVisitActivity.startMe(MvcMedicalHistoryActivity.this, ovcMemberObject.getBaseEntityId(), true);
                                 }
                             } catch (Exception e) {
                                 Timber.e(e);

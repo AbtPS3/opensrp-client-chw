@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="12" rowspan="2">[R]Education and Vocational Training</th>
+            <th colspan="6" rowspan="2">[S] ECD & Psychosocial Support</th>
+            <th colspan="4" rowspan="2">[T] MVC<5 years Received all Required Vaccination</th>
+            <th colspan="6" rowspan="2">[U] Nutritional Status Assessment (MUAC)</th>
+            <th colspan="14" rowspan="2">[V] Health Care</th>
+            <th colspan="10" rowspan="2">[W] Child Protection</th>
+            <th colspan="32">[X] Child Referrals</th>
+            <th colspan="10" rowspan="2">[Y] Status in Program</th>
+        </tr>
+        <tr>
+            <th colspan="14">[X1] Number of Child Referrals, by Type</th>
+            <th colspan="14">[X2] Number of Child Referrals Completed, by Type</th>
+            <th colspan="4">[X3] Support provided to Child on Referrals</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Age & sex category</th>
+            <th colspan="2">Number of children enrolled in school.</th>
+            <th colspan="2">Number of children missed school for three or more days consecutively in a month.</th>
+            <th colspan="2">Number of children linked to education support.</th>
+            <th colspan="2">Number of children supported to attend vocational training.</th>
+            <th colspan="2">Number of children received business start-up kit.</th>
+            <th colspan="2">Number of children linked to mainstreamed education program (MEMKWA).</th>
+            <th colspan="2">Number of children (<5 years) attended ECD centre.</th>
+            <th colspan="2">Number of children attended children's clubs.</th>
+            <th colspan="2">Number of children attended teen clubs.</th>
+            <th colspan="2">Number of MVC < 5 years received required Vaccination.</th>
+            <th colspan="2">Number of MVC < 5 years who did not receive required Vaccination.</th>
+            <th colspan="2">Number of MVC with Severe Malnutrition.</th>
+            <th colspan="2">Number of MVC with Moderate Malnutrition.</th>
+            <th colspan="2">Number of MVC not Malnourished.</th>
+            <th colspan="2">Number of Children supported to join CHF/TIKA.</th>
+            <th colspan="2">Number of Children received HIV prevention counseling services.</th>
+            <th colspan="2">Number of Children received disclosure support.</th>
+            <th colspan="2">Number of Children linked to HIV support group.</th>
+            <th colspan="2">Number of Children received ART adherence counseling.</th>
+            <th colspan="2">Number of Children received HIV risk assessment.</th>
+            <th colspan="2">Number of Children provided with HIV prevention education.</th>
+            <th colspan="2">Number of Children supported to get birth certificates.</th>
+            <th colspan="2">Number of Children provided with emergency care and support services.</th>
+            <th colspan="2">Number of Children linked with social welfare office.</th>
+            <th colspan="2">Number of Children linked with MVCC/Child protection team.</th>
+            <th colspan="2">Number of Children provided with general child protection awareness creation.</th>
+            <th colspan="2">Health Related Services.</th>
+            <th colspan="2">Nutrition.</th>
+            <th colspan="2">Education.</th>
+            <th colspan="2">Child Protection.</th>
+            <th colspan="2">Psychosocial Support.</th>
+            <th colspan="2">Economic Strengthening.</th>
+            <th colspan="2">Others.</th>
+            <th colspan="2">Health Related Services.</th>
+            <th colspan="2">Nutrition.</th>
+            <th colspan="2">Education.</th>
+            <th colspan="2">Child Protection.</th>
+            <th colspan="2">Psychosocial Support.</th>
+            <th colspan="2">Economic Strengthening.</th>
+            <th colspan="2">Others.</th>
+            <th colspan="2">Number of Children Referrals Accompanied to Service(s).</th>
+            <th colspan="2">Number of Children Referrals Assisted with Transport</th>
+            <th colspan="2">Number of Active MVC.</th>
+            <th colspan="2">Number of MVC Graduated.</th>
+            <th colspan="2">Number of MVC Transferred.</th>
+            <th colspan="2">Number of MVC Exited Without Graduation.</th>
+            <th colspan="2">Number of MVC Died.</th>
+        </tr>
+        <tr>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+            <th>M</th>
+            <th>F</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><1</td>
+            <!-- Education and Vocational Training Data -->
+            <td id="mvc-<1-enrolled-in-school-M"></td>
+            <td id="mvc-<1-enrolled-in-school-F"></td>
+            <td id="mvc-<1-missed-school-M"></td>
+            <td id="mvc-<1-missed-school-F"></td>
+            <td id="mvc-<1-linked-to-education-support-M"></td>
+            <td id="mvc-<1-linked-to-education-support-F"></td>
+            <td id="mvc-<1-supported-vocational-training-M"></td>
+            <td id="mvc-<1-supported-vocational-training-F"></td>
+            <td id="mvc-<1-received-business-kit-M"></td>
+            <td id="mvc-<1-received-business-kit-F"></td>
+            <td id="mvc-<1-linked-to-memkwa-M"></td>
+            <td id="mvc-<1-linked-to-memkwa-F"></td>
+
+            <!-- ECD & Psychosocial Support -->
+            <td id="mvc-<1-attended-ecd-M"></td>
+            <td id="mvc-<1-attended-ecd-F"></td>
+            <td id="mvc-<1-attended-childrens-clubs-M"></td>
+            <td id="mvc-<1-attended-childrens-clubs-F"></td>
+            <td id="mvc-<1-attended-teen-clubs-M"></td>
+            <td id="mvc-<1-attended-teen-clubs-F"></td>
+
+            <!-- MVC<5 years Vaccination -->
+            <td id="mvc-<1-vaccinated-M"></td>
+            <td id="mvc-<1-vaccinated-F"></td>
+            <td id="mvc-<1-not-vaccinated-M"></td>
+            <td id="mvc-<1-not-vaccinated-F"></td>
+
+            <!-- Nutritional Status -->
+            <td id="mvc-<1-severe-malnutrition-M"></td>
+            <td id="mvc-<1-severe-malnutrition-F"></td>
+            <td id="mvc-<1-moderate-malnutrition-M"></td>
+            <td id="mvc-<1-moderate-malnutrition-F"></td>
+            <td id="mvc-<1-not-malnourished-M"></td>
+            <td id="mvc-<1-not-malnourished-F"></td>
+
+            <!-- Health Care -->
+            <td id="mvc-<1-joined-chf-tika-M"></td>
+            <td id="mvc-<1-joined-chf-tika-F"></td>
+            <td id="mvc-<1-hiv-prevention-counseling-M"></td>
+            <td id="mvc-<1-hiv-prevention-counseling-F"></td>
+            <td id="mvc-<1-disclosure-support-M"></td>
+            <td id="mvc-<1-disclosure-support-F"></td>
+            <td id="mvc-<1-linked-hiv-support-group-M"></td>
+            <td id="mvc-<1-linked-hiv-support-group-F"></td>
+            <td id="mvc-<1-art-adherence-counseling-M"></td>
+            <td id="mvc-<1-art-adherence-counseling-F"></td>
+            <td id="mvc-<1-hiv-risk-assessment-M"></td>
+            <td id="mvc-<1-hiv-risk-assessment-F"></td>
+            <td id="mvc-<1-hiv-prevention-education-M"></td>
+            <td id="mvc-<1-hiv-prevention-education-F"></td>
+
+            <!-- Child Protection -->
+            <td id="mvc-<1-supported-birth-certificates-M"></td>
+            <td id="mvc-<1-supported-birth-certificates-F"></td>
+            <td id="mvc-<1-emergency-care-M"></td>
+            <td id="mvc-<1-emergency-care-F"></td>
+            <td id="mvc-<1-linked-social-welfare-M"></td>
+            <td id="mvc-<1-linked-social-welfare-F"></td>
+            <td id="mvc-<1-linked-mvcc-M"></td>
+            <td id="mvc-<1-linked-mvcc-F"></td>
+            <td id="mvc-<1-child-protection-awareness-M"></td>
+            <td id="mvc-<1-child-protection-awareness-F"></td>
+
+            <!-- Child Referrals -->
+            <td id="mvc-<1-referrals-health-services-M"></td>
+            <td id="mvc-<1-referrals-health-services-F"></td>
+            <td id="mvc-<1-referrals-nutrition-M"></td>
+            <td id="mvc-<1-referrals-nutrition-F"></td>
+            <td id="mvc-<1-referrals-education-M"></td>
+            <td id="mvc-<1-referrals-education-F"></td>
+            <td id="mvc-<1-referrals-child-protection-M"></td>
+            <td id="mvc-<1-referrals-child-protection-F"></td>
+            <td id="mvc-<1-referrals-psychosocial-M"></td>
+            <td id="mvc-<1-referrals-psychosocial-F"></td>
+            <td id="mvc-<1-referrals-economic-strengthening-M"></td>
+            <td id="mvc-<1-referrals-economic-strengthening-F"></td>
+            <td id="mvc-<1-referrals-others-M"></td>
+            <td id="mvc-<1-referrals-others-F"></td>
+
+            <td id="mvc-<1-referrals-completed-health-services-M"></td>
+            <td id="mvc-<1-referrals-completed-health-services-F"></td>
+            <td id="mvc-<1-referrals-completed-nutrition-M"></td>
+            <td id="mvc-<1-referrals-completed-nutrition-F"></td>
+            <td id="mvc-<1-referrals-completed-education-M"></td>
+            <td id="mvc-<1-referrals-completed-education-F"></td>
+            <td id="mvc-<1-referrals-completed-child-protection-M"></td>
+            <td id="mvc-<1-referrals-completed-child-protection-F"></td>
+            <td id="mvc-<1-referrals-completed-psychosocial-M"></td>
+            <td id="mvc-<1-referrals-completed-psychosocial-F"></td>
+            <td id="mvc-<1-referrals-completed-economic-strengthening-M"></td>
+            <td id="mvc-<1-referrals-completed-economic-strengthening-F"></td>
+            <td id="mvc-<1-referrals-completed-others-M"></td>
+            <td id="mvc-<1-referrals-completed-others-F"></td>
+
+            <td id="mvc-<1-referral-accompanied-to-services-M"></td>
+            <td id="mvc-<1-referral-accompanied-to-services-F"></td>
+
+            <td id="mvc-<1-referral-assisted-with-transport-M"></td>
+            <td id="mvc-<1-referral-assisted-with-transport-F"></td>
+
+            <!-- Status in Program -->
+            <td id="mvc-<1-active-MVC-M"></td>
+            <td id="mvc-<1-active-MVC-F"></td>
+            <td id="mvc-<1-graduated-MVC-M"></td>
+            <td id="mvc-<1-graduated-MVC-F"></td>
+            <td id="mvc-<1-transferred-MVC-M"></td>
+            <td id="mvc-<1-transferred-MVC-F"></td>
+            <td id="mvc-<1-exited-without-graduation-M"></td>
+            <td id="mvc-<1-exited-without-graduation-F"></td>
+            <td id="mvc-<1-died-MVC-M"></td>
+            <td id="mvc-<1-died-MVC-F"></td>
+        </tr>
+        <tr>
+            <td>1-4</td>
+            <td id="mvc-1-4-number-of-children-enrolled-in-school-M"></td>
+            <td id="mvc-1-4-number-of-children-enrolled-in-school-F"></td>
+            <td id="mvc-1-4-missed-school-M"></td>
+            <td id="mvc-1-4-missed-school-F"></td>
+            <td id="mvc-1-4-linked-to-education-support-M"></td>
+            <td id="mvc-1-4-linked-to-education-support-F"></td>
+            <td id="mvc-1-4-supported-vocational-training-M"></td>
+            <td id="mvc-1-4-supported-vocational-training-F"></td>
+            <td id="mvc-1-4-received-business-kit-M"></td>
+            <td id="mvc-1-4-received-business-kit-F"></td>
+            <td id="mvc-1-4-linked-to-memkwa-M"></td>
+            <td id="mvc-1-4-linked-to-memkwa-F"></td>
+
+            <!-- ECD & Psychosocial Support -->
+            <td id="mvc-1-4-attended-ecd-M"></td>
+            <td id="mvc-1-4-attended-ecd-F"></td>
+            <td id="mvc-1-4-attended-childrens-clubs-M"></td>
+            <td id="mvc-1-4-attended-childrens-clubs-F"></td>
+            <td id="mvc-1-4-attended-teen-clubs-M"></td>
+            <td id="mvc-1-4-attended-teen-clubs-F"></td>
+
+            <!-- MVC<5 years Vaccination -->
+            <td id="mvc-1-4-vaccinated-M"></td>
+            <td id="mvc-1-4-vaccinated-F"></td>
+            <td id="mvc-1-4-not-vaccinated-M"></td>
+            <td id="mvc-1-4-not-vaccinated-F"></td>
+
+            <!-- Nutritional Status -->
+            <td id="mvc-1-4-severe-malnutrition-M"></td>
+            <td id="mvc-1-4-severe-malnutrition-F"></td>
+            <td id="mvc-1-4-moderate-malnutrition-M"></td>
+            <td id="mvc-1-4-moderate-malnutrition-F"></td>
+            <td id="mvc-1-4-not-malnourished-M"></td>
+            <td id="mvc-1-4-not-malnourished-F"></td>
+
+            <!-- Health Care -->
+            <td id="mvc-1-4-joined-chf-tika-M"></td>
+            <td id="mvc-1-4-joined-chf-tika-F"></td>
+            <td id="mvc-1-4-hiv-prevention-counseling-M"></td>
+            <td id="mvc-1-4-hiv-prevention-counseling-F"></td>
+            <td id="mvc-1-4-disclosure-support-M"></td>
+            <td id="mvc-1-4-disclosure-support-F"></td>
+            <td id="mvc-1-4-linked-hiv-support-group-M"></td>
+            <td id="mvc-1-4-linked-hiv-support-group-F"></td>
+            <td id="mvc-1-4-art-adherence-counseling-M"></td>
+            <td id="mvc-1-4-art-adherence-counseling-F"></td>
+            <td id="mvc-1-4-hiv-risk-assessment-M"></td>
+            <td id="mvc-1-4-hiv-risk-assessment-F"></td>
+            <td id="mvc-1-4-hiv-prevention-education-M"></td>
+            <td id="mvc-1-4-hiv-prevention-education-F"></td>
+
+            <!-- Child Protection -->
+            <td id="mvc-1-4-supported-birth-certificates-M"></td>
+            <td id="mvc-1-4-supported-birth-certificates-F"></td>
+            <td id="mvc-1-4-emergency-care-M"></td>
+            <td id="mvc-1-4-emergency-care-F"></td>
+            <td id="mvc-1-4-linked-social-welfare-M"></td>
+            <td id="mvc-1-4-linked-social-welfare-F"></td>
+            <td id="mvc-1-4-linked-mvcc-M"></td>
+            <td id="mvc-1-4-linked-mvcc-F"></td>
+            <td id="mvc-1-4-child-protection-awareness-M"></td>
+            <td id="mvc-1-4-child-protection-awareness-F"></td>
+
+            <!-- Child Referrals -->
+            <td id="mvc-1-4-referrals-health-services-M"></td>
+            <td id="mvc-1-4-referrals-health-services-F"></td>
+            <td id="mvc-1-4-referrals-nutrition-M"></td>
+            <td id="mvc-1-4-referrals-nutrition-F"></td>
+            <td id="mvc-1-4-referrals-education-M"></td>
+            <td id="mvc-1-4-referrals-education-F"></td>
+            <td id="mvc-1-4-referrals-child-protection-M"></td>
+            <td id="mvc-1-4-referrals-child-protection-F"></td>
+            <td id="mvc-1-4-referrals-psychosocial-M"></td>
+            <td id="mvc-1-4-referrals-psychosocial-F"></td>
+            <td id="mvc-1-4-referrals-economic-strengthening-M"></td>
+            <td id="mvc-1-4-referrals-economic-strengthening-F"></td>
+            <td id="mvc-1-4-referrals-others-M"></td>
+            <td id="mvc-1-4-referrals-others-F"></td>
+            <td id="mvc-1-4-referrals-completed-health-services-M"></td>
+            <td id="mvc-1-4-referrals-completed-health-services-F"></td>
+            <td id="mvc-1-4-referrals-completed-nutrition-M"></td>
+            <td id="mvc-1-4-referrals-completed-nutrition-F"></td>
+            <td id="mvc-1-4-referrals-completed-education-M"></td>
+            <td id="mvc-1-4-referrals-completed-education-F"></td>
+            <td id="mvc-1-4-referrals-completed-child-protection-M"></td>
+            <td id="mvc-1-4-referrals-completed-child-protection-F"></td>
+            <td id="mvc-1-4-referrals-completed-psychosocial-M"></td>
+            <td id="mvc-1-4-referrals-completed-psychosocial-F"></td>
+            <td id="mvc-1-4-referrals-completed-economic-strengthening-M"></td>
+            <td id="mvc-1-4-referrals-completed-economic-strengthening-F"></td>
+            <td id="mvc-1-4-referrals-completed-others-M"></td>
+            <td id="mvc-1-4-referrals-completed-others-F"></td>
+
+
+            <td id="mvc-1-4-referral-accompanied-to-services-M"></td>
+            <td id="mvc-1-4-referral-accompanied-to-services-F"></td>
+
+            <td id="mvc-1-4-referral-assisted-with-transport-M"></td>
+            <td id="mvc-1-4-referral-assisted-with-transport-F"></td>
+
+            <!-- Status in Program -->
+            <td id="mvc-1-4-active-MVC-M"></td>
+            <td id="mvc-1-4-active-MVC-F"></td>
+            <td id="mvc-1-4-graduated-MVC-M"></td>
+            <td id="mvc-1-4-graduated-MVC-F"></td>
+            <td id="mvc-1-4-transferred-MVC-M"></td>
+            <td id="mvc-1-4-transferred-MVC-F"></td>
+            <td id="mvc-1-4-exited-without-graduation-M"></td>
+            <td id="mvc-1-4-exited-without-graduation-F"></td>
+            <td id="mvc-1-4-died-MVC-M"></td>
+            <td id="mvc-1-4-died-MVC-F"></td>
+        </tr>
+        <tr>
+            <td>5-9</td>
+            <td id="mvc-5-9-number-of-children-enrolled-in-school-M"></td>
+            <td id="mvc-5-9-number-of-children-enrolled-in-school-F"></td>
+            <td id="mvc-5-9-missed-school-M"></td>
+            <td id="mvc-5-9-missed-school-F"></td>
+            <td id="mvc-5-9-linked-to-education-support-M"></td>
+            <td id="mvc-5-9-linked-to-education-support-F"></td>
+            <td id="mvc-5-9-supported-vocational-training-M"></td>
+            <td id="mvc-5-9-supported-vocational-training-F"></td>
+            <td id="mvc-5-9-received-business-kit-M"></td>
+            <td id="mvc-5-9-received-business-kit-F"></td>
+            <td id="mvc-5-9-linked-to-memkwa-M"></td>
+            <td id="mvc-5-9-linked-to-memkwa-F"></td>
+
+            <!-- ECD & Psychosocial Support -->
+            <td id="mvc-5-9-attended-ecd-M"></td>
+            <td id="mvc-5-9-attended-ecd-F"></td>
+            <td id="mvc-5-9-attended-childrens-clubs-M"></td>
+            <td id="mvc-5-9-attended-childrens-clubs-F"></td>
+            <td id="mvc-5-9-attended-teen-clubs-M"></td>
+            <td id="mvc-5-9-attended-teen-clubs-F"></td>
+
+            <!-- MVC<5 years Vaccination -->
+            <td id="mvc-5-9-vaccinated-M"></td>
+            <td id="mvc-5-9-vaccinated-F"></td>
+            <td id="mvc-5-9-not-vaccinated-M"></td>
+            <td id="mvc-5-9-not-vaccinated-F"></td>
+
+            <!-- Nutritional Status -->
+            <td id="mvc-5-9-severe-malnutrition-M"></td>
+            <td id="mvc-5-9-severe-malnutrition-F"></td>
+            <td id="mvc-5-9-moderate-malnutrition-M"></td>
+            <td id="mvc-5-9-moderate-malnutrition-F"></td>
+            <td id="mvc-5-9-not-malnourished-M"></td>
+            <td id="mvc-5-9-not-malnourished-F"></td>
+
+            <!-- Health Care -->
+            <td id="mvc-5-9-joined-chf-tika-M"></td>
+            <td id="mvc-5-9-joined-chf-tika-F"></td>
+            <td id="mvc-5-9-hiv-prevention-counseling-M"></td>
+            <td id="mvc-5-9-hiv-prevention-counseling-F"></td>
+            <td id="mvc-5-9-disclosure-support-M"></td>
+            <td id="mvc-5-9-disclosure-support-F"></td>
+            <td id="mvc-5-9-linked-hiv-support-group-M"></td>
+            <td id="mvc-5-9-linked-hiv-support-group-F"></td>
+            <td id="mvc-5-9-art-adherence-counseling-M"></td>
+            <td id="mvc-5-9-art-adherence-counseling-F"></td>
+            <td id="mvc-5-9-hiv-risk-assessment-M"></td>
+            <td id="mvc-5-9-hiv-risk-assessment-F"></td>
+            <td id="mvc-5-9-hiv-prevention-education-M"></td>
+            <td id="mvc-5-9-hiv-prevention-education-F"></td>
+
+            <!-- Child Protection -->
+            <td id="mvc-5-9-supported-birth-certificates-M"></td>
+            <td id="mvc-5-9-supported-birth-certificates-F"></td>
+            <td id="mvc-5-9-emergency-care-M"></td>
+            <td id="mvc-5-9-emergency-care-F"></td>
+            <td id="mvc-5-9-linked-social-welfare-M"></td>
+            <td id="mvc-5-9-linked-social-welfare-F"></td>
+            <td id="mvc-5-9-linked-mvcc-M"></td>
+            <td id="mvc-5-9-linked-mvcc-F"></td>
+            <td id="mvc-5-9-child-protection-awareness-M"></td>
+            <td id="mvc-5-9-child-protection-awareness-F"></td>
+
+            <!-- Child Referrals -->
+            <td id="mvc-5-9-referrals-health-services-M"></td>
+            <td id="mvc-5-9-referrals-health-services-F"></td>
+            <td id="mvc-5-9-referrals-nutrition-M"></td>
+            <td id="mvc-5-9-referrals-nutrition-F"></td>
+            <td id="mvc-5-9-referrals-education-M"></td>
+            <td id="mvc-5-9-referrals-education-F"></td>
+            <td id="mvc-5-9-referrals-child-protection-M"></td>
+            <td id="mvc-5-9-referrals-child-protection-F"></td>
+            <td id="mvc-5-9-referrals-psychosocial-M"></td>
+            <td id="mvc-5-9-referrals-psychosocial-F"></td>
+            <td id="mvc-5-9-referrals-economic-strengthening-M"></td>
+            <td id="mvc-5-9-referrals-economic-strengthening-F"></td>
+            <td id="mvc-5-9-referrals-others-M"></td>
+            <td id="mvc-5-9-referrals-others-F"></td>
+            <td id="mvc-5-9-referrals-completed-health-services-M"></td>
+            <td id="mvc-5-9-referrals-completed-health-services-F"></td>
+            <td id="mvc-5-9-referrals-completed-nutrition-M"></td>
+            <td id="mvc-5-9-referrals-completed-nutrition-F"></td>
+            <td id="mvc-5-9-referrals-completed-education-M"></td>
+            <td id="mvc-5-9-referrals-completed-education-F"></td>
+            <td id="mvc-5-9-referrals-completed-child-protection-M"></td>
+            <td id="mvc-5-9-referrals-completed-child-protection-F"></td>
+            <td id="mvc-5-9-referrals-completed-psychosocial-M"></td>
+            <td id="mvc-5-9-referrals-completed-psychosocial-F"></td>
+            <td id="mvc-5-9-referrals-completed-economic-strengthening-M"></td>
+            <td id="mvc-5-9-referrals-completed-economic-strengthening-F"></td>
+            <td id="mvc-5-9-referrals-completed-others-M"></td>
+            <td id="mvc-5-9-referrals-completed-others-F"></td>
+
+
+
+            <td id="mvc-5-9-referral-accompanied-to-services-M"></td>
+            <td id="mvc-5-9-referral-accompanied-to-services-F"></td>
+
+            <td id="mvc-5-9-referral-assisted-with-transport-M"></td>
+            <td id="mvc-5-9-referral-assisted-with-transport-F"></td>
+
+
+            <!-- Status in Program -->
+            <td id="mvc-5-9-active-MVC-M"></td>
+            <td id="mvc-5-9-active-MVC-F"></td>
+            <td id="mvc-5-9-graduated-MVC-M"></td>
+            <td id="mvc-5-9-graduated-MVC-F"></td>
+            <td id="mvc-5-9-transferred-MVC-M"></td>
+            <td id="mvc-5-9-transferred-MVC-F"></td>
+            <td id="mvc-5-9-exited-without-graduation-M"></td>
+            <td id="mvc-5-9-exited-without-graduation-F"></td>
+            <td id="mvc-5-9-died-MVC-M"></td>
+            <td id="mvc-5-9-died-MVC-F"></td>
+        </tr>
+        <tr>
+            <td>10-14</td>
+            <td id="mvc-10-14-number-of-children-enrolled-in-school-M"></td>
+            <td id="mvc-10-14-number-of-children-enrolled-in-school-F"></td>
+            <td id="mvc-10-14-missed-school-M"></td>
+            <td id="mvc-10-14-missed-school-F"></td>
+            <td id="mvc-10-14-linked-to-education-support-M"></td>
+            <td id="mvc-10-14-linked-to-education-support-F"></td>
+            <td id="mvc-10-14-supported-vocational-training-M"></td>
+            <td id="mvc-10-14-supported-vocational-training-F"></td>
+            <td id="mvc-10-14-received-business-kit-M"></td>
+            <td id="mvc-10-14-received-business-kit-F"></td>
+            <td id="mvc-10-14-linked-to-memkwa-M"></td>
+            <td id="mvc-10-14-linked-to-memkwa-F"></td>
+
+            <!-- ECD & Psychosocial Support -->
+            <td id="mvc-10-14-attended-ecd-M"></td>
+            <td id="mvc-10-14-attended-ecd-F"></td>
+            <td id="mvc-10-14-attended-childrens-clubs-M"></td>
+            <td id="mvc-10-14-attended-childrens-clubs-F"></td>
+            <td id="mvc-10-14-attended-teen-clubs-M"></td>
+            <td id="mvc-10-14-attended-teen-clubs-F"></td>
+
+            <!-- MVC<5 years Vaccination -->
+            <td id="mvc-10-14-vaccinated-M"></td>
+            <td id="mvc-10-14-vaccinated-F"></td>
+            <td id="mvc-10-14-not-vaccinated-M"></td>
+            <td id="mvc-10-14-not-vaccinated-F"></td>
+
+            <!-- Nutritional Status -->
+            <td id="mvc-10-14-severe-malnutrition-M"></td>
+            <td id="mvc-10-14-severe-malnutrition-F"></td>
+            <td id="mvc-10-14-moderate-malnutrition-M"></td>
+            <td id="mvc-10-14-moderate-malnutrition-F"></td>
+            <td id="mvc-10-14-not-malnourished-M"></td>
+            <td id="mvc-10-14-not-malnourished-F"></td>
+
+            <!-- Health Care -->
+            <td id="mvc-10-14-joined-chf-tika-M"></td>
+            <td id="mvc-10-14-joined-chf-tika-F"></td>
+            <td id="mvc-10-14-hiv-prevention-counseling-M"></td>
+            <td id="mvc-10-14-hiv-prevention-counseling-F"></td>
+            <td id="mvc-10-14-disclosure-support-M"></td>
+            <td id="mvc-10-14-disclosure-support-F"></td>
+            <td id="mvc-10-14-linked-hiv-support-group-M"></td>
+            <td id="mvc-10-14-linked-hiv-support-group-F"></td>
+            <td id="mvc-10-14-art-adherence-counseling-M"></td>
+            <td id="mvc-10-14-art-adherence-counseling-F"></td>
+            <td id="mvc-10-14-hiv-risk-assessment-M"></td>
+            <td id="mvc-10-14-hiv-risk-assessment-F"></td>
+            <td id="mvc-10-14-hiv-prevention-education-M"></td>
+            <td id="mvc-10-14-hiv-prevention-education-F"></td>
+
+            <!-- Child Protection -->
+            <td id="mvc-10-14-supported-birth-certificates-M"></td>
+            <td id="mvc-10-14-supported-birth-certificates-F"></td>
+            <td id="mvc-10-14-emergency-care-M"></td>
+            <td id="mvc-10-14-emergency-care-F"></td>
+            <td id="mvc-10-14-linked-social-welfare-M"></td>
+            <td id="mvc-10-14-linked-social-welfare-F"></td>
+            <td id="mvc-10-14-linked-mvcc-M"></td>
+            <td id="mvc-10-14-linked-mvcc-F"></td>
+            <td id="mvc-10-14-child-protection-awareness-M"></td>
+            <td id="mvc-10-14-child-protection-awareness-F"></td>
+
+            <!-- Child Referrals -->
+            <td id="mvc-10-14-referrals-health-services-M"></td>
+            <td id="mvc-10-14-referrals-health-services-F"></td>
+            <td id="mvc-10-14-referrals-nutrition-M"></td>
+            <td id="mvc-10-14-referrals-nutrition-F"></td>
+            <td id="mvc-10-14-referrals-education-M"></td>
+            <td id="mvc-10-14-referrals-education-F"></td>
+            <td id="mvc-10-14-referrals-child-protection-M"></td>
+            <td id="mvc-10-14-referrals-child-protection-F"></td>
+            <td id="mvc-10-14-referrals-psychosocial-M"></td>
+            <td id="mvc-10-14-referrals-psychosocial-F"></td>
+            <td id="mvc-10-14-referrals-economic-strengthening-M"></td>
+            <td id="mvc-10-14-referrals-economic-strengthening-F"></td>
+            <td id="mvc-10-14-referrals-others-M"></td>
+            <td id="mvc-10-14-referrals-others-F"></td>
+            <td id="mvc-10-14-referrals-completed-health-services-M"></td>
+            <td id="mvc-10-14-referrals-completed-health-services-F"></td>
+            <td id="mvc-10-14-referrals-completed-nutrition-M"></td>
+            <td id="mvc-10-14-referrals-completed-nutrition-F"></td>
+            <td id="mvc-10-14-referrals-completed-education-M"></td>
+            <td id="mvc-10-14-referrals-completed-education-F"></td>
+            <td id="mvc-10-14-referrals-completed-child-protection-M"></td>
+            <td id="mvc-10-14-referrals-completed-child-protection-F"></td>
+            <td id="mvc-10-14-referrals-completed-psychosocial-M"></td>
+            <td id="mvc-10-14-referrals-completed-psychosocial-F"></td>
+            <td id="mvc-10-14-referrals-completed-economic-strengthening-M"></td>
+            <td id="mvc-10-14-referrals-completed-economic-strengthening-F"></td>
+            <td id="mvc-10-14-referrals-completed-others-M"></td>
+            <td id="mvc-10-14-referrals-completed-others-F"></td>
+
+
+
+            <td id="mvc-10-14-referral-accompanied-to-services-M"></td>
+            <td id="mvc-10-14-referral-accompanied-to-services-F"></td>
+
+            <td id="mvc-10-14-referral-assisted-with-transport-M"></td>
+            <td id="mvc-10-14-referral-assisted-with-transport-F"></td>
+
+
+            <!-- Status in Program -->
+            <td id="mvc-10-14-active-MVC-M"></td>
+            <td id="mvc-10-14-active-MVC-F"></td>
+            <td id="mvc-10-14-graduated-MVC-M"></td>
+            <td id="mvc-10-14-graduated-MVC-F"></td>
+            <td id="mvc-10-14-transferred-MVC-M"></td>
+            <td id="mvc-10-14-transferred-MVC-F"></td>
+            <td id="mvc-10-14-exited-without-graduation-M"></td>
+            <td id="mvc-10-14-exited-without-graduation-F"></td>
+            <td id="mvc-10-14-died-MVC-M"></td>
+            <td id="mvc-10-14-died-MVC-F"></td>
+        </tr>
+        <tr>
+            <td>15-17</td>
+            <td id="mvc-15-17-number-of-children-enrolled-in-school-M"></td>
+            <td id="mvc-15-17-number-of-children-enrolled-in-school-F"></td>
+            <td id="mvc-15-17-missed-school-M"></td>
+            <td id="mvc-15-17-missed-school-F"></td>
+            <td id="mvc-15-17-linked-to-education-support-M"></td>
+            <td id="mvc-15-17-linked-to-education-support-F"></td>
+            <td id="mvc-15-17-supported-vocational-training-M"></td>
+            <td id="mvc-15-17-supported-vocational-training-F"></td>
+            <td id="mvc-15-17-received-business-kit-M"></td>
+            <td id="mvc-15-17-received-business-kit-F"></td>
+            <td id="mvc-15-17-linked-to-memkwa-M"></td>
+            <td id="mvc-15-17-linked-to-memkwa-F"></td>
+
+            <!-- ECD & Psychosocial Support -->
+            <td id="mvc-15-17-attended-ecd-M"></td>
+            <td id="mvc-15-17-attended-ecd-F"></td>
+            <td id="mvc-15-17-attended-childrens-clubs-M"></td>
+            <td id="mvc-15-17-attended-childrens-clubs-F"></td>
+            <td id="mvc-15-17-attended-teen-clubs-M"></td>
+            <td id="mvc-15-17-attended-teen-clubs-F"></td>
+
+            <!-- MVC<5 years Vaccination -->
+            <td id="mvc-15-17-vaccinated-M"></td>
+            <td id="mvc-15-17-vaccinated-F"></td>
+            <td id="mvc-15-17-not-vaccinated-M"></td>
+            <td id="mvc-15-17-not-vaccinated-F"></td>
+
+            <!-- Nutritional Status -->
+            <td id="mvc-15-17-severe-malnutrition-M"></td>
+            <td id="mvc-15-17-severe-malnutrition-F"></td>
+            <td id="mvc-15-17-moderate-malnutrition-M"></td>
+            <td id="mvc-15-17-moderate-malnutrition-F"></td>
+            <td id="mvc-15-17-not-malnourished-M"></td>
+            <td id="mvc-15-17-not-malnourished-F"></td>
+
+            <!-- Health Care -->
+            <td id="mvc-15-17-joined-chf-tika-M"></td>
+            <td id="mvc-15-17-joined-chf-tika-F"></td>
+            <td id="mvc-15-17-hiv-prevention-counseling-M"></td>
+            <td id="mvc-15-17-hiv-prevention-counseling-F"></td>
+            <td id="mvc-15-17-disclosure-support-M"></td>
+            <td id="mvc-15-17-disclosure-support-F"></td>
+            <td id="mvc-15-17-linked-hiv-support-group-M"></td>
+            <td id="mvc-15-17-linked-hiv-support-group-F"></td>
+            <td id="mvc-15-17-art-adherence-counseling-M"></td>
+            <td id="mvc-15-17-art-adherence-counseling-F"></td>
+            <td id="mvc-15-17-hiv-risk-assessment-M"></td>
+            <td id="mvc-15-17-hiv-risk-assessment-F"></td>
+            <td id="mvc-15-17-hiv-prevention-education-M"></td>
+            <td id="mvc-15-17-hiv-prevention-education-F"></td>
+
+            <!-- Child Protection -->
+            <td id="mvc-15-17-supported-birth-certificates-M"></td>
+            <td id="mvc-15-17-supported-birth-certificates-F"></td>
+            <td id="mvc-15-17-emergency-care-M"></td>
+            <td id="mvc-15-17-emergency-care-F"></td>
+            <td id="mvc-15-17-linked-social-welfare-M"></td>
+            <td id="mvc-15-17-linked-social-welfare-F"></td>
+            <td id="mvc-15-17-linked-mvcc-M"></td>
+            <td id="mvc-15-17-linked-mvcc-F"></td>
+            <td id="mvc-15-17-child-protection-awareness-M"></td>
+            <td id="mvc-15-17-child-protection-awareness-F"></td>
+
+            <!-- Child Referrals -->
+            <td id="mvc-15-17-referrals-health-services-M"></td>
+            <td id="mvc-15-17-referrals-health-services-F"></td>
+            <td id="mvc-15-17-referrals-nutrition-M"></td>
+            <td id="mvc-15-17-referrals-nutrition-F"></td>
+            <td id="mvc-15-17-referrals-education-M"></td>
+            <td id="mvc-15-17-referrals-education-F"></td>
+            <td id="mvc-15-17-referrals-child-protection-M"></td>
+            <td id="mvc-15-17-referrals-child-protection-F"></td>
+            <td id="mvc-15-17-referrals-psychosocial-M"></td>
+            <td id="mvc-15-17-referrals-psychosocial-F"></td>
+            <td id="mvc-15-17-referrals-economic-strengthening-M"></td>
+            <td id="mvc-15-17-referrals-economic-strengthening-F"></td>
+            <td id="mvc-15-17-referrals-others-M"></td>
+            <td id="mvc-15-17-referrals-others-F"></td>
+            <td id="mvc-15-17-referrals-completed-health-services-M"></td>
+            <td id="mvc-15-17-referrals-completed-health-services-F"></td>
+            <td id="mvc-15-17-referrals-completed-nutrition-M"></td>
+            <td id="mvc-15-17-referrals-completed-nutrition-F"></td>
+            <td id="mvc-15-17-referrals-completed-education-M"></td>
+            <td id="mvc-15-17-referrals-completed-education-F"></td>
+            <td id="mvc-15-17-referrals-completed-child-protection-M"></td>
+            <td id="mvc-15-17-referrals-completed-child-protection-F"></td>
+            <td id="mvc-15-17-referrals-completed-psychosocial-M"></td>
+            <td id="mvc-15-17-referrals-completed-psychosocial-F"></td>
+            <td id="mvc-15-17-referrals-completed-economic-strengthening-M"></td>
+            <td id="mvc-15-17-referrals-completed-economic-strengthening-F"></td>
+            <td id="mvc-15-17-referrals-completed-others-M"></td>
+            <td id="mvc-15-17-referrals-completed-others-F"></td>
+
+            <td id="mvc-15-17-referral-accompanied-to-services-M"></td>
+            <td id="mvc-15-17-referral-accompanied-to-services-F"></td>
+
+            <td id="mvc-15-17-referral-assisted-with-transport-M"></td>
+            <td id="mvc-15-17-referral-assisted-with-transport-F"></td>
+
+            <!-- Status in Program -->
+            <td id="mvc-15-17-active-MVC-M"></td>
+            <td id="mvc-15-17-active-MVC-F"></td>
+            <td id="mvc-15-17-graduated-MVC-M"></td>
+            <td id="mvc-15-17-graduated-MVC-F"></td>
+            <td id="mvc-15-17-transferred-MVC-M"></td>
+            <td id="mvc-15-17-transferred-MVC-F"></td>
+            <td id="mvc-15-17-exited-without-graduation-M"></td>
+            <td id="mvc-15-17-exited-without-graduation-F"></td>
+            <td id="mvc-15-17-died-MVC-M"></td>
+            <td id="mvc-15-17-died-MVC-F"></td>
+        </tr>
+        <tr>
+            <td>18+</td>
+            <td id="mvc-18+-number-of-children-enrolled-in-school-M"></td>
+            <td id="mvc-18+-number-of-children-enrolled-in-school-F"></td>
+            <td id="mvc-18+-missed-school-M"></td>
+            <td id="mvc-18+-missed-school-F"></td>
+            <td id="mvc-18+-linked-to-education-support-M"></td>
+            <td id="mvc-18+-linked-to-education-support-F"></td>
+            <td id="mvc-18+-supported-vocational-training-M"></td>
+            <td id="mvc-18+-supported-vocational-training-F"></td>
+            <td id="mvc-18+-received-business-kit-M"></td>
+            <td id="mvc-18+-received-business-kit-F"></td>
+            <td id="mvc-18+-linked-to-memkwa-M"></td>
+            <td id="mvc-18+-linked-to-memkwa-F"></td>
+
+            <!-- ECD & Psychosocial Support -->
+            <td id="mvc-18+-attended-ecd-M"></td>
+            <td id="mvc-18+-attended-ecd-F"></td>
+            <td id="mvc-18+-attended-childrens-clubs-M"></td>
+            <td id="mvc-18+-attended-childrens-clubs-F"></td>
+            <td id="mvc-18+-attended-teen-clubs-M"></td>
+            <td id="mvc-18+-attended-teen-clubs-F"></td>
+
+            <!-- MVC<5 years Vaccination -->
+            <td id="mvc-18+-vaccinated-M"></td>
+            <td id="mvc-18+-vaccinated-F"></td>
+            <td id="mvc-18+-not-vaccinated-M"></td>
+            <td id="mvc-18+-not-vaccinated-F"></td>
+
+            <!-- Nutritional Status -->
+            <td id="mvc-18+-severe-malnutrition-M"></td>
+            <td id="mvc-18+-severe-malnutrition-F"></td>
+            <td id="mvc-18+-moderate-malnutrition-M"></td>
+            <td id="mvc-18+-moderate-malnutrition-F"></td>
+            <td id="mvc-18+-not-malnourished-M"></td>
+            <td id="mvc-18+-not-malnourished-F"></td>
+
+            <!-- Health Care -->
+            <td id="mvc-18+-joined-chf-tika-M"></td>
+            <td id="mvc-18+-joined-chf-tika-F"></td>
+            <td id="mvc-18+-hiv-prevention-counseling-M"></td>
+            <td id="mvc-18+-hiv-prevention-counseling-F"></td>
+            <td id="mvc-18+-disclosure-support-M"></td>
+            <td id="mvc-18+-disclosure-support-F"></td>
+            <td id="mvc-18+-linked-hiv-support-group-M"></td>
+            <td id="mvc-18+-linked-hiv-support-group-F"></td>
+            <td id="mvc-18+-art-adherence-counseling-M"></td>
+            <td id="mvc-18+-art-adherence-counseling-F"></td>
+            <td id="mvc-18+-hiv-risk-assessment-M"></td>
+            <td id="mvc-18+-hiv-risk-assessment-F"></td>
+            <td id="mvc-18+-hiv-prevention-education-M"></td>
+            <td id="mvc-18+-hiv-prevention-education-F"></td>
+
+            <!-- Child Protection -->
+            <td id="mvc-18+-supported-birth-certificates-M"></td>
+            <td id="mvc-18+-supported-birth-certificates-F"></td>
+            <td id="mvc-18+-emergency-care-M"></td>
+            <td id="mvc-18+-emergency-care-F"></td>
+            <td id="mvc-18+-linked-social-welfare-M"></td>
+            <td id="mvc-18+-linked-social-welfare-F"></td>
+            <td id="mvc-18+-linked-mvcc-M"></td>
+            <td id="mvc-18+-linked-mvcc-F"></td>
+            <td id="mvc-18+-child-protection-awareness-M"></td>
+            <td id="mvc-18+-child-protection-awareness-F"></td>
+
+            <!-- Child Referrals -->
+            <td id="mvc-18+-referrals-health-services-M"></td>
+            <td id="mvc-18+-referrals-health-services-F"></td>
+            <td id="mvc-18+-referrals-nutrition-M"></td>
+            <td id="mvc-18+-referrals-nutrition-F"></td>
+            <td id="mvc-18+-referrals-education-M"></td>
+            <td id="mvc-18+-referrals-education-F"></td>
+            <td id="mvc-18+-referrals-child-protection-M"></td>
+            <td id="mvc-18+-referrals-child-protection-F"></td>
+            <td id="mvc-18+-referrals-psychosocial-M"></td>
+            <td id="mvc-18+-referrals-psychosocial-F"></td>
+            <td id="mvc-18+-referrals-economic-strengthening-M"></td>
+            <td id="mvc-18+-referrals-economic-strengthening-F"></td>
+            <td id="mvc-18+-referrals-others-M"></td>
+            <td id="mvc-18+-referrals-others-F"></td>
+            <td id="mvc-18+-referrals-completed-health-services-M"></td>
+            <td id="mvc-18+-referrals-completed-health-services-F"></td>
+            <td id="mvc-18+-referrals-completed-nutrition-M"></td>
+            <td id="mvc-18+-referrals-completed-nutrition-F"></td>
+            <td id="mvc-18+-referrals-completed-education-M"></td>
+            <td id="mvc-18+-referrals-completed-education-F"></td>
+            <td id="mvc-18+-referrals-completed-child-protection-M"></td>
+            <td id="mvc-18+-referrals-completed-child-protection-F"></td>
+            <td id="mvc-18+-referrals-completed-psychosocial-M"></td>
+            <td id="mvc-18+-referrals-completed-psychosocial-F"></td>
+            <td id="mvc-18+-referrals-completed-economic-strengthening-M"></td>
+            <td id="mvc-18+-referrals-completed-economic-strengthening-F"></td>
+            <td id="mvc-18+-referrals-completed-others-M"></td>
+            <td id="mvc-18+-referrals-completed-others-F"></td>
+
+            <td id="mvc-18+-referral-accompanied-to-services-M"></td>
+            <td id="mvc-18+-referral-accompanied-to-services-F"></td>
+
+            <td id="mmvc-18+-referral-assisted-with-transport-M"></td>
+            <td id="mvc-18+-referral-assisted-with-transport-F"></td>
+
+            <!-- Status in Program -->
+            <td id="mvc-18+-active-MVC-M"></td>
+            <td id="mvc-18+-active-MVC-F"></td>
+            <td id="mvc-18+-graduated-MVC-M"></td>
+            <td id="mvc-18+-graduated-MVC-F"></td>
+            <td id="mvc-18+-transferred-MVC-M"></td>
+            <td id="mvc-18+-transferred-MVC-F"></td>
+            <td id="mvc-18+-exited-without-graduation-M"></td>
+            <td id="mvc-18+-exited-without-graduation-F"></td>
+            <td id="mvc-18+-died-MVC-M"></td>
+            <td id="mvc-18+-died-MVC-F"></td>
+        </tr>
+        <tr>
+            <td>TOTAL</td>
+            <td id="mvc-total-number-of-children-enrolled-in-school-M"></td>
+            <td id="mvc-total-number-of-children-enrolled-in-school-F"></td>
+            <td id="mvc-total-missed-school-M"></td>
+            <td id="mvc-total-missed-school-F"></td>
+            <td id="mvc-total-linked-to-education-support-M"></td>
+            <td id="mvc-total-linked-to-education-support-F"></td>
+            <td id="mvc-total-supported-vocational-training-M"></td>
+            <td id="mvc-total-supported-vocational-training-F"></td>
+            <td id="mvc-total-received-business-kit-M"></td>
+            <td id="mvc-total-received-business-kit-F"></td>
+            <td id="mvc-total-linked-to-memkwa-M"></td>
+            <td id="mvc-total-linked-to-memkwa-F"></td>
+
+            <!-- ECD & Psychosocial Support -->
+            <td id="mvc-total-attended-ecd-M"></td>
+            <td id="mvc-total-attended-ecd-F"></td>
+            <td id="mvc-total-attended-childrens-clubs-M"></td>
+            <td id="mvc-total-attended-childrens-clubs-F"></td>
+            <td id="mvc-total-attended-teen-clubs-M"></td>
+            <td id="mvc-total-attended-teen-clubs-F"></td>
+
+            <!-- MVC<5 years Vaccination -->
+            <td id="mvc-total-vaccinated-M"></td>
+            <td id="mvc-total-vaccinated-F"></td>
+            <td id="mvc-total-not-vaccinated-M"></td>
+            <td id="mvc-total-not-vaccinated-F"></td>
+
+            <!-- Nutritional Status -->
+            <td id="mvc-total-severe-malnutrition-M"></td>
+            <td id="mvc-total-severe-malnutrition-F"></td>
+            <td id="mvc-total-moderate-malnutrition-M"></td>
+            <td id="mvc-total-moderate-malnutrition-F"></td>
+            <td id="mvc-total-not-malnourished-M"></td>
+            <td id="mvc-total-not-malnourished-F"></td>
+
+            <!-- Health Care -->
+            <td id="mvc-total-joined-chf-tika-M"></td>
+            <td id="mvc-total-joined-chf-tika-F"></td>
+            <td id="mvc-total-hiv-prevention-counseling-M"></td>
+            <td id="mvc-total-hiv-prevention-counseling-F"></td>
+            <td id="mvc-total-disclosure-support-M"></td>
+            <td id="mvc-total-disclosure-support-F"></td>
+            <td id="mvc-total-linked-hiv-support-group-M"></td>
+            <td id="mvc-total-linked-hiv-support-group-F"></td>
+            <td id="mvc-total-art-adherence-counseling-M"></td>
+            <td id="mvc-total-art-adherence-counseling-F"></td>
+            <td id="mvc-total-hiv-risk-assessment-M"></td>
+            <td id="mvc-total-hiv-risk-assessment-F"></td>
+            <td id="mvc-total-hiv-prevention-education-M"></td>
+            <td id="mvc-total-hiv-prevention-education-F"></td>
+
+            <!-- Child Protection -->
+            <td id="mvc-total-supported-birth-certificates-M"></td>
+            <td id="mvc-total-supported-birth-certificates-F"></td>
+            <td id="mvc-total-emergency-care-M"></td>
+            <td id="mvc-total-emergency-care-F"></td>
+            <td id="mvc-total-linked-social-welfare-M"></td>
+            <td id="mvc-total-linked-social-welfare-F"></td>
+            <td id="mvc-total-linked-mvcc-M"></td>
+            <td id="mvc-total-linked-mvcc-F"></td>
+            <td id="mvc-total-child-protection-awareness-M"></td>
+            <td id="mvc-total-child-protection-awareness-F"></td>
+
+            <!-- Child Referrals -->
+            <td id="mvc-total-referrals-health-services-M"></td>
+            <td id="mvc-total-referrals-health-services-F"></td>
+            <td id="mvc-total-referrals-nutrition-M"></td>
+            <td id="mvc-total-referrals-nutrition-F"></td>
+            <td id="mvc-total-referrals-education-M"></td>
+            <td id="mvc-total-referrals-education-F"></td>
+            <td id="mvc-total-referrals-child-protection-M"></td>
+            <td id="mvc-total-referrals-child-protection-F"></td>
+            <td id="mvc-total-referrals-psychosocial-M"></td>
+            <td id="mvc-total-referrals-psychosocial-F"></td>
+            <td id="mvc-total-referrals-economic-strengthening-M"></td>
+            <td id="mvc-total-referrals-economic-strengthening-F"></td>
+            <td id="mvc-total-referrals-others-M"></td>
+            <td id="mvc-total-referrals-others-F"></td>
+            <td id="mvc-total-referrals-completed-health-services-M"></td>
+            <td id="mvc-total-referrals-completed-health-services-F"></td>
+            <td id="mvc-total-referrals-completed-nutrition-M"></td>
+            <td id="mvc-total-referrals-completed-nutrition-F"></td>
+            <td id="mvc-total-referrals-completed-education-M"></td>
+            <td id="mvc-total-referrals-completed-education-F"></td>
+            <td id="mvc-total-referrals-completed-child-protection-M"></td>
+            <td id="mvc-total-referrals-completed-child-protection-F"></td>
+            <td id="mvc-total-referrals-completed-psychosocial-M"></td>
+            <td id="mvc-total-referrals-completed-psychosocial-F"></td>
+            <td id="mvc-total-referrals-completed-economic-strengthening-M"></td>
+            <td id="mvc-total-referrals-completed-economic-strengthening-F"></td>
+            <td id="mvc-total-referrals-completed-others-M"></td>
+            <td id="mvc-total-referrals-completed-others-F"></td>
+
+            <td id="mvc-total-referral-accompanied-to-services-M"></td>
+            <td id="mvc-total-referral-accompanied-to-services-F"></td>
+
+            <td id="mvc-total-referral-assisted-with-transport-M"></td>
+            <td id="mvc-total-referral-assisted-with-transport-F"></td>
+
+            <!-- Status in Program -->
+            <td id="mvc-total-active-MVC-M"></td>
+            <td id="mvc-total-active-MVC-F"></td>
+            <td id="mvc-total-graduated-MVC-M"></td>
+            <td id="mvc-total-graduated-MVC-F"></td>
+            <td id="mvc-total-transferred-MVC-M"></td>
+            <td id="mvc-total-transferred-MVC-F"></td>
+            <td id="mvc-total-exited-without-graduation-M"></td>
+            <td id="mvc-total-exited-without-graduation-F"></td>
+            <td id="mvc-total-died-MVC-M"></td>
+            <td id="mvc-total-died-MVC-F"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script>
+    function loadData(reportKey, reportType) {
+        const data = JSON.parse(Android.getData("mvc-registration-summary-reporter"));
+        const keys = Object.keys(data.nameValuePairs);
+        const reportPeriod = document.getElementById("report_period");
+        const reportingFacility = document.getElementById("reporting_facility");
+        keys.forEach((key) => {
+            let element;
+            if (reportType!== null && reportType === "sbc"){
+                element = document.getElementById(key.replace("sbc-",""));
+            } else{
+                element = document.getElementById(key);
+            }
+            if (element !== null && typeof element !== "undefined") {
+                element.innerHTML = data.nameValuePairs[key];
+            }
+        });
+        reportPeriod.innerHTML = Android.getDataPeriod();
+        reportingFacility.innerHTML = Android.getReportingFacility();
+    }
+</script>
+</html>

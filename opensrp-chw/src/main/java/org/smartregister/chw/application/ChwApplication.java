@@ -44,7 +44,7 @@ import org.smartregister.chw.activity.LTFURegisterActivity;
 import org.smartregister.chw.activity.LoginActivity;
 import org.smartregister.chw.activity.MalariaRegisterActivity;
 import org.smartregister.chw.activity.MotherChampionRegisterActivity;
-import org.smartregister.chw.activity.OvcRegisterActivity;
+import org.smartregister.chw.activity.MvcRegisterActivity;
 import org.smartregister.chw.activity.PncRegisterActivity;
 import org.smartregister.chw.activity.ReferralRegisterActivity;
 import org.smartregister.chw.activity.SbcMonthlySocialMediaReportRegisterActivity;
@@ -306,7 +306,7 @@ public class ChwApplication extends CoreChwApplication {
             GbvLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
         }
 
-        if (flavor.hasOvc()) {
+        if (flavor.hasMvc()) {
             OvcLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
         }
 
@@ -402,7 +402,7 @@ public class ChwApplication extends CoreChwApplication {
         registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.MOTHER_CHAMPION_ACTIVITY, MotherChampionRegisterActivity.class);
         registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.AGYW_REGISTER_ACTIVITY, AgywRegisterActivity.class);
         registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.GBV_REGISTER_ACTIVITY, GbvRegisterActivity.class);
-        registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.OVC_REGISTER_ACTIVITY, OvcRegisterActivity.class);
+        registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.OVC_REGISTER_ACTIVITY, MvcRegisterActivity.class);
         return registeredActivities;
     }
 
@@ -589,7 +589,7 @@ public class ChwApplication extends CoreChwApplication {
 
         boolean hasGbv();
 
-        boolean hasOvc();
+        boolean hasMvc();
 
         String[] getFTSTables();
 

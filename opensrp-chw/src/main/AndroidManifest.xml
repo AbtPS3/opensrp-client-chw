@@ -474,25 +474,33 @@
             android:exported="false"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
-            android:name=".activity.OvcRegisterActivity"
+            android:name=".activity.MvcRegisterActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
-            android:name=".activity.OvcFamilyProfileActivity"
+            android:name=".activity.MvcFamilyProfileActivity"
             android:label="@string/title_family_detail"
-            android:parentActivityName=".activity.OvcRegisterActivity"
+            android:parentActivityName=".activity.MvcRegisterActivity"
             android:theme="@style/ChwTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.smartregister.chw.activity.OvcRegisterActivity" />
+                android:value="org.smartregister.chw.activity.MvcRegisterActivity" />
         </activity>
         <activity
-            android:name=".activity.OvcProfileActivity"
+            android:name=".activity.MvcProfileActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
-            android:name=".activity.OvcMedicalHistoryActivity"
+            android:name=".activity.MvcMedicalHistoryActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
-            android:name=".activity.OvcVisitActivity"
+            android:name=".activity.MvcVisitActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MvcReportsViewActivity"
+            android:exported="false"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.MvcReportsActivity"
+            android:exported="false"
             android:theme="@style/ChwTheme.NoActionBar" />
         <meta-data
             android:name="io.fabric.ApiKey"

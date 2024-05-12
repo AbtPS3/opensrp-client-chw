@@ -148,7 +148,7 @@ public class ChwApplicationFlv extends DefaultChwApplicationFlv {
     }
 
     @Override
-    public boolean hasOvc() {
+    public boolean hasMvc() {
         return true;
     }
 

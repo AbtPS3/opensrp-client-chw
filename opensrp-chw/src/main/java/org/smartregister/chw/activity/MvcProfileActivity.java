@@ -59,13 +59,13 @@ import java.util.List;
 
 import timber.log.Timber;
 
-public class OvcProfileActivity extends BaseOvcProfileActivity {
+public class MvcProfileActivity extends BaseOvcProfileActivity {
     private final FamilyOtherMemberProfileActivity.Flavor flavor = new FamilyOtherMemberProfileActivityFlv();
 
     private final List<ReferralTypeModel> referralTypeModels = new ArrayList<>();
 
     public static void startMe(Activity activity, String baseEntityID) {
-        Intent intent = new Intent(activity, OvcProfileActivity.class);
+        Intent intent = new Intent(activity, MvcProfileActivity.class);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.BASE_ENTITY_ID, baseEntityID);
         activity.startActivityForResult(intent, Constants.REQUEST_CODE_GET_JSON);
     }
@@ -85,7 +85,7 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
                 Timber.e(e);
             }
         } else {
-            OvcVisitActivity.startMe(this, memberObject.getBaseEntityId(), false);
+            MvcVisitActivity.startMe(this, memberObject.getBaseEntityId(), false);
         }
     }
 
@@ -111,7 +111,7 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
     protected void setupViews() {
         super.setupViews();
         try {
-            VisitUtils.processVisits(OvcLibrary.getInstance().visitRepository(), OvcLibrary.getInstance().visitDetailsRepository(), OvcProfileActivity.this);
+            VisitUtils.processVisits(OvcLibrary.getInstance().visitRepository(), OvcLibrary.getInstance().visitDetailsRepository(), MvcProfileActivity.this);
         } catch (Exception e) {
             Timber.e(e);
         }
@@ -119,7 +119,7 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
 
     @Override
     public void openMedicalHistory() {
-        OvcMedicalHistoryActivity.startMe(this, memberObject);
+        MvcMedicalHistoryActivity.startMe(this, memberObject);
     }
 
     @Override
@@ -174,7 +174,7 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
                 ((OvcFloatingMenu) baseOvcFloatingMenu).launchCallWidget();
                 ((OvcFloatingMenu) baseOvcFloatingMenu).animateFAB();
             } else if (viewId == R.id.gbv_refer_to_facility_layout) {
-                org.smartregister.chw.util.Utils.launchClientReferralActivity(OvcProfileActivity.this, getReferralTypeModels(), memberObject.getBaseEntityId());
+                org.smartregister.chw.util.Utils.launchClientReferralActivity(MvcProfileActivity.this, getReferralTypeModels(), memberObject.getBaseEntityId());
                 ((OvcFloatingMenu) baseOvcFloatingMenu).animateFAB();
             } else {
                 Timber.d("Unknown fab action");
@@ -346,17 +346,17 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
     }
 
     protected void startAncRegister() {
-        AncRegisterActivity.startAncRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getPhoneNumber(),
+        AncRegisterActivity.startAncRegistrationActivity(MvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getPhoneNumber(),
                 org.smartregister.chw.util.Constants.JSON_FORM.getAncRegistration(), null, memberObject.getFamilyBaseEntityId(), memberObject.getFamilyName());
     }
 
     protected void startPncRegister() {
-        PncRegisterActivity.startPncRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getPhoneNumber(),
+        PncRegisterActivity.startPncRegistrationActivity(MvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getPhoneNumber(),
                 CoreConstants.JSON_FORM.getPregnancyOutcome(), null, memberObject.getFamilyBaseEntityId(), memberObject.getFamilyName(), null);
     }
 
     protected void startMalariaRegister() {
-        MalariaRegisterActivity.startMalariaRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
+        MalariaRegisterActivity.startMalariaRegistrationActivity(MvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
     }
 
     protected void startVmmcRegister() {
@@ -364,7 +364,7 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
     }
 
     protected void startIntegratedCommunityCaseManagementEnrollment() {
-        IccmRegisterActivity.startIccmRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
+        IccmRegisterActivity.startIccmRegistrationActivity(MvcProfileActivity.this, memberObject.getBaseEntityId(), memberObject.getFamilyBaseEntityId());
     }
 
     protected void startHivRegister() {
@@ -374,14 +374,14 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
 
         try {
             String formName = org.smartregister.chw.util.Constants.JsonForm.getCbhsRegistrationForm();
-            JSONObject formJsonObject = (new FormUtils()).getFormJsonFromRepositoryOrAssets(OvcProfileActivity.this, formName);
+            JSONObject formJsonObject = (new FormUtils()).getFormJsonFromRepositoryOrAssets(MvcProfileActivity.this, formName);
             JSONArray steps = formJsonObject.getJSONArray("steps");
             JSONObject step = steps.getJSONObject(0);
             JSONArray fields = step.getJSONArray("fields");
 
             updateAgeAndGender(fields, age, gender);
 
-            HivRegisterActivity.startHIVFormActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), formName, formJsonObject.toString());
+            HivRegisterActivity.startHIVFormActivity(MvcProfileActivity.this, memberObject.getBaseEntityId(), formName, formJsonObject.toString());
         } catch (JSONException e) {
             Timber.e(e);
         } catch (Exception e) {
@@ -391,7 +391,7 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
 
     protected void startTbRegister() {
         try {
-            TbRegisterActivity.startTbFormActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), org.smartregister.chw.util.Constants.JSON_FORM.getTbRegistration(), (new FormUtils()).getFormJsonFromRepositoryOrAssets(this, org.smartregister.chw.util.Constants.JSON_FORM.getTbRegistration()).toString());
+            TbRegisterActivity.startTbFormActivity(MvcProfileActivity.this, memberObject.getBaseEntityId(), org.smartregister.chw.util.Constants.JSON_FORM.getTbRegistration(), (new FormUtils()).getFormJsonFromRepositoryOrAssets(this, org.smartregister.chw.util.Constants.JSON_FORM.getTbRegistration()).toString());
         } catch (JSONException e) {
             Timber.e(e);
         }
@@ -410,28 +410,28 @@ public class OvcProfileActivity extends BaseOvcProfileActivity {
 
     protected void startHivstRegistration() {
         String gender = memberObject.getGender();
-        HivstRegisterActivity.startHivstRegistrationActivity(OvcProfileActivity.this, memberObject.getBaseEntityId(), gender);
+        HivstRegisterActivity.startHivstRegistrationActivity(MvcProfileActivity.this, memberObject.getBaseEntityId(), gender);
     }
 
     protected void startAgywScreening() {
         String dob = memberObject.getDob();
         int age = org.smartregister.chw.util.Utils.getAgeFromDate(dob);
-        AgywRegisterActivity.startRegistration(OvcProfileActivity.this, memberObject.getBaseEntityId(), age);
+        AgywRegisterActivity.startRegistration(MvcProfileActivity.this, memberObject.getBaseEntityId(), age);
     }
 
     protected void startSbcRegistration() {
-        SbcRegisterActivity.startRegistration(OvcProfileActivity.this, memberObject.getBaseEntityId());
+        SbcRegisterActivity.startRegistration(MvcProfileActivity.this, memberObject.getBaseEntityId());
     }
 
     protected void startGbvRegistration() {
-        GbvRegisterActivity.startRegistration(OvcProfileActivity.this, memberObject.getBaseEntityId());
+        GbvRegisterActivity.startRegistration(MvcProfileActivity.this, memberObject.getBaseEntityId());
     }
 
     protected void startKvpPrEPRegistration() {
         String gender = getClientGender(memberObject.getBaseEntityId());
         String dob = memberObject.getDob();
         int age = org.smartregister.chw.util.Utils.getAgeFromDate(dob);
-        KvpPrEPRegisterActivity.startRegistration(OvcProfileActivity.this, memberObject.getBaseEntityId(), gender, age);
+        KvpPrEPRegisterActivity.startRegistration(MvcProfileActivity.this, memberObject.getBaseEntityId(), gender, age);
     }
 
     public void startFormForEdit(Integer title_resource, String formName) {

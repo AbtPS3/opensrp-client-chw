@@ -2,8 +2,7 @@ package org.smartregister.chw.fragment;
 
 import android.content.Intent;
 
-import org.smartregister.chw.activity.GbvMemberProfileActivity;
-import org.smartregister.chw.activity.OvcFamilyProfileActivity;
+import org.smartregister.chw.activity.MvcFamilyProfileActivity;
 import org.smartregister.chw.core.fragment.CoreOvcRegisterFragment;
 import org.smartregister.chw.core.provider.CoreRegisterProvider;
 import org.smartregister.chw.model.OvcRegisterFragmentModel;
@@ -50,7 +49,7 @@ public class OvcRegisterFragment extends CoreOvcRegisterFragment {
 
     protected void goToPatientDetailActivity(CommonPersonObjectClient patient,
                                              boolean goToDuePage) {
-        Intent intent = new Intent(getActivity(), OvcFamilyProfileActivity.class);
+        Intent intent = new Intent(getActivity(), MvcFamilyProfileActivity.class);
         intent.putExtra(Constants.INTENT_KEY.FAMILY_BASE_ENTITY_ID, Utils.getValue(patient.getColumnmaps(), DBConstants.KEY.BASE_ENTITY_ID, false));
         intent.putExtra(Constants.INTENT_KEY.FAMILY_HEAD, Utils.getValue(patient.getColumnmaps(), DBConstants.KEY.FAMILY_HEAD, false));
         intent.putExtra(Constants.INTENT_KEY.PRIMARY_CAREGIVER, Utils.getValue(patient.getColumnmaps(), DBConstants.KEY.PRIMARY_CAREGIVER, false));

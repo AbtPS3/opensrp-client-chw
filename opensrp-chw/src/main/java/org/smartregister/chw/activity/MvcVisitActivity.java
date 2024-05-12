@@ -11,9 +11,9 @@ import org.smartregister.chw.ovc.activity.BaseOvcChildVisitActivity;
 import org.smartregister.chw.ovc.util.Constants;
 import org.smartregister.family.util.Utils;
 
-public class OvcVisitActivity extends BaseOvcChildVisitActivity {
+public class MvcVisitActivity extends BaseOvcChildVisitActivity {
     public static void startMe(Activity activity, String baseEntityID, Boolean isEditMode) {
-        Intent intent = new Intent(activity, OvcVisitActivity.class);
+        Intent intent = new Intent(activity, MvcVisitActivity.class);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.BASE_ENTITY_ID, baseEntityID);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.EDIT_MODE, isEditMode);
         activity.startActivityForResult(intent, Constants.REQUEST_CODE_GET_JSON);

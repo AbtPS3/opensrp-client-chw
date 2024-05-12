@@ -117,7 +117,7 @@ public class NavigationModelFlv implements NavigationModel.Flavor {
                 if (ChwApplication.getApplicationFlavor().hasGbv()) {
                     navigationOptions.add(op23);
                 }
-                if (ChwApplication.getApplicationFlavor().hasOvc()) {
+                if (ChwApplication.getApplicationFlavor().hasMvc()) {
                     navigationOptions.add(op24);
                 }
                 navigationOptions.addAll(Arrays.asList(op8, op15));
