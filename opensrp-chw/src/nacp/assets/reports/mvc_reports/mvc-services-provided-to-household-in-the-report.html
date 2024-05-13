@@ -812,6 +812,13 @@
     function loadData() {
         const data = JSON.parse(Android.getData("mvc-services-provided-to-households-report"));
         const keys = Object.keys(data.nameValuePairs);
+        keys.forEach(key => {
+            let elementKey = key
+            const element = document.getElementById(elementKey)
+            if (element !== null && element !== undefined) {
+                element.innerHTML = data.nameValuePairs[key]
+            }
+        })
         const reportPeriod = document.getElementById("report_period");
         const reportingFacility = document.getElementById("reporting_facility");
         reportPeriod.innerHTML = Android.getDataPeriod();

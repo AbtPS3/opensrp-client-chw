@@ -33,7 +33,7 @@ public class MvcHouseholdRegistrationSummaryReportObject extends ReportObject {
         setIndicatorCodesWithAgeGroups(indicatorCodesWithAgeGroups);
     }
 
-    public static int calculateGbvSpecificTotal(HashMap<String, Integer> indicators, String specificKey) {
+    public static int calculateMvcSpecificTotal(HashMap<String, Integer> indicators, String specificKey) {
         int total = 0;
 
         for (Map.Entry<String, Integer> entry : indicators.entrySet()) {
