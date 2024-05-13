@@ -6104,6 +6104,13 @@
             "field": "obs.fieldCode",
             "concept": "registration_number_of_head"
           }
+        },{
+          "column_name": "head_of_household",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "head_of_household"
+          }
         },
         {
           "column_name": "type_of_vulnerability",
@@ -6111,6 +6118,70 @@
           "json_mapping": {
             "field": "obs.fieldCode",
             "concept": "type_of_vulnerability"
+          }
+        },
+        {
+          "column_name": "mvc_has_birth_certificate",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "mvc_has_birth_certificate"
+          }
+        },
+        {
+          "column_name": "reasons_of_vulnerability",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "reasons_of_vulnerability"
+          }
+        },
+        {
+          "column_name": "type_of_disability",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "type_of_disability"
+          }
+        },
+        {
+          "column_name": "is_child_in_school",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "is_child_in_school"
+          }
+        },
+        {
+          "column_name": "level_of_education",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "level_of_education"
+          }
+        },
+        {
+          "column_name": "reason_for_not_being_in_school",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "reason_for_not_being_in_school"
+          }
+        },
+        {
+          "column_name": "care_of_household",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "care_of_household"
+          }
+        },
+        {
+          "column_name": "case_opened",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "case_opened"
           }
         },
         {
