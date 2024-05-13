@@ -118,6 +118,9 @@ public class ChwRepositoryFlv {
                 case 28:
                     upgradeToVersion28(db);
                     break;
+                case 29:
+                    upgradeToVersion29(db);
+                    break;
                 default:
                     break;
             }
@@ -479,6 +482,19 @@ public class ChwRepositoryFlv {
                     new HashSet<>(Arrays.asList("ec_gbv_register", "ec_gbv_home_visit")),
                     ChwApplication.createCommonFtsObject());
 
+        } catch (Exception e) {
+            Timber.e(e, "upgradeToVersion28");
+        }
+    }
+
+    private static void upgradeToVersion29(SQLiteDatabase db) {
+        try {
+            // setup reporting
+            ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
+            String mvcReportIndicatorConfigFile = "config/mvc-monthly-report.yml";
+            for (String configFile : Collections.singletonList(mvcReportIndicatorConfigFile)) {
+                reportingLibrary.readConfigFile(configFile, db);
+            }
         } catch (Exception e) {
             Timber.e(e, "upgradeToVersion28");
         }
