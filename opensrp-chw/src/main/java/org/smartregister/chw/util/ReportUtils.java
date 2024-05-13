@@ -22,7 +22,7 @@ import org.smartregister.chw.domain.iccm_reports.IccmDispensingSummaryReportObje
 import org.smartregister.chw.domain.iccm_reports.MalariaTestReportObject;
 import org.smartregister.chw.domain.mother_champion_report.MotherChampionReportObject;
 import org.smartregister.chw.domain.mvc_reports.MvcChildrenRegistrationSummaryReportObject;
-import org.smartregister.chw.domain.mvc_reports.MvcRegistrationSummaryReportObject;
+import org.smartregister.chw.domain.mvc_reports.MvcHouseholdRegistrationSummaryReportObject;
 import org.smartregister.chw.domain.mvc_reports.MvcServicesProvidedToChildrenReportObject;
 import org.smartregister.chw.domain.mvc_reports.MvcServicesProvidedToHouseholdsReportObject;
 import org.smartregister.chw.domain.sbc_reports.SbcReportObject;
@@ -247,7 +247,7 @@ public class ReportUtils {
 
     public static class MvcReports {
         public static String computeRegistrationSummaryReports(Date startDate) {
-            MvcRegistrationSummaryReportObject registrationSummaryReportObject = new MvcRegistrationSummaryReportObject(startDate);
+            MvcHouseholdRegistrationSummaryReportObject registrationSummaryReportObject = new MvcHouseholdRegistrationSummaryReportObject(startDate);
             try {
                 return registrationSummaryReportObject.getIndicatorDataAsGson(registrationSummaryReportObject.getIndicatorData());
             } catch (JSONException e) {
