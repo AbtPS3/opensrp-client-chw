@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .show-on-print {
+        display: none;
+    }
+
+    body {
+        font-family: Helvetica;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    /* Table Styles */
+
+    .table-wrapper {
+        margin: 10px;
+        margin-right: 10px;
+    }
+
+    .fl-table {
+        border-radius: 5px;
+        font-size: 10px;
+        font-weight: normal;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 100%;
+        background-color: white;
+    }
+
+    .fl-table td, .fl-table th {
+        padding: 5px;
+    }
+
+
+    ul {
+        width: 100%;
+    }
+
+    ul li {
+        width: 49%;
+        display: inline-block;
+    }
+
+    ul li > * {
+        width: 30%;
+        margin-bottom: 5px;
+    }
+
+    .no-data {
+        background: #ccc;
+    }
+
+
+</style>
+
+<body>
+
+<div class="table-wrapper">
+    <table cellspacing="0" border="0">
+        <colgroup span="93" width="85"></colgroup>
+        <tr>
+            <td rowspan=2 height="34"></td>
+            <td colspan=10 rowspan=2>[F] Parenting (for Caregivers with Children of &lt;5 years Old)</td>
+            <td colspan=6 rowspan=2>[G] Nutritional Status Assessment (MUAC)</td>
+            <td colspan=6 rowspan=2>[H] Food and Nutrition</td>
+            <td colspan=14 rowspan=2>[I] Health Care</td>
+            <td colspan=16 rowspan=2>[J] Household Economic Strengthening</td>
+            <td colspan=32>[K]Caregivers Referrals</td>
+            <td colspan=8 rowspan=2>[L] Shelter &amp; Hygiene</td>
+        </tr>
+        <tr>
+            <td colspan=14>[K1] Number of &nbsp;Caregiver's Referrals, by Type</td>
+            <td colspan=14>[K2] Number of &nbsp;Caregiver's Referrals Completed, by Type</td>
+            <td colspan=4>[K3] Support Provided to Caregiver on Referrals</td>
+        </tr>
+        <tr>
+            <td rowspan=2 height="94">Age &amp; sex category</td>
+            <td colspan=2>Number of &nbsp;caregivers received care for child development (CCD) education during a CHW
+                &nbsp;home visit.
+            </td>
+            <td colspan=2>Number of caregivers received ECD education at children's corners in HF</td>
+            <td colspan=2>Number of caregivers linked to community parenting groups</td>
+            <td colspan=2>Number of caregivers received parenting messages</td>
+            <td colspan=2>Number of caregivers received infant and young child feeding counseling</td>
+            <td colspan=2>Number of &nbsp;caregivers with severe &nbsp; &nbsp;malnutrition</td>
+            <td colspan=2>Number of &nbsp;caregivers with moderate &nbsp;mulnutrition</td>
+            <td colspan=2>Number of &nbsp;caregivers not mulnourished</td>
+            <td colspan=2>Number of caregiver received nutrition &nbsp;counseling</td>
+            <td colspan=2>Number of households linked to external food &nbsp;support &amp; nutritional supplements</td>
+            <td colspan=2>Number of caregivvers linked to other services</td>
+            <td colspan=2>Number of caregivers received HIV risk assessment</td>
+            <td colspan=2>Number of caregivers received HIV prevention counseling service &nbsp;</td>
+            <td colspan=2>Number of caregivers received disclosure support &nbsp;</td>
+            <td colspan=2>Number of caregivers linked to an HIV support group.</td>
+            <td colspan=2>Number of caregivers received ART adherence counseling</td>
+            <td colspan=2>Number of caregivers supported to join CHF/TIKA.&nbsp;</td>
+            <td colspan=2>Number of caregivers received support for GBV</td>
+            <td colspan=2>Number of primary caregivers who are active SLG member</td>
+            <td colspan=2>Number of &nbsp;households linked to temporary consumption support (e.g. SLG &amp; OVC
+                funds.
+            </td>
+            <td colspan=2>Number of household linked to cash transfer eg TASAF.</td>
+            <td colspan=2>Number of caregivers linked to entrepreneurship trainings.</td>
+            <td colspan=2>Number of caregivers supported to establish income generating activity (IGA).</td>
+            <td colspan=2>Number of households linked to market.</td>
+            <td colspan=2>Number of households supported to prepare succession plan.</td>
+            <td colspan=2>Number of primary caregivers linked to agricultural extension support.</td>
+            <td colspan=2>Health -related services</td>
+            <td colspan=2>Nutrition</td>
+            <td colspan=2>Education</td>
+            <td colspan=2>Child Protection</td>
+            <td colspan=2>Psycho social support</td>
+            <td colspan=2>Economic strengtherning</td>
+            <td colspan=2>Others</td>
+            <td colspan=2>Health -related services.</td>
+            <td colspan=2>Nutrition</td>
+            <td colspan=2>Education &nbsp;</td>
+            <td colspan=2>Child Protection</td>
+            <td colspan=2>Psycho social support</td>
+            <td colspan=2>Economic strengtherning</td>
+            <td colspan=2>Others</td>
+            <td colspan=2>Number of caregiver's referrals &nbsp;accompanied to service(s</td>
+            <td colspan=2>Number of caregiver's referrals &nbsp;asisted with transport</td>
+            <td colspan=2>Number of households linked to house renovation support</td>
+            <td colspan=2>Number of households linked to house construction support.</td>
+            <td colspan=2>Number of households received water, sanitation and hygiene (WASH) &nbsp;education.</td>
+            <td colspan=2>Number of households received clothing support</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>&nbsp; &nbsp; M</td>
+            <td>&nbsp; &nbsp; &nbsp;F</td>
+            <td>&nbsp; &nbsp; &nbsp;M</td>
+            <td>&nbsp; &nbsp; F</td>
+            <td>&nbsp; &nbsp; M</td>
+            <td>&nbsp; &nbsp; F</td>
+            <td>&nbsp; &nbsp; M</td>
+            <td>&nbsp; &nbsp; &nbsp;F</td>
+            <td>&nbsp; &nbsp; M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>&nbsp; &nbsp; &nbsp;F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td><1</td>
+            <td id="mvc-<1-ccd-education-home-M"></td>
+            <td id="mvc-<1-ccd-education-home-F"></td>
+            <td id="mvc-<1-ecd-education-cc-M"></td>
+            <td id="mvc-<1-ecd-education-cc-F"></td>
+            <td id="mvc-<1-parenting-groups-M"></td>
+            <td id="mvc-<1-parenting-groups-F"></td>
+            <td id="mvc-<1-parenting-messages-M"></td>
+            <td id="mvc-<1-parenting-messages-F"></td>
+            <td id="mvc-<1-infant-feeding-M"></td>
+            <td id="mvc-<1-infant-feeding-F"></td>
+            <td id="mvc-<1-severe-malnutrition-M"></td>
+            <td id="mvc-<1-severe-malnutrition-F"></td>
+            <td id="mvc-<1-moderate-malnutrition-M"></td>
+            <td id="mvc-<1-moderate-malnutrition-F"></td>
+            <td id="mvc-<1-not-malnourished-M"></td>
+            <td id="mvc-<1-not-malnourished-F"></td>
+            <td id="mvc-<1-nutrition-counseling-M"></td>
+            <td id="mvc-<1-nutrition-counseling-F"></td>
+            <td id="mvc-<1-food-support-M"></td>
+            <td id="mvc-<1-food-support-F"></td>
+            <td id="mvc-<1-linked-services-M"></td>
+            <td id="mvc-<1-linked-services-F"></td>
+            <td id="mvc-<1-hiv-risk-M"></td>
+            <td id="mvc-<1-hiv-risk-F"></td>
+            <td id="mvc-<1-hiv-prevention-M"></td>
+            <td id="mvc-<1-hiv-prevention-F"></td>
+            <td id="mvc-<1-disclosure-support-M"></td>
+            <td id="mvc-<1-disclosure-support-F"></td>
+            <td id="mvc-<1-hiv-support-group-M"></td>
+            <td id="mvc-<1-hiv-support-group-F"></td>
+            <td id="mvc-<1-art-adherence-M"></td>
+            <td id="mvc-<1-art-adherence-F"></td>
+            <td id="mvc-<1-join-chf-tika-M"></td>
+            <td id="mvc-<1-join-chf-tika-F"></td>
+            <td id="mvc-<1-gbv-support-M"></td>
+            <td id="mvc-<1-gbv-support-F"></td>
+            <td id="mvc-<1-slg-member-M"></td>
+            <td id="mvc-<1-slg-member-F"></td>
+            <td id="mvc-<1-consumption-support-M"></td>
+            <td id="mvc-<1-consumption-support-F"></td>
+            <td id="mvc-<1-cash-transfer-M"></td>
+            <td id="mvc-<1-cash-transfer-F"></td>
+            <td id="mvc-<1-entrepreneurship-training-M"></td>
+            <td id="mvc-<1-entrepreneurship-training-F"></td>
+            <td id="mvc-<1-iga-establishment-M"></td>
+            <td id="mvc-<1-iga-establishment-F"></td>
+            <td id="mvc-<1-market-link-M"></td>
+            <td id="mvc-<1-market-link-F"></td>
+            <td id="mvc-<1-succession-plan-M"></td>
+            <td id="mvc-<1-succession-plan-F"></td>
+            <td id="mvc-<1-agricultural-extension-M"></td>
+            <td id="mvc-<1-agricultural-extension-F"></td>
+            <td id="mvc-<1-referral-health-services-M"></td>
+            <td id="mvc-<1-referral-health-services-F"></td>
+            <td id="mvc-<1-referral-nutrition-M"></td>
+            <td id="mvc-<1-referral-nutrition-F"></td>
+            <td id="mvc-<1-referral-education-M"></td>
+            <td id="mvc-<1-referral-education-F"></td>
+            <td id="mvc-<1-referral-child-protection-M"></td>
+            <td id="mvc-<1-referral-child-protection-F"></td>
+            <td id="mvc-<1-referral-psychosocial-support-M"></td>
+            <td id="mvc-<1-referral-psychosocial-support-F"></td>
+            <td id="mvc-<1-referral-economic-strengthening-M"></td>
+            <td id="mvc-<1-referral-economic-strengthening-F"></td>
+            <td id="mvc-<1-referral-others-M"></td>
+            <td id="mvc-<1-referral-others-F"></td>
+            <td id="mvc-<1-health-related-services-M"></td>
+            <td id="mvc-<1-health-related-services-F"></td>
+            <td id="mvc-<1-nutrition-M"></td>
+            <td id="mvc-<1-nutrition-F"></td>
+            <td id="mvc-<1-education-M"></td>
+            <td id="mvc-<1-education-F"></td>
+            <td id="mvc-<1-child-protection-M"></td>
+            <td id="mvc-<1-child-protection-F"></td>
+            <td id="mvc-<1-psycho-social-support-M"></td>
+            <td id="mvc-<1-psycho-social-support-F"></td>
+            <td id="mvc-<1-economic-strengthening-M"></td>
+            <td id="mvc-<1-economic-strengthening-F"></td>
+            <td id="mvc-<1-others-M"></td>
+            <td id="mvc-<1-others-F"></td>
+            <td id="mvc-<1-caregiver-referrals-accompanied-to-services-M"></td>
+            <td id="mvc-<1-caregiver-referrals-accompanied-to-services-F"></td>
+            <td id="mvc-<1-caregiver-referrals-assisted-with-transport-M"></td>
+            <td id="mvc-<1-caregiver-referrals-assisted-with-transport-F"></td>
+            <td id="mvc-<1-house-renovation-support-M"></td>
+            <td id="mvc-<1-house-renovation-support-F"></td>
+            <td id="mvc-<1-house-construction-support-M"></td>
+            <td id="mvc-<1-house-construction-support-F"></td>
+            <td id="mvc-<1-wash-education-M"></td>
+            <td id="mvc-<1-wash-education-F"></td>
+            <td id="mvc-<1-clothing-support-M"></td>
+            <td id="mvc-<1-clothing-support-F"></td>
+        </tr>
+        <tr>
+            <td>17 & <</td>
+            <td id="mvc-17-and-below-ccd-education-home-M"></td>
+            <td id="mvc-17-and-below-ccd-education-home-F"></td>
+            <td id="mvc-17-and-below-ecd-education-cc-M"></td>
+            <td id="mvc-17-and-below-ecd-education-cc-F"></td>
+            <td id="mvc-17-and-below-parenting-groups-M"></td>
+            <td id="mvc-17-and-below-parenting-groups-F"></td>
+            <td id="mvc-17-and-below-parenting-messages-M"></td>
+            <td id="mvc-17-and-below-parenting-messages-F"></td>
+            <td id="mvc-17-and-below-infant-feeding-M"></td>
+            <td id="mvc-17-and-below-infant-feeding-F"></td>
+            <td id="mvc-17-and-below-severe-malnutrition-M"></td>
+            <td id="mvc-17-and-below-severe-malnutrition-F"></td>
+            <td id="mvc-17-and-below-moderate-malnutrition-M"></td>
+            <td id="mvc-17-and-below-moderate-malnutrition-F"></td>
+            <td id="mvc-17-and-below-not-malnourished-M"></td>
+            <td id="mvc-17-and-below-not-malnourished-F"></td>
+            <td id="mvc-17-and-below-nutrition-counseling-M"></td>
+            <td id="mvc-17-and-below-nutrition-counseling-F"></td>
+            <td id="mvc-17-and-below-food-support-M"></td>
+            <td id="mvc-17-and-below-food-support-F"></td>
+            <td id="mvc-17-and-below-linked-services-M"></td>
+            <td id="mvc-17-and-below-linked-services-F"></td>
+            <td id="mvc-17-and-below-hiv-risk-M"></td>
+            <td id="mvc-17-and-below-hiv-risk-F"></td>
+            <td id="mvc-17-and-below-hiv-prevention-M"></td>
+            <td id="mvc-17-and-below-hiv-prevention-F"></td>
+            <td id="mvc-17-and-below-disclosure-support-M"></td>
+            <td id="mvc-17-and-below-disclosure-support-F"></td>
+            <td id="mvc-17-and-below-hiv-support-group-M"></td>
+            <td id="mvc-17-and-below-hiv-support-group-F"></td>
+            <td id="mvc-17-and-below-art-adherence-M"></td>
+            <td id="mvc-17-and-below-art-adherence-F"></td>
+            <td id="mvc-17-and-below-join-chf-tika-M"></td>
+            <td id="mvc-17-and-below-join-chf-tika-F"></td>
+            <td id="mvc-17-and-below-gbv-support-M"></td>
+            <td id="mvc-17-and-below-gbv-support-F"></td>
+            <td id="mvc-17-and-below-slg-member-M"></td>
+            <td id="mvc-17-and-below-slg-member-F"></td>
+            <td id="mvc-17-and-below-consumption-support-M"></td>
+            <td id="mvc-17-and-below-consumption-support-F"></td>
+            <td id="mvc-17-and-below-cash-transfer-M"></td>
+            <td id="mvc-17-and-below-cash-transfer-F"></td>
+            <td id="mvc-17-and-below-entrepreneurship-training-M"></td>
+            <td id="mvc-17-and-below-entrepreneurship-training-F"></td>
+            <td id="mvc-17-and-below-iga-establishment-M"></td>
+            <td id="mvc-17-and-below-iga-establishment-F"></td>
+            <td id="mvc-17-and-below-market-link-M"></td>
+            <td id="mvc-17-and-below-market-link-F"></td>
+            <td id="mvc-17-and-below-succession-plan-M"></td>
+            <td id="mvc-17-and-below-succession-plan-F"></td>
+            <td id="mvc-17-and-below-agricultural-extension-M"></td>
+            <td id="mvc-17-and-below-agricultural-extension-F"></td>
+            <td id="mvc-17-and-below-referral-health-services-M"></td>
+            <td id="mvc-17-and-below-referral-health-services-F"></td>
+            <td id="mvc-17-and-below-referral-nutrition-M"></td>
+            <td id="mvc-17-and-below-referral-nutrition-F"></td>
+            <td id="mvc-17-and-below-referral-education-M"></td>
+            <td id="mvc-17-and-below-referral-education-F"></td>
+            <td id="mvc-17-and-below-referral-child-protection-M"></td>
+            <td id="mvc-17-and-below-referral-child-protection-F"></td>
+            <td id="mvc-17-and-below-referral-psychosocial-support-M"></td>
+            <td id="mvc-17-and-below-referral-psychosocial-support-F"></td>
+            <td id="mvc-17-and-below-referral-economic-strengthening-M"></td>
+            <td id="mvc-17-and-below-referral-economic-strengthening-F"></td>
+            <td id="mvc-17-and-below-referral-others-M"></td>
+            <td id="mvc-17-and-below-referral-others-F"></td>
+            <td id="mvc-17-and-below-health-related-services-M"></td>
+            <td id="mvc-17-and-below-health-related-services-F"></td>
+            <td id="mvc-17-and-below-nutrition-M"></td>
+            <td id="mvc-17-and-below-nutrition-F"></td>
+            <td id="mvc-17-and-below-education-M"></td>
+            <td id="mvc-17-and-below-education-F"></td>
+            <td id="mvc-17-and-below-child-protection-M"></td>
+            <td id="mvc-17-and-below-child-protection-F"></td>
+            <td id="mvc-17-and-below-psycho-social-support-M"></td>
+            <td id="mvc-17-and-below-psycho-social-support-F"></td>
+            <td id="mvc-17-and-below-economic-strengthening-M"></td>
+            <td id="mvc-17-and-below-economic-strengthening-F"></td>
+            <td id="mvc-17-and-below-others-M"></td>
+            <td id="mvc-17-and-below-others-F"></td>
+            <td id="mvc-17-and-below-caregiver-referrals-accompanied-to-services-M"></td>
+            <td id="mvc-17-and-below-caregiver-referrals-accompanied-to-services-F"></td>
+            <td id="mvc-17-and-below-caregiver-referrals-assisted-with-transport-M"></td>
+            <td id="mvc-17-and-below-caregiver-referrals-assisted-with-transport-F"></td>
+            <td id="mvc-17-and-below-house-renovation-support-M"></td>
+            <td id="mvc-17-and-below-house-renovation-support-F"></td>
+            <td id="mvc-17-and-below-house-construction-support-M"></td>
+            <td id="mvc-17-and-below-house-construction-support-F"></td>
+            <td id="mvc-17-and-below-wash-education-M"></td>
+            <td id="mvc-17-and-below-wash-education-F"></td>
+            <td id="mvc-17-and-below-clothing-support-M"></td>
+            <td id="mvc-17-and-below-clothing-support-F"></td>
+        </tr>
+        <tr>
+            <td>18-24</td>
+            <td id="mvc-18-24-ccd-education-home-M"></td>
+            <td id="mvc-18-24-ccd-education-home-F"></td>
+            <td id="mvc-18-24-ecd-education-cc-M"></td>
+            <td id="mvc-18-24-ecd-education-cc-F"></td>
+            <td id="mvc-18-24-parenting-groups-M"></td>
+            <td id="mvc-18-24-parenting-groups-F"></td>
+            <td id="mvc-18-24-parenting-messages-M"></td>
+            <td id="mvc-18-24-parenting-messages-F"></td>
+            <td id="mvc-18-24-infant-feeding-M"></td>
+            <td id="mvc-18-24-infant-feeding-F"></td>
+            <td id="mvc-18-24-severe-malnutrition-M"></td>
+            <td id="mvc-18-24-severe-malnutrition-F"></td>
+            <td id="mvc-18-24-moderate-malnutrition-M"></td>
+            <td id="mvc-18-24-moderate-malnutrition-F"></td>
+            <td id="mvc-18-24-not-malnourished-M"></td>
+            <td id="mvc-18-24-not-malnourished-F"></td>
+            <td id="mvc-18-24-nutrition-counseling-M"></td>
+            <td id="mvc-18-24-nutrition-counseling-F"></td>
+            <td id="mvc-18-24-food-support-M"></td>
+            <td id="mvc-18-24-food-support-F"></td>
+            <td id="mvc-18-24-linked-services-M"></td>
+            <td id="mvc-18-24-linked-services-F"></td>
+            <td id="mvc-18-24-hiv-risk-M"></td>
+            <td id="mvc-18-24-hiv-risk-F"></td>
+            <td id="mvc-18-24-hiv-prevention-M"></td>
+            <td id="mvc-18-24-hiv-prevention-F"></td>
+            <td id="mvc-18-24-disclosure-support-M"></td>
+            <td id="mvc-18-24-disclosure-support-F"></td>
+            <td id="mvc-18-24-hiv-support-group-M"></td>
+            <td id="mvc-18-24-hiv-support-group-F"></td>
+            <td id="mvc-18-24-art-adherence-M"></td>
+            <td id="mvc-18-24-art-adherence-F"></td>
+            <td id="mvc-18-24-join-chf-tika-M"></td>
+            <td id="mvc-18-24-join-chf-tika-F"></td>
+            <td id="mvc-18-24-gbv-support-M"></td>
+            <td id="mvc-18-24-gbv-support-F"></td>
+            <td id="mvc-18-24-slg-member-M"></td>
+            <td id="mvc-18-24-slg-member-F"></td>
+            <td id="mvc-18-24-consumption-support-M"></td>
+            <td id="mvc-18-24-consumption-support-F"></td>
+            <td id="mvc-18-24-cash-transfer-M"></td>
+            <td id="mvc-18-24-cash-transfer-F"></td>
+            <td id="mvc-18-24-entrepreneurship-training-M"></td>
+            <td id="mvc-18-24-entrepreneurship-training-F"></td>
+            <td id="mvc-18-24-iga-establishment-M"></td>
+            <td id="mvc-18-24-iga-establishment-F"></td>
+            <td id="mvc-18-24-market-link-M"></td>
+            <td id="mvc-18-24-market-link-F"></td>
+            <td id="mvc-18-24-succession-plan-M"></td>
+            <td id="mvc-18-24-succession-plan-F"></td>
+            <td id="mvc-18-24-agricultural-extension-M"></td>
+            <td id="mvc-18-24-agricultural-extension-F"></td>
+            <td id="mvc-18-24-referral-health-services-M"></td>
+            <td id="mvc-18-24-referral-health-services-F"></td>
+            <td id="mvc-18-24-referral-nutrition-M"></td>
+            <td id="mvc-18-24-referral-nutrition-F"></td>
+            <td id="mvc-18-24-referral-education-M"></td>
+            <td id="mvc-18-24-referral-education-F"></td>
+            <td id="mvc-18-24-referral-child-protection-M"></td>
+            <td id="mvc-18-24-referral-child-protection-F"></td>
+            <td id="mvc-18-24-referral-psychosocial-support-M"></td>
+            <td id="mvc-18-24-referral-psychosocial-support-F"></td>
+            <td id="mvc-18-24-referral-economic-strengthening-M"></td>
+            <td id="mvc-18-24-referral-economic-strengthening-F"></td>
+            <td id="mvc-18-24-referral-others-M"></td>
+            <td id="mvc-18-24-referral-others-F"></td>
+            <td id="mvc-18-24-health-related-services-M"></td>
+            <td id="mvc-18-24-health-related-services-F"></td>
+            <td id="mvc-18-24-nutrition-M"></td>
+            <td id="mvc-18-24-nutrition-F"></td>
+            <td id="mvc-18-24-education-M"></td>
+            <td id="mvc-18-24-education-F"></td>
+            <td id="mvc-18-24-child-protection-M"></td>
+            <td id="mvc-18-24-child-protection-F"></td>
+            <td id="mvc-18-24-psycho-social-support-M"></td>
+            <td id="mvc-18-24-psycho-social-support-F"></td>
+            <td id="mvc-18-24-economic-strengthening-M"></td>
+            <td id="mvc-18-24-economic-strengthening-F"></td>
+            <td id="mvc-18-24-others-M"></td>
+            <td id="mvc-18-24-others-F"></td>
+            <td id="mvc-18-24-caregiver-referrals-accompanied-to-services-M"></td>
+            <td id="mvc-18-24-caregiver-referrals-accompanied-to-services-F"></td>
+            <td id="mvc-18-24-caregiver-referrals-assisted-with-transport-M"></td>
+            <td id="mvc-18-24-caregiver-referrals-assisted-with-transport-F"></td>
+            <td id="mvc-18-24-house-renovation-support-M"></td>
+            <td id="mvc-18-24-house-renovation-support-F"></td>
+            <td id="mvc-18-24-house-construction-support-M"></td>
+            <td id="mvc-18-24-house-construction-support-F"></td>
+            <td id="mvc-18-24-wash-education-M"></td>
+            <td id="mvc-18-24-wash-education-F"></td>
+            <td id="mvc-18-24-clothing-support-M"></td>
+            <td id="mvc-18-24-clothing-support-F"></td>
+        </tr>
+        <tr>
+            <td>25-59</td>
+            <td id="mvc-25-59-ccd-education-home-M"></td>
+            <td id="mvc-25-59-ccd-education-home-F"></td>
+            <td id="mvc-25-59-ecd-education-cc-M"></td>
+            <td id="mvc-25-59-ecd-education-cc-F"></td>
+            <td id="mvc-25-59-parenting-groups-M"></td>
+            <td id="mvc-25-59-parenting-groups-F"></td>
+            <td id="mvc-25-59-parenting-messages-M"></td>
+            <td id="mvc-25-59-parenting-messages-F"></td>
+            <td id="mvc-25-59-infant-feeding-M"></td>
+            <td id="mvc-25-59-infant-feeding-F"></td>
+            <td id="mvc-25-59-severe-malnutrition-M"></td>
+            <td id="mvc-25-59-severe-malnutrition-F"></td>
+            <td id="mvc-25-59-moderate-malnutrition-M"></td>
+            <td id="mvc-25-59-moderate-malnutrition-F"></td>
+            <td id="mvc-25-59-not-malnourished-M"></td>
+            <td id="mvc-25-59-not-malnourished-F"></td>
+            <td id="mvc-25-59-nutrition-counseling-M"></td>
+            <td id="mvc-25-59-nutrition-counseling-F"></td>
+            <td id="mvc-25-59-food-support-M"></td>
+            <td id="mvc-25-59-food-support-F"></td>
+            <td id="mvc-25-59-linked-services-M"></td>
+            <td id="mvc-25-59-linked-services-F"></td>
+            <td id="mvc-25-59-hiv-risk-M"></td>
+            <td id="mvc-25-59-hiv-risk-F"></td>
+            <td id="mvc-25-59-hiv-prevention-M"></td>
+            <td id="mvc-25-59-hiv-prevention-F"></td>
+            <td id="mvc-25-59-disclosure-support-M"></td>
+            <td id="mvc-25-59-disclosure-support-F"></td>
+            <td id="mvc-25-59-hiv-support-group-M"></td>
+            <td id="mvc-25-59-hiv-support-group-F"></td>
+            <td id="mvc-25-59-art-adherence-M"></td>
+            <td id="mvc-25-59-art-adherence-F"></td>
+            <td id="mvc-25-59-join-chf-tika-M"></td>
+            <td id="mvc-25-59-join-chf-tika-F"></td>
+            <td id="mvc-25-59-gbv-support-M"></td>
+            <td id="mvc-25-59-gbv-support-F"></td>
+            <td id="mvc-25-59-slg-member-M"></td>
+            <td id="mvc-25-59-slg-member-F"></td>
+            <td id="mvc-25-59-consumption-support-M"></td>
+            <td id="mvc-25-59-consumption-support-F"></td>
+            <td id="mvc-25-59-cash-transfer-M"></td>
+            <td id="mvc-25-59-cash-transfer-F"></td>
+            <td id="mvc-25-59-entrepreneurship-training-M"></td>
+            <td id="mvc-25-59-entrepreneurship-training-F"></td>
+            <td id="mvc-25-59-iga-establishment-M"></td>
+            <td id="mvc-25-59-iga-establishment-F"></td>
+            <td id="mvc-25-59-market-link-M"></td>
+            <td id="mvc-25-59-market-link-F"></td>
+            <td id="mvc-25-59-succession-plan-M"></td>
+            <td id="mvc-25-59-succession-plan-F"></td>
+            <td id="mvc-25-59-agricultural-extension-M"></td>
+            <td id="mvc-25-59-agricultural-extension-F"></td>
+            <td id="mvc-25-59-referral-health-services-M"></td>
+            <td id="mvc-25-59-referral-health-services-F"></td>
+            <td id="mvc-25-59-referral-nutrition-M"></td>
+            <td id="mvc-25-59-referral-nutrition-F"></td>
+            <td id="mvc-25-59-referral-education-M"></td>
+            <td id="mvc-25-59-referral-education-F"></td>
+            <td id="mvc-25-59-referral-child-protection-M"></td>
+            <td id="mvc-25-59-referral-child-protection-F"></td>
+            <td id="mvc-25-59-referral-psychosocial-support-M"></td>
+            <td id="mvc-25-59-referral-psychosocial-support-F"></td>
+            <td id="mvc-25-59-referral-economic-strengthening-M"></td>
+            <td id="mvc-25-59-referral-economic-strengthening-F"></td>
+            <td id="mvc-25-59-referral-others-M"></td>
+            <td id="mvc-25-59-referral-others-F"></td>
+            <td id="mvc-25-59-health-related-services-M"></td>
+            <td id="mvc-25-59-health-related-services-F"></td>
+            <td id="mvc-25-59-nutrition-M"></td>
+            <td id="mvc-25-59-nutrition-F"></td>
+            <td id="mvc-25-59-education-M"></td>
+            <td id="mvc-25-59-education-F"></td>
+            <td id="mvc-25-59-child-protection-M"></td>
+            <td id="mvc-25-59-child-protection-F"></td>
+            <td id="mvc-25-59-psycho-social-support-M"></td>
+            <td id="mvc-25-59-psycho-social-support-F"></td>
+            <td id="mvc-25-59-economic-strengthening-M"></td>
+            <td id="mvc-25-59-economic-strengthening-F"></td>
+            <td id="mvc-25-59-others-M"></td>
+            <td id="mvc-25-59-others-F"></td>
+            <td id="mvc-25-59-caregiver-referrals-accompanied-to-services-M"></td>
+            <td id="mvc-25-59-caregiver-referrals-accompanied-to-services-F"></td>
+            <td id="mvc-25-59-caregiver-referrals-assisted-with-transport-M"></td>
+            <td id="mvc-25-59-caregiver-referrals-assisted-with-transport-F"></td>
+            <td id="mvc-25-59-house-renovation-support-M"></td>
+            <td id="mvc-25-59-house-renovation-support-F"></td>
+            <td id="mvc-25-59-house-construction-support-M"></td>
+            <td id="mvc-25-59-house-construction-support-F"></td>
+            <td id="mvc-25-59-wash-education-M"></td>
+            <td id="mvc-25-59-wash-education-F"></td>
+            <td id="mvc-25-59-clothing-support-M"></td>
+            <td id="mvc-25-59-clothing-support-F"></td>
+        </tr>
+        <tr>
+            <td>60+</td>
+            <td id="mvc-60-and-above-ccd-education-home-M"></td>
+            <td id="mvc-60-and-above-ccd-education-home-F"></td>
+            <td id="mvc-60-and-above-ecd-education-cc-M"></td>
+            <td id="mvc-60-and-above-ecd-education-cc-F"></td>
+            <td id="mvc-60-and-above-parenting-groups-M"></td>
+            <td id="mvc-60-and-above-parenting-groups-F"></td>
+            <td id="mvc-60-and-above-parenting-messages-M"></td>
+            <td id="mvc-60-and-above-parenting-messages-F"></td>
+            <td id="mvc-60-and-above-infant-feeding-M"></td>
+            <td id="mvc-60-and-above-infant-feeding-F"></td>
+            <td id="mvc-60-and-above-severe-malnutrition-M"></td>
+            <td id="mvc-60-and-above-severe-malnutrition-F"></td>
+            <td id="mvc-60-and-above-moderate-malnutrition-M"></td>
+            <td id="mvc-60-and-above-moderate-malnutrition-F"></td>
+            <td id="mvc-60-and-above-not-malnourished-M"></td>
+            <td id="mvc-60-and-above-not-malnourished-F"></td>
+            <td id="mvc-60-and-above-nutrition-counseling-M"></td>
+            <td id="mvc-60-and-above-nutrition-counseling-F"></td>
+            <td id="mvc-60-and-above-food-support-M"></td>
+            <td id="mvc-60-and-above-food-support-F"></td>
+            <td id="mvc-60-and-above-linked-services-M"></td>
+            <td id="mvc-60-and-above-linked-services-F"></td>
+            <td id="mvc-60-and-above-hiv-risk-M"></td>
+            <td id="mvc-60-and-above-hiv-risk-F"></td>
+            <td id="mvc-60-and-above-hiv-prevention-M"></td>
+            <td id="mvc-60-and-above-hiv-prevention-F"></td>
+            <td id="mvc-60-and-above-disclosure-support-M"></td>
+            <td id="mvc-60-and-above-disclosure-support-F"></td>
+            <td id="mvc-60-and-above-hiv-support-group-M"></td>
+            <td id="mvc-60-and-above-hiv-support-group-F"></td>
+            <td id="mvc-60-and-above-art-adherence-M"></td>
+            <td id="mvc-60-and-above-art-adherence-F"></td>
+            <td id="mvc-60-and-above-join-chf-tika-M"></td>
+            <td id="mvc-60-and-above-join-chf-tika-F"></td>
+            <td id="mvc-60-and-above-gbv-support-M"></td>
+            <td id="mvc-60-and-above-gbv-support-F"></td>
+            <td id="mvc-60-and-above-slg-member-M"></td>
+            <td id="mvc-60-and-above-slg-member-F"></td>
+            <td id="mvc-60-and-above-consumption-support-M"></td>
+            <td id="mvc-60-and-above-consumption-support-F"></td>
+            <td id="mvc-60-and-above-cash-transfer-M"></td>
+            <td id="mvc-60-and-above-cash-transfer-F"></td>
+            <td id="mvc-60-and-above-entrepreneurship-training-M"></td>
+            <td id="mvc-60-and-above-entrepreneurship-training-F"></td>
+            <td id="mvc-60-and-above-iga-establishment-M"></td>
+            <td id="mvc-60-and-above-iga-establishment-F"></td>
+            <td id="mvc-60-and-above-market-link-M"></td>
+            <td id="mvc-60-and-above-market-link-F"></td>
+            <td id="mvc-60-and-above-succession-plan-M"></td>
+            <td id="mvc-60-and-above-succession-plan-F"></td>
+            <td id="mvc-60-and-above-agricultural-extension-M"></td>
+            <td id="mvc-60-and-above-agricultural-extension-F"></td>
+            <td id="mvc-60-and-above-referral-health-services-M"></td>
+            <td id="mvc-60-and-above-referral-health-services-F"></td>
+            <td id="mvc-60-and-above-referral-nutrition-M"></td>
+            <td id="mvc-60-and-above-referral-nutrition-F"></td>
+            <td id="mvc-60-and-above-referral-education-M"></td>
+            <td id="mvc-60-and-above-referral-education-F"></td>
+            <td id="mvc-60-and-above-referral-child-protection-M"></td>
+            <td id="mvc-60-and-above-referral-child-protection-F"></td>
+            <td id="mvc-60-and-above-referral-psychosocial-support-M"></td>
+            <td id="mvc-60-and-above-referral-psychosocial-support-F"></td>
+            <td id="mvc-60-and-above-referral-economic-strengthening-M"></td>
+            <td id="mvc-60-and-above-referral-economic-strengthening-F"></td>
+            <td id="mvc-60-and-above-referral-others-M"></td>
+            <td id="mvc-60-and-above-referral-others-F"></td>
+            <td id="mvc-60-and-above-health-related-services-M"></td>
+            <td id="mvc-60-and-above-health-related-services-F"></td>
+            <td id="mvc-60-and-above-nutrition-M"></td>
+            <td id="mvc-60-and-above-nutrition-F"></td>
+            <td id="mvc-60-and-above-education-M"></td>
+            <td id="mvc-60-and-above-education-F"></td>
+            <td id="mvc-60-and-above-child-protection-M"></td>
+            <td id="mvc-60-and-above-child-protection-F"></td>
+            <td id="mvc-60-and-above-psycho-social-support-M"></td>
+            <td id="mvc-60-and-above-psycho-social-support-F"></td>
+            <td id="mvc-60-and-above-economic-strengthening-M"></td>
+            <td id="mvc-60-and-above-economic-strengthening-F"></td>
+            <td id="mvc-60-and-above-others-M"></td>
+            <td id="mvc-60-and-above-others-F"></td>
+            <td id="mvc-60-and-above-caregiver-referrals-accompanied-to-services-M"></td>
+            <td id="mvc-60-and-above-caregiver-referrals-accompanied-to-services-F"></td>
+            <td id="mvc-60-and-above-caregiver-referrals-assisted-with-transport-M"></td>
+            <td id="mvc-60-and-above-caregiver-referrals-assisted-with-transport-F"></td>
+            <td id="mvc-60-and-above-house-renovation-support-M"></td>
+            <td id="mvc-60-and-above-house-renovation-support-F"></td>
+            <td id="mvc-60-and-above-house-construction-support-M"></td>
+            <td id="mvc-60-and-above-house-construction-support-F"></td>
+            <td id="mvc-60-and-above-wash-education-M"></td>
+            <td id="mvc-60-and-above-wash-education-F"></td>
+            <td id="mvc-60-and-above-clothing-support-M"></td>
+            <td id="mvc-60-and-above-clothing-support-F"></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td id="mvc-total-ccd-education-home-M"></td>
+            <td id="mvc-total-ccd-education-home-F"></td>
+            <td id="mvc-total-ecd-education-cc-M"></td>
+            <td id="mvc-total-ecd-education-cc-F"></td>
+            <td id="mvc-total-parenting-groups-M"></td>
+            <td id="mvc-total-parenting-groups-F"></td>
+            <td id="mvc-total-parenting-messages-M"></td>
+            <td id="mvc-total-parenting-messages-F"></td>
+            <td id="mvc-total-infant-feeding-M"></td>
+            <td id="mvc-total-infant-feeding-F"></td>
+            <td id="mvc-total-severe-malnutrition-M"></td>
+            <td id="mvc-total-severe-malnutrition-F"></td>
+            <td id="mvc-total-moderate-malnutrition-M"></td>
+            <td id="mvc-total-moderate-malnutrition-F"></td>
+            <td id="mvc-total-not-malnourished-M"></td>
+            <td id="mvc-total-not-malnourished-F"></td>
+            <td id="mvc-total-nutrition-counseling-M"></td>
+            <td id="mvc-total-nutrition-counseling-F"></td>
+            <td id="mvc-total-food-support-M"></td>
+            <td id="mvc-total-food-support-F"></td>
+            <td id="mvc-total-linked-services-M"></td>
+            <td id="mvc-total-linked-services-F"></td>
+            <td id="mvc-total-hiv-risk-M"></td>
+            <td id="mvc-total-hiv-risk-F"></td>
+            <td id="mvc-total-hiv-prevention-M"></td>
+            <td id="mvc-total-hiv-prevention-F"></td>
+            <td id="mvc-total-disclosure-support-M"></td>
+            <td id="mvc-total-disclosure-support-F"></td>
+            <td id="mvc-total-hiv-support-group-M"></td>
+            <td id="mvc-total-hiv-support-group-F"></td>
+            <td id="mvc-total-art-adherence-M"></td>
+            <td id="mvc-total-art-adherence-F"></td>
+            <td id="mvc-total-join-chf-tika-M"></td>
+            <td id="mvc-total-join-chf-tika-F"></td>
+            <td id="mvc-total-gbv-support-M"></td>
+            <td id="mvc-total-gbv-support-F"></td>
+            <td id="mvc-total-slg-member-M"></td>
+            <td id="mvc-total-slg-member-F"></td>
+            <td id="mvc-total-consumption-support-M"></td>
+            <td id="mvc-total-consumption-support-F"></td>
+            <td id="mvc-total-cash-transfer-M"></td>
+            <td id="mvc-total-cash-transfer-F"></td>
+            <td id="mvc-total-entrepreneurship-training-M"></td>
+            <td id="mvc-total-entrepreneurship-training-F"></td>
+            <td id="mvc-total-iga-establishment-M"></td>
+            <td id="mvc-total-iga-establishment-F"></td>
+            <td id="mvc-total-market-link-M"></td>
+            <td id="mvc-total-market-link-F"></td>
+            <td id="mvc-total-succession-plan-M"></td>
+            <td id="mvc-total-succession-plan-F"></td>
+            <td id="mvc-total-agricultural-extension-M"></td>
+            <td id="mvc-total-agricultural-extension-F"></td>
+            <td id="mvc-total-referral-health-services-M"></td>
+            <td id="mvc-total-referral-health-services-F"></td>
+            <td id="mvc-total-referral-nutrition-M"></td>
+            <td id="mvc-total-referral-nutrition-F"></td>
+            <td id="mvc-total-referral-education-M"></td>
+            <td id="mvc-total-referral-education-F"></td>
+            <td id="mvc-total-referral-child-protection-M"></td>
+            <td id="mvc-total-referral-child-protection-F"></td>
+            <td id="mvc-total-referral-psychosocial-support-M"></td>
+            <td id="mvc-total-referral-psychosocial-support-F"></td>
+            <td id="mvc-total-referral-economic-strengthening-M"></td>
+            <td id="mvc-total-referral-economic-strengthening-F"></td>
+            <td id="mvc-total-referral-others-M"></td>
+            <td id="mvc-total-referral-others-F"></td>
+            <td id="mvc-total-health-related-services-M"></td>
+            <td id="mvc-total-health-related-services-F"></td>
+            <td id="mvc-total-nutrition-M"></td>
+            <td id="mvc-total-nutrition-F"></td>
+            <td id="mvc-total-education-M"></td>
+            <td id="mvc-total-education-F"></td>
+            <td id="mvc-total-child-protection-M"></td>
+            <td id="mvc-total-child-protection-F"></td>
+            <td id="mvc-total-psycho-social-support-M"></td>
+            <td id="mvc-total-psycho-social-support-F"></td>
+            <td id="mvc-total-economic-strengthening-M"></td>
+            <td id="mvc-total-economic-strengthening-F"></td>
+            <td id="mvc-total-others-M"></td>
+            <td id="mvc-total-others-F"></td>
+            <td id="mvc-total-caregiver-referrals-accompanied-to-services-M"></td>
+            <td id="mvc-total-caregiver-referrals-accompanied-to-services-F"></td>
+            <td id="mvc-total-caregiver-referrals-assisted-with-transport-M"></td>
+            <td id="mvc-total-caregiver-referrals-assisted-with-transport-F"></td>
+            <td id="mvc-total-house-renovation-support-M"></td>
+            <td id="mvc-total-house-renovation-support-F"></td>
+            <td id="mvc-total-house-construction-support-M"></td>
+            <td id="mvc-total-house-construction-support-F"></td>
+            <td id="mvc-total-wash-education-M"></td>
+            <td id="mvc-total-wash-education-F"></td>
+            <td id="mvc-total-clothing-support-M"></td>
+            <td id="mvc-total-clothing-support-F"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function loadData(reportKey, reportType) {
+        const data = JSON.parse(Android.getData(reportKey));
+        const keys = Object.keys(data.nameValuePairs);
+        const reportPeriod = document.getElementById("report_period");
+        const reportingFacility = document.getElementById("reporting_facility");
+        keys.forEach((key) => {
+            let element;
+            if (reportType !== null && reportType === "sbc") {
+                element = document.getElementById(key.replace("sbc-", ""));
+            } else {
+                element = document.getElementById(key);
+            }
+            if (element !== null && typeof element !== "undefined") {
+                element.innerHTML = data.nameValuePairs[key];
+            }
+        });
+        reportPeriod.innerHTML = Android.getDataPeriod();
+        reportingFacility.innerHTML = Android.getReportingFacility();
+    }
+</script>
+</body>
+</html>

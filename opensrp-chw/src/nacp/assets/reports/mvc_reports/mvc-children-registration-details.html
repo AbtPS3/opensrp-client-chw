@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="./report-script.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .show-on-print {
+            display: none;
+        }
+
+        body {
+            font-family: Helvetica;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        /* Table Styles */
+
+        .table-wrapper {
+            margin: 10px;
+            margin-right: 10px;
+        }
+
+        .fl-table {
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: normal;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            background-color: white;
+        }
+
+        .fl-table td, .fl-table th {
+            padding: 5px;
+        }
+
+
+        ul {
+            width: 100%;
+        }
+
+        ul li {
+            width: 49%;
+            display: inline-block;
+        }
+
+        ul li > * {
+            width: 30%;
+            margin-bottom: 5px;
+        }
+
+        .no-data {
+            background: #ccc;
+        }
+
+
+    </style>
+</head>
+
+<body onload="loadData('monthly', 'anc')">
+
+<div class="table-wrapper">
+    <table>
+        <colgroup span="9" width="83"></colgroup>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+        <colgroup span="2" width="45"></colgroup>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+        <colgroup span="63" width="83"></colgroup>
+        <tr>
+            <td height="22"></td>
+            <td colspan=2></td>
+            <td colspan=2></td>
+            <td colspan=22>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [P] Type of Vulnerabilty
+            </td>
+            <td align="center" colspan=16 valign=bottom>[Q] If disabled, Type of Disability</td>
+            <td align="center" colspan=4 valign=bottom>[R] Child in School</td>
+            <td align="center" colspan=12 valign=bottom>[S] Level of education</td>
+            <td align="center" colspan=22 valign=bottom>[U] Child Primary Caregiver</td>
+            <td align="center" colspan=2 valign=bottom>[V] Case Opened</td>
+        </tr>
+        <tr>
+            <td height="101" rowspan=2>Age &amp; Sex category</td>
+            <td colspan=2>Number Of MVC Registered</td>
+            <td colspan=2>MVC with birth certificate</td>
+            <td colspan=2>Number of disabled MVC</td>
+            <td colspan=2>Number of MVC orphaned due to HIV</td>
+            <td colspan=2>Number of MVC orphaned due to other causes</td>
+            <td colspan=2>Number of MVC living with HIV &nbsp;</td>
+            <td colspan=2>Number of malnuourished MVC</td>
+            <td colspan=2>Number of children in conflict with law</td>
+            <td colspan=2>Number of MVC living/working on the street</td>
+            <td colspan=2>Number of children living in institutional care</td>
+            <td colspan=2>Number of MVC in worst form of child labor</td>
+            <td colspan=2>Number of children at risk or suffering from violence, abuse and neglect</td>
+            <td colspan=2>Others</td>
+            <td colspan=2>Number of MVC with albinism</td>
+            <td colspan=2>Number of MVC with mental disability</td>
+            <td colspan=2>Number of MVC with hearing disability</td>
+            <td colspan=2>Number of MVC with visual disability</td>
+            <td colspan=2>Number of MVC physical disability</td>
+            <td colspan=2>Number of MVC with speech impairment</td>
+            <td colspan=2>Number of MVC with speech impairment</td>
+            <td colspan=2>Others</td>
+            <td colspan=2>Number of children in school</td>
+            <td colspan=2>Number of children not in school</td>
+            <td colspan=2>Number of MVC in early childhood development</td>
+            <td colspan=2>Number of MVC in pre- primary school&nbsp;</td>
+            <td colspan=2>Number of MVC in primary school&nbsp;</td>
+            <td colspan=2>Number of MVC in secondary school</td>
+            <td colspan=2>Number of MVC in vocational trainings</td>
+            <td colspan=2>Number of MVC in colleges</td>
+            <td colspan=2>Number of MVC under father/mother care</td>
+            <td colspan=2>Number of MVC under grandfather/grandmother care</td>
+            <td colspan=2>Number of MVC under aunt/uncle care</td>
+            <td colspan=2>Number of MVC under stepfather/stepmother care</td>
+            <td colspan=2>Number of MVC under sister/brother</td>
+            <td colspan=2>Number of MVC under institutional care</td>
+            <td colspan=2>Number of MVC under cousin care</td>
+            <td colspan=2>Number of MVC under family friend care</td>
+            <td colspan=2>Number of MVC under foster parent care</td>
+            <td colspan=2>Number of MVC under adoptive parent care</td>
+            <td colspan=2>Other</td>
+            <td colspan=2>Number of cases opened</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+            <td>M</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td><1</td>
+            <td id="mvc-<1-number-registered-M"></td>
+            <td id="mvc-<1-number-registered-F"></td>
+            <td id="mvc-<1-birth-certificate-M"></td>
+            <td id="mvc-<1-birth-certificate-F"></td>
+            <td id="mvc-<1-disabled-mvc-M"></td>
+            <td id="mvc-<1-disabled-mvc-F"></td>
+            <td id="mvc-<1-orphaned-hiv-M"></td>
+            <td id="mvc-<1-orphaned-hiv-F"></td>
+            <td id="mvc-<1-orphaned-other-M"></td>
+            <td id="mvc-<1-orphaned-other-F"></td>
+            <td id="mvc-<1-living-hiv-M"></td>
+            <td id="mvc-<1-living-hiv-F"></td>
+            <td id="mvc-<1-malnourished-M"></td>
+            <td id="mvc-<1-malnourished-F"></td>
+            <td id="mvc-<1-conflict-law-M"></td>
+            <td id="mvc-<1-conflict-law-F"></td>
+            <td id="mvc-<1-street-M"></td>
+            <td id="mvc-<1-street-F"></td>
+            <td id="mvc-<1-institutional-care-M"></td>
+            <td id="mvc-<1-institutional-care-F"></td>
+            <td id="mvc-<1-worst-labor-M"></td>
+            <td id="mvc-<1-worst-labor-F"></td>
+            <td id="mvc-<1-violence-M"></td>
+            <td id="mvc-<1-violence-F"></td>
+            <td id="mvc-<1-others-M"></td>
+            <td id="mvc-<1-others-F"></td>
+            <td id="mvc-<1-albinism-M"></td>
+            <td id="mvc-<1-albinism-F"></td>
+            <td id="mvc-<1-mental-disability-M"></td>
+            <td id="mvc-<1-mental-disability-F"></td>
+            <td id="mvc-<1-hearing-disability-M"></td>
+            <td id="mvc-<1-hearing-disability-F"></td>
+            <td id="mvc-<1-visual-disability-M"></td>
+            <td id="mvc-<1-visual-disability-F"></td>
+            <td id="mvc-<1-physical-disability-M"></td>
+            <td id="mvc-<1-physical-disability-F"></td>
+            <td id="mvc-<1-speech-impairment-1-M"></td>
+            <td id="mvc-<1-speech-impairment-1-F"></td>
+            <td id="mvc-<1-speech-impairment-2-M"></td>
+            <td id="mvc-<1-speech-impairment-2-F"></td>
+            <td id="mvc-<1-others-2-M"></td>
+            <td id="mvc-<1-others-2-F"></td>
+            <td id="mvc-<1-in-school-M"></td>
+            <td id="mvc-<1-in-school-F"></td>
+            <td id="mvc-<1-not-in-school-M"></td>
+            <td id="mvc-<1-not-in-school-F"></td>
+            <td id="mvc-<1-early-childhood-M"></td>
+            <td id="mvc-<1-early-childhood-F"></td>
+            <td id="mvc-<1-pre-primary-M"></td>
+            <td id="mvc-<1-pre-primary-F"></td>
+            <td id="mvc-<1-primary-school-M"></td>
+            <td id="mvc-<1-primary-school-F"></td>
+            <td id="mvc-<1-secondary-school-M"></td>
+            <td id="mvc-<1-secondary-school-F"></td>
+            <td id="mvc-<1-vocational-training-M"></td>
+            <td id="mvc-<1-vocational-training-F"></td>
+            <td id="mvc-<1-college-M"></td>
+            <td id="mvc-<1-college-F"></td>
+            <td id="mvc-<1-father-mother-care-M"></td>
+            <td id="mvc-<1-father-mother-care-F"></td>
+            <td id="mvc-<1-grandparent-care-M"></td>
+            <td id="mvc-<1-grandparent-care-F"></td>
+            <td id="mvc-<1-aunt-uncle-care-M"></td>
+            <td id="mvc-<1-aunt-uncle-care-F"></td>
+            <td id="mvc-<1-step-parent-care-M"></td>
+            <td id="mvc-<1-step-parent-care-F"></td>
+            <td id="mvc-<1-sibling-care-M"></td>
+            <td id="mvc-<1-sibling-care-F"></td>
+            <td id="mvc-<1-institutional-care-2-M"></td>
+            <td id="mvc-<1-institutional-care-2-F"></td>
+            <td id="mvc-<1-cousin-care-M"></td>
+            <td id="mvc-<1-cousin-care-F"></td>
+            <td id="mvc-<1-family-friend-care-M"></td>
+            <td id="mvc-<1-family-friend-care-F"></td>
+            <td id="mvc-<1-foster-parent-care-M"></td>
+            <td id="mvc-<1-foster-parent-care-F"></td>
+            <td id="mvc-<1-adoptive-parent-care-M"></td>
+            <td id="mvc-<1-adoptive-parent-care-F"></td>
+            <td id="mvc-<1-other-M"></td>
+            <td id="mvc-<1-other-F"></td>
+            <td id="mvc-<1-cases-opened-M"></td>
+            <td id="mvc-<1-cases-opened-F"></td>
+        </tr>
+        <tr>
+            <td>5-9</td>
+            <td id="mvc-5-9-number-registered-M"></td>
+            <td id="mvc-5-9-number-registered-F"></td>
+            <td id="mvc-5-9-birth-certificate-M"></td>
+            <td id="mvc-5-9-birth-certificate-F"></td>
+            <td id="mvc-5-9-disabled-mvc-M"></td>
+            <td id="mvc-5-9-disabled-mvc-F"></td>
+            <td id="mvc-5-9-orphaned-hiv-M"></td>
+            <td id="mvc-5-9-orphaned-hiv-F"></td>
+            <td id="mvc-5-9-orphaned-other-M"></td>
+            <td id="mvc-5-9-orphaned-other-F"></td>
+            <td id="mvc-5-9-living-hiv-M"></td>
+            <td id="mvc-5-9-living-hiv-F"></td>
+            <td id="mvc-5-9-malnourished-M"></td>
+            <td id="mvc-5-9-malnourished-F"></td>
+            <td id="mvc-5-9-conflict-law-M"></td>
+            <td id="mvc-5-9-conflict-law-F"></td>
+            <td id="mvc-5-9-street-M"></td>
+            <td id="mvc-5-9-street-F"></td>
+            <td id="mvc-5-9-institutional-care-M"></td>
+            <td id="mvc-5-9-institutional-care-F"></td>
+            <td id="mvc-5-9-worst-labor-M"></td>
+            <td id="mvc-5-9-worst-labor-F"></td>
+            <td id="mvc-5-9-violence-M"></td>
+            <td id="mvc-5-9-violence-F"></td>
+            <td id="mvc-5-9-others-M"></td>
+            <td id="mvc-5-9-others-F"></td>
+            <td id="mvc-5-9-albinism-M"></td>
+            <td id="mvc-5-9-albinism-F"></td>
+            <td id="mvc-5-9-mental-disability-M"></td>
+            <td id="mvc-5-9-mental-disability-F"></td>
+            <td id="mvc-5-9-hearing-disability-M"></td>
+            <td id="mvc-5-9-hearing-disability-F"></td>
+            <td id="mvc-5-9-visual-disability-M"></td>
+            <td id="mvc-5-9-visual-disability-F"></td>
+            <td id="mvc-5-9-physical-disability-M"></td>
+            <td id="mvc-5-9-physical-disability-F"></td>
+            <td id="mvc-5-9-speech-impairment-1-M"></td>
+            <td id="mvc-5-9-speech-impairment-1-F"></td>
+            <td id="mvc-5-9-speech-impairment-2-M"></td>
+            <td id="mvc-5-9-speech-impairment-2-F"></td>
+            <td id="mvc-5-9-others-2-M"></td>
+            <td id="mvc-5-9-others-2-F"></td>
+            <td id="mvc-5-9-in-school-M"></td>
+            <td id="mvc-5-9-in-school-F"></td>
+            <td id="mvc-5-9-not-in-school-M"></td>
+            <td id="mvc-5-9-not-in-school-F"></td>
+            <td id="mvc-5-9-early-childhood-M"></td>
+            <td id="mvc-5-9-early-childhood-F"></td>
+            <td id="mvc-5-9-pre-primary-M"></td>
+            <td id="mvc-5-9-pre-primary-F"></td>
+            <td id="mvc-5-9-primary-school-M"></td>
+            <td id="mvc-5-9-primary-school-F"></td>
+            <td id="mvc-5-9-secondary-school-M"></td>
+            <td id="mvc-5-9-secondary-school-F"></td>
+            <td id="mvc-5-9-vocational-training-M"></td>
+            <td id="mvc-5-9-vocational-training-F"></td>
+            <td id="mvc-5-9-college-M"></td>
+            <td id="mvc-5-9-college-F"></td>
+            <td id="mvc-5-9-father-mother-care-M"></td>
+            <td id="mvc-5-9-father-mother-care-F"></td>
+            <td id="mvc-5-9-grandparent-care-M"></td>
+            <td id="mvc-5-9-grandparent-care-F"></td>
+            <td id="mvc-5-9-aunt-uncle-care-M"></td>
+            <td id="mvc-5-9-aunt-uncle-care-F"></td>
+            <td id="mvc-5-9-step-parent-care-M"></td>
+            <td id="mvc-5-9-step-parent-care-F"></td>
+            <td id="mvc-5-9-sibling-care-M"></td>
+            <td id="mvc-5-9-sibling-care-F"></td>
+            <td id="mvc-5-9-institutional-care-2-M"></td>
+            <td id="mvc-5-9-institutional-care-2-F"></td>
+            <td id="mvc-5-9-cousin-care-M"></td>
+            <td id="mvc-5-9-cousin-care-F"></td>
+            <td id="mvc-5-9-family-friend-care-M"></td>
+            <td id="mvc-5-9-family-friend-care-F"></td>
+            <td id="mvc-5-9-foster-parent-care-M"></td>
+            <td id="mvc-5-9-foster-parent-care-F"></td>
+            <td id="mvc-5-9-adoptive-parent-care-M"></td>
+            <td id="mvc-5-9-adoptive-parent-care-F"></td>
+            <td id="mvc-5-9-other-M"></td>
+            <td id="mvc-5-9-other-F"></td>
+            <td id="mvc-5-9-cases-opened-M"></td>
+            <td id="mvc-5-9-cases-opened-F"></td>
+        </tr>
+        <tr>
+            <td>10-14</td>
+            <td id="mvc-10-14-number-registered-M"></td>
+            <td id="mvc-10-14-number-registered-F"></td>
+            <td id="mvc-10-14-birth-certificate-M"></td>
+            <td id="mvc-10-14-birth-certificate-F"></td>
+            <td id="mvc-10-14-disabled-mvc-M"></td>
+            <td id="mvc-10-14-disabled-mvc-F"></td>
+            <td id="mvc-10-14-orphaned-hiv-M"></td>
+            <td id="mvc-10-14-orphaned-hiv-F"></td>
+            <td id="mvc-10-14-orphaned-other-M"></td>
+            <td id="mvc-10-14-orphaned-other-F"></td>
+            <td id="mvc-10-14-living-hiv-M"></td>
+            <td id="mvc-10-14-living-hiv-F"></td>
+            <td id="mvc-10-14-malnourished-M"></td>
+            <td id="mvc-10-14-malnourished-F"></td>
+            <td id="mvc-10-14-conflict-law-M"></td>
+            <td id="mvc-10-14-conflict-law-F"></td>
+            <td id="mvc-10-14-street-M"></td>
+            <td id="mvc-10-14-street-F"></td>
+            <td id="mvc-10-14-institutional-care-M"></td>
+            <td id="mvc-10-14-institutional-care-F"></td>
+            <td id="mvc-10-14-worst-labor-M"></td>
+            <td id="mvc-10-14-worst-labor-F"></td>
+            <td id="mvc-10-14-violence-M"></td>
+            <td id="mvc-10-14-violence-F"></td>
+            <td id="mvc-10-14-others-M"></td>
+            <td id="mvc-10-14-others-F"></td>
+            <td id="mvc-10-14-albinism-M"></td>
+            <td id="mvc-10-14-albinism-F"></td>
+            <td id="mvc-10-14-mental-disability-M"></td>
+            <td id="mvc-10-14-mental-disability-F"></td>
+            <td id="mvc-10-14-hearing-disability-M"></td>
+            <td id="mvc-10-14-hearing-disability-F"></td>
+            <td id="mvc-10-14-visual-disability-M"></td>
+            <td id="mvc-10-14-visual-disability-F"></td>
+            <td id="mvc-10-14-physical-disability-M"></td>
+            <td id="mvc-10-14-physical-disability-F"></td>
+            <td id="mvc-10-14-speech-impairment-1-M"></td>
+            <td id="mvc-10-14-speech-impairment-1-F"></td>
+            <td id="mvc-10-14-speech-impairment-2-M"></td>
+            <td id="mvc-10-14-speech-impairment-2-F"></td>
+            <td id="mvc-10-14-others-2-M"></td>
+            <td id="mvc-10-14-others-2-F"></td>
+            <td id="mvc-10-14-in-school-M"></td>
+            <td id="mvc-10-14-in-school-F"></td>
+            <td id="mvc-10-14-not-in-school-M"></td>
+            <td id="mvc-10-14-not-in-school-F"></td>
+            <td id="mvc-10-14-early-childhood-M"></td>
+            <td id="mvc-10-14-early-childhood-F"></td>
+            <td id="mvc-10-14-pre-primary-M"></td>
+            <td id="mvc-10-14-pre-primary-F"></td>
+            <td id="mvc-10-14-primary-school-M"></td>
+            <td id="mvc-10-14-primary-school-F"></td>
+            <td id="mvc-10-14-secondary-school-M"></td>
+            <td id="mvc-10-14-secondary-school-F"></td>
+            <td id="mvc-10-14-vocational-training-M"></td>
+            <td id="mvc-10-14-vocational-training-F"></td>
+            <td id="mvc-10-14-college-M"></td>
+            <td id="mvc-10-14-college-F"></td>
+            <td id="mvc-10-14-father-mother-care-M"></td>
+            <td id="mvc-10-14-father-mother-care-F"></td>
+            <td id="mvc-10-14-grandparent-care-M"></td>
+            <td id="mvc-10-14-grandparent-care-F"></td>
+            <td id="mvc-10-14-aunt-uncle-care-M"></td>
+            <td id="mvc-10-14-aunt-uncle-care-F"></td>
+            <td id="mvc-10-14-step-parent-care-M"></td>
+            <td id="mvc-10-14-step-parent-care-F"></td>
+            <td id="mvc-10-14-sibling-care-M"></td>
+            <td id="mvc-10-14-sibling-care-F"></td>
+            <td id="mvc-10-14-institutional-care-2-M"></td>
+            <td id="mvc-10-14-institutional-care-2-F"></td>
+            <td id="mvc-10-14-cousin-care-M"></td>
+            <td id="mvc-10-14-cousin-care-F"></td>
+            <td id="mvc-10-14-family-friend-care-M"></td>
+            <td id="mvc-10-14-family-friend-care-F"></td>
+            <td id="mvc-10-14-foster-parent-care-M"></td>
+            <td id="mvc-10-14-foster-parent-care-F"></td>
+            <td id="mvc-10-14-adoptive-parent-care-M"></td>
+            <td id="mvc-10-14-adoptive-parent-care-F"></td>
+            <td id="mvc-10-14-other-M"></td>
+            <td id="mvc-10-14-other-F"></td>
+            <td id="mvc-10-14-cases-opened-M"></td>
+            <td id="mvc-10-14-cases-opened-F"></td>
+        </tr>
+        <tr>
+            <td>15-17</td>
+            <td id="mvc-15-17-number-registered-M"></td>
+            <td id="mvc-15-17-number-registered-F"></td>
+            <td id="mvc-15-17-birth-certificate-M"></td>
+            <td id="mvc-15-17-birth-certificate-F"></td>
+            <td id="mvc-15-17-disabled-mvc-M"></td>
+            <td id="mvc-15-17-disabled-mvc-F"></td>
+            <td id="mvc-15-17-orphaned-hiv-M"></td>
+            <td id="mvc-15-17-orphaned-hiv-F"></td>
+            <td id="mvc-15-17-orphaned-other-M"></td>
+            <td id="mvc-15-17-orphaned-other-F"></td>
+            <td id="mvc-15-17-living-hiv-M"></td>
+            <td id="mvc-15-17-living-hiv-F"></td>
+            <td id="mvc-15-17-malnourished-M"></td>
+            <td id="mvc-15-17-malnourished-F"></td>
+            <td id="mvc-15-17-conflict-law-M"></td>
+            <td id="mvc-15-17-conflict-law-F"></td>
+            <td id="mvc-15-17-street-M"></td>
+            <td id="mvc-15-17-street-F"></td>
+            <td id="mvc-15-17-institutional-care-M"></td>
+            <td id="mvc-15-17-institutional-care-F"></td>
+            <td id="mvc-15-17-worst-labor-M"></td>
+            <td id="mvc-15-17-worst-labor-F"></td>
+            <td id="mvc-15-17-violence-M"></td>
+            <td id="mvc-15-17-violence-F"></td>
+            <td id="mvc-15-17-others-M"></td>
+            <td id="mvc-15-17-others-F"></td>
+            <td id="mvc-15-17-albinism-M"></td>
+            <td id="mvc-15-17-albinism-F"></td>
+            <td id="mvc-15-17-mental-disability-M"></td>
+            <td id="mvc-15-17-mental-disability-F"></td>
+            <td id="mvc-15-17-hearing-disability-M"></td>
+            <td id="mvc-15-17-hearing-disability-F"></td>
+            <td id="mvc-15-17-visual-disability-M"></td>
+            <td id="mvc-15-17-visual-disability-F"></td>
+            <td id="mvc-15-17-physical-disability-M"></td>
+            <td id="mvc-15-17-physical-disability-F"></td>
+            <td id="mvc-15-17-speech-impairment-1-M"></td>
+            <td id="mvc-15-17-speech-impairment-1-F"></td>
+            <td id="mvc-15-17-speech-impairment-2-M"></td>
+            <td id="mvc-15-17-speech-impairment-2-F"></td>
+            <td id="mvc-15-17-others-2-M"></td>
+            <td id="mvc-15-17-others-2-F"></td>
+            <td id="mvc-15-17-in-school-M"></td>
+            <td id="mvc-15-17-in-school-F"></td>
+            <td id="mvc-15-17-not-in-school-M"></td>
+            <td id="mvc-15-17-not-in-school-F"></td>
+            <td id="mvc-15-17-early-childhood-M"></td>
+            <td id="mvc-15-17-early-childhood-F"></td>
+            <td id="mvc-15-17-pre-primary-M"></td>
+            <td id="mvc-15-17-pre-primary-F"></td>
+            <td id="mvc-15-17-primary-school-M"></td>
+            <td id="mvc-15-17-primary-school-F"></td>
+            <td id="mvc-15-17-secondary-school-M"></td>
+            <td id="mvc-15-17-secondary-school-F"></td>
+            <td id="mvc-15-17-vocational-training-M"></td>
+            <td id="mvc-15-17-vocational-training-F"></td>
+            <td id="mvc-15-17-college-M"></td>
+            <td id="mvc-15-17-college-F"></td>
+            <td id="mvc-15-17-father-mother-care-M"></td>
+            <td id="mvc-15-17-father-mother-care-F"></td>
+            <td id="mvc-15-17-grandparent-care-M"></td>
+            <td id="mvc-15-17-grandparent-care-F"></td>
+            <td id="mvc-15-17-aunt-uncle-care-M"></td>
+            <td id="mvc-15-17-aunt-uncle-care-F"></td>
+            <td id="mvc-15-17-step-parent-care-M"></td>
+            <td id="mvc-15-17-step-parent-care-F"></td>
+            <td id="mvc-15-17-sibling-care-M"></td>
+            <td id="mvc-15-17-sibling-care-F"></td>
+            <td id="mvc-15-17-institutional-care-2-M"></td>
+            <td id="mvc-15-17-institutional-care-2-F"></td>
+            <td id="mvc-15-17-cousin-care-M"></td>
+            <td id="mvc-15-17-cousin-care-F"></td>
+            <td id="mvc-15-17-family-friend-care-M"></td>
+            <td id="mvc-15-17-family-friend-care-F"></td>
+            <td id="mvc-15-17-foster-parent-care-M"></td>
+            <td id="mvc-15-17-foster-parent-care-F"></td>
+            <td id="mvc-15-17-adoptive-parent-care-M"></td>
+            <td id="mvc-15-17-adoptive-parent-care-F"></td>
+            <td id="mvc-15-17-other-M"></td>
+            <td id="mvc-15-17-other-F"></td>
+            <td id="mvc-15-17-cases-opened-M"></td>
+            <td id="mvc-15-17-cases-opened-F"></td>
+        </tr>
+        <tr>
+            <td>18+</td>
+            <td id="mvc-18+-number-registered-M"></td>
+            <td id="mvc-18+-number-registered-F"></td>
+            <td id="mvc-18+-birth-certificate-M"></td>
+            <td id="mvc-18+-birth-certificate-F"></td>
+            <td id="mvc-18+-disabled-mvc-M"></td>
+            <td id="mvc-18+-disabled-mvc-F"></td>
+            <td id="mvc-18+-orphaned-hiv-M"></td>
+            <td id="mvc-18+-orphaned-hiv-F"></td>
+            <td id="mvc-18+-orphaned-other-M"></td>
+            <td id="mvc-18+-orphaned-other-F"></td>
+            <td id="mvc-18+-living-hiv-M"></td>
+            <td id="mvc-18+-living-hiv-F"></td>
+            <td id="mvc-18+-malnourished-M"></td>
+            <td id="mvc-18+-malnourished-F"></td>
+            <td id="mvc-18+-conflict-law-M"></td>
+            <td id="mvc-18+-conflict-law-F"></td>
+            <td id="mvc-18+-street-M"></td>
+            <td id="mvc-18+-street-F"></td>
+            <td id="mvc-18+-institutional-care-M"></td>
+            <td id="mvc-18+-institutional-care-F"></td>
+            <td id="mvc-18+-worst-labor-M"></td>
+            <td id="mvc-18+-worst-labor-F"></td>
+            <td id="mvc-18+-violence-M"></td>
+            <td id="mvc-18+-violence-F"></td>
+            <td id="mvc-18+-others-M"></td>
+            <td id="mvc-18+-others-F"></td>
+            <td id="mvc-18+-albinism-M"></td>
+            <td id="mvc-18+-albinism-F"></td>
+            <td id="mvc-18+-mental-disability-M"></td>
+            <td id="mvc-18+-mental-disability-F"></td>
+            <td id="mvc-18+-hearing-disability-M"></td>
+            <td id="mvc-18+-hearing-disability-F"></td>
+            <td id="mvc-18+-visual-disability-M"></td>
+            <td id="mvc-18+-visual-disability-F"></td>
+            <td id="mvc-18+-physical-disability-M"></td>
+            <td id="mvc-18+-physical-disability-F"></td>
+            <td id="mvc-18+-speech-impairment-1-M"></td>
+            <td id="mvc-18+-speech-impairment-1-F"></td>
+            <td id="mvc-18+-speech-impairment-2-M"></td>
+            <td id="mvc-18+-speech-impairment-2-F"></td>
+            <td id="mvc-18+-others-2-M"></td>
+            <td id="mvc-18+-others-2-F"></td>
+            <td id="mvc-18+-in-school-M"></td>
+            <td id="mvc-18+-in-school-F"></td>
+            <td id="mvc-18+-not-in-school-M"></td>
+            <td id="mvc-18+-not-in-school-F"></td>
+            <td id="mvc-18+-early-childhood-M"></td>
+            <td id="mvc-18+-early-childhood-F"></td>
+            <td id="mvc-18+-pre-primary-M"></td>
+            <td id="mvc-18+-pre-primary-F"></td>
+            <td id="mvc-18+-primary-school-M"></td>
+            <td id="mvc-18+-primary-school-F"></td>
+            <td id="mvc-18+-secondary-school-M"></td>
+            <td id="mvc-18+-secondary-school-F"></td>
+            <td id="mvc-18+-vocational-training-M"></td>
+            <td id="mvc-18+-vocational-training-F"></td>
+            <td id="mvc-18+-college-M"></td>
+            <td id="mvc-18+-college-F"></td>
+            <td id="mvc-18+-father-mother-care-M"></td>
+            <td id="mvc-18+-father-mother-care-F"></td>
+            <td id="mvc-18+-grandparent-care-M"></td>
+            <td id="mvc-18+-grandparent-care-F"></td>
+            <td id="mvc-18+-aunt-uncle-care-M"></td>
+            <td id="mvc-18+-aunt-uncle-care-F"></td>
+            <td id="mvc-18+-step-parent-care-M"></td>
+            <td id="mvc-18+-step-parent-care-F"></td>
+            <td id="mvc-18+-sibling-care-M"></td>
+            <td id="mvc-18+-sibling-care-F"></td>
+            <td id="mvc-18+-institutional-care-2-M"></td>
+            <td id="mvc-18+-institutional-care-2-F"></td>
+            <td id="mvc-18+-cousin-care-M"></td>
+            <td id="mvc-18+-cousin-care-F"></td>
+            <td id="mvc-18+-family-friend-care-M"></td>
+            <td id="mvc-18+-family-friend-care-F"></td>
+            <td id="mvc-18+-foster-parent-care-M"></td>
+            <td id="mvc-18+-foster-parent-care-F"></td>
+            <td id="mvc-18+-adoptive-parent-care-M"></td>
+            <td id="mvc-18+-adoptive-parent-care-F"></td>
+            <td id="mvc-18+-other-M"></td>
+            <td id="mvc-18+-other-F"></td>
+            <td id="mvc-18+-cases-opened-M"></td>
+            <td id="mvc-18+-cases-opened-F"></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td id="mvc-total-number-registered-M"></td>
+            <td id="mvc-total-number-registered-F"></td>
+            <td id="mvc-total-birth-certificate-M"></td>
+            <td id="mvc-total-birth-certificate-F"></td>
+            <td id="mvc-total-disabled-mvc-M"></td>
+            <td id="mvc-total-disabled-mvc-F"></td>
+            <td id="mvc-total-orphaned-hiv-M"></td>
+            <td id="mvc-total-orphaned-hiv-F"></td>
+            <td id="mvc-total-orphaned-other-M"></td>
+            <td id="mvc-total-orphaned-other-F"></td>
+            <td id="mvc-total-living-hiv-M"></td>
+            <td id="mvc-total-living-hiv-F"></td>
+            <td id="mvc-total-malnourished-M"></td>
+            <td id="mvc-total-malnourished-F"></td>
+            <td id="mvc-total-conflict-law-M"></td>
+            <td id="mvc-total-conflict-law-F"></td>
+            <td id="mvc-total-street-M"></td>
+            <td id="mvc-total-street-F"></td>
+            <td id="mvc-total-institutional-care-M"></td>
+            <td id="mvc-total-institutional-care-F"></td>
+            <td id="mvc-total-worst-labor-M"></td>
+            <td id="mvc-total-worst-labor-F"></td>
+            <td id="mvc-total-violence-M"></td>
+            <td id="mvc-total-violence-F"></td>
+            <td id="mvc-total-others-M"></td>
+            <td id="mvc-total-others-F"></td>
+            <td id="mvc-total-albinism-M"></td>
+            <td id="mvc-total-albinism-F"></td>
+            <td id="mvc-total-mental-disability-M"></td>
+            <td id="mvc-total-mental-disability-F"></td>
+            <td id="mvc-total-hearing-disability-M"></td>
+            <td id="mvc-total-hearing-disability-F"></td>
+            <td id="mvc-total-visual-disability-M"></td>
+            <td id="mvc-total-visual-disability-F"></td>
+            <td id="mvc-total-physical-disability-M"></td>
+            <td id="mvc-total-physical-disability-F"></td>
+            <td id="mvc-total-speech-impairment-1-M"></td>
+            <td id="mvc-total-speech-impairment-1-F"></td>
+            <td id="mvc-total-speech-impairment-2-M"></td>
+            <td id="mvc-total-speech-impairment-2-F"></td>
+            <td id="mvc-total-others-2-M"></td>
+            <td id="mvc-total-others-2-F"></td>
+            <td id="mvc-total-in-school-M"></td>
+            <td id="mvc-total-in-school-F"></td>
+            <td id="mvc-total-not-in-school-M"></td>
+            <td id="mvc-total-not-in-school-F"></td>
+            <td id="mvc-total-early-childhood-M"></td>
+            <td id="mvc-total-early-childhood-F"></td>
+            <td id="mvc-total-pre-primary-M"></td>
+            <td id="mvc-total-pre-primary-F"></td>
+            <td id="mvc-total-primary-school-M"></td>
+            <td id="mvc-total-primary-school-F"></td>
+            <td id="mvc-total-secondary-school-M"></td>
+            <td id="mvc-total-secondary-school-F"></td>
+            <td id="mvc-total-vocational-training-M"></td>
+            <td id="mvc-total-vocational-training-F"></td>
+            <td id="mvc-total-college-M"></td>
+            <td id="mvc-total-college-F"></td>
+            <td id="mvc-total-father-mother-care-M"></td>
+            <td id="mvc-total-father-mother-care-F"></td>
+            <td id="mvc-total-grandparent-care-M"></td>
+            <td id="mvc-total-grandparent-care-F"></td>
+            <td id="mvc-total-aunt-uncle-care-M"></td>
+            <td id="mvc-total-aunt-uncle-care-F"></td>
+            <td id="mvc-total-step-parent-care-M"></td>
+            <td id="mvc-total-step-parent-care-F"></td>
+            <td id="mvc-total-sibling-care-M"></td>
+            <td id="mvc-total-sibling-care-F"></td>
+            <td id="mvc-total-institutional-care-2-M"></td>
+            <td id="mvc-total-institutional-care-2-F"></td>
+            <td id="mvc-total-cousin-care-M"></td>
+            <td id="mvc-total-cousin-care-F"></td>
+            <td id="mvc-total-family-friend-care-M"></td>
+            <td id="mvc-total-family-friend-care-F"></td>
+            <td id="mvc-total-foster-parent-care-M"></td>
+            <td id="mvc-total-foster-parent-care-F"></td>
+            <td id="mvc-total-adoptive-parent-care-M"></td>
+            <td id="mvc-total-adoptive-parent-care-F"></td>
+            <td id="mvc-total-other-M"></td>
+            <td id="mvc-total-other-F"></td>
+            <td id="mvc-total-cases-opened-M"></td>
+            <td id="mvc-total-cases-opened-F"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function loadData(reportKey, reportType) {
+        const data = JSON.parse(Android.getData(reportKey));
+        const keys = Object.keys(data.nameValuePairs);
+        const reportPeriod = document.getElementById("report_period");
+        const reportingFacility = document.getElementById("reporting_facility");
+        keys.forEach((key) => {
+            let element;
+            if (reportType !== null && reportType === "sbc") {
+                element = document.getElementById(key.replace("sbc-", ""));
+            } else {
+                element = document.getElementById(key);
+            }
+            if (element !== null && typeof element !== "undefined") {
+                element.innerHTML = data.nameValuePairs[key];
+            }
+        });
+        reportPeriod.innerHTML = Android.getDataPeriod();
+        reportingFacility.innerHTML = Android.getReportingFacility();
+    }
+</script>
+
+</body>
+</html>
