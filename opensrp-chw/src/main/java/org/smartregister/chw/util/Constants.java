@@ -246,11 +246,10 @@ public class Constants extends CoreConstants {
         }
 
         public interface MvcReportKeys {
-            String REGISTRATION_SUMMARY = "mvc-registration-summary-report";
-            String CHILDREN_REGISTRATION_DETAILS = "mvc-children-registration-details-report";
-
-            String SERVICES_PROVIDED_TO_HOUSEHOLDS = "mvc-services-provided-to-households-report";
-            String SERVICES_PROVIDED_TO_CHILDREN = "mvc-services-provided-to-children-report";
+            String HOUSEHOLD_REGISTRATION_DETAILS_REPORT = "mvc-household-registration-details-report";
+            String CHILDREN_REGISTRATION_DETAILS_REPORT = "mvc-children-registration-details-report";
+            String SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT = "mvc-services-provided-to-households-report";
+            String SERVICES_PROVIDED_TO_CHILDREN_REPORT = "mvc-services-provided-to-children-report";
         }
 
         public interface ReportPaths {
@@ -264,11 +263,11 @@ public class Constants extends CoreConstants {
             String SBC_REPORT_PATH = "sbc-report";
             String GBV_REPORT_PATH = "gbv-report";
 
-            String MVC_REGISTRATION_SUMMARY_REPORT = "mvc_reports/";
+            String MVC_HOUSEHOLD_REGISTRATION_DETAILS_REPORT_PATH = "mvc_reports/mvc-household-registration-details";
 
-            String MVC_CHILDREN_REGISTRATION_DETAILS_REPORT = "mvc_reports/";
+            String MVC_CHILDREN_REGISTRATION_DETAILS_REPORT = "mvc_reports/mvc-children-registration-details";
 
-            String MVC_SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT = "mvc_reports/";
+            String MVC_SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT = "mvc_reports/mvc-services-provided-to-children-report";
 
             String MVC_SERVICES_PROVIDED_TO_CHILDREN_REPORT = "mvc_reports/mvc-services-provided-to-children-report";
         }

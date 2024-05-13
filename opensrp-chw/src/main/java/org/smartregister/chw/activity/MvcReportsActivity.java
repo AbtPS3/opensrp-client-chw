@@ -29,7 +29,7 @@ import java.util.Locale;
 import timber.log.Timber;
 
 public class MvcReportsActivity extends SecuredActivity implements View.OnClickListener {
-    protected ConstraintLayout mvcRegistrationSummaryReport;
+    protected ConstraintLayout mvcHouseholdRegistrationReport;
 
     protected ConstraintLayout mvcChildrenRegistrationReport;
 
@@ -51,15 +51,15 @@ public class MvcReportsActivity extends SecuredActivity implements View.OnClickL
     }
 
     public void setupViews() {
-        mvcRegistrationSummaryReport = findViewById(R.id.mvc_registration_summary);
+        mvcHouseholdRegistrationReport = findViewById(R.id.mvc_household_registration_report);
 
-        mvcChildrenRegistrationReport = findViewById(R.id.mvc_child_registration_details);
+        mvcChildrenRegistrationReport = findViewById(R.id.mvc_children_registration_report);
 
-        mvcServicesProvidedToHouseholdsReport = findViewById(R.id.mvc_services_provided_to_households);
+        mvcServicesProvidedToHouseholdsReport = findViewById(R.id.mvc_services_provided_to_households_report);
 
-        mvcServicesProvidedToChildrenReport = findViewById(R.id.mvc_services_provided_to_children);
+        mvcServicesProvidedToChildrenReport = findViewById(R.id.mvc_services_provided_to_children_report);
 
-        mvcRegistrationSummaryReport.setOnClickListener(this);
+        mvcHouseholdRegistrationReport.setOnClickListener(this);
 
         mvcChildrenRegistrationReport.setOnClickListener(this);
 
@@ -111,14 +111,14 @@ public class MvcReportsActivity extends SecuredActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.mvc_registration_summary) {
-            MvcReportsViewActivity.startMe(this, Constants.ReportConstants.ReportPaths.MVC_REGISTRATION_SUMMARY_REPORT, R.string.mvc_registrations_summary_title, reportPeriod);
-        } else if (id == R.id.mvc_child_registration_details) {
-            MvcReportsViewActivity.startMe(this, Constants.ReportConstants.ReportPaths.MVC_CHILDREN_REGISTRATION_DETAILS_REPORT, R.string.mvc_children_registration_details_title, reportPeriod);
-        } else if (id == R.id.mvc_services_provided_to_households) {
-            MvcReportsViewActivity.startMe(this, Constants.ReportConstants.ReportPaths.MVC_SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT, R.string.mvc_services_provided_to_the_households_title, reportPeriod);
-        } else if (id == R.id.mvc_services_provided_to_children) {
-            MvcReportsViewActivity.startMe(this, Constants.ReportConstants.ReportPaths.MVC_SERVICES_PROVIDED_TO_CHILDREN_REPORT, R.string.mvc_services_provided_to_the_children_title, reportPeriod);
+        if (id == R.id.mvc_household_registration_report) {
+            MvcReportsViewActivity.startMe(this, Constants.ReportConstants.ReportPaths.MVC_HOUSEHOLD_REGISTRATION_DETAILS_REPORT_PATH, R.string.mvc_household_registrations_report_title, reportPeriod);
+        } else if (id == R.id.mvc_children_registration_report) {
+            MvcReportsViewActivity.startMe(this, Constants.ReportConstants.ReportPaths.MVC_CHILDREN_REGISTRATION_DETAILS_REPORT, R.string.mvc_children_registration_report_title, reportPeriod);
+        } else if (id == R.id.mvc_services_provided_to_households_report) {
+            MvcReportsViewActivity.startMe(this, Constants.ReportConstants.ReportPaths.MVC_SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT, R.string.mvc_services_provided_to_the_households_report_title, reportPeriod);
+        } else if (id == R.id.mvc_services_provided_to_children_report) {
+            MvcReportsViewActivity.startMe(this, Constants.ReportConstants.ReportPaths.MVC_SERVICES_PROVIDED_TO_CHILDREN_REPORT, R.string.mvc_services_provided_to_the_children_report_title, reportPeriod);
         } else {
             Toast.makeText(this, "Action Not Defined", Toast.LENGTH_SHORT).show();
         }
