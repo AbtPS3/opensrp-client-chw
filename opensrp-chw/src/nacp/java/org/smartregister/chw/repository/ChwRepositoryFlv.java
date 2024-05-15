@@ -121,9 +121,6 @@ public class ChwRepositoryFlv {
                 case 29:
                     upgradeToVersion29(db);
                     break;
-                case 30:
-                    upgradeToVersion30(db);
-                    break;
                 default:
                     break;
             }
@@ -495,24 +492,12 @@ public class ChwRepositoryFlv {
             // setup reporting
             ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
             String mvcReportIndicatorConfigFile = "config/mvc-monthly-report.yml";
-            for (String configFile : Collections.singletonList(mvcReportIndicatorConfigFile)) {
+            String mvcReportIndicatorConfigFile2 = "config/mvc-children-registration-details.yml";
+            for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile,mvcReportIndicatorConfigFile2)) {
                 reportingLibrary.readConfigFile(configFile, db);
             }
         } catch (Exception e) {
             Timber.e(e, "upgradeToVersion28");
-        }
-    }
-
-    private static void upgradeToVersion30(SQLiteDatabase db) {
-        try {
-            // setup reporting
-            ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
-            String mvcReportIndicatorConfigFile = "config/mvc-monthly-report.yml";
-            for (String configFile : Collections.singletonList(mvcReportIndicatorConfigFile)) {
-                reportingLibrary.readConfigFile(configFile, db);
-            }
-        } catch (Exception e) {
-            Timber.e(e, "upgradeToVersion30");
         }
     }
 }
