@@ -19,11 +19,11 @@ public class MvcServicesProvidedToChildrenReportObject extends ReportObject {
 
     private final List<String> indicatorCodesWithAgeGroups = new ArrayList<>();
 
-    private final String[] indicatorCodes = new String[]{"gbv-1", "gbv-2", "gbv-3", "gbv-4", "gbv-5", "gbv-6"};
+    private final String[] indicatorCodes = new String[]{"mvc-child-headed", "mvc-adult-headed", "mvc-elderly-headed", "mvc-employed", "mvc-unemployed", "mvc-insured","mvc-uninsured","mvc-disabled","mvc-hiv","mvc-chronic"};
 
     private final String[] clientSex = new String[]{"F", "M"};
 
-    private final String[] indicatorAgeGroups = new String[]{"0-4", "5-9", "10-14", "15-17", "18-19", "20-24", "25-29", "30-34", "35-above"};
+    private final String[] indicatorAgeGroups = new String[]{"17", "18-24", "25-59", "60-and-above"};
 
     private final Date reportDate;
 
@@ -33,7 +33,7 @@ public class MvcServicesProvidedToChildrenReportObject extends ReportObject {
         setIndicatorCodesWithAgeGroups(indicatorCodesWithAgeGroups);
     }
 
-    public static int calculateGbvSpecificTotal(HashMap<String, Integer> indicators, String specificKey) {
+    public static int calculateMvcSpecificTotal(HashMap<String, Integer> indicators, String specificKey) {
         int total = 0;
 
         for (Map.Entry<String, Integer> entry : indicators.entrySet()) {
@@ -56,13 +56,12 @@ public class MvcServicesProvidedToChildrenReportObject extends ReportObject {
 
     public void setIndicatorCodesWithAgeGroups(List<String> indicatorCodesWithAgeGroups) {
         for (String indicatorCode : indicatorCodes) {
-            for (String indicatorKey : indicatorAgeGroups) {
-                for (String clientType : clientSex) {
-                    indicatorCodesWithAgeGroups.add(indicatorCode + "-" + indicatorKey + "-" + clientType);
+            for (String sex : clientSex) {
+                for (String ageGroup : indicatorAgeGroups) {
+                    indicatorCodesWithAgeGroups.add(indicatorCode + "-" + sex + "-" + ageGroup);
                 }
             }
         }
-
     }
 
     @Override
@@ -74,26 +73,6 @@ public class MvcServicesProvidedToChildrenReportObject extends ReportObject {
             indicatorsValues.put(indicatorCode, value);
             indicatorDataObject.put(indicatorCode, value);
         }
-
-        // Calculate and add total values for "totals"
-        for (String indicatorCode : indicatorCodes) {
-            for (String sex : clientSex) {
-                if (sex.equalsIgnoreCase("male")) {
-                    indicatorDataObject.put(indicatorCode + "-totalMale", calculateGbvSpecificTotal(indicatorsValues, indicatorCode + "-" + sex));
-                } else {
-                    indicatorDataObject.put(indicatorCode + "-totalFemale", calculateGbvSpecificTotal(indicatorsValues, indicatorCode + "-" + sex));
-                }
-            }
-        }
-        for (String indicatorCode : indicatorCodes) {
-            try {
-                int grandTotal = indicatorDataObject.getInt(indicatorCode + "-totalMale") + indicatorDataObject.getInt(indicatorCode + "-totalFemale");
-                indicatorDataObject.put(indicatorCode + "-grandTotal", grandTotal);
-            } catch (Exception e) {
-                Timber.e(e);
-            }
-        }
-
         return indicatorDataObject;
     }
 
