@@ -256,10 +256,10 @@
             "openmrs_entity_id": "physical_disability"
           },
           {
-            "key": "speech_impairment",
+            "key": "impairment_of_speech",
             "text": "Speech impairment",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "speech_impairment"
+            "openmrs_entity_id": "impairment_of_speech"
           },
           {
             "key": "other",
