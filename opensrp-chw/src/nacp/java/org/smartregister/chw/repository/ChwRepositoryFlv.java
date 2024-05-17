@@ -491,7 +491,7 @@ public class ChwRepositoryFlv {
         try {
             // setup reporting
             ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
-            String mvcReportIndicatorConfigFile = "config/mvc-monthly-report.yml";
+            String mvcReportIndicatorConfigFile = "config/mvc-head_of_household_registration-report.yml";
             String mvcReportIndicatorConfigFile2 = "config/mvc-children-registration-details.yml";
             for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile,mvcReportIndicatorConfigFile2)) {
                 reportingLibrary.readConfigFile(configFile, db);
