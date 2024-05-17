@@ -491,11 +491,19 @@ public class ChwRepositoryFlv {
         try {
             // setup reporting
             ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
-            String mvcReportIndicatorConfigFile = "config/mvc-monthly-report.yml";
+            String mvcReportIndicatorConfigFile = "config/mvc-head_of_household_registration-report.yml";
             String mvcReportIndicatorConfigFile2 = "config/mvc-children-registration-details.yml";
             for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile,mvcReportIndicatorConfigFile2)) {
                 reportingLibrary.readConfigFile(configFile, db);
             }
+        } catch (Exception e) {
+            Timber.e(e, "upgradeToVersion28");
+        }
+
+        try {
+            DatabaseMigrationUtils.createAddedECTables(db,
+                    new HashSet<>(Arrays.asList("ec_ovc_register", "ec_mvc_household_services","ec_mvc_child_services")),
+                    ChwApplication.createCommonFtsObject());
         } catch (Exception e) {
             Timber.e(e, "upgradeToVersion28");
         }

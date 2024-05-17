@@ -115,7 +115,7 @@ public class MvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                 String jsonString = data.getStringExtra(org.smartregister.chw.hivst.util.Constants.JSON_FORM_EXTRA.JSON);
                 JSONObject form = new JSONObject(jsonString);
                 String encounterType = form.getString(JsonFormUtils.ENCOUNTER_TYPE);
-                if (encounterType.equals(Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT) || encounterType.equals(Constants.EVENT_TYPE.MVC_SERVICES_VISIT)) {
+                if (encounterType.equals(Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT) || encounterType.equals(Constants.EVENT_TYPE.MVC_CHILD_SERVICES_VISIT)) {
                     if (form.has(VISIT_ID)) {
                         String deletedVisitId = form.getString(VISIT_ID);
                         form.remove(VISIT_ID);

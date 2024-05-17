@@ -6192,6 +6192,312 @@
           }
         }
       ]
+    },
+    {
+      "name": "ec_mvc_household_services",
+      "columns": [
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "formSubmissionId"
+          }
+        },
+        {
+          "column_name": "entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "parenting_caregivers_with_children",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "parenting_caregivers_with_children"
+          }
+        },
+        {
+          "column_name": "nutritional_status_assessment",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "nutritional_status_assessment"
+          }
+        },{
+          "column_name": "food_and_nutrition",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "food_and_nutrition"
+          }
+        },
+        {
+          "column_name": "health_care_provided",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "health_care_provided"
+          }
+        },
+        {
+          "column_name": "economic_strengthening",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "economic_strengthening"
+          }
+        },
+        {
+          "column_name": "referrals",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "referrals"
+          }
+        },
+        {
+          "column_name": "support_provided_to_caregiver_on_referrals",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "support_provided_to_caregiver_on_referrals"
+          }
+        },
+        {
+          "column_name": "caregiver_referrals_completed",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "caregiver_referrals_completed"
+          }
+        },
+        {
+          "column_name": "shelter_and_hygiene",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "shelter_and_hygiene"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ec_mvc_child_services",
+      "columns": [
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "formSubmissionId"
+          }
+        },
+        {
+          "column_name": "entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "visit_type",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "visit_type"
+          }
+        },
+        {
+          "column_name": "has_need_assessment_been_conducted",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "has_need_assessment_been_conducted"
+          }
+        },{
+          "column_name": "client_needs",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "client_needs"
+          }
+        },
+        {
+          "column_name": "has_risk_assessment_been_conducted",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "has_risk_assessment_been_conducted"
+          }
+        },
+        {
+          "column_name": "has_the_child_experienced_vac",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "has_the_child_experienced_vac"
+          }
+        },
+        {
+          "column_name": "refer_to_dcms",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "refer_to_dcms"
+          }
+        },
+        {
+          "column_name": "is_the_child_in_conflict_and_contact_with_the_law",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "is_the_child_in_conflict_and_contact_with_the_law"
+          }
+        },
+        {
+          "column_name": "select_child_protection_service",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "select_child_protection_service"
+          }
+        },
+        {
+          "column_name": "select_education_vocational_training",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "select_education_vocational_training"
+          }
+        },
+        {
+          "column_name": "ecd_psychosocial_support",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "ecd_psychosocial_support"
+          }
+        },
+        {
+          "column_name": "education_and_vocational_training",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "education_and_vocational_training"
+          }
+        },
+        {
+          "column_name": "ecd_psychosocial_support",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "ecd_psychosocial_support"
+          }
+        },
+        {
+          "column_name": "child_received_vaccinations",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "child_received_vaccinations"
+          }
+        },
+        {
+          "column_name": "child_nutritional_status",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "child_nutritional_status"
+          }
+        },
+        {
+          "column_name": "health_care_service_provided",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "health_care_service_provided"
+          }
+        },
+        {
+          "column_name": "child_ever_tested_for_hiv",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "child_ever_tested_for_hiv"
+          }
+        },
+        {
+          "column_name": "hiv_results",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "hiv_results"
+          }
+        },
+        {
+          "column_name": "ctc_number",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "ctc_number"
+          }
+        },
+        {
+          "column_name": "when_was_the_last_test_result",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "when_was_the_last_test_result"
+          }
+        },
+        {
+          "column_name": "is_the_adolescent_sexually_active",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "is_the_adolescent_sexually_active"
+          }
+        },
+        {
+          "column_name": "referrals_provided",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "referrals_provided"
+          }
+        },
+        {
+          "column_name": "support_provided_on_referrals",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "support_provided_on_referrals"
+          }
+        },
+        {
+          "column_name": "referrals_completed_by_client",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "referrals_completed_by_client"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
     }
   ]
 }
