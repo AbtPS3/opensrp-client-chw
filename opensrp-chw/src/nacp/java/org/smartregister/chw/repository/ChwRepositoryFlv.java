@@ -492,7 +492,8 @@ public class ChwRepositoryFlv {
             // setup reporting
             ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
             String mvcReportIndicatorConfigFile = "config/mvc-monthly-report.yml";
-            for (String configFile : Collections.singletonList(mvcReportIndicatorConfigFile)) {
+            String mvcReportIndicatorConfigFile2 = "config/mvc-children-registration-details.yml";
+            for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile,mvcReportIndicatorConfigFile2)) {
                 reportingLibrary.readConfigFile(configFile, db);
             }
         } catch (Exception e) {
