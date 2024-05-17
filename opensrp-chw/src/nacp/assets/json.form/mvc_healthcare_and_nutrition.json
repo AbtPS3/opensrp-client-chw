@@ -131,6 +131,7 @@
       {
         "key": "health_care_service_provided",
         "type": "check_box",
+        "combine_checkbox_option_values": "true",
         "label": "Select the health services provided",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",

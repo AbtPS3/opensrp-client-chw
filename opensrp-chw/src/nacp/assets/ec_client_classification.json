@@ -779,6 +779,20 @@
             "creates_case": [
               "ec_ovc_register"
             ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "MVC Household Services",
+            "creates_case": [
+              "ec_mvc_household_services"
+            ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "MVC Child Services",
+            "creates_case": [
+              "ec_mvc_child_services"
+            ]
           }
         ]
       }

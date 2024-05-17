@@ -50,13 +50,13 @@
     "title": "Referral",
     "fields": [
       {
-        "key": "select_referrals_provided",
+        "key": "referrals_provided",
         "type": "check_box",
         "combine_checkbox_option_values": true,
         "label": "Select the referrals provided to the client",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "select_referrals_provided",
+        "openmrs_entity_id": "referrals_provided",
         "exclusive": [
           "no_referrals_provided"
         ],
@@ -135,7 +135,7 @@
           "err": "Required"
         },
         "relevance": {
-          "step1:select_referrals_provided": {
+          "step1:referrals_provided": {
             "ex-checkbox": [
               {
                 "or": [

@@ -124,6 +124,7 @@
         "key": "select_ecd_psychosocial_support_less_than_5",
         "type": "check_box",
         "label": "Select ECD & Psychosocial Support provided",
+        "combine_checkbox_option_values": "true",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_ecd_psychosocial_support_less_than_5",
@@ -168,6 +169,7 @@
       {
         "key": "select_ecd_psychosocial_support_greater_than_5",
         "type": "check_box",
+        "combine_checkbox_option_values": "true",
         "label": "Select ECD & Psychosocial Support provided",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
