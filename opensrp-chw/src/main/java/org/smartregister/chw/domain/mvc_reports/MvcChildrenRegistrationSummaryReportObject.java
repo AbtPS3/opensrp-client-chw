@@ -17,7 +17,26 @@ public class MvcChildrenRegistrationSummaryReportObject extends ReportObject {
 
     private final List<String> indicatorCodesWithAgeGroups = new ArrayList<>();
 
-    private final String[] indicatorCodes = new String[]{"mvc-number-registered", "mvc-birth-certificate", "mvc-disabled-mvc", "mvc-orphaned-hiv", "mvc-orphaned-other", "mvc-living-hiv", "mvc-malnourished", "mvc-conflict-law", "mvc-street", "mvc-institutional-care", "mvc-worst-labor", "mvc-violence", "mvc-others", "mvc-albinism", "mvc-mental-disability", "mvc-hearing-disability", "mvc-visual-disability", "mvc-physical-disability", "mvc-speech-impairment-1", "mvc-speech-impairment-2", "mvc-others-2", "mvc-in-school", "mvc-not-in-school", "mvc-early-childhood", "mvc-pre-primary", "mvc-primary-school", "mvc-secondary-school", "mvc-vocational-training", "mvc-college", "mvc-father-mother-care", "mvc-grandparent-care", "mvc-aunt-uncle-care", "mvc-aunt-uncle-care", "mvc-step-parent-care", "mvc-sibling-care", "mvc-institutional-care", "mvc-cousin-care", "mvc-family-friend-care", "mvc-foster-parent-care", "mvc-adoptive-parent", "mvc-other", "mvc-cases-opened"};
+    private final String[] indicatorCodes = new String[]{"mvc-number-registered", "mvc-birth-certificate", "mvc-type-of-vulnerability-disabled",
+            "mvc-type-of-vulnerability-orphaned-hiv", "mvc-type-of-vulnerability-orphaned-other",
+            "mvc-type-of-vulnerability-living-hiv", "mvc-type-of-vulnerability-malnourished",
+            "mvc-type-of-vulnerability-conflict-law", "mvc-type-of-vulnerability-street",
+            "mvc-type-of-vulnerability-institutional-care", "mvc-type-of-vulnerability-worst-labor",
+            "mvc-type-of-vulnerability-violence", "mvc-type-of-vulnerability-others",
+            "mvc-type-of-disability-albinism", "mvc-type-of-disability-mental-disability",
+            "mvc-type-of-disability-hearing-disability", "mvc-type-of-disability-visual-disability",
+            "mvc-type-of-disability-physical-disability", "mvc-type-of-disability-speech-impairment-1",
+            "mvc-type-of-disability-others", "mvc-in-school", "mvc-not-in-school",
+            "mvc-level-of-education-early-childhood", "mvc-level-of-education-pre-primary",
+            "mvc-level-of-education-primary-school", "mvc-level-of-education-secondary-school",
+            "mvc-level-of-education-vocational-training", "mvc-level-of-education-college",
+            "mvc-child-primary-caregiver-father-mother-care", "mvc-child-primary-caregiver-grandparent-care",
+            "mvc-child-primary-caregiver-aunt-uncle-care", "mvc-child-primary-caregiver-step-parent-care",
+            "mvc-child-primary-caregiver-sibling-care", "mvc-child-primary-caregiver-institutional-care",
+            "mvc-child-primary-caregiver-cousin-care", "mvc-child-primary-caregiver-family-friend-care",
+            "mvc-child-primary-caregiver-foster-parent-care", "mvc-child-primary-caregiver-adoptive-parent-care",
+            "mvc-child-primary-caregiver-other", "mvc-child-primary-caregiver-number-cases-opened",
+            "mvc-cases-opened-yes"};
 
     private final String[] clientSex = new String[]{"F", "M"};
 
