@@ -13,13 +13,57 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import timber.log.Timber;
-
 public class MvcServicesProvidedToHouseholdsReportObject extends ReportObject {
 
     private final List<String> indicatorCodesWithAgeGroups = new ArrayList<>();
 
-    private final String[] indicatorCodes = new String[]{"mvc-child-headed", "mvc-adult-headed", "mvc-elderly-headed", "mvc-employed", "mvc-unemployed", "mvc-insured","mvc-uninsured","mvc-disabled","mvc-hiv","mvc-chronic"};
+    private final String[] indicatorCodes = new String[]{
+            "mvc-ccd-education-home",
+            "mvc-ecd-education-cc",
+            "mvc-parenting-groups",
+            "mvc-parenting-messages",
+            "mvc-infant-feeding",
+            "mvc-severe-malnutrition",
+            "mvc-moderate-malnutrition",
+            "mvc-not-malnourished",
+            "mvc-nutrition-counseling",
+            "mvc-food-support",
+            "mvc-linked-services",
+            "mvc-hiv-risk",
+            "mvc-hiv-prevention",
+            "mvc-disclosure-support",
+            "mvc-hiv-support-group",
+            "mvc-art-adherence",
+            "mvc-join-chf-tika",
+            "mvc-gbv-support",
+            "mvc-slg-member",
+            "mvc-consumption-support",
+            "mvc-cash-transfer",
+            "mvc-entrepreneurship-training",
+            "mvc-iga-establishment",
+            "mvc-market-link",
+            "mvc-succession-plan",
+            "mvc-agricultural-extension",
+            "mvc-referral-health-services",
+            "mvc-referral-nutrition",
+            "mvc-referral-education",
+            "mvc-referral-child-protection",
+            "mvc-referral-psychosocial-support",
+            "mvc-referral-economic-strengthening",
+            "mvc-referral-others",
+            "mvc-health-related-services",
+            "mvc-nutrition",
+            "mvc-education",
+            "mvc-child-protection",
+            "mvc-psycho-social-support",
+            "mvc-economic-strengthening",
+            "mvc-others",
+            "mvc-caregiver-referrals-accompanied-to-services",
+            "mvc-caregiver-referrals-assisted-with-transport",
+            "mvc-house-renovation-support",
+            "mvc-house-construction-support",
+            "mvc-wash-education",
+            "mvc-clothing-support"};
 
     private final String[] clientSex = new String[]{"F", "M"};
 
