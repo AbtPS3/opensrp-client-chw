@@ -20,7 +20,7 @@ public class MvcServicesProvidedToChildrenReportObject extends ReportObject {
     private final List<String> indicatorCodesWithAgeGroups = new ArrayList<>();
 
     private final String[] indicatorCodes = new String[]{
-            "mvc-enrolled-in-school",
+            "mvc-number-of-children-enrolled-in-school",
             "mvc-missed-school",
             "mvc-linked-to-education-support",
             "mvc-supported-vocational-training",
