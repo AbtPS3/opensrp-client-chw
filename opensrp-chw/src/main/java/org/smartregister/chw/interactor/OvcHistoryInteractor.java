@@ -54,7 +54,7 @@ public class OvcHistoryInteractor extends CoreBaseAncMedicalHistoryInteractor {
     public void getMemberHistory(final String memberID, final Context context, final BaseAncMedicalHistoryContract.InteractorCallBack callBack) {
         final Runnable runnable = () -> {
             String[] eventTypes = new String[]{
-                    Constants.EVENT_TYPE.MVC_SERVICES_VISIT,
+                    Constants.EVENT_TYPE.MVC_CHILD_SERVICES_VISIT,
                     Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT,
             };
             List<SortableVisit> visits = getVisits(memberID, eventTypes);
