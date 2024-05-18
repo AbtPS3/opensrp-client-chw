@@ -1,0 +1,53 @@
+#Indicators for less than 1
+indicators:
+  #Male
+  - key: "mvc-number-of-children-enrolled-in-school-M-<1"
+    grouping: "MVC"
+    description: "Number male children registered in school aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT eor.base_entity_id) as count
+                      FROM ec_ovc_register eor
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND eor.is_child_in_school = 'yes'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-number-of-children-enrolled-in-school-F-<1"
+    grouping: "MVC"
+    description: "Number Female children registered in school aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT eor.base_entity_id) as count
+                      FROM ec_ovc_register eor
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND eor.is_child_in_school = 'yes'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-missed-school-M-<1"
+    grouping: "MVC"
+    description: "Number of Male children who missed school for three or more days consecutively in a month aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT eor.base_entity_id) as count
+                      FROM ec_ovc_register eor
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) > 4 AND (date('Now') - date(efm.dob)) < 1
+                      AND eor.is_child_in_school = 'yes'
+                      AND (efm.gender='Male')
+                      AND eor.client_type = 'ovc_child'
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-missed-school-F-<1"
+    grouping: "MVC"
+    description: "Number of Female children who missed school for three or more days consecutively in a month aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT eor.base_entity_id) as count
+                      FROM ec_ovc_register eor
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) > 4 AND (date('Now') - date(efm.dob)) < 1
+                      AND eor.is_child_in_school = 'yes'
+                      AND (efm.gender='Male')
+                      AND eor.client_type = 'ovc_child'
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+

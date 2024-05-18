@@ -493,7 +493,8 @@ public class ChwRepositoryFlv {
             ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
             String mvcReportIndicatorConfigFile = "config/mvc-head_of_household_registration-report.yml";
             String mvcReportIndicatorConfigFile2 = "config/mvc-children-registration-details.yml";
-            for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile,mvcReportIndicatorConfigFile2)) {
+            String mvcReportIndicatorConfigFile3 = "config/mvc-services-provided-to-children-in-the-reporting-period.yml";
+            for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile,mvcReportIndicatorConfigFile2,mvcReportIndicatorConfigFile3)) {
                 reportingLibrary.readConfigFile(configFile, db);
             }
         } catch (Exception e) {
