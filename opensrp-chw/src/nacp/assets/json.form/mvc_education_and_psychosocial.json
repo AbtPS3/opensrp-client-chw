@@ -51,12 +51,12 @@
     "title": "Education & Psychosocial",
     "fields": [
       {
-        "key": "select_education_vocational_training",
+        "key": "education_vocational_training",
         "type": "native_radio",
         "label": "Select clients Education and Vocational Training",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "select_education_vocational_training",
+        "openmrs_entity_id": "education_vocational_training",
         "options": [
           {
             "key": "children_enrolled_in_school",
