@@ -28,26 +28,157 @@ indicators:
   - key: "mvc-missed-school-M-<1"
     grouping: "MVC"
     description: "Number of Male children who missed school for three or more days consecutively in a month aged under 1"
-    indicatorQuery: " SELECT count(DISTINCT eor.base_entity_id) as count
-                      FROM ec_ovc_register eor
-                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
-                      WHERE  (date('Now') - date(efm.dob)) > 4 AND (date('Now') - date(efm.dob)) < 1
-                      AND eor.is_child_in_school = 'yes'
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.education_and_vocational_training = 'missed_school_three_days'
                       AND (efm.gender='Male')
-                      AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Female
   - key: "mvc-missed-school-F-<1"
     grouping: "MVC"
     description: "Number of Female children who missed school for three or more days consecutively in a month aged under 1"
-    indicatorQuery: " SELECT count(DISTINCT eor.base_entity_id) as count
-                      FROM ec_ovc_register eor
-                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
-                      WHERE  (date('Now') - date(efm.dob)) > 4 AND (date('Now') - date(efm.dob)) < 1
-                      AND eor.is_child_in_school = 'yes'
-                      AND (efm.gender='Male')
-                      AND eor.client_type = 'ovc_child'
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.education_and_vocational_training = 'missed_school_three_days'
+                      AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
+
+  #Male
+  - key: "mvc-linked-to-education-support-M-<1"
+    grouping: "MVC"
+    description: "Number of Male children who are linked to education and support and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%linked_to_education_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-linked-to-education-support-M-<1"
+    grouping: "MVC"
+    description: "Number of Female children who are linked to education and support and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%linked_to_education_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-supported-vocational-training-M-<1"
+    grouping: "MVC"
+    description: "Number of Male children who are linked to vocational training support and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%supported_attend_vocational_training%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-supported-vocational-training-M-<1"
+    grouping: "MVC"
+    description: "Number of Female children who are linked to vocational trining support and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%supported_attend_vocational_training%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+
+
+  #Male
+  - key: "mvc-supported-vocational-training-M-<1"
+    grouping: "MVC"
+    description: "Number of Male children who received business kit and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%received_business_start_up_kit%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-supported-vocational-training-M-<1"
+    grouping: "MVC"
+    description: "Number of Female children who received business kit and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%received_business_start_up_kit%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-received-business-kit-M-<1"
+    grouping: "MVC"
+    description: "Number of Male children who received business kit and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%linked_mainstreamed_education_program%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Female
+  - key: "mvc-received-business-kit-F-<1"
+    grouping: "MVC"
+    description: "Number of Female children who received business kit and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%linked_mainstreamed_education_program%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+###############################################Education and vocational training ends here ###########################################################################
+
+###############################################ECD & Psychosocial Support starts here ###########################################################################
+
+  #Male
+  - key: "mvc-attended-ecd-M-<1"
+    grouping: "MVC"
+    description: "Number of Male children who attended ECD and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%linked_mainstreamed_education_program%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Female
+  - key: "mvc-received-business-kit-F-<1"
+    grouping: "MVC"
+    description: "Number of Female children who received business kit and are aged under 1"
+    indicatorQuery: " SELECT count(DISTINCT ecs.base_entity_id) as count
+                      FROM ec_mvc_child_services ecs
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = ecs.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 1
+                      AND ecs.ecd_psychosocial_support like '%linked_mainstreamed_education_program%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(ecs.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
