@@ -60,18 +60,18 @@
         "openmrs_entity_id": "child_received_vaccinations",
         "options": [
           {
-            "key": "yes_vaccinated",
+            "key": "yes",
             "text": "Yes",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes_vaccinated"
+            "openmrs_entity_id": "yes"
           },
           {
-            "key": "no_vaccinated",
+            "key": "no",
             "text": "No",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_vaccinated"
+            "openmrs_entity_id": "no"
           },
           {
             "key": "unknown_vaccinated",
@@ -126,6 +126,13 @@
         "v_required": {
           "value": "true",
           "err": "Please select the child's nutritional status"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_healthcare_and_nutrition.yml"
+            }
+          }
         }
       },
       {

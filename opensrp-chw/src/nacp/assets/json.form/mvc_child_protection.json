@@ -50,13 +50,13 @@
     "title": "Child Protection",
     "fields": [
       {
-        "key": "select_child_protection_service",
+        "key": "child_protection_service",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
         "label": "Select child protection service provided",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "select_child_protection_service",
+        "openmrs_entity_id": "child_protection_service",
         "options": [
           {
             "key": "supported_to_get_birth_certificates",

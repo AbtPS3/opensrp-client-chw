@@ -6363,19 +6363,19 @@
           }
         },
         {
-          "column_name": "select_child_protection_service",
+          "column_name": "child_protection_service",
           "type": "Event",
           "json_mapping": {
             "field": "obs.fieldCode",
-            "concept": "select_child_protection_service"
+            "concept": "child_protection_service"
           }
         },
         {
-          "column_name": "select_education_vocational_training",
+          "column_name": "education_vocational_training",
           "type": "Event",
           "json_mapping": {
             "field": "obs.fieldCode",
-            "concept": "select_education_vocational_training"
+            "concept": "education_vocational_training"
           }
         },
         {
