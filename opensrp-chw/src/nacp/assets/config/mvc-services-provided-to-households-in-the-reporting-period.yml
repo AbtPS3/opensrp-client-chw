@@ -1,0 +1,1138 @@
+#Indicators for households aged less than 18
+indicators:
+  #Male
+  - key: "mvc-ccd-education-home-M-17"
+    grouping: "MVC"
+    description: "Number male caregivers received care for child development (CCD) education during a CHW  home visit aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'ecd_education_during_chw_home_visit'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-ccd-education-home-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers received care for child development (CCD) education during a CHW  home visit aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'ecd_education_during_chw_home_visit'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-ecd-education-cc-M-17"
+    grouping: "MVC"
+    description: "Number male of caregivers received ECD education at children's corners in HF aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'ecd_education_at_children_conner'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-ecd-education-cc-F-17"
+    grouping: "MVC"
+    description: "Number Female of caregivers received ECD education at children's corners in HF aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'ecd_education_at_children_conner'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-parenting-groups-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers linked to community parenting groups aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'community_parenting_groups'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-parenting-groups-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers linked to community parenting groups aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'community_parenting_groups'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-parenting-groups-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers who received parenting messages aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'parenting_messages'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-parenting-groups-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who received parenting messages aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'parenting_messages'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-infant-feeding-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers who received infant and young child feeding counseling aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'infant_feeding_counseling'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-infant-feeding-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who received infant and young child feeding counseling aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.parenting_caregivers_with_children = 'infant_feeding_counseling'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-severe-malnutrition-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers with severe malnutrition aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.nutritional_status_assessment = 'severe_malnutrition'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-severe-malnutrition-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers with severe malnutrition aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.nutritional_status_assessment = 'severe_malnutrition'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-moderate-malnutrition-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers with moderate malnutrition aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.nutritional_status_assessment = 'moderate_malnutrition'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-moderate-malnutrition-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers with moderate malnutrition aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.nutritional_status_assessment = 'moderate_malnutrition'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-not-malnourished-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers with severe malnutrition aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.nutritional_status_assessment = 'not_malnourished'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-not-malnourished-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who received infant and young child feeding counseling aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.nutritional_status_assessment = 'not_malnourished'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-nutrition-counseling-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers with severe malnutrition aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.food_and_nutrition like '%nutrition_counseling%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-nutrition-counseling-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who received infant and young child feeding counseling aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.food_and_nutrition like '%nutrition_counseling%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-food-support-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers linked to external food support & nutritional supplements aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.food_and_nutrition like '%food_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-food-support-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers linked to external food support & nutritional supplements aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.food_and_nutrition like '%food_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-linked-services-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers linked to other services aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.food_and_nutrition like '%services_linkage%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-linked-services-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers linked to other services aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.food_and_nutrition like '%services_linkage%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-hiv-risk-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers who received HIV risk assessment aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%hiv_risk_assessment%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-hiv-risk-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who received HIV risk assessment aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%hiv_risk_assessment%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-hiv-prevention-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers who received HIV risk assessment aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%hiv_prevention_counseling%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-hiv-prevention-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who received HIV risk assessment aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%hiv_prevention_counseling%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-disclosure-support-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers who received HIV disclosure support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%disclosure_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-disclosure-support-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who received HIV disclosure support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%disclosure_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-hiv-support-group-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers who were linked to an HIV support group aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%linked_to_an_hiv_support_group%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-hiv-support-group-M-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who were linked to an HIV support group aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%linked_to_an_hiv_support_group%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-art-adherence-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers who received ART adherence counseling aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%received_art_adherence_counseling%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-art-adherence-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers who received ART adherence counseling aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%received_art_adherence_counseling%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-join-chf-tika-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers supported to join CHF/TIKA aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%supported_to_join_CHF_or_TIKA%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-join-chf-tika-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers supported to join CHF/TIKA aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%supported_to_join_CHF_or_TIKA%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-gbv-support-M-17"
+    grouping: "MVC"
+    description: "Number Male caregivers received support for GBV aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%received_support_for_gbv%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-gbv-support-F-17"
+    grouping: "MVC"
+    description: "Number Female caregivers received support for GBV aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.health_care_provided like '%received_support_for_gbv%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+
+  #Male
+  - key: "mvc-slg-member-M-17"
+    grouping: "MVC"
+    description: "Number of Male primary caregivers who are active SLG member aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%primary_caregivers_who_are_active_slg_members%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-slg-member-F-17"
+    grouping: "MVC"
+    description: "Number of Female primary caregivers who are active SLG member aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%primary_caregivers_who_are_active_slg_members%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Male
+  - key: "mvc-consumption-support-M-17"
+    grouping: "MVC"
+    description: "Number of Male households linked to temporary consumption support (e.g. SLG & OVC funds.) aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%households_linked_to_temporary_consumption_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-consumption-support-F-17"
+    grouping: "MVC"
+    description: "Number of Female households linked to temporary consumption support (e.g. SLG & OVC funds.) aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%households_linked_to_temporary_consumption_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-cash-transfer-M-17"
+    grouping: "MVC"
+    description: "Number of Male household linked to cash transfer eg TASAF. aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%households_linked_to_cash_transfer%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-cash-transfer-F-17"
+    grouping: "MVC"
+    description: "Number of Female household linked to cash transfer eg TASAF. aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%households_linked_to_cash_transfer%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-entrepreneurship-training-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers linked to entrepreneurship trainings aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%caregivers_linked_to_entrepreneurship_trainings%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-entrepreneurship-training-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers linked to entrepreneurship trainings aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%caregivers_linked_to_entrepreneurship_trainings%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-iga-establishment-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers supported to establish income generating activity (IGA) aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%caregivers_supported_to_establish_income_generating_activity_iga%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-iga-establishment-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers supported to establish income generating activity (IGA) aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%caregivers_supported_to_establish_income_generating_activity_iga%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-market-link-M-17"
+    grouping: "MVC"
+    description: "Number of Male households linked to market aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%households_linked_to_market%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-market-link-F-17"
+    grouping: "MVC"
+    description: "Number of Female households linked to market aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%households_linked_to_market%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-succession-plan-M-17"
+    grouping: "MVC"
+    description: "Number of Male households supported to prepare succession plan aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%households_supported_to_prepare_succession_plan%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-succession-plan-F-17"
+    grouping: "MVC"
+    description: "Number of Female households supported to prepare succession plan aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%households_supported_to_prepare_succession_plan%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-agricultural-extension-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers linked to agricultural extension support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%primary_caregivers_linked_to_agricultural_extension_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-agricultural-extension-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers linked to agricultural extension support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.economic_strengthening like '%primary_caregivers_linked_to_agricultural_extension_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-referral-health-services-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers given health related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%health_related_services%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-referral-health-services-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers given health related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%health_related_services%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-referral-nutrition-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers given Nutrition related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%nutrition%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-referral-nutrition-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers given Nutrition related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%nutrition%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-referral-education-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers given education related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%education%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-referral-education-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers given education related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%education%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-referral-child-protection-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers given child protection related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%child_protection%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-referral-child-protection-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers given child protection related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%child_protection%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-referral-psychosocial-support-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers given psychosocial support related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%psychosocial_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-referral-psychosocial-support-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers given psychosocial support related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%psychosocial_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-referral-economic-strengthening-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers given economic strengthening related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%economic_strengthening%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-referral-economic-strengthening-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers given economic strengthening related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%economic_strengthening%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-referral-others-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers given other referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%other%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-referral-others-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers given other referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.referrals like '%other%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-health-related-services-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who completed health related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%health_related_services%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-health-related-services-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who completed health related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%health_related_services%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-nutrition-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who completed nutrition related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%nutrition%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-nutrition-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who completed nutrition related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%nutrition%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-education-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who completed education related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%education%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-education-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who completed education related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%education%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-child-protection-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who completed child protection related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%child_protection%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-child-protection-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who completed child protection related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%child_protection%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-psycho-social-support-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who completed psychosocial support related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%psychosocial_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-psycho-social-support-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who completed psychosocial support related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%psychosocial_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-economic-strengthening-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who completed economic strengthening related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%economic_strengthening%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-economic-strengthening-M-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who completed economic strengthening related referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%economic_strengthening%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-others-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who completed other referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%other%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-others-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who completed other referrals aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.caregiver_referrals_completed like '%other%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-caregiver-referrals-accompanied-to-services-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who were accompanied to services aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.support_provided_to_caregiver_on_referrals like '%accompanied_to_service%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-caregiver-referrals-accompanied-to-services-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who were accompanied to services aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.support_provided_to_caregiver_on_referrals like '%accompanied_to_service%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-caregiver-referrals-assisted-with-transport-M-17"
+    grouping: "MVC"
+    description: "Number of Male caregivers who were assisted with transport to services aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.support_provided_to_caregiver_on_referrals like '%assisted_with_transport%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-caregiver-referrals-assisted-with-transport-F-17"
+    grouping: "MVC"
+    description: "Number of Female caregivers who were assisted with transport to services aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.support_provided_to_caregiver_on_referrals like '%assisted_with_transport%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-house-renovation-support-M-17"
+    grouping: "MVC"
+    description: "Number of Male linked to house renovation support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.shelter_and_hygiene like '%households_linked_to_house_renovation_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-house-renovation-support-F-17"
+    grouping: "MVC"
+    description: "Number of Female linked to house renovation support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.shelter_and_hygiene like '%households_linked_to_house_renovation_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-house-construction-support-M-17"
+    grouping: "MVC"
+    description: "Number of Male linked to house construction support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.shelter_and_hygiene like '%households_linked_to_house_construction_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-house-construction-support-F-17"
+    grouping: "MVC"
+    description: "Number of Female linked to house construction support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.shelter_and_hygiene like '%households_linked_to_house_construction_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-wash-education-M-17"
+    grouping: "MVC"
+    description: "Number of Male linked to wash education aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.shelter_and_hygiene like '%households_received_water_sanitation_and_hygiene_wash_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-wash-education-F-17"
+    grouping: "MVC"
+    description: "Number of Female linked to wash education aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.shelter_and_hygiene like '%households_received_water_sanitation_and_hygiene_wash_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+
+  #Male
+  - key: "mvc-clothing-support-M-17"
+    grouping: "MVC"
+    description: "Number of Male linked to clothing support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.shelter_and_hygiene like '%households_received_clothing_support%'
+                      AND (efm.gender='Male')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+  #Female
+  - key: "mvc-clothing-support-F-17"
+    grouping: "MVC"
+    description: "Number of Female linked to clothing support aged under 18"
+    indicatorQuery: " SELECT count(DISTINCT eos.base_entity_id) as count
+                      FROM ec_mvc_household_services eos
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eos.base_entity_id
+                      WHERE  (date('Now') - date(efm.dob)) < 18
+                      AND eos.shelter_and_hygiene like '%households_received_clothing_support%'
+                      AND (efm.gender='Female')
+                      AND date((substr('%s', 1, 7) || '-' || '01')) =
+                      date(substr(strftime('%Y-%m-%d', datetime(eos.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+

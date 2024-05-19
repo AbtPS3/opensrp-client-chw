@@ -494,7 +494,8 @@ public class ChwRepositoryFlv {
             String mvcReportIndicatorConfigFile = "config/mvc-head_of_household_registration-report.yml";
             String mvcReportIndicatorConfigFile2 = "config/mvc-children-registration-details.yml";
             String mvcReportIndicatorConfigFile3 = "config/mvc-services-provided-to-children-in-the-reporting-period.yml";
-            for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile,mvcReportIndicatorConfigFile2,mvcReportIndicatorConfigFile3)) {
+            String mvcReportIndicatorConfigFile4 = "config/mvc-services-provided-to-households-in-the-reporting-period.yml";
+            for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile, mvcReportIndicatorConfigFile2, mvcReportIndicatorConfigFile3, mvcReportIndicatorConfigFile4)) {
                 reportingLibrary.readConfigFile(configFile, db);
             }
         } catch (Exception e) {
@@ -503,7 +504,7 @@ public class ChwRepositoryFlv {
 
         try {
             DatabaseMigrationUtils.createAddedECTables(db,
-                    new HashSet<>(Arrays.asList("ec_ovc_register", "ec_mvc_household_services","ec_mvc_child_services")),
+                    new HashSet<>(Arrays.asList("ec_ovc_register", "ec_mvc_household_services", "ec_mvc_child_services")),
                     ChwApplication.createCommonFtsObject());
         } catch (Exception e) {
             Timber.e(e, "upgradeToVersion28");
