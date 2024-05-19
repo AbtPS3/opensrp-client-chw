@@ -6,7 +6,7 @@ indicators:
     description: "Number male children registered in school aged under 1"
     indicatorQuery: " SELECT count(DISTINCT eor.base_entity_id) as count
                       FROM ec_ovc_register eor
-                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.entity_id
+                      INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) < 1
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Male')
