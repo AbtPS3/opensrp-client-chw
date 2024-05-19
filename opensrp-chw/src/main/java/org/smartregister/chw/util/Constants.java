@@ -267,7 +267,7 @@ public class Constants extends CoreConstants {
 
             String MVC_CHILDREN_REGISTRATION_DETAILS_REPORT = "mvc_reports/mvc-children-registration-details";
 
-            String MVC_SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT = "mvc_reports/mvc-services-provided-to-children-report";
+            String MVC_SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT = "mvc_reports/mvc-services-provided-to-household-in-the-report";
 
             String MVC_SERVICES_PROVIDED_TO_CHILDREN_REPORT = "mvc_reports/mvc-services-provided-to-children-report";
         }
