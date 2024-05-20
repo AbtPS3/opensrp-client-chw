@@ -43,11 +43,12 @@ import org.smartregister.chw.ovc.OvcLibrary;
 import org.smartregister.chw.ovc.activity.BaseOvcProfileActivity;
 import org.smartregister.chw.ovc.dao.OvcDao;
 import org.smartregister.chw.ovc.domain.MemberObject;
+import org.smartregister.chw.ovc.domain.Visit;
 import org.smartregister.chw.ovc.presenter.BaseOvcProfilePresenter;
 import org.smartregister.chw.ovc.util.Constants;
 import org.smartregister.chw.ovc.util.OvcJsonFormUtils;
-import org.smartregister.chw.ovc.util.VisitUtils;
 import org.smartregister.chw.sbc.dao.SbcDao;
+import org.smartregister.chw.util.MvcVisitUtils;
 import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.commonregistry.CommonRepository;
@@ -56,6 +57,8 @@ import org.smartregister.family.util.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Nullable;
 
 import timber.log.Timber;
 
@@ -111,9 +114,35 @@ public class MvcProfileActivity extends BaseOvcProfileActivity {
     protected void setupViews() {
         super.setupViews();
         try {
-            VisitUtils.processVisits(OvcLibrary.getInstance().visitRepository(), OvcLibrary.getInstance().visitDetailsRepository(), MvcProfileActivity.this);
+            MvcVisitUtils.processVisits(OvcLibrary.getInstance().visitRepository(), OvcLibrary.getInstance().visitDetailsRepository());
         } catch (Exception e) {
             Timber.e(e);
+        }
+
+        Visit lastFollowupVisit = getVisit(Constants.EVENT_TYPE.MVC_CHILD_SERVICES_VISIT);
+
+        if (lastFollowupVisit != null && !lastFollowupVisit.getProcessed()) {
+            if (MvcVisitUtils.isVisitComplete(lastFollowupVisit)) {
+                manualProcessVisit.setVisibility(View.VISIBLE);
+                manualProcessVisit.setOnClickListener(view -> {
+                    try {
+                        MvcVisitUtils.manualProcessVisit(lastFollowupVisit);
+                        onResume();
+                    } catch (Exception e) {
+                        Timber.e(e);
+                    }
+                });
+            } else {
+                manualProcessVisit.setVisibility(View.GONE);
+            }
+            showVisitInProgress();
+            setUpEditButton();
+        } else {
+            manualProcessVisit.setVisibility(View.GONE);
+            textViewVisitDoneEdit.setVisibility(View.GONE);
+            visitDone.setVisibility(View.GONE);
+
+            textViewRecordOvc.setVisibility(View.VISIBLE);
         }
     }
 
@@ -470,5 +499,25 @@ public class MvcProfileActivity extends BaseOvcProfileActivity {
         } catch (Exception e) {
             Timber.e(e);
         }
+    }
+
+    public @Nullable
+    Visit getVisit(String eventType) {
+        return OvcLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), eventType);
+    }
+
+    private void showVisitInProgress() {
+        textViewRecordOvc.setVisibility(View.GONE);
+        textViewVisitDoneEdit.setVisibility(View.VISIBLE);
+        visitDone.setVisibility(View.VISIBLE);
+        textViewVisitDone.setText(getString(R.string.visit_in_progress, "MVC"));
+        textViewVisitDone.setTextColor(getResources().getColor(R.color.black_text_color));
+        imageViewCross.setImageResource(org.smartregister.chw.core.R.drawable.activityrow_notvisited);
+    }
+
+    private void setUpEditButton() {
+        textViewVisitDoneEdit.setOnClickListener(v -> {
+            MvcVisitActivity.startMe(MvcProfileActivity.this, memberObject.getBaseEntityId(), true);
+        });
     }
 }
