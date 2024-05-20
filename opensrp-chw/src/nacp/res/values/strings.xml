@@ -752,6 +752,32 @@
 
     <string name="ovc_edit_home_visit">Edit OVC Visit</string>
 
+    <string name="mvc_has_need_assessment_been_conducted">Has Need Assessment been conducted:</string>
+    <string name="mvc_visit_type">Visit type:</string>
+    <string name="mvc_client_needs">Select the client\'s need:</string>
+    <string name="mvc_other_client_needs">Specify other Client Needs:</string>
+    <string name="mvc_has_risk_assessment_been_conducted">Has Risk Assessment been conducted:</string>
+    <string name="mvc_has_the_child_experienced_vac">Has the child experienced VAC:</string>
+    <string name="mvc_is_the_child_in_conflict_and_contact_with_the_law">Is the child in conflict and contact with the law:</string>
+    <string name="mvc_yes">Yes</string>
+    <string name="mvc_no">No</string>
+    <string name="mvc_health_and_nutrition">Health and Nutrition</string>
+    <string name="mvc_housing_and_care">Housing and Care</string>
+    <string name="mvc_security_and_safety">Security and Safety</string>
+    <string name="mvc_psychological_and_emotional_support">Psychological and Emotional Support</string>
+    <string name="mvc_education_and_life_skills">Education and Life Skills</string>
+    <string name="mvc_household_and_economic_strengthening">Household and Economic Strengthening</string>
+    <string name="mvc_physical">Physical</string>
+    <string name="mvc_sexual">Sexual</string>
+    <string name="mvc_neglect">Neglect</string>
+    <string name="mvc_exploitation">Exploitation</string>
+    <string name="mvc_new_client">New client</string>
+    <string name="mvc_active_continuing_with_services">Active/ continuing with services</string>
+    <string name="mvc_graduated">Graduated</string>
+    <string name="mvc_transferred">Transferred</string>
+    <string name="mvc_exited_without_graduation">Exited Without Graduation</string>
+    <string name="mvc_died">Died</string>
+
 
 
 

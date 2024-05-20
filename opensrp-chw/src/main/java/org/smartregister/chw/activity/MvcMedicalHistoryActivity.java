@@ -168,7 +168,13 @@ public class MvcMedicalHistoryActivity extends CoreAncMedicalHistoryActivity {
                             "nutritional_status_assessment",
                             "food_and_nutrition",
                             "health_care_provided",
-                            "visit_type"
+                            "visit_type",
+                            "has_need_assessment_been_conducted",
+                            "client_needs",
+                            "other_client_needs",
+                            "has_risk_assessment_been_conducted",
+                            "has_the_child_experienced_vac",
+                            "is_the_child_in_conflict_and_contact_with_the_law"
                     };
                     extractVisitDetails(visits, params, visitDetails, x, context);
 
