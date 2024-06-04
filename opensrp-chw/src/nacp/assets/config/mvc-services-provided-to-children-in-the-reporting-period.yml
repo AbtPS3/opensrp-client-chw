@@ -11,7 +11,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Female
   - key: "mvc-number-of-children-enrolled-in-school-F-<1"
     grouping: "MVC"
@@ -23,7 +23,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Male
   - key: "mvc-missed-school-M-<1"
     grouping: "MVC"
@@ -1261,7 +1261,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Female
   - key: "mvc-number-of-children-enrolled-in-school-F-1-4"
     grouping: "MVC"
@@ -1273,7 +1273,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Male
   - key: "mvc-missed-school-M-1-4"
     grouping: "MVC"
@@ -2511,7 +2511,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Female
   - key: "mvc-number-of-children-enrolled-in-school-F-5-9"
     grouping: "MVC"
@@ -2523,7 +2523,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Male
   - key: "mvc-missed-school-M-5-9"
     grouping: "MVC"
@@ -3761,7 +3761,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Female
   - key: "mvc-number-of-children-enrolled-in-school-F-5-9"
     grouping: "MVC"
@@ -3773,7 +3773,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Male
   - key: "mvc-missed-school-M-5-9"
     grouping: "MVC"
@@ -5003,7 +5003,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Female
   - key: "mvc-number-of-children-enrolled-in-school-F-10-14"
     grouping: "MVC"
@@ -5015,7 +5015,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Male
   - key: "mvc-missed-school-M-10-14"
     grouping: "MVC"
@@ -6245,7 +6245,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Female
   - key: "mvc-number-of-children-enrolled-in-school-F-15-17"
     grouping: "MVC"
@@ -6257,7 +6257,7 @@ indicators:
                       AND eor.is_child_in_school = 'yes'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
   #Male
   - key: "mvc-missed-school-M-15-17"
     grouping: "MVC"

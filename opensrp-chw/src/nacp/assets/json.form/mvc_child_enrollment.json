@@ -614,6 +614,20 @@
         "openmrs_entity_id": "client_type",
         "type": "hidden",
         "value": "ovc_child"
+      },
+      {
+        "key": "enrollment_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "enrollment_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_head_of_household_enrollment_calculation.yml"
+            }
+          }
+        }
       }
     ]
   }

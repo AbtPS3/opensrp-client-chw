@@ -1,0 +1,14 @@
+---
+name: step1_hiv_results
+description: HIV Results Calculation
+priority: 1
+condition: "step1_type_of_vulnerability.contains('living_with_hiv')"
+actions:
+  - "calculation = 'positive'"
+---
+name: step1_enrollment_date
+description: Enrollment Date Calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = helper.getTimeInMillis()"

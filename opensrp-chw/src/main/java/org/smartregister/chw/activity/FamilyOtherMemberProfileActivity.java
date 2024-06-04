@@ -198,7 +198,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
                 menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
             }
 
-            if (ChwApplication.getApplicationFlavor().hasMvc()) {
+            if (ChwApplication.getApplicationFlavor().hasMvc() && familyHead.equals(baseEntityId)) {
                 menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(baseEntityId));
             }
         }

@@ -10,7 +10,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-child-headed-F-17"
     grouping: "MVC"
@@ -23,7 +23,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-adult-headed-M-17"
     grouping: "MVC"
@@ -36,7 +36,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-adult-headed-F-17"
     grouping: "MVC"
@@ -49,7 +49,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-elderly-headed-M-17"
     grouping: "MVC"
@@ -62,7 +62,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-elderly-headed-F-17"
     grouping: "MVC"
@@ -75,7 +75,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-employed-M-17"
     grouping: "MVC"
@@ -91,7 +91,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-employed-F-17"
     grouping: "MVC"
@@ -107,7 +107,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-unemployed-M-17"
     grouping: "MVC"
@@ -120,7 +120,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-unemployed-F-17"
     grouping: "MVC"
@@ -133,7 +133,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-insured-M-17"
     grouping: "MVC"
@@ -146,7 +146,7 @@ indicators:
                     AND (efm.gender='Male')
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
-                    date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                    date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-insured-F-17"
     grouping: "MVC"
@@ -159,7 +159,7 @@ indicators:
                     AND (efm.gender='Female')
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
-                    date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                    date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-uninsured-M-17"
     grouping: "MVC"
@@ -172,7 +172,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-uninsured-F-17"
     grouping: "MVC"
@@ -185,7 +185,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-disabled-M-17"
     grouping: "MVC"
@@ -198,7 +198,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-disabled-F-17"
     grouping: "MVC"
@@ -211,7 +211,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-hiv-M-17"
     grouping: "MVC"
@@ -224,7 +224,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-hiv-F-17"
     grouping: "MVC"
@@ -237,7 +237,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-chronic-M-17"
     grouping: "MVC"
@@ -250,7 +250,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-chronic-F-17"
     grouping: "MVC"
@@ -263,7 +263,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
 #    Queries for the age group 18-24 starts here
 
@@ -278,7 +278,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-child-headed-F-18-24"
     grouping: "MVC"
@@ -291,7 +291,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-adult-headed-M-18-24"
     grouping: "MVC"
@@ -304,7 +304,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-adult-headed-F-18-24"
     grouping: "MVC"
@@ -317,7 +317,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-elderly-headed-M-18-24"
     grouping: "MVC"
@@ -330,7 +330,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-elderly-headed-F-18-24"
     grouping: "MVC"
@@ -343,7 +343,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-employed-M-18-24"
     grouping: "MVC"
@@ -359,7 +359,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-employed-F-18-24"
     grouping: "MVC"
@@ -375,7 +375,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-unemployed-M-18-24"
     grouping: "MVC"
@@ -388,7 +388,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-unemployed-F-18-24"
     grouping: "MVC"
@@ -401,7 +401,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-insured-M-18-24"
     grouping: "MVC"
@@ -414,7 +414,7 @@ indicators:
                     AND (efm.gender='Male')
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
-                    date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                    date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-insured-F-18-24"
     grouping: "MVC"
@@ -427,7 +427,7 @@ indicators:
                     AND (efm.gender='Female')
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
-                    date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                    date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-uninsured-M-18-24"
     grouping: "MVC"
@@ -440,7 +440,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-uninsured-F-18-24"
     grouping: "MVC"
@@ -453,7 +453,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-disabled-M-18-24"
     grouping: "MVC"
@@ -466,7 +466,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-disabled-F-18-24"
     grouping: "MVC"
@@ -479,7 +479,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-hiv-M-18-24"
     grouping: "MVC"
@@ -492,7 +492,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-hiv-F-18-24"
     grouping: "MVC"
@@ -505,7 +505,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-chronic-M-18-24"
     grouping: "MVC"
@@ -518,7 +518,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-chronic-F-18-24"
     grouping: "MVC"
@@ -531,7 +531,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
 
 
@@ -548,7 +548,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-child-headed-F-25-59"
     grouping: "MVC"
@@ -561,7 +561,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-adult-headed-M-25-59"
     grouping: "MVC"
@@ -574,7 +574,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-adult-headed-F-25-59"
     grouping: "MVC"
@@ -587,7 +587,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-elderly-headed-M-25-59"
     grouping: "MVC"
@@ -600,7 +600,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-elderly-headed-F-25-59"
     grouping: "MVC"
@@ -613,7 +613,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-employed-M-25-59"
     grouping: "MVC"
@@ -629,7 +629,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-employed-F-25-59"
     grouping: "MVC"
@@ -645,7 +645,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-unemployed-M-25-59"
     grouping: "MVC"
@@ -658,7 +658,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-unemployed-F-25-59"
     grouping: "MVC"
@@ -671,7 +671,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-insured-M-25-59"
     grouping: "MVC"
@@ -684,7 +684,7 @@ indicators:
                     AND (efm.gender='Male')
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
-                    date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                    date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-insured-F-25-59"
     grouping: "MVC"
@@ -697,7 +697,7 @@ indicators:
                     AND (efm.gender='Female')
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
-                    date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                    date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-uninsured-M-25-59"
     grouping: "MVC"
@@ -710,7 +710,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-uninsured-F-25-59"
     grouping: "MVC"
@@ -723,7 +723,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-disabled-M-25-59"
     grouping: "MVC"
@@ -736,7 +736,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-disabled-F-25-59"
     grouping: "MVC"
@@ -749,7 +749,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-hiv-M-25-59"
     grouping: "MVC"
@@ -762,7 +762,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-hiv-F-25-59"
     grouping: "MVC"
@@ -775,7 +775,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-chronic-M-25-59"
     grouping: "MVC"
@@ -788,7 +788,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-chronic-F-25-59"
     grouping: "MVC"
@@ -801,7 +801,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
 
 
@@ -819,7 +819,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-child-headed-F-60-and-above"
     grouping: "MVC"
@@ -832,7 +832,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-adult-headed-M-60-and-above"
     grouping: "MVC"
@@ -845,7 +845,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-adult-headed-F-60-and-above"
     grouping: "MVC"
@@ -858,7 +858,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-elderly-headed-M-60-and-above"
     grouping: "MVC"
@@ -871,7 +871,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-elderly-headed-F-60-and-above"
     grouping: "MVC"
@@ -884,7 +884,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                          date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                          date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-employed-M-60-and-above"
     grouping: "MVC"
@@ -900,7 +900,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-employed-F-60-and-above"
     grouping: "MVC"
@@ -916,7 +916,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-unemployed-M-60-and-above"
     grouping: "MVC"
@@ -929,7 +929,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-unemployed-F-60-and-above"
     grouping: "MVC"
@@ -942,7 +942,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-insured-M-60-and-above"
     grouping: "MVC"
@@ -955,7 +955,7 @@ indicators:
                     AND (efm.gender='Male')
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
-                    date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                    date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-insured-F-60-and-above"
     grouping: "MVC"
@@ -968,7 +968,7 @@ indicators:
                     AND (efm.gender='Female')
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
-                    date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                    date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-uninsured-M-60-and-above"
     grouping: "MVC"
@@ -981,7 +981,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-uninsured-F-60-and-above"
     grouping: "MVC"
@@ -994,7 +994,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-disabled-M-60-and-above"
     grouping: "MVC"
@@ -1007,7 +1007,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-disabled-F-60-and-above"
     grouping: "MVC"
@@ -1020,7 +1020,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-hiv-M-60-and-above"
     grouping: "MVC"
@@ -1033,7 +1033,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-hiv-F-60-and-above"
     grouping: "MVC"
@@ -1046,7 +1046,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-chronic-M-60-and-above"
     grouping: "MVC"
@@ -1059,7 +1059,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
 
   - key: "mvc-chronic-F-60-and-above"
     grouping: "MVC"
@@ -1072,4 +1072,4 @@ indicators:
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
-                      date(substr(strftime('%Y-%m-%d', datetime(eor.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
+                      date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
