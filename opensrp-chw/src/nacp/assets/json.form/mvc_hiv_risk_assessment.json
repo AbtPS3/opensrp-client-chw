@@ -239,6 +239,23 @@
             }
           }
         }
+      },
+      {
+        "key": "refer_for_hiv_testing_toaster",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Refer the client for HTS services.",
+        "text_color": "#CF0800",
+        "toaster_type": "problem",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_hiv_risk_assessment_relevance_rules.yml"
+            }
+          }
+        }
       }
     ]
   }

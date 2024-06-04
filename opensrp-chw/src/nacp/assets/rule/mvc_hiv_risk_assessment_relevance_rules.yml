@@ -9,7 +9,7 @@ actions:
 name: step1_when_was_the_last_test_result
 description: Show when tests where taken if tests where taken
 priority: 1
-condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('yes') || step1_child_ever_tested_for_hiv.equalsIgnoreCase('no')"
+condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('yes')"
 actions:
   - "isRelevant = true"
 ---
@@ -25,6 +25,14 @@ name: step1_ctc_number
 description: shown when hiv result is positive
 priority: 1
 condition: "step1_hiv_results.equalsIgnoreCase('positive')"
+actions:
+  - "isRelevant = true"
+
+---
+name: step1_refer_for_hiv_testing_toaster
+description: refer_for_hiv_testing_toaster
+priority: 1
+condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('no') || step1_child_ever_tested_for_hiv.equalsIgnoreCase('unknown')"
 actions:
   - "isRelevant = true"
 
