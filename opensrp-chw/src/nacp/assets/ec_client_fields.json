@@ -6104,7 +6104,8 @@
             "field": "obs.fieldCode",
             "concept": "registration_number_of_head"
           }
-        },{
+        },
+        {
           "column_name": "head_of_household",
           "type": "Event",
           "json_mapping": {
@@ -6190,6 +6191,30 @@
           "json_mapping": {
             "field": "obs.fieldCode",
             "concept": "enrollment_date"
+          }
+        },
+        {
+          "column_name": "hiv_results",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "hiv_results"
+          }
+        },
+        {
+          "column_name": "hiv_status_after_testing",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.formSubmissionField",
+            "concept": "test_results"
+          }
+        },
+        {
+          "column_name": "ctc_number",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "ctc_number"
           }
         },
         {
