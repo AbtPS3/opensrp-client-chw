@@ -77,13 +77,13 @@
         }
       },
       {
-        "key": "type_of_vulnerability",
+        "key": "select_type_of_vulnerability",
         "type": "check_box",
         "label": "Type of vulnerability to the Head of Household",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "combine_checkbox_option_values": "true",
-        "openmrs_entity_id": "type_of_vulnerability",
+        "openmrs_entity_id": "select_type_of_vulnerability",
         "exclusive": [
           "none"
         ],
@@ -94,13 +94,6 @@
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "disability"
-          },
-          {
-            "key": "living_with_hiv",
-            "text": "Living with HIV",
-            "openmrs_entity_parent": "",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "living_with_hiv"
           },
           {
             "key": "chronic_disease",
@@ -136,7 +129,7 @@
           "err": "Required"
         },
         "relevance": {
-          "step1:type_of_vulnerability": {
+          "step1:select_type_of_vulnerability": {
             "ex-checkbox": [
               {
                 "or": [
@@ -176,12 +169,35 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "unknown"
           }
+        ]
+      },
+      {
+        "key": "enrolled_to_clinic",
+        "type": "native_radio",
+        "label": "Is the Client enrolled into care?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "enrolled_to_clinic",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
         ],
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "mvc_head_of_household_enrollment_calculation.yml"
-            }
+        "relevance": {
+          "step1:hiv_results": {
+            "type": "string",
+            "ex": "equalTo(., \"positive\")"
           }
         }
       },
@@ -210,9 +226,9 @@
           "err": "Please enter a valid CTC Number"
         },
         "relevance": {
-          "step1:hiv_results": {
+          "step1:is_the_client_enrolled_into_care": {
             "type": "string",
-            "ex": "equalTo(., \"positive\")"
+            "ex": "equalTo(., \"yes\")"
           }
         }
       },
@@ -246,6 +262,21 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "enrollment_date",
         "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_head_of_household_enrollment_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "type_of_vulnerability",
+        "type": "hidden",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "combine_checkbox_option_values": "true",
+        "openmrs_entity_id": "type_of_vulnerability",
         "calculation": {
           "rules-engine": {
             "ex-rules": {
