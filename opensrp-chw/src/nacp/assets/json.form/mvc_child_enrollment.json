@@ -183,6 +183,13 @@
             "openmrs_entity_id": "children_at_risk_or_suffering_from_violence_abuse_and_neglect"
           },
           {
+            "key": "is_a_child_of_whr",
+            "text": "Is a child of a Woman in High Risk",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "is_a_child_of_whr"
+          },
+          {
             "key": "other",
             "text": "Other",
             "openmrs_entity_parent": "",
