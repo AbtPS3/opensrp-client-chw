@@ -453,7 +453,8 @@
             "field_value": "HIV Outcome",
             "creates_case": [
               "ec_hiv_outcome",
-              "ec_hiv_register"
+              "ec_hiv_register",
+              "ec_ovc_register"
             ]
           },
           {
@@ -791,7 +792,8 @@
             "field": "eventType",
             "field_value": "MVC Child Services",
             "creates_case": [
-              "ec_mvc_child_services"
+              "ec_mvc_child_services",
+              "ec_ovc_register"
             ]
           }
         ]
