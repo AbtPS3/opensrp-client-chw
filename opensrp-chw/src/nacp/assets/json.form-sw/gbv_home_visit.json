@@ -401,7 +401,7 @@
           },
           {
             "key": "not_thriving_or_not_doing_well",
-            "text": "Kutokua vizuri",
+            "text": "Kutokujisika Vizuri",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "not_thriving_or_not_doing_well"
           },
@@ -581,12 +581,6 @@
             "text": "Kituo cha Polisi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "police_station"
-          },
-          {
-            "key": "safe_house",
-            "text": "Nyumba salama",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "safe_house"
           },
           {
             "key": "mtakuwwa_committee",

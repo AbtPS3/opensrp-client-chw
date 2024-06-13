@@ -1267,7 +1267,7 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "intervention_screening",
-        "label": "Je,Mteja amefanyiwa utambuzi wa afua za kuzui maambukizi",
+        "label": "Je,Mteja amefanyiwa utambuzi wa afua za kuzuia maambukizi",
         "text_color": "#000000",
         "type": "native_radio",
         "options": [

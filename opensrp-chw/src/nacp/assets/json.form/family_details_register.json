@@ -144,7 +144,7 @@
         "openmrs_entity": "person_address",
         "openmrs_entity_id": "cityVillage",
         "type": "edit_text",
-        "hint": "Area Name",
+        "hint": "Kitongoji/Street",
         "v_required": {
           "value": "true",
           "err": "Please enter the area name"
