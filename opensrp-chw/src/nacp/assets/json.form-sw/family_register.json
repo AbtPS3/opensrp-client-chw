@@ -128,7 +128,7 @@
         "openmrs_entity_id": "cityVillage",
         "type": "edit_text",
         "edit_type": "name",
-        "hint": "Jina la Kitongoji/Mtaa",
+        "hint": "Jina la Kitongoji",
         "v_required": {
           "value": "true",
           "err": "Tafadhali jaza jina la eneo"
@@ -221,7 +221,7 @@
         "openmrs_entity_id": "nearest_facility",
         "openmrs_data_type": "text",
         "type": "tree",
-        "hint": "Kijiji",
+        "hint": "Kijiji/Mtaa",
         "tree": [],
         "v_required": {
           "value": true,
