@@ -212,12 +212,6 @@
             "text": "Vidonda au michubuko mdomoni",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "wounds_around_the_mouth"
-          },
-          {
-            "key": "unexplained_bruises_and_wounds",
-            "text": "Michubuko isiyoelezeka na vidonda",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "unexplained_bruises_and_wounds"
           }
         ],
         "relevance": {

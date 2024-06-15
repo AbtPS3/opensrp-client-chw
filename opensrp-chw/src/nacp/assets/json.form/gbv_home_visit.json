@@ -212,12 +212,6 @@
             "text": "Wounds or bruises around the mouth",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "wounds_around_the_mouth"
-          },
-          {
-            "key": "unexplained_bruises_and_wounds",
-            "text": "Unexplained bruises and wounds",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "unexplained_bruises_and_wounds"
           }
         ],
         "relevance": {
