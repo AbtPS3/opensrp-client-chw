@@ -571,6 +571,12 @@
             "openmrs_entity_id": "social_welfare_officer"
           },
           {
+            "key": "legal_services",
+            "text": "Legal Services",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "legal_services"
+          },
+          {
             "key": "ward_community_development_officer",
             "text": "Ward Community Development Officer",
             "openmrs_entity": "concept",

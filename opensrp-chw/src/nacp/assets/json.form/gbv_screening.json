@@ -56,7 +56,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "physical_violence",
         "type": "native_radio",
-        "label": "Within the past six months, has anyone hit you with fists, kicked you, pushed you/your child, causing physical harm such as wounds, burns, bite marks, fractures, or health problems? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else",
+        "label": "Within the past 12 months , has anyone hit you with fists, kicked, pushed, causing you physical harm such as wounds, burns, bite marks, fractures, or health problems? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
@@ -99,7 +99,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "emotional_violence",
         "type": "native_radio",
-        "label": "Within the past six months, has anyone humiliated you, insulted you, threatened you or your child to the extent that it made you feel lonely/isolated, led to school avoidance, caused depression, or constant anger? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else.)",
+        "label": "Within the past 12 months, has anyone humiliated, insulted, threatened you to the extent that it made you feel lonely/isolated, led to, caused depression, or constant anger? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else.)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
@@ -142,7 +142,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "sexual_violence",
         "type": "native_radio",
-        "label": "Within the past six months, has anyone forced you/your child to have sex or engage in any sexual activity, or touched you/your child in a way that you/your child did not want? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else.)",
+        "label": "Within the past 12 months, has anyone forced you to have sex or engage in any sexual activity, or touched you in a way that you did not want? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else.)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
@@ -185,7 +185,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "exploitation_violence",
         "type": "native_radio",
-        "label": "Within the past six months, has anyone made you feel like you're being used/exploited, such as being forced to do excessive and difficult household chores, engaging in hazardous work, or being involved in sex work? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else.)",
+        "label": "Within the past 12 months, has anyone made you feel like you're being used/exploited, such as being forced to do excessive and difficult household chores, engaging in hazardous work, or being involved in sex work? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else.)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [

@@ -56,7 +56,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "physical_violence",
         "type": "native_radio",
-        "label": "Kuna mtu yeyote amekupiga ngumi, mateke, kukusukuma na kukusababishia madhara mwilini kama vidonda, kuungua sehemu ya mwili, alama za kung’atwa, kuvunjika au matatizo ya kiafya? (Mtu yeyote anaweza kuwa; mwenzi wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu  yeyote.)",
+        "label": "Ndani ya miezi  kumi na mbili (12) iliyopita, kuna mtu yeyote amekupiga ngumi, mateke, kukusukuma wewe na kukusababishia madhara mwilini kama vidonda, kuungua sehemu ya mwili, alama za kung’atwa, kuvunjika au matatizo ya kiafya? (Mtu yeyote anaweza kuwa; mwenzi wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote.)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
@@ -99,7 +99,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "emotional_violence",
         "type": "native_radio",
-        "label": "Ndani ya miezi sita iliyopita, kuna mtu yeyote amekudhalilisha, kukutukana, kukutishia jambo  kiasi cha kukufanya ujisikie mpweke/kujitenga, kupatwa na msongo wa mawazo au kuwa na hasira muda wote? (‘Mtu  yeyote anaweza kuwa; mwenza wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote) ",
+        "label": "Ndani ya miezi kumi na mbili (12) iliyopita, kuna mtu yeyote amekudhalilisha, kukutukana, kukutishia jambo wewe kiasi cha kukufanya ujisikie mpweke/kujitenga, kupatwa na msongo wa mawazo au kuwa na hasira muda wote? (‘Mtu yeyote anaweza kuwa; mwenza wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
@@ -142,7 +142,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "sexual_violence",
         "type": "native_radio",
-        "label": "Ndani ya miezi sita iliyopita, kuna mtu yeyote amekulazimisha kufanya ngono au kufanya kitendo chochote cha ngono, au kwa kushika, kugusa au kupapasa kwa namna ambayo hukutaka?  (‘Mtu yeyote anaweza kuwa; mwenza wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote.) ",
+        "label": "Ndani ya miezi kumi na mbili (12) iliyopita, kuna mtu yeyote amekulazimisha kufanya ngono au kufanya kitendo chochote cha ngono, kwa kukugusa, kukushika au kukupapasa kwa namna ambayo hukutaka? (‘Mtu yeyote anaweza kuwa; mwenza wako, mlezi, mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote.)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
@@ -185,7 +185,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "exploitation_violence",
         "type": "native_radio",
-        "label": "Ndani ya miezi sita iliyopita, kuna mtu amekufanya ujihisi unatumikishwa/unanyonywa mfano kulazimishwa kufanya kazi nyingi na ngumu za ndani, kufanyishwa kazi hatarishi  au kufanyishwa biashara za ngono? (‘Mtu yeyote anaweza kuwa; mwenza wako, mlezi  mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote) ",
+        "label": "Ndani ya miezi kumi na mbili (12) iliyopita, kuna mtu amekufanya ujihisi unatumikishwa/unanyonywa mfano kulazimishwa kufanya kazi nyingi na ngumu za ndani, kufanyishwa kazi hatarishi au kufanyishwa biashara za ngono? (‘Mtu yeyote anaweza kuwa; mwenza wako, mlezi mwanafamilia, rafiki, jirani, mwalimu au mtu yeyote)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [

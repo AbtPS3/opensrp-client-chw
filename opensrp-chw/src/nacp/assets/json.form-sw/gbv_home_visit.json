@@ -197,7 +197,7 @@
           },
           {
             "key": "marks_resembling_needle_electrical_burns",
-            "text": "Alama zinazoashiria kuchomwa na sindano au umeme",
+            "text": "Alama kama za kuunguzwa  na pasi au umeme",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "marks_resembling_needle_electrical_burns"
           },
@@ -401,7 +401,7 @@
           },
           {
             "key": "not_thriving_or_not_doing_well",
-            "text": "Kutokujisika Vizuri",
+            "text": "Kutojisikia vizuri",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "not_thriving_or_not_doing_well"
           },
@@ -569,6 +569,12 @@
             "text": "Afisa ustawi wa Jamii",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "social_welfare_officer"
+          },
+          {
+            "key": "legal_services",
+            "text": "Msaada wa Kisheria",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "legal_services"
           },
           {
             "key": "ward_community_development_officer",
