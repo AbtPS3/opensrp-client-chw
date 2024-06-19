@@ -185,7 +185,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "exploitation_violence",
         "type": "native_radio",
-        "label": "Within the past 12 months, has anyone made you feel like you're being used/exploited, such as being forced to do excessive and difficult household chores, engaging in hazardous work, or being involved in sex work? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else.)",
+        "label": "Within the past 12 months, has anyone made you feel like you're being used/exploited, such as being forced to do excessive and difficult household chores, engaging in hazardous work, or being involved in sexual activities? (Anyone could be; your partner, caregiver, family member, friend, neighbor, teacher, or anyone else.)",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
