@@ -139,6 +139,36 @@
         }
       },
       {
+        "key": "enrolled_to_clinic",
+        "type": "native_radio",
+        "label": "Is the Client enrolled into care?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "enrolled_to_clinic",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "step1:hiv_results": {
+            "type": "string",
+            "ex": "equalTo(., \"positive\")"
+          }
+        }
+      },
+      {
         "key": "ctc_number",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
@@ -232,6 +262,23 @@
           "value": true,
           "err": "This field is required"
         },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_hiv_risk_assessment_relevance_rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "refer_for_hiv_testing_toaster",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Refer the client for HTS services.",
+        "text_color": "#CF0800",
+        "toaster_type": "problem",
         "relevance": {
           "rules-engine": {
             "ex-rules": {

@@ -255,7 +255,7 @@
           },
           {
             "key": "no_referrals_sent_completed",
-            "text": "No referrals sent",
+            "text": "No referrals completed",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no_referrals_sent_completed"

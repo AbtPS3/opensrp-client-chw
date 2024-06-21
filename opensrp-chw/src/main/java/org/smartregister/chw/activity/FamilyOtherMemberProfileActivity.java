@@ -188,9 +188,10 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
                 menu.findItem(R.id.action_kvp_prep_registration).setVisible(!KvpDao.isRegisteredForKvpPrEP(baseEntityId) && age >= 15);
             }
 
+            String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
+            int age = Utils.getAgeFromDate(dob);
+
             if (ChwApplication.getApplicationFlavor().hasSbc()) {
-                String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                int age = Utils.getAgeFromDate(dob);
                 menu.findItem(R.id.action_sbc_registration).setVisible(!SbcDao.isRegisteredForSbc(baseEntityId) && age >= 10);
             }
 
@@ -198,7 +199,9 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
                 menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
             }
 
-            if (ChwApplication.getApplicationFlavor().hasMvc()) {
+            if (ChwApplication.getApplicationFlavor().hasMvc() && familyHead.equals(baseEntityId)) {
+                menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(baseEntityId));
+            } else if (ChwApplication.getApplicationFlavor().hasMvc() && !familyHead.equals(baseEntityId) && age < 18) {
                 menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(baseEntityId));
             }
         }
