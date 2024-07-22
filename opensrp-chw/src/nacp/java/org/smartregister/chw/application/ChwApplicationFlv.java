@@ -143,6 +143,16 @@ public class ChwApplicationFlv extends DefaultChwApplicationFlv {
     }
 
     @Override
+    public boolean hasGbv() {
+        return true;
+    }
+
+    @Override
+    public boolean hasMvc() {
+        return true;
+    }
+
+    @Override
     public boolean hasKvp() {
         return true;
     }

@@ -5897,6 +5897,640 @@
           }
         }
       ]
+    },
+    {
+      "name": "ec_gbv_register",
+      "columns": [
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "relational_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "relational_id"
+          }
+        },
+        {
+          "column_name": "physical_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "physical_violence"
+          }
+        },
+        {
+          "column_name": "emotional_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "emotional_violence"
+          }
+        },
+        {
+          "column_name": "sexual_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "sexual_violence"
+          }
+        },
+        {
+          "column_name": "exploitation_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "exploitation_violence"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ec_gbv_home_visit",
+      "columns": [
+        {
+          "column_name": "entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "formSubmissionId"
+          }
+        },
+        {
+          "column_name": "type_of_violence_experienced",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "type_of_violence_experienced"
+          }
+        },
+        {
+          "column_name": "indication_of_sexual_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_sexual_violence"
+          }
+        },
+        {
+          "column_name": "indication_of_physical_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_physical_violence"
+          }
+        },
+        {
+          "column_name": "indication_of_neglect",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_neglect"
+          }
+        },
+        {
+          "column_name": "indication_of_exploitation",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_exploitation"
+          }
+        },
+        {
+          "column_name": "indication_of_emotional_violence",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "indication_of_emotional_violence"
+          }
+        },
+        {
+          "column_name": "time_since_incident",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "time_since_incident"
+          }
+        },
+        {
+          "column_name": "location_where_the_incident_occurred",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "location_where_the_incident_occurred"
+          }
+        },
+        {
+          "column_name": "was_education_provided",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "was_education_provided"
+          }
+        },
+        {
+          "column_name": "emergency_services_offered",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "emergency_services_offered"
+          }
+        },
+        {
+          "column_name": "referral_to_other_services",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "referral_to_other_services"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ec_ovc_register",
+      "columns": [
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "relational_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "relational_id"
+          }
+        },
+        {
+          "column_name": "client_type",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "client_type"
+          }
+        },
+        {
+          "column_name": "registration_number_of_head",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "registration_number_of_head"
+          }
+        },
+        {
+          "column_name": "head_of_household",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "head_of_household"
+          }
+        },
+        {
+          "column_name": "type_of_vulnerability",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "type_of_vulnerability"
+          }
+        },
+        {
+          "column_name": "mvc_has_birth_certificate",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "mvc_has_birth_certificate"
+          }
+        },
+        {
+          "column_name": "reasons_of_vulnerability",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "reasons_of_vulnerability"
+          }
+        },
+        {
+          "column_name": "type_of_disability",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "type_of_disability"
+          }
+        },
+        {
+          "column_name": "is_child_in_school",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "is_child_in_school"
+          }
+        },
+        {
+          "column_name": "level_of_education",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "level_of_education"
+          }
+        },
+        {
+          "column_name": "reason_for_not_being_in_school",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "reason_for_not_being_in_school"
+          }
+        },
+        {
+          "column_name": "care_of_household",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "care_of_household"
+          }
+        },
+        {
+          "column_name": "case_opened",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "case_opened"
+          }
+        },
+        {
+          "column_name": "enrollment_date",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "enrollment_date"
+          }
+        },
+        {
+          "column_name": "hiv_results",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "hiv_results"
+          }
+        },
+        {
+          "column_name": "hiv_status_after_testing",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.formSubmissionField",
+            "concept": "test_results"
+          }
+        },
+        {
+          "column_name": "ctc_number",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "ctc_number"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ec_mvc_household_services",
+      "columns": [
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "formSubmissionId"
+          }
+        },
+        {
+          "column_name": "entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "parenting_caregivers_with_children",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "parenting_caregivers_with_children"
+          }
+        },
+        {
+          "column_name": "nutritional_status_assessment",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "nutritional_status_assessment"
+          }
+        },{
+          "column_name": "food_and_nutrition",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "food_and_nutrition"
+          }
+        },
+        {
+          "column_name": "health_care_provided",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "health_care_provided"
+          }
+        },
+        {
+          "column_name": "economic_strengthening",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "economic_strengthening"
+          }
+        },
+        {
+          "column_name": "referrals",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "referrals"
+          }
+        },
+        {
+          "column_name": "support_provided_to_caregiver_on_referrals",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "support_provided_to_caregiver_on_referrals"
+          }
+        },
+        {
+          "column_name": "caregiver_referrals_completed",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "caregiver_referrals_completed"
+          }
+        },
+        {
+          "column_name": "shelter_and_hygiene",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "shelter_and_hygiene"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ec_mvc_child_services",
+      "columns": [
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "formSubmissionId"
+          }
+        },
+        {
+          "column_name": "entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "visit_type",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "visit_type"
+          }
+        },
+        {
+          "column_name": "has_need_assessment_been_conducted",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "has_need_assessment_been_conducted"
+          }
+        },{
+          "column_name": "client_needs",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "client_needs"
+          }
+        },
+        {
+          "column_name": "has_risk_assessment_been_conducted",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "has_risk_assessment_been_conducted"
+          }
+        },
+        {
+          "column_name": "has_the_child_experienced_vac",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "has_the_child_experienced_vac"
+          }
+        },
+        {
+          "column_name": "refer_to_dcms",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "refer_to_dcms"
+          }
+        },
+        {
+          "column_name": "is_the_child_in_conflict_and_contact_with_the_law",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "is_the_child_in_conflict_and_contact_with_the_law"
+          }
+        },
+        {
+          "column_name": "child_protection_service",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "child_protection_service"
+          }
+        },
+        {
+          "column_name": "education_vocational_training",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "education_vocational_training"
+          }
+        },
+        {
+          "column_name": "ecd_psychosocial_support",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "ecd_psychosocial_support"
+          }
+        },
+        {
+          "column_name": "education_and_vocational_training",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "education_and_vocational_training"
+          }
+        },
+        {
+          "column_name": "ecd_psychosocial_support",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "ecd_psychosocial_support"
+          }
+        },
+        {
+          "column_name": "child_received_vaccinations",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "child_received_vaccinations"
+          }
+        },
+        {
+          "column_name": "child_nutritional_status",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "child_nutritional_status"
+          }
+        },
+        {
+          "column_name": "health_care_service_provided",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "health_care_service_provided"
+          }
+        },
+        {
+          "column_name": "child_ever_tested_for_hiv",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "child_ever_tested_for_hiv"
+          }
+        },
+        {
+          "column_name": "hiv_results",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "hiv_results"
+          }
+        },
+        {
+          "column_name": "ctc_number",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "ctc_number"
+          }
+        },
+        {
+          "column_name": "when_was_the_last_test_result",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "when_was_the_last_test_result"
+          }
+        },
+        {
+          "column_name": "is_the_adolescent_sexually_active",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "is_the_adolescent_sexually_active"
+          }
+        },
+        {
+          "column_name": "referrals_provided",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "referrals_provided"
+          }
+        },
+        {
+          "column_name": "support_provided_on_referrals",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "support_provided_on_referrals"
+          }
+        },
+        {
+          "column_name": "referrals_completed_by_client",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "referrals_completed_by_client"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
     }
   ]
 }

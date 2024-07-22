@@ -1,0 +1,174 @@
+{
+  "count": "1",
+  "encounter_type": "MVC Head of Household Enrollment",
+  "entity_id": "",
+  "relational_id": "",
+  "global": {},
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Head of Household Registration",
+    "fields": [
+      {
+        "key": "registration_number_of_head",
+        "type": "edit_text",
+        "hint": "Registration number of Head of Household",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "registration_number_of_head",
+        "v_required": {
+          "value": "true",
+          "err": "Registration number is required"
+        }
+      },
+      {
+        "key": "head_of_household",
+        "type": "hidden",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "head_of_household",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_head_of_household_enrollment.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "type_of_vulnerability",
+        "type": "check_box",
+        "label": "Type of vulnerability to the Head of Household",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "combine_checkbox_option_values": "true",
+        "openmrs_entity_id": "type_of_vulnerability",
+        "exclusive": [
+          "none"
+        ],
+        "options": [
+          {
+            "key": "disability",
+            "text": "Disability",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "disability"
+          },
+          {
+            "key": "living_with_hiv",
+            "text": "Living with HIV",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "living_with_hiv"
+          },
+          {
+            "key": "chronic_disease",
+            "text": "Chronic disease",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "chronic_disease"
+          },
+          {
+            "key": "other",
+            "text": "Other",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          },
+          {
+            "key": "none",
+            "text": "None",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ]
+      },
+      {
+        "key": "other_type_of_vulnerability",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_type_of_vulnerability",
+        "type": "edit_text",
+        "hint": "Specify other type of vulnerability",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "step1:type_of_vulnerability": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "key": "client_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "client_type",
+        "type": "hidden",
+        "value": "family_head"
+      },
+      {
+        "key": "enrollment_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "enrollment_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_head_of_household_enrollment_calculation.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

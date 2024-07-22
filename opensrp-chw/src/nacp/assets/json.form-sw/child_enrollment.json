@@ -255,7 +255,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "insurance_provider",
         "type": "spinner",
-        "hint": "Mtoa huduma ya bima ya afya",
+        "hint": "Bima ya afya",
         "values": [
           "Mfuko wa Afya ya Jamii (CHF)/(iCHF)",
           "Mfuko wa Taifa wa Hifadhi ya Jamii - Manufaa ya Bima ya Afya ya Jamii (SHIB)",
@@ -303,7 +303,7 @@
         },
         "v_required": {
           "value": "true",
-          "err": "Tafadhali ingiza mtoa huduma ya bima"
+          "err": "Tafadhali jaza taarifa za bima ya afya"
         }
       },
       {
@@ -312,10 +312,10 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "Other_Health_Insurance_Type",
         "type": "edit_text",
-        "hint": "Mtoa huduma mwingine wa bima ya afya",
+        "hint": "Bima nyingine ya afya",
         "v_required": {
           "value": "true",
-          "err": "Tafadhali ingiza mtoa huduma ya bima"
+          "err": "Tafadhali jaza taarifa za bima ya afya"
         },
         "relevance": {
           "rules-engine": {

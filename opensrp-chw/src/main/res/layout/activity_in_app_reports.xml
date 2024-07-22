@@ -55,7 +55,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                app:constraint_referenced_ids="cbhs_summary, mother_champion_reports, cdp_reports,agyw_reports"
+                app:constraint_referenced_ids="cbhs_summary, mother_champion_reports, cdp_reports, agyw_reports,iccm_reports, sbc_reports, gbv_reports, mvc_reports"
                 app:flow_horizontalAlign="center"
                 app:flow_horizontalGap="20dp"
                 app:flow_horizontalStyle="packed"
@@ -405,6 +405,118 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/iv_sbc_report"
                     app:layout_constraintTop_toBottomOf="@+id/textViewTitle_sbc_reports" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gbv_reports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reports_bg_blue"
+                app:layout_constraintTop_toBottomOf="@id/sbc_reports"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:minHeight="150dp"
+                android:layout_marginTop="32dp"
+                android:visibility="gone"
+                android:paddingVertical="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_gbv_report"
+                    android:layout_width="92dp"
+                    android:layout_height="93dp"
+                    android:layout_margin="20dp"
+                    android:contentDescription="gbv Icon"
+                    android:src="@drawable/gbv_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewTitle_gbv_reports"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/gbv_reports_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewSubtitle_gbv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv_gbv_report"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewSubtitle_gbv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/gbv_reports_subtitle"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv_gbv_report"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTitle_gbv_reports" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mvc_reports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reports_bg_blue"
+                app:layout_constraintTop_toBottomOf="@id/gbv_reports"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:minHeight="150dp"
+                android:layout_marginTop="32dp"
+                android:visibility="gone"
+                android:paddingVertical="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_mvc_report"
+                    android:layout_width="92dp"
+                    android:layout_height="93dp"
+                    android:layout_margin="20dp"
+                    android:tint="@android:color/white"
+                    android:src="@mipmap/sidemenu_children"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewTitle_mvc_reports"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/mvc_reports_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewSubtitle_mvc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv_mvc_report"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewSubtitle_mvc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/mvc_reports_subtitle"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv_mvc_report"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTitle_mvc_reports" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

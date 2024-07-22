@@ -221,7 +221,7 @@
         "openmrs_entity_id": "nearest_facility",
         "openmrs_data_type": "text",
         "type": "tree",
-        "hint": "Kijiji/Mtaa",
+        "hint": "Kijiji",
         "tree": [],
         "v_required": {
           "value": true,
@@ -670,7 +670,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "Health_Insurance_Type",
         "type": "spinner",
-        "hint": "Mtoa huduma ya bima ya afya",
+        "hint": "Bima ya afya",
         "values": [
           "Mfuko wa Afya ya Jamii (CHF)/(iCHF)",
           "Mfuko wa Taifa wa Hifadhi ya Jamii - Manufaa ya Bima ya Afya ya Jamii (SHIB)",
@@ -727,7 +727,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "Other_Health_Insurance_Type",
         "type": "edit_text",
-        "hint": "Mtoa huduma mwingine wa bima ya afya",
+        "hint": "Bima nyingine ya afya",
         "v_required": {
           "value": "true",
           "err": "Tafadhali bainisha mtoa huduma wa bima"

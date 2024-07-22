@@ -8,13 +8,11 @@ import android.print.PrintManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import androidx.annotation.RequiresApi;
-import androidx.webkit.WebViewAssetLoader;
-
 import androidx.webkit.WebViewAssetLoader;
 
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONException;
+import org.smartregister.chw.domain.GbvReportObject;
 import org.smartregister.chw.domain.agyw_reports.AGYWReportObject;
 import org.smartregister.chw.domain.cbhs_reports.CbhsMonthlyReportObject;
 import org.smartregister.chw.domain.cdp_reports.CdpIssuingReportObject;
@@ -23,6 +21,10 @@ import org.smartregister.chw.domain.iccm_reports.IccmClientsReportObject;
 import org.smartregister.chw.domain.iccm_reports.IccmDispensingSummaryReportObject;
 import org.smartregister.chw.domain.iccm_reports.MalariaTestReportObject;
 import org.smartregister.chw.domain.mother_champion_report.MotherChampionReportObject;
+import org.smartregister.chw.domain.mvc_reports.MvcChildrenRegistrationSummaryReportObject;
+import org.smartregister.chw.domain.mvc_reports.MvcHouseholdRegistrationSummaryReportObject;
+import org.smartregister.chw.domain.mvc_reports.MvcServicesProvidedToChildrenReportObject;
+import org.smartregister.chw.domain.mvc_reports.MvcServicesProvidedToHouseholdsReportObject;
 import org.smartregister.chw.domain.sbc_reports.SbcReportObject;
 
 import java.text.ParseException;
@@ -221,6 +223,63 @@ public class ReportUtils {
             SbcReportObject sbcReportObject = new SbcReportObject(startDate);
             try {
                 return sbcReportObject.getIndicatorDataAsGson(sbcReportObject.getIndicatorData());
+            } catch (JSONException e) {
+                Timber.e(e);
+            }
+            return "";
+        }
+    }
+
+
+    public static class GbvReports {
+        public static String computeClientsReports(Date startDate) {
+            GbvReportObject gbvReportObject = new GbvReportObject(startDate);
+            try {
+                return gbvReportObject.getIndicatorDataAsGson(gbvReportObject.getIndicatorData());
+            } catch (JSONException e) {
+                Timber.e(e);
+            }
+            return "";
+        }
+    }
+
+
+
+    public static class MvcReports {
+        public static String computeRegistrationSummaryReports(Date startDate) {
+            MvcHouseholdRegistrationSummaryReportObject registrationSummaryReportObject = new MvcHouseholdRegistrationSummaryReportObject(startDate);
+            try {
+                return registrationSummaryReportObject.getIndicatorDataAsGson(registrationSummaryReportObject.getIndicatorData());
+            } catch (JSONException e) {
+                Timber.e(e);
+            }
+            return "";
+        }
+
+        public static String computeChildrenRegistrationDetailsReports(Date startDate) {
+            MvcChildrenRegistrationSummaryReportObject childrenRegistrationSummaryReportObject = new MvcChildrenRegistrationSummaryReportObject(startDate);
+            try {
+                return childrenRegistrationSummaryReportObject.getIndicatorDataAsGson(childrenRegistrationSummaryReportObject.getIndicatorData());
+            } catch (Exception e) {
+                Timber.e(e);
+            }
+            return "";
+        }
+
+        public static String computeServicesProvidedToHouseholdsReports(Date startDate) {
+            MvcServicesProvidedToHouseholdsReportObject servicesProvidedToHouseholdsReportObject = new MvcServicesProvidedToHouseholdsReportObject(startDate);
+            try {
+                return servicesProvidedToHouseholdsReportObject.getIndicatorDataAsGson(servicesProvidedToHouseholdsReportObject.getIndicatorData());
+            } catch (JSONException e) {
+                Timber.e(e);
+            }
+            return "";
+        }
+
+        public static String computeServicesProvidedToChildrenReports(Date startDate) {
+            MvcServicesProvidedToChildrenReportObject servicesProvidedToChildrenReportObject = new MvcServicesProvidedToChildrenReportObject(startDate);
+            try {
+                return servicesProvidedToChildrenReportObject.getIndicatorDataAsGson(servicesProvidedToChildrenReportObject.getIndicatorData());
             } catch (JSONException e) {
                 Timber.e(e);
             }

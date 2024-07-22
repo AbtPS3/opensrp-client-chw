@@ -1,0 +1,1512 @@
+indicators:
+  #  GBV 1
+  - key: "gbv-1-0-4-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-5-9-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-10-14-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-15-17-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-18-19-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-20-24-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-25-29-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-30-34-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-35-above-F"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-0-4-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-5-9-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-10-14-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-15-17-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-18-19-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-20-24-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-25-29-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-30-34-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-1-35-above-M"
+    grouping: "GBV"
+    description: "Idadi ya watu waliopata elimu kuhusu ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      was_education_provided = 'yes'
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+  
+  
+  #  GBV 2
+  - key: "gbv-2-0-4-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-5-9-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-10-14-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-15-17-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-18-19-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-20-24-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-25-29-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-30-34-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-35-above-F"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-0-4-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-5-9-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-10-14-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-15-17-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-18-19-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-20-24-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-25-29-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-30-34-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-2-35-above-M"
+    grouping: "GBV"
+    description: "Idadi ya wateja waliofanyiwa utambuzi dhidi ya ukatili"
+    indicatorQuery: " SELECT count(DISTINCT egr.base_entity_id) as count FROM ec_gbv_register egr
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egr.base_entity_id
+      WHERE
+      (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egr.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+  
+  #  GBV 3
+  - key: "gbv-3-0-4-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-5-9-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-10-14-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-15-17-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-18-19-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-20-24-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-25-29-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-30-34-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-35-above-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-0-4-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-5-9-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-10-14-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-15-17-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-18-19-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-20-24-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-25-29-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-30-34-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-3-35-above-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura waliofanyiwa ukatili"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      (type_of_violence_experienced <> '' AND type_of_violence_experienced IS NOT NULL)
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+  
+  
+  #  GBV 4
+  - key: "gbv-4-0-4-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-5-9-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-10-14-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-15-17-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-18-19-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-20-24-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-25-29-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+29 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-30-34-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-35-above-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-0-4-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-5-9-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-10-14-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-15-17-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-18-19-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-20-24-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-25-29-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+29 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-30-34-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-4-35-above-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura wa ukatili waliopata huduma ya afya ya akili/msaada wa kisaikolojia na kijamii"
+    indicatorQuery: " SELECT count(DISTINCT eghv.base_entity_id) as count FROM ec_gbv_home_visit eghv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = eghv.entity_id
+      WHERE
+      emergency_services_offered LIKE '%mental_health_care%'
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(eghv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+  
+  #  GBV 5
+  - key: "gbv-5-0-4-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-5-9-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-10-14-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-15-17-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-18-19-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-20-24-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-25-29-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-30-34-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-35-above-F"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-0-4-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-5-9-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-10-14-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-15-17-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-18-19-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-20-24-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-25-29-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-30-34-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-5-35-above-M"
+    grouping: "GBV"
+    description: "Idadi ya manusura ukatili waliopewa rufaa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+  
+  
+  #  GBV 6
+  - key: "gbv-6-0-4-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-5-9-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-10-14-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-15-17-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-18-19-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-20-24-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-25-29-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-30-34-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-35-above-F"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-0-4-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+0 years') <= date('now'))
+      AND (date(efm.dob, '+5 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-5-9-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+5 years') <= date('now'))
+      AND (date(efm.dob, '+10 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-10-14-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+10 years') <= date('now'))
+      AND (date(efm.dob, '+15 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-15-17-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+15 years') <= date('now'))
+      AND (date(efm.dob, '+18 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-18-19-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+18 years') <= date('now'))
+      AND (date(efm.dob, '+20 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-20-24-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+20 years') <= date('now'))
+      AND (date(efm.dob, '+25 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-25-29-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+25 years') <= date('now'))
+      AND (date(efm.dob, '+30 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-30-34-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+30 years') <= date('now'))
+      AND (date(efm.dob, '+35 years') > date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+    
+  - key: "gbv-6-35-above-M"
+    grouping: "GBV"
+    description: "Idadi ya rufaa zilizofanikiwa"
+    indicatorQuery: " SELECT count(efm.base_entity_id) as count FROM task
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = task.for
+      INNER JOIN ec_gbv_register ON efm.base_entity_id = ec_gbv_register.base_entity_id
+      WHERE focus LIKE '%GBV%'
+      AND business_status = 'Complete'
+      AND (date(efm.dob, '+35 years') <= date('now'))
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+          date(substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+          substr(strftime('%Y-%m-%d', datetime(authored_on / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+  
+  

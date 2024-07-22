@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
@@ -32,10 +33,12 @@ import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.custom_view.FamilyMemberFloatingMenu;
 import org.smartregister.chw.dataloader.FamilyMemberDataLoader;
 import org.smartregister.chw.fragment.FamilyOtherMemberProfileFragment;
+import org.smartregister.chw.gbv.dao.GbvDao;
 import org.smartregister.chw.hiv.dao.HivDao;
 import org.smartregister.chw.hivst.dao.HivstDao;
 import org.smartregister.chw.kvp.dao.KvpDao;
 import org.smartregister.chw.malaria.dao.IccmDao;
+import org.smartregister.chw.ovc.dao.OvcDao;
 import org.smartregister.chw.presenter.FamilyOtherMemberActivityPresenter;
 import org.smartregister.chw.sbc.dao.SbcDao;
 import org.smartregister.chw.util.Constants;
@@ -139,6 +142,10 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
                         int age = Utils.getAgeFromDate(dob);
                         menu.findItem(R.id.action_sbc_registration).setVisible(!SbcDao.isRegisteredForSbc(baseEntityId) && age >= 10);
                     }
+
+                    if (ChwApplication.getApplicationFlavor().hasGbv()) {
+                        menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
+                    }
                     break;
             }
         } else {
@@ -181,14 +188,36 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
                 menu.findItem(R.id.action_kvp_prep_registration).setVisible(!KvpDao.isRegisteredForKvpPrEP(baseEntityId) && age >= 15);
             }
 
+            String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
+            int age = Utils.getAgeFromDate(dob);
+
             if (ChwApplication.getApplicationFlavor().hasSbc()) {
-                String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                int age = Utils.getAgeFromDate(dob);
                 menu.findItem(R.id.action_sbc_registration).setVisible(!SbcDao.isRegisteredForSbc(baseEntityId) && age >= 10);
+            }
+
+            if (ChwApplication.getApplicationFlavor().hasGbv()) {
+                menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
+            }
+
+            if (ChwApplication.getApplicationFlavor().hasMvc() && familyHead.equals(baseEntityId)) {
+                menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(baseEntityId));
+            } else if (ChwApplication.getApplicationFlavor().hasMvc() && !familyHead.equals(baseEntityId) && age < 18) {
+                menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(baseEntityId));
             }
         }
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int i = item.getItemId();
+        if (i == R.id.action_ovc_registration) {
+            startOvcRegistration();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     public FamilyOtherMemberActivityPresenter presenter() {
@@ -387,7 +416,19 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
 
     @Override
     protected void startGbvRegistration() {
-        //TOBE Implementented
+        GbvRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId);
+    }
+
+
+    protected void startOvcRegistration() {
+        String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
+        int age = Utils.getAgeFromDate(dob);
+
+        if (familyHead.equals(baseEntityId))
+            MvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_HEAD_OF_HOUSEHOLD_ENROLLMENT);
+        else if (age < 18) {
+            MvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);
+        }
     }
 
     @Override

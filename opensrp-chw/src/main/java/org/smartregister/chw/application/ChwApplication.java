@@ -34,6 +34,7 @@ import org.smartregister.chw.activity.ChildRegisterActivity;
 import org.smartregister.chw.activity.FamilyProfileActivity;
 import org.smartregister.chw.activity.FamilyRegisterActivity;
 import org.smartregister.chw.activity.FpRegisterActivity;
+import org.smartregister.chw.activity.GbvRegisterActivity;
 import org.smartregister.chw.activity.HivIndexContactsContactsRegisterActivity;
 import org.smartregister.chw.activity.HivRegisterActivity;
 import org.smartregister.chw.activity.HivstRegisterActivity;
@@ -43,6 +44,7 @@ import org.smartregister.chw.activity.LTFURegisterActivity;
 import org.smartregister.chw.activity.LoginActivity;
 import org.smartregister.chw.activity.MalariaRegisterActivity;
 import org.smartregister.chw.activity.MotherChampionRegisterActivity;
+import org.smartregister.chw.activity.MvcRegisterActivity;
 import org.smartregister.chw.activity.PncRegisterActivity;
 import org.smartregister.chw.activity.ReferralRegisterActivity;
 import org.smartregister.chw.activity.SbcMonthlySocialMediaReportRegisterActivity;
@@ -62,12 +64,14 @@ import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.FormUtils;
 import org.smartregister.chw.custom_view.NavigationMenuFlv;
 import org.smartregister.chw.fp.FpLibrary;
+import org.smartregister.chw.gbv.GbvLibrary;
 import org.smartregister.chw.hiv.HivLibrary;
 import org.smartregister.chw.hivst.HivstLibrary;
 import org.smartregister.chw.job.ChwJobCreator;
 import org.smartregister.chw.kvp.KvpLibrary;
 import org.smartregister.chw.malaria.MalariaLibrary;
 import org.smartregister.chw.model.NavigationModelFlv;
+import org.smartregister.chw.ovc.OvcLibrary;
 import org.smartregister.chw.pmtct.PmtctLibrary;
 import org.smartregister.chw.pnc.PncLibrary;
 import org.smartregister.chw.provider.ChwAllClientsRegisterQueryProvider;
@@ -114,7 +118,7 @@ import timber.log.Timber;
 
 public class ChwApplication extends CoreChwApplication {
 
-    private static Flavor flavor = new ChwApplicationFlv();
+    private static final Flavor flavor = new ChwApplicationFlv();
     private AppExecutors appExecutors;
     private CommonFtsObject commonFtsObject;
 
@@ -298,6 +302,13 @@ public class ChwApplication extends CoreChwApplication {
         if (flavor.hasSbc()) {
             SbcLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
         }
+        if (flavor.hasGbv()) {
+            GbvLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
+        }
+
+        if (flavor.hasMvc()) {
+            OvcLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
+        }
 
         OpdLibrary.init(context, getRepository(),
                 new OpdConfiguration.Builder(ChwAllClientsRegisterQueryProvider.class)
@@ -390,6 +401,8 @@ public class ChwApplication extends CoreChwApplication {
         registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.UPDATES_REGISTER_ACTIVITY, UpdatesRegisterActivity.class);
         registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.MOTHER_CHAMPION_ACTIVITY, MotherChampionRegisterActivity.class);
         registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.AGYW_REGISTER_ACTIVITY, AgywRegisterActivity.class);
+        registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.GBV_REGISTER_ACTIVITY, GbvRegisterActivity.class);
+        registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.OVC_REGISTER_ACTIVITY, MvcRegisterActivity.class);
         return registeredActivities;
     }
 
@@ -573,6 +586,10 @@ public class ChwApplication extends CoreChwApplication {
         boolean hasAGYW();
 
         boolean hasSbc();
+
+        boolean hasGbv();
+
+        boolean hasMvc();
 
         String[] getFTSTables();
 

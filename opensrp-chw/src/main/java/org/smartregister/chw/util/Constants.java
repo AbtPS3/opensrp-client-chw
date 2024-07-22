@@ -217,11 +217,20 @@ public class Constants extends CoreConstants {
 
         public interface ReportTypes {
            String CBHS_REPORT = "cbhs_report";
+
            String MOTHER_CHAMPION_REPORT = "mother_champion_report";
+
            String CONDOM_DISTRIBUTION_REPORT = "condom_distribution_report";
+
            String AGYW_REPORT = "agyw_report";
+
            String ICCM_REPORT = "iccm_report";
+
            String SBC_REPORT = "sbc_report";
+
+           String GBV_REPORT = "gbv_report";
+
+           String MVC_REPORT = "mvc_report";
         }
 
         public interface CDPReportKeys {
@@ -236,6 +245,13 @@ public class Constants extends CoreConstants {
             String MALARIA_MONTHLY_REPORT = "iccm-malaria-monthly-report";
         }
 
+        public interface MvcReportKeys {
+            String HOUSEHOLD_REGISTRATION_DETAILS_REPORT = "mvc-household-registration-details-report";
+            String CHILDREN_REGISTRATION_DETAILS_REPORT = "mvc-children-registration-details-report";
+            String SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT = "mvc-services-provided-to-households-report";
+            String SERVICES_PROVIDED_TO_CHILDREN_REPORT = "mvc-services-provided-to-children-report";
+        }
+
         public interface ReportPaths {
             String CBHS_REPORT_PATH = "cbhs-taarifa-ya-mwezi";
             String MOTHER_CHAMPION_REPORT_PATH = "mother-champion-report";
@@ -245,6 +261,15 @@ public class Constants extends CoreConstants {
             String ICCM_DISPENSING_SUMMARY_PATH = "iccm_reports/iccm-dispensing-summary";
             String MALARIA_MONTHLY_REPORT_PATH = "iccm_reports/iccm-malaria-monthly-report";
             String SBC_REPORT_PATH = "sbc-report";
+            String GBV_REPORT_PATH = "gbv-report";
+
+            String MVC_HOUSEHOLD_REGISTRATION_DETAILS_REPORT_PATH = "mvc_reports/mvc-household-registration-details";
+
+            String MVC_CHILDREN_REGISTRATION_DETAILS_REPORT = "mvc_reports/mvc-children-registration-details";
+
+            String MVC_SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT = "mvc_reports/mvc-services-provided-to-household-in-the-report";
+
+            String MVC_SERVICES_PROVIDED_TO_CHILDREN_REPORT = "mvc_reports/mvc-services-provided-to-children-report";
         }
     }
 }

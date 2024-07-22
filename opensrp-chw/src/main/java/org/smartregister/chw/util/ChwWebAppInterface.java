@@ -70,6 +70,30 @@ public class ChwWebAppInterface {
             return ReportUtils.SbcReports.computeClientsReports(ReportUtils.getReportDate());
         }
 
+        if (reportType.equalsIgnoreCase(Constants.ReportConstants.ReportTypes.GBV_REPORT)) {
+            ReportUtils.setPrintJobName("GBV_report_ya_mwezi-" + ReportUtils.getReportPeriod() + ".pdf");
+            return ReportUtils.GbvReports.computeClientsReports(ReportUtils.getReportDate());
+        }
+
+        if (reportType.equalsIgnoreCase(Constants.ReportConstants.ReportTypes.MVC_REPORT)){
+            switch (key) {
+                case Constants.ReportConstants.MvcReportKeys.HOUSEHOLD_REGISTRATION_DETAILS_REPORT:
+                    ReportUtils.setPrintJobName("MVC Registration Summary - " + ReportUtils.getReportPeriod() + ".pdf");
+                    return ReportUtils.MvcReports.computeRegistrationSummaryReports(ReportUtils.getReportDate());
+                case Constants.ReportConstants.MvcReportKeys.CHILDREN_REGISTRATION_DETAILS_REPORT:
+                    ReportUtils.setPrintJobName("MVC Children Registration Details - " + ReportUtils.getReportPeriod() + ".pdf");
+                    return ReportUtils.MvcReports.computeChildrenRegistrationDetailsReports(ReportUtils.getReportDate());
+                case Constants.ReportConstants.MvcReportKeys.SERVICES_PROVIDED_TO_HOUSEHOLDS_REPORT:
+                    ReportUtils.setPrintJobName("MVC Services Provided To Households - " + ReportUtils.getReportPeriod() + ".pdf");
+                    return ReportUtils.MvcReports.computeServicesProvidedToHouseholdsReports(ReportUtils.getReportDate());
+                case Constants.ReportConstants.MvcReportKeys.SERVICES_PROVIDED_TO_CHILDREN_REPORT:
+                    ReportUtils.setPrintJobName("MVC Services Provided To Children -" + ReportUtils.getReportPeriod() + ".pdf");
+                    return ReportUtils.MvcReports.computeServicesProvidedToChildrenReports(ReportUtils.getReportDate());
+                default:
+                    return "";
+            }
+        }
+
         return "";
     }
 

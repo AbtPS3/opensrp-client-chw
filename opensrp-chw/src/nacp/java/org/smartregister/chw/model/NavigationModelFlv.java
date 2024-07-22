@@ -47,6 +47,9 @@ public class NavigationModelFlv implements NavigationModel.Flavor {
 
             NavigationOption op21 = new NavigationOption(R.mipmap.sidemenu_updates, R.mipmap.sidemenu_updates_active, R.string.sbc, CoreConstants.DrawerMenu.SBC, 0);
             NavigationOption op22 = new NavigationOption(R.mipmap.sidemenu_updates, R.mipmap.sidemenu_updates_active, R.string.sbc_monthly_social_media_report, CoreConstants.DrawerMenu.SBC_MONTHLY_SOCIAL_MEDIA_REPORT, 0);
+            NavigationOption op23 = new NavigationOption(R.mipmap.sidemenu_gbv_disabled, R.mipmap.sidemenu_gbv_active, R.string.gbv_register, CoreConstants.DrawerMenu.GBV, 0);
+            NavigationOption op24 = new NavigationOption(R.mipmap.sidemenu_children, R.mipmap.sidemenu_children_active, R.string.ovc_register, CoreConstants.DrawerMenu.OVC, 0);
+
 
             AllSharedPreferences allSharedPreferences = Utils.getAllSharedPreferences();
             SharedPreferences preferences = allSharedPreferences.getPreferences();
@@ -87,7 +90,6 @@ public class NavigationModelFlv implements NavigationModel.Flavor {
                             navigationOptions.add(op22);
                             navigationOptions.add(op21);
                         }
-
                         navigationOptions.addAll(Arrays.asList(op8, op15));
                         break;
                 }
@@ -111,6 +113,12 @@ public class NavigationModelFlv implements NavigationModel.Flavor {
                 if (ChwApplication.getApplicationFlavor().hasSbc()) {
                     navigationOptions.add(op22);
                     navigationOptions.add(op21);
+                }
+                if (ChwApplication.getApplicationFlavor().hasGbv()) {
+                    navigationOptions.add(op23);
+                }
+                if (ChwApplication.getApplicationFlavor().hasMvc()) {
+                    navigationOptions.add(op24);
                 }
                 navigationOptions.addAll(Arrays.asList(op8, op15));
             }

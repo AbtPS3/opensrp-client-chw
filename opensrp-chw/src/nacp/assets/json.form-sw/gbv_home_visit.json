@@ -1,0 +1,640 @@
+{
+  "count": "1",
+  "encounter_type": "GBV Home Visit",
+  "validate_on_submit": false,
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Ukatili wa kijinsia na Ukatili dhidi ya watoto",
+    "fields": [
+      {
+        "key": "type_of_violence_experienced",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "type_of_violence_experienced",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Aina ya ukatili aliofanyiwa",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "sexual_violence",
+            "text": "Ukatili wa kingono (kubakwa/kulawatiwa)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "sexual_violence"
+          },
+          {
+            "key": "physical_violence",
+            "text": "Ukatili wa kimwili",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "physical_violence"
+          },
+          {
+            "key": "fgm",
+            "text": "Kukeketwa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "fgm"
+          },
+          {
+            "key": "neglect",
+            "text": "Kutelekezwa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "neglect"
+          },
+          {
+            "key": "emotional",
+            "text": "Ukatili wa kihisia",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "emotional"
+          },
+          {
+            "key": "child_exploitation",
+            "text": "Unyonywaji",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "child_exploitation"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "indication_of_sexual_violence",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "indication_of_sexual_violence",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Viashiria vya ukatili Ukatili wa kingono (kubakwa/kulawatiwa)",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "difficulty_walking",
+            "text": "Kutembea kwa shida",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "difficulty_walking"
+          },
+          {
+            "key": "torn_clothing",
+            "text": "Nguo kuchanika",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "torn_clothing"
+          },
+          {
+            "key": "blood_on_clothing",
+            "text": "Damu kwenye nguo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "blood_on_clothing"
+          },
+          {
+            "key": "pain_in_intimate_areas",
+            "text": "Maumivu au muwasho sehemu za siri",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "pain_in_intimate_areas"
+          },
+          {
+            "key": "bruises_in_intimate_areas",
+            "text": "Michubuko sehemu za siri",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "bruises_in_intimate_areas"
+          },
+          {
+            "key": "bruises_around_the_mouth",
+            "text": "Michubuko sehemu za mdomo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "bruises_around_the_mouth"
+          }
+        ],
+        "relevance": {
+          "step1:type_of_violence_experienced": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "sexual_violence"
+                ]
+              }
+            ]
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "indication_of_physical_violence",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "indication_of_physical_violence",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Viashiria vya ukatili wa kimwili",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "unexplained_bruises_and_wounds",
+            "text": "Michubuko isiyoelezeka na vidonda",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "unexplained_bruises_and_wounds"
+          },
+          {
+            "key": "cigarette_burns_on_the_palms",
+            "text": "Vidonda vya kuchomwa na sigara viganjani",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "cigarette_burns_on_the_palms"
+          },
+          {
+            "key": "marks_resembling_needle_electrical_burns",
+            "text": "Alama zinazoashiria kuchomwa na sindano au umeme",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "marks_resembling_needle_electrical_burns"
+          },
+          {
+            "key": "signs_of_being_tied_up_with_a_rope",
+            "text": "Alama za kufungwa na kamba mwilini",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "signs_of_being_tied_up_with_a_rope"
+          },
+          {
+            "key": "wounds_around_the_mouth",
+            "text": "Vidonda au michubuko mdomoni",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "wounds_around_the_mouth"
+          },
+          {
+            "key": "unexplained_bruises_and_wounds",
+            "text": "Michubuko isiyoelezeka na vidonda",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "unexplained_bruises_and_wounds"
+          }
+        ],
+        "relevance": {
+          "step1:type_of_violence_experienced": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "physical_violence"
+                ]
+              }
+            ]
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "indication_of_neglect",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "indication_of_neglect",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Viashiria vya Kutelekezwa",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "dirty_child",
+            "text": "Mtoto mchafu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "dirty_child"
+          },
+          {
+            "key": "often_hungry",
+            "text": "Kuwa na njaa muda mwingi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "often_hungry"
+          },
+          {
+            "key": "wearing_inappropriate_or_worn_out_clothes",
+            "text": "Kuvaa nguo zisizofaa/dhaifu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "wearing_inappropriate_or_worn_out_clothes"
+          },
+          {
+            "key": "lack_of_supervision",
+            "text": "Kukosa usimamizi muda mwingi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "lack_of_supervision"
+          },
+          {
+            "key": "clothing_not_suitable_for_the_weather",
+            "text": "Mavazi yasiyoendana na hali ya hewa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "clothing_not_suitable_for_the_weather"
+          },
+          {
+            "key": "excessive_dirtiness",
+            "text": "Mchafu kupindukia na asiyeoga",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "excessive_dirtiness"
+          },
+          {
+            "key": "limited_supervision",
+            "text": "Uangalizi mdogo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "limited_supervision"
+          },
+          {
+            "key": "malnourished",
+            "text": "Ana utapiamlo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "malnourished"
+          },
+          {
+            "key": "has_rashes_and_sores",
+            "text": "Ana vipele na ukurutu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "has_rashes_and_sores"
+          }
+        ],
+        "relevance": {
+          "step1:type_of_violence_experienced": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "neglect"
+                ]
+              }
+            ]
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "indication_of_exploitation",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "indication_of_exploitation",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Viashiria vya Unyonywaji",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "not_being_seing_at_home_for_a_long_time",
+            "text": "Kutoonekana nyumbani kwa muda mrefu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_being_seen_at_home_for_a_long_time"
+          },
+          {
+            "key": "not_attending_school_or_being_disruptive_in_class",
+            "text": "Kutohudhuria shuleni au msumbufu darasani",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_attending_school_or_being_disruptive_in_class"
+          },
+          {
+            "key": "having_gifts_of_unknown_origin",
+            "text": "Kuwa na zawadi zisizojulikana chanzo chake",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "having_gifts_of_unknown_origin"
+          },
+          {
+            "key": "cigarette_burns",
+            "text": "Vidonda vya kuchomwa na sigara",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "cigarette_burns"
+          }
+        ],
+        "relevance": {
+          "step1:type_of_violence_experienced": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "child_exploitation"
+                ]
+              }
+            ]
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "indication_of_emotional_violence",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "indication_of_emotional_violence",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Viashiria vya Ukatili wa kihisia",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "bedwetting_without_a_medical_reason",
+            "text": "Kukojoa kitandani bila sababu ya kitaalam",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "bedwetting_without_a_medical_reason"
+          },
+          {
+            "key": "frequent_headaches_or_stomach_aches",
+            "text": "Maumivu ya kichwa, tumbo mara kwa mara",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "frequent_headaches_or_stomach_aches"
+          },
+          {
+            "key": "persistent_vomiting_or_diarrhea",
+            "text": "Kutapika au kuharisha kwa muda mrefu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "persistent_vomiting_or_diarrhea"
+          },
+          {
+            "key": "not_thriving_or_not_doing_well",
+            "text": "Kutokua vizuri",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_thriving_or_not_doing_well"
+          },
+          {
+            "key": "dressing_differently_from_other_children_in_the_household",
+            "text": "Kuvaa tofauti na watoto wengine kwenye kaya",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "dressing_differently_from_other_children"
+          }
+        ],
+        "relevance": {
+          "step1:type_of_violence_experienced": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "emotional"
+                ]
+              }
+            ]
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "time_since_incident",
+        "type": "native_radio",
+        "label": "Muda tangu tukio limetokea",
+        "openmrs_entity_id": "time_since_incident",
+        "openmrs_entity": "concept",
+        "openmrs_entity_parent": "",
+        "options": [
+          {
+            "key": "less_than_2_hours",
+            "text": "Masaa < 2",
+            "openmrs_entity_id": "less_than_two_hours",
+            "openmrs_entity": "concept"
+          },
+          {
+            "key": "2_to_36_hours",
+            "text": "Masaa 2-36",
+            "openmrs_entity_id": "2_to_36_hours",
+            "openmrs_entity": "concept"
+          },
+          {
+            "key": "36_to_48_hours",
+            "text": "Masaa 36-48",
+            "openmrs_entity_id": "36_to_48_hours",
+            "openmrs_entity": "concept"
+          },
+          {
+            "key": "48_to_72_hours",
+            "text": "Masaa 48-72",
+            "openmrs_entity_id": "48_to_72_hours",
+            "openmrs_entity": "concept"
+          },
+          {
+            "key": "more_than_72_hours",
+            "text": "Masaa > 72",
+            "openmrs_entity_id": "more_than_72_hours",
+            "openmrs_entity": "concept"
+          }
+        ],
+        "v_required": {
+          "value": true,
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "location_where_the_incident_occurred",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "location_where_the_incident_occurred",
+        "type": "edit_text",
+        "hint": "Mahali tukio la ukatili lilipotokea",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "was_education_provided",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "was_education_provided",
+        "type": "native_radio",
+        "label": "Je Elimu ya ukatili imetolewa",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "emergency_services_offered",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "emergency_services_offered",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Huduma zinazotolewa",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "exclusive": [
+          "none"
+        ],
+        "options": [
+          {
+            "key": "mental_health_care",
+            "text": "Msaada wa afya ya akili/kisaikolojia na jamii",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "mental_health_care"
+          },
+          {
+            "key": "paracetamol",
+            "text": "Dawa za kupunguza maumivu (Paracetamol)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "paracetamol"
+          },
+          {
+            "key": "none",
+            "text": "Hakuna huduma iliyotolewa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "referral_to_other_services",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referral_to_other_services",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Rufaa zilizotolewa (Ambazo sio za kwenda kituo cha kutolea huduma za Afya)",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "exclusive": [
+          "none"
+        ],
+        "options": [
+          {
+            "key": "social_welfare_officer",
+            "text": "Afisa ustawi wa Jamii",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "social_welfare_officer"
+          },
+          {
+            "key": "ward_community_development_officer",
+            "text": "Afisa Maendeleo ya jamii kata",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ward_community_development_officer"
+          },
+          {
+            "key": "police_station",
+            "text": "Kituo cha Polisi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "police_station"
+          },
+          {
+            "key": "safe_house",
+            "text": "Nyumba salama",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "safe_house"
+          },
+          {
+            "key": "mtakuwwa_committee",
+            "text": "Kamati ya MTAKUWWA",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "mtakuwwa_committee"
+          },
+          {
+            "key": "other",
+            "text": "Nyingine, Taja",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          },
+          {
+            "key": "none",
+            "text": "Hakupewa rufaa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "other_referral_to_other_services",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_referral_to_other_services",
+        "type": "edit_text",
+        "hint": "Taja rufaa nyingine zilizotolewa",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu la swali hili"
+        },
+        "relevance": {
+          "step1:referral_to_other_services": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
