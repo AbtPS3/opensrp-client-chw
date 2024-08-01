@@ -1,0 +1,18 @@
+---
+name: step1_enrollment_date
+description: Enrollment Date Calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = helper.getTimeInMillis()"
+---
+name: step1_type_of_vulnerability
+description: type_of_vulnerability Calculation
+priority: 1
+condition: "true"
+actions:
+  - "def addTypeOfVulnerability(typeOfVulnerability) {
+          typeOfVulnerability.add('living_with_hiv');
+          return typeOfVulnerability.toString();
+  }"
+  - "calculation = step1_hiv_results.equals('positive') ? addTypeOfVulnerability(step1_select_type_of_vulnerability) : step1_select_type_of_vulnerability"

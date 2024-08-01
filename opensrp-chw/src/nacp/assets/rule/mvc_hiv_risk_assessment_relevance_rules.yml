@@ -36,3 +36,11 @@ condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('no') || step1_chil
 actions:
   - "isRelevant = true"
 
+---
+name: step1_refer_for_hiv_testing_toaster
+description: refer_for_hiv_testing_toaster
+priority: 1
+condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('no') || step1_child_ever_tested_for_hiv.equalsIgnoreCase('unknown')"
+actions:
+  - "isRelevant = true"
+

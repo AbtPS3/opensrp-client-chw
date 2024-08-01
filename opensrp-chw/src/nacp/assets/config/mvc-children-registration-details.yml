@@ -156,7 +156,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-malnourished-M-<1"
     grouping: "MVC"
@@ -183,7 +183,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-conflict-law-M-<1"
     grouping: "MVC"
@@ -236,7 +236,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-institutional-care-M-<1"
     grouping: "MVC"
@@ -263,7 +263,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-worst-labor-M-<1"
     grouping: "MVC"
@@ -290,7 +290,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-violence-M-<1"
     grouping: "MVC"
@@ -317,7 +317,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-others-M-<1"
     grouping: "MVC"
@@ -344,7 +344,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-albinism-M-<1"
     grouping: "MVC"
@@ -371,7 +371,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-mental-disability-M-<1"
     grouping: "MVC"
@@ -398,7 +398,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-hearing-disability-M-<1"
     grouping: "MVC"
@@ -425,7 +425,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-visual-disability-M-<1"
     grouping: "MVC"
@@ -452,7 +452,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-physical-disability-M-<1"
     grouping: "MVC"
@@ -479,7 +479,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-speech-impairment-1-M-<1"
     grouping: "MVC"
@@ -506,7 +506,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-others-M-<1"
     grouping: "MVC"
@@ -533,7 +533,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-in-school-M-<1"
     grouping: "MVC"
@@ -560,7 +560,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-not-in-school-M-<1"
     grouping: "MVC"
@@ -587,7 +587,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-early-childhood-M-<1"
     grouping: "MVC"
@@ -616,7 +616,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-pre-primary-M-<1"
     grouping: "MVC"
@@ -645,7 +645,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-primary-school-M-<1"
     grouping: "MVC"
@@ -674,7 +674,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-secondary-school-M-<1"
     grouping: "MVC"
@@ -703,7 +703,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-vocational-training-M-<1"
     grouping: "MVC"
@@ -732,7 +732,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-college-M-<1"
     grouping: "MVC"
@@ -761,7 +761,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-father-mother-care-M-<1"
     grouping: "MVC"
@@ -790,7 +790,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-grandparent-care-M-<1"
     grouping: "MVC"
@@ -819,7 +819,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-aunt-uncle-care-M-<1"
     grouping: "MVC"
@@ -904,7 +904,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-institutional-care-M-<1"
     grouping: "MVC"
@@ -931,7 +931,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-cousin-care-M-<1"
     grouping: "MVC"
@@ -1010,7 +1010,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-adoptive-parent-care-M-<1"
     grouping: "MVC"
@@ -1050,7 +1050,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-other-F-<1"
     grouping: "MVC"
@@ -1064,7 +1064,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-number-cases-opened-M-<1"
     grouping: "MVC"
@@ -1078,7 +1078,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-number-cases-opened-F-<1"
     grouping: "MVC"
@@ -1092,7 +1092,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-cases-opened-M-<1"
     grouping: "MVC"
@@ -1119,8 +1119,8 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
-  #Indicators for less for age between 1 and 5
+
+#Indicators for less for age between 1 and 5
   #Male
   - key: "mvc-number-registered-M-1-4"
     grouping: "MVC"
@@ -1277,7 +1277,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-malnourished-M-1-4"
     grouping: "MVC"
@@ -1304,7 +1304,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-conflict-law-M-1-4"
     grouping: "MVC"
@@ -1357,7 +1357,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-institutional-care-M-1-4"
     grouping: "MVC"
@@ -1384,7 +1384,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-worst-labor-M-1-4"
     grouping: "MVC"
@@ -1411,7 +1411,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-violence-M-1-4"
     grouping: "MVC"
@@ -1438,7 +1438,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-others-M-1-4"
     grouping: "MVC"
@@ -1465,7 +1465,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-albinism-M-1-4"
     grouping: "MVC"
@@ -1492,7 +1492,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-mental-disability-M-1-4"
     grouping: "MVC"
@@ -1519,7 +1519,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-hearing-disability-M-1-4"
     grouping: "MVC"
@@ -1546,7 +1546,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-visual-disability-M-1-4"
     grouping: "MVC"
@@ -1573,7 +1573,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-physical-disability-M-1-4"
     grouping: "MVC"
@@ -1600,7 +1600,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-speech-impairment-M-1-4"
     grouping: "MVC"
@@ -1627,7 +1627,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-others-M-1-4"
     grouping: "MVC"
@@ -1654,7 +1654,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-in-school-M-1-4"
     grouping: "MVC"
@@ -1681,7 +1681,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-not-in-school-M-1-4"
     grouping: "MVC"
@@ -1708,7 +1708,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-early-childhood-M-1-4"
     grouping: "MVC"
@@ -1737,7 +1737,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-pre-primary-M-1-4"
     grouping: "MVC"
@@ -1766,7 +1766,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-primary-school-M-1-4"
     grouping: "MVC"
@@ -1795,7 +1795,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-secondary-school-M-1-4"
     grouping: "MVC"
@@ -1824,7 +1824,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-vocational-training-M-1-4"
     grouping: "MVC"
@@ -1853,7 +1853,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-college-M-1-4"
     grouping: "MVC"
@@ -1882,7 +1882,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-father-mother-care-M-1-4"
     grouping: "MVC"
@@ -1911,7 +1911,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-grandparent-care-M-1-4"
     grouping: "MVC"
@@ -1940,7 +1940,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-aunt-uncle-care-M-1-4"
     grouping: "MVC"
@@ -2025,7 +2025,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-institutional-care-M-1-4"
     grouping: "MVC"
@@ -2052,7 +2052,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-cousin-care-M-1-4"
     grouping: "MVC"
@@ -2131,7 +2131,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-adoptive-parent-care-M-1-4"
     grouping: "MVC"
@@ -2171,7 +2171,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-other-F-1-4"
     grouping: "MVC"
@@ -2185,7 +2185,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-number-cases-opened-M-1-4"
     grouping: "MVC"
@@ -2199,7 +2199,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-number-cases-opened-F-1-4"
     grouping: "MVC"
@@ -2213,7 +2213,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-cases-opened-M-1-4"
     grouping: "MVC"
@@ -2240,10 +2240,10 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
-  
-  
-  #Indicators for age group 5 to 9
+
+
+
+#Indicators for age group 5 to 9
   #Male
   - key: "mvc-number-registered-M-5-9"
     grouping: "MVC"
@@ -2398,7 +2398,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-malnourished-M-5-9"
     grouping: "MVC"
@@ -2425,7 +2425,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-conflict-law-M-5-9"
     grouping: "MVC"
@@ -2478,7 +2478,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-institutional-care-M-5-9"
     grouping: "MVC"
@@ -2505,7 +2505,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-worst-labor-M-5-9"
     grouping: "MVC"
@@ -2532,7 +2532,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-violence-M-5-9"
     grouping: "MVC"
@@ -2559,7 +2559,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-others-M-5-9"
     grouping: "MVC"
@@ -2586,7 +2586,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-albinism-M-5-9"
     grouping: "MVC"
@@ -2613,7 +2613,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-mental-disability-M-5-9"
     grouping: "MVC"
@@ -2640,7 +2640,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-hearing-disability-M-5-9"
     grouping: "MVC"
@@ -2667,7 +2667,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-visual-disability-M-5-9"
     grouping: "MVC"
@@ -2694,7 +2694,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-physical-disability-M-5-9"
     grouping: "MVC"
@@ -2721,7 +2721,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-speech-impairment-M-5-9"
     grouping: "MVC"
@@ -2748,7 +2748,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-others-M-5-9"
     grouping: "MVC"
@@ -2775,7 +2775,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-in-school-M-5-9"
     grouping: "MVC"
@@ -2802,7 +2802,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-not-in-school-M-5-9"
     grouping: "MVC"
@@ -2829,7 +2829,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-early-childhood-M-5-9"
     grouping: "MVC"
@@ -2858,7 +2858,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-pre-primary-M-5-9"
     grouping: "MVC"
@@ -2887,7 +2887,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-primary-school-M-5-9"
     grouping: "MVC"
@@ -2916,7 +2916,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-secondary-school-M-5-9"
     grouping: "MVC"
@@ -2945,7 +2945,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-vocational-training-M-5-9"
     grouping: "MVC"
@@ -2974,7 +2974,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-college-M-5-9"
     grouping: "MVC"
@@ -3003,7 +3003,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-father-mother-care-M-5-9"
     grouping: "MVC"
@@ -3032,7 +3032,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-grandparent-care-M-5-9"
     grouping: "MVC"
@@ -3061,7 +3061,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-aunt-uncle-care-M-5-9"
     grouping: "MVC"
@@ -3146,7 +3146,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-institutional-care-M-5-9"
     grouping: "MVC"
@@ -3173,7 +3173,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-cousin-care-M-5-9"
     grouping: "MVC"
@@ -3252,7 +3252,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-adoptive-parent-care-M-5-9"
     grouping: "MVC"
@@ -3292,7 +3292,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-other-F-5-9"
     grouping: "MVC"
@@ -3306,7 +3306,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-number-cases-opened-M-5-9"
     grouping: "MVC"
@@ -3320,7 +3320,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-number-cases-opened-F-5-9"
     grouping: "MVC"
@@ -3334,7 +3334,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-cases-opened-M-5-9"
     grouping: "MVC"
@@ -3361,9 +3361,9 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
-  
-  ###############################################################Indicators for age group 10 to 14##################################################################
+
+
+###############################################################Indicators for age group 10 to 14##################################################################
   #Male
   - key: "mvc-number-registered-M-10-14"
     grouping: "MVC"
@@ -3518,7 +3518,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-malnourished-M-10-14"
     grouping: "MVC"
@@ -3545,7 +3545,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-conflict-law-M-10-14"
     grouping: "MVC"
@@ -3598,7 +3598,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-institutional-care-M-10-14"
     grouping: "MVC"
@@ -3625,7 +3625,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-worst-labor-M-10-14"
     grouping: "MVC"
@@ -3652,7 +3652,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-violence-M-10-14"
     grouping: "MVC"
@@ -3679,7 +3679,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-others-M-10-14"
     grouping: "MVC"
@@ -3706,7 +3706,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-albinism-M-10-14"
     grouping: "MVC"
@@ -3733,7 +3733,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-mental-disability-M-10-14"
     grouping: "MVC"
@@ -3760,7 +3760,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-hearing-disability-M-10-14"
     grouping: "MVC"
@@ -3787,7 +3787,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-visual-disability-M-10-14"
     grouping: "MVC"
@@ -3814,7 +3814,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-physical-disability-M-10-14"
     grouping: "MVC"
@@ -3841,7 +3841,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-speech-impairment-M-10-14"
     grouping: "MVC"
@@ -3868,7 +3868,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-others-M-10-14"
     grouping: "MVC"
@@ -3895,7 +3895,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-in-school-M-10-14"
     grouping: "MVC"
@@ -3922,7 +3922,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-not-in-school-M-10-14"
     grouping: "MVC"
@@ -3949,7 +3949,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-early-childhood-M-10-14"
     grouping: "MVC"
@@ -3978,7 +3978,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-pre-primary-M-10-14"
     grouping: "MVC"
@@ -4007,7 +4007,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-primary-school-M-10-14"
     grouping: "MVC"
@@ -4036,7 +4036,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-secondary-school-M-10-14"
     grouping: "MVC"
@@ -4065,7 +4065,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-vocational-training-M-10-14"
     grouping: "MVC"
@@ -4094,7 +4094,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-college-M-10-14"
     grouping: "MVC"
@@ -4123,7 +4123,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-father-mother-care-M-10-14"
     grouping: "MVC"
@@ -4152,7 +4152,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-grandparent-care-M-10-14"
     grouping: "MVC"
@@ -4181,7 +4181,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-aunt-uncle-care-M-10-14"
     grouping: "MVC"
@@ -4266,7 +4266,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-institutional-care-M-10-14"
     grouping: "MVC"
@@ -4293,7 +4293,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-cousin-care-M-10-14"
     grouping: "MVC"
@@ -4372,7 +4372,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-adoptive-parent-care-M-10-14"
     grouping: "MVC"
@@ -4412,7 +4412,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-other-F-10-14"
     grouping: "MVC"
@@ -4426,7 +4426,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-number-cases-opened-M-10-14"
     grouping: "MVC"
@@ -4440,7 +4440,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-number-cases-opened-F-10-14"
     grouping: "MVC"
@@ -4454,7 +4454,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-cases-opened-M-10-14"
     grouping: "MVC"
@@ -4481,9 +4481,9 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
-  
-  ############################################################# Indicators for age group 15 to 17 ##################################################################
+
+
+############################################################# Indicators for age group 15 to 17 ##################################################################
   #Male
   - key: "mvc-number-registered-M-15-17"
     grouping: "MVC"
@@ -4638,7 +4638,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-malnourished-M-15-17"
     grouping: "MVC"
@@ -4665,7 +4665,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-conflict-law-M-15-17"
     grouping: "MVC"
@@ -4718,7 +4718,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-institutional-care-M-15-17"
     grouping: "MVC"
@@ -4745,7 +4745,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-worst-labor-M-15-17"
     grouping: "MVC"
@@ -4772,7 +4772,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-violence-M-15-17"
     grouping: "MVC"
@@ -4799,7 +4799,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-vulnerability-others-M-15-17"
     grouping: "MVC"
@@ -4826,7 +4826,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-albinism-M-15-17"
     grouping: "MVC"
@@ -4853,7 +4853,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-mental-disability-M-15-17"
     grouping: "MVC"
@@ -4880,7 +4880,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-hearing-disability-M-15-17"
     grouping: "MVC"
@@ -4907,7 +4907,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-visual-disability-M-15-17"
     grouping: "MVC"
@@ -4934,7 +4934,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-physical-disability-M-15-17"
     grouping: "MVC"
@@ -4961,7 +4961,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-speech-impairment-M-15-17"
     grouping: "MVC"
@@ -4988,7 +4988,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-type-of-disability-others-M-15-17"
     grouping: "MVC"
@@ -5015,7 +5015,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-in-school-M-15-17"
     grouping: "MVC"
@@ -5042,7 +5042,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-not-in-school-M-15-17"
     grouping: "MVC"
@@ -5069,7 +5069,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-early-childhood-M-15-17"
     grouping: "MVC"
@@ -5098,7 +5098,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-pre-primary-M-15-17"
     grouping: "MVC"
@@ -5127,7 +5127,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-primary-school-M-15-17"
     grouping: "MVC"
@@ -5156,7 +5156,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-secondary-school-M-15-17"
     grouping: "MVC"
@@ -5185,7 +5185,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-vocational-training-M-15-17"
     grouping: "MVC"
@@ -5214,7 +5214,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-level-of-education-college-M-15-17"
     grouping: "MVC"
@@ -5243,7 +5243,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-father-mother-care-M-15-17"
     grouping: "MVC"
@@ -5272,7 +5272,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-grandparent-care-M-15-17"
     grouping: "MVC"
@@ -5301,7 +5301,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-aunt-uncle-care-M-15-17"
     grouping: "MVC"
@@ -5386,7 +5386,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-institutional-care-M-15-17"
     grouping: "MVC"
@@ -5413,7 +5413,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-cousin-care-M-15-17"
     grouping: "MVC"
@@ -5492,7 +5492,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-adoptive-parent-care-M-15-17"
     grouping: "MVC"
@@ -5532,7 +5532,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-other-F-15-17"
     grouping: "MVC"
@@ -5546,7 +5546,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-child-primary-caregiver-number-cases-opened-M-15-17"
     grouping: "MVC"
@@ -5560,7 +5560,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Female
   - key: "mvc-child-primary-caregiver-number-cases-opened-F-15-17"
     grouping: "MVC"
@@ -5574,7 +5574,7 @@ indicators:
                       AND eor.client_type = 'ovc_child'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   #Male
   - key: "mvc-cases-opened-M-15-17"
     grouping: "MVC"
