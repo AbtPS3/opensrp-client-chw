@@ -15,6 +15,7 @@ import org.smartregister.Context;
 import org.smartregister.chw.anc.util.NCUtils;
 import org.smartregister.chw.core.custom_views.NavigationMenu;
 import org.smartregister.chw.fragment.GeRegisterFragment;
+import org.smartregister.chw.ge.activity.BaseGeRegisterActivity;
 import org.smartregister.chw.presenter.GeRegisterActivityPresenter;
 import org.smartregister.clientandeventmodel.Event;
 import org.smartregister.helper.BottomNavigationHelper;
@@ -27,7 +28,7 @@ import java.util.List;
 
 import timber.log.Timber;
 
-public class GeRegisterActivity extends BaseRegisterActivity {
+public class GeRegisterActivity extends BaseGeRegisterActivity {
     @Override
     protected void initializePresenter() {
         presenter = new GeRegisterActivityPresenter();
