@@ -845,7 +845,7 @@
     <string name="mvc_children_attended_teen_clubs">Children attended teen clubs.</string>
     <string name="mvc_select_ecd_psychosocial_support_greater_than_5">Selecting at least one option for ECD &amp; Psychosocial Support is required</string>
 
-    <string name="select_ecd_psychosocial_support_greater_than_5_children_attended_childrens_clubs">Children attended children's clubs.</string>
+    <string name="select_ecd_psychosocial_support_greater_than_5_children_attended_childrens_clubs">Children attended children\'s clubs.</string>
     <string name="select_ecd_psychosocial_support_greater_than_5_children_attended_teen_clubs">Children attended teen clubs.</string>
 
 

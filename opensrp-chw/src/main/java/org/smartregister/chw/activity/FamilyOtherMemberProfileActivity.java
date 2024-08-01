@@ -419,6 +419,11 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         GbvRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId);
     }
 
+    @Override
+    protected void startGeEnrollment() {
+
+    }
+
 
     protected void startOvcRegistration() {
         String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
