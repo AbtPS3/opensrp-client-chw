@@ -11,7 +11,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-child-headed-F-17"
     grouping: "MVC"
     description: "Number of Households Headed by Fema Children aged 17 and below"
@@ -24,7 +24,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-adult-headed-M-17"
     grouping: "MVC"
     description: "Number of Households Headed by Male Adult aged 17 and below"
@@ -37,7 +37,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-adult-headed-F-17"
     grouping: "MVC"
     description: "Number of Households Headed by Female Adult aged 17 and below"
@@ -50,7 +50,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-elderly-headed-M-17"
     grouping: "MVC"
     description: "Number of Households Headed by Male Adult aged 17 and below"
@@ -63,7 +63,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-elderly-headed-F-17"
     grouping: "MVC"
     description: "Number of Households Headed by Female Adult aged 17 and below"
@@ -76,7 +76,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-employed-M-17"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 17 and below who are employed"
@@ -84,15 +84,15 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob))  <=17
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed'
-					  OR efm.service_provider ='chk_employed'
-					  OR efm.service_provider ='chk_farmer'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed' 
+					  OR efm.service_provider ='chk_employed' 
+					  OR efm.service_provider ='chk_farmer' 
 					  OR efm.service_provider='chk_traditional_healer'
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-employed-F-17"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 17 and below who are employed"
@@ -100,15 +100,15 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob))  <=17
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed'
-					  OR efm.service_provider ='chk_employed'
-					  OR efm.service_provider ='chk_farmer'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed' 
+					  OR efm.service_provider ='chk_employed' 
+					  OR efm.service_provider ='chk_farmer' 
 					  OR efm.service_provider='chk_traditional_healer'
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-unemployed-M-17"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 17 and below who are unemployed"
@@ -116,12 +116,12 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob))  <=17
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed' 
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-unemployed-F-17"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 17 and below and who are unemployed"
@@ -129,12 +129,12 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob))  <=17
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed' 
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-insured-M-17"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 17 and below who are insured"
@@ -147,7 +147,7 @@ indicators:
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
                     date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-insured-F-17"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 17 and below who are insured"
@@ -160,7 +160,7 @@ indicators:
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
                     date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-uninsured-M-17"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 17 and below who are not insured"
@@ -173,7 +173,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-uninsured-F-17"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 17 and below who are not insured"
@@ -186,7 +186,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-disabled-M-17"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 17 and below and are disabled"
@@ -199,7 +199,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-disabled-F-17"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 17 and below and are disabled"
@@ -212,7 +212,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-hiv-M-17"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 17 and below and have hiv"
@@ -225,7 +225,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-hiv-F-17"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 17 and below and have hiv"
@@ -238,7 +238,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-chronic-M-17"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 17 and below and have chronic vulnerabilities"
@@ -251,7 +251,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-chronic-F-17"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 17 and below and have chronic vulnerabilities"
@@ -264,9 +264,9 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
-  #    Queries for the age group 18-24 starts here
-  
+
+#    Queries for the age group 18-24 starts here
+
   - key: "mvc-child-headed-M-18-24"
     grouping: "MVC"
     description: "Number of Households Headed by Male Children aged 18-24"
@@ -279,7 +279,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-child-headed-F-18-24"
     grouping: "MVC"
     description: "Number of Households Headed by Fema Children aged 18-24"
@@ -292,7 +292,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-adult-headed-M-18-24"
     grouping: "MVC"
     description: "Number of Households Headed by Male Adult aged 18-24"
@@ -305,7 +305,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-adult-headed-F-18-24"
     grouping: "MVC"
     description: "Number of Households Headed by Female Adult aged 18-24"
@@ -318,7 +318,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-elderly-headed-M-18-24"
     grouping: "MVC"
     description: "Number of Households Headed by Male Adult aged 18-24"
@@ -331,7 +331,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-elderly-headed-F-18-24"
     grouping: "MVC"
     description: "Number of Households Headed by Female Adult aged 18-24"
@@ -344,7 +344,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-employed-M-18-24"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 18-24 who are employed"
@@ -352,15 +352,15 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) > 17 AND (date('Now') - date(efm.dob)) < 25
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed'
-					  OR efm.service_provider ='chk_employed'
-					  OR efm.service_provider ='chk_farmer'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed' 
+					  OR efm.service_provider ='chk_employed' 
+					  OR efm.service_provider ='chk_farmer' 
 					  OR efm.service_provider='chk_traditional_healer'
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-employed-F-18-24"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 18-24 who are employed"
@@ -368,15 +368,15 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) > 17 AND (date('Now') - date(efm.dob)) < 25
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed'
-					  OR efm.service_provider ='chk_employed'
-					  OR efm.service_provider ='chk_farmer'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed' 
+					  OR efm.service_provider ='chk_employed' 
+					  OR efm.service_provider ='chk_farmer' 
 					  OR efm.service_provider='chk_traditional_healer'
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-unemployed-M-18-24"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 18-24 who are unemployed"
@@ -384,12 +384,12 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) > 17 AND (date('Now') - date(efm.dob)) < 25
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed' 
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-unemployed-F-18-24"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 18-24 and who are unemployed"
@@ -397,12 +397,12 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) > 17 AND (date('Now') - date(efm.dob)) < 25
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed' 
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-insured-M-18-24"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 18-24 who are insured"
@@ -415,7 +415,7 @@ indicators:
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
                     date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-insured-F-18-24"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 18-24 who are insured"
@@ -428,7 +428,7 @@ indicators:
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
                     date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-uninsured-M-18-24"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 18-24 who are not insured"
@@ -441,7 +441,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-uninsured-F-18-24"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 18-24 who are not insured"
@@ -454,7 +454,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-disabled-M-18-24"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 18-24 and are disabled"
@@ -467,7 +467,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-disabled-F-18-24"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 18-24 and are disabled"
@@ -480,7 +480,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-hiv-M-18-24"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 18-24 and have hiv"
@@ -493,7 +493,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-hiv-F-18-24"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 18-24 and have hiv"
@@ -506,7 +506,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-chronic-M-18-24"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 18-24 and have chronic vulnerabilities"
@@ -519,7 +519,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-chronic-F-18-24"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 18-24 and have chronic vulnerabilities"
@@ -532,11 +532,11 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
-  
-  
+
+
+
   #    Queries for the age group 25-59 starts here
-  
+
   - key: "mvc-child-headed-M-25-59"
     grouping: "MVC"
     description: "Number of Households Headed by Male Children aged 25-59"
@@ -549,7 +549,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-child-headed-F-25-59"
     grouping: "MVC"
     description: "Number of Households Headed by Fema Children aged 18-24"
@@ -562,7 +562,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-adult-headed-M-25-59"
     grouping: "MVC"
     description: "Number of Households Headed by Male Adult aged 25-59"
@@ -575,7 +575,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-adult-headed-F-25-59"
     grouping: "MVC"
     description: "Number of Households Headed by Female Adult aged 25-59"
@@ -588,7 +588,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-elderly-headed-M-25-59"
     grouping: "MVC"
     description: "Number of Households Headed by Male Adult aged 25-59"
@@ -601,7 +601,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-elderly-headed-F-25-59"
     grouping: "MVC"
     description: "Number of Households Headed by Female Adult aged 25-59"
@@ -614,7 +614,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-employed-M-25-59"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 25-59 who are employed"
@@ -622,15 +622,15 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) >= 25 AND (date('Now') - date(efm.dob)) < 60
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed'
-					  OR efm.service_provider ='chk_employed'
-					  OR efm.service_provider ='chk_farmer'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed' 
+					  OR efm.service_provider ='chk_employed' 
+					  OR efm.service_provider ='chk_farmer' 
 					  OR efm.service_provider='chk_traditional_healer'
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-employed-F-25-59"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 25-59 who are employed"
@@ -638,15 +638,15 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) >= 25 AND (date('Now') - date(efm.dob)) < 60
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed'
-					  OR efm.service_provider ='chk_employed'
-					  OR efm.service_provider ='chk_farmer'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed' 
+					  OR efm.service_provider ='chk_employed' 
+					  OR efm.service_provider ='chk_farmer' 
 					  OR efm.service_provider='chk_traditional_healer'
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-unemployed-M-25-59"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 25-59 who are unemployed"
@@ -654,12 +654,12 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) >= 25 AND (date('Now') - date(efm.dob)) < 60
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed' 
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-unemployed-F-25-59"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 25-59 and who are unemployed"
@@ -667,12 +667,12 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) >= 25 AND (date('Now') - date(efm.dob)) < 60
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed' 
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-insured-M-25-59"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 25-59 who are insured"
@@ -685,7 +685,7 @@ indicators:
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
                     date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-insured-F-25-59"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 25-59 who are insured"
@@ -698,7 +698,7 @@ indicators:
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
                     date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-uninsured-M-25-59"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 25-59 who are not insured"
@@ -711,7 +711,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-uninsured-F-25-59"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 25-59 who are not insured"
@@ -724,7 +724,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-disabled-M-25-59"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 25-59 and are disabled"
@@ -737,7 +737,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-disabled-F-25-59"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 25-59 and are disabled"
@@ -750,7 +750,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-hiv-M-25-59"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 25-59 and have hiv"
@@ -763,7 +763,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-hiv-F-25-59"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 25-59 and have hiv"
@@ -776,7 +776,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-chronic-M-25-59"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 25-59 and have chronic vulnerabilities"
@@ -789,7 +789,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-chronic-F-25-59"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 25-59 and have chronic vulnerabilities"
@@ -802,12 +802,12 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
-  
-  
-  
+
+
+
+
   #    Queries for the age group 60+ starts here
-  
+
   - key: "mvc-child-headed-M-60-and-above"
     grouping: "MVC"
     description: "Number of Households Headed by Male Children aged 60-and-above"
@@ -820,7 +820,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-child-headed-F-60-and-above"
     grouping: "MVC"
     description: "Number of Households Headed by Fema Children aged 18-24"
@@ -833,7 +833,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-adult-headed-M-60-and-above"
     grouping: "MVC"
     description: "Number of Households Headed by Male Adult aged 60-and-above"
@@ -846,7 +846,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-adult-headed-F-60-and-above"
     grouping: "MVC"
     description: "Number of Households Headed by Female Adult aged 60-and-above"
@@ -859,7 +859,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-elderly-headed-M-60-and-above"
     grouping: "MVC"
     description: "Number of Households Headed by Male Adult aged 60-and-above"
@@ -872,7 +872,7 @@ indicators:
                       AND (efm.gender='Male')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-elderly-headed-F-60-and-above"
     grouping: "MVC"
     description: "Number of Households Headed by Female Adult aged 60-and-above"
@@ -885,7 +885,7 @@ indicators:
                       AND (efm.gender='Female')
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                           date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-employed-M-60-and-above"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 60-and-above who are employed"
@@ -893,15 +893,15 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) >= 60
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed'
-					  OR efm.service_provider ='chk_employed'
-					  OR efm.service_provider ='chk_farmer'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed' 
+					  OR efm.service_provider ='chk_employed' 
+					  OR efm.service_provider ='chk_farmer' 
 					  OR efm.service_provider='chk_traditional_healer'
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-employed-F-60-and-above"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 60-and-above who are employed"
@@ -909,15 +909,15 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) >= 60
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed'
-					  OR efm.service_provider ='chk_employed'
-					  OR efm.service_provider ='chk_farmer'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_self_employed' 
+					  OR efm.service_provider ='chk_employed' 
+					  OR efm.service_provider ='chk_farmer' 
 					  OR efm.service_provider='chk_traditional_healer'
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-unemployed-M-60-and-above"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 60-and-above who are unemployed"
@@ -925,12 +925,12 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) >= 60
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed' 
                       AND (efm.gender='Male')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-unemployed-F-60-and-above"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 60-and-above and who are unemployed"
@@ -938,12 +938,12 @@ indicators:
                       FROM ec_ovc_register eor
                       INNER JOIN ec_family_member efm ON efm.base_entity_id = eor.base_entity_id
                       WHERE  (date('Now') - date(efm.dob)) >= 60
-					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed'
+					  AND efm.service_provider IS NOT NULL AND efm.service_provider = 'chk_unemployed' 
                       AND (efm.gender='Female')
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-insured-M-60-and-above"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 60-and-above who are insured"
@@ -956,7 +956,7 @@ indicators:
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
                     date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-insured-F-60-and-above"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 60-and-above who are insured"
@@ -969,7 +969,7 @@ indicators:
                     AND eor.client_type = 'family_head'
                     AND date((substr('%s', 1, 7) || '-' || '01')) =
                     date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-uninsured-M-60-and-above"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 60-and-above who are not insured"
@@ -982,7 +982,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-uninsured-F-60-and-above"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 60-and-above who are not insured"
@@ -995,7 +995,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-disabled-M-60-and-above"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 60-and-above and are disabled"
@@ -1008,7 +1008,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-disabled-F-60-and-above"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 60-and-above and are disabled"
@@ -1021,7 +1021,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-hiv-M-60-and-above"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 60-and-above and have hiv"
@@ -1034,7 +1034,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-hiv-F-60-and-above"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 60-and-above and have hiv"
@@ -1047,7 +1047,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-chronic-M-60-and-above"
     grouping: "MVC"
     description: "Number of Male primary primary caregivers aged 60-and-above and have chronic vulnerabilities"
@@ -1060,7 +1060,7 @@ indicators:
                       AND eor.client_type = 'family_head'
                       AND date((substr('%s', 1, 7) || '-' || '01')) =
                       date(substr(strftime('%Y-%m-%d', datetime(eor.enrollment_date / 1000, 'unixepoch', 'localtime')), 1, 7) || '-' || '01')"
-  
+
   - key: "mvc-chronic-F-60-and-above"
     grouping: "MVC"
     description: "Number of Female primary primary caregivers aged 60-and-above and have chronic vulnerabilities"
