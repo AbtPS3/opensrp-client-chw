@@ -1,0 +1,7 @@
+---
+name: step1_head_of_household
+description: head_of_household calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = global_age > 60 ? 'elderly' :  global_age >= 18 ?  'adult' : 'child'"
