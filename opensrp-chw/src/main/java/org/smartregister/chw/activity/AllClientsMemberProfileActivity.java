@@ -31,6 +31,7 @@ import org.smartregister.chw.custom_view.FamilyMemberFloatingMenu;
 import org.smartregister.chw.dataloader.FamilyMemberDataLoader;
 import org.smartregister.chw.fragment.FamilyOtherMemberProfileFragment;
 import org.smartregister.chw.gbv.dao.GbvDao;
+import org.smartregister.chw.ge.dao.GeDao;
 import org.smartregister.chw.hivst.dao.HivstDao;
 import org.smartregister.chw.kvp.dao.KvpDao;
 import org.smartregister.chw.malaria.dao.IccmDao;
@@ -59,6 +60,9 @@ public class AllClientsMemberProfileActivity extends CoreAllClientsMemberProfile
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         String gender = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.GENDER, false);
+        String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
+        int age = Utils.getAgeFromDate(dob);
+
         menu.findItem(R.id.action_location_info).setVisible(true);
         menu.findItem(R.id.action_tb_registration).setVisible(false);
         menu.findItem(R.id.action_sick_child_follow_up).setVisible(false);
@@ -107,29 +111,31 @@ public class AllClientsMemberProfileActivity extends CoreAllClientsMemberProfile
                     }
 
                     if (ChwApplication.getApplicationFlavor().hasHIVST()) {
-                        String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                        int age = Utils.getAgeFromDate(dob);
                         menu.findItem(R.id.action_hivst_registration).setVisible(!HivstDao.isRegisteredForHivst(baseEntityId) && age >= 15);
                     }
 
                     if (ChwApplication.getApplicationFlavor().hasAGYW()) {
-                        String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                        int age = Utils.getAgeFromDate(dob);
                         if (gender.equalsIgnoreCase("Female") && age >= 10 && age <= 24 && !AGYWDao.isRegisteredForAgyw(baseEntityId)) {
                             menu.findItem(R.id.action_agyw_screening).setVisible(true);
                         }
                     }
 
                     if (ChwApplication.getApplicationFlavor().hasKvp()) {
-                        String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                        int age = Utils.getAgeFromDate(dob);
                         menu.findItem(R.id.action_kvp_prep_registration).setVisible(!KvpDao.isRegisteredForKvpPrEP(baseEntityId) && age >= 15);
                     }
 
                     if (ChwApplication.getApplicationFlavor().hasSbc()) {
-                        String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                        int age = Utils.getAgeFromDate(dob);
                         menu.findItem(R.id.action_sbc_registration).setVisible(!SbcDao.isRegisteredForSbc(baseEntityId) && age >= 10);
+                    }
+
+                    if (ChwApplication.getApplicationFlavor().hasGbv()) {
+                        menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
+                    }
+
+
+                    if (ChwApplication.getApplicationFlavor().hasGe() &&
+                            gender.equalsIgnoreCase("female") && age >= 15) {
+                        menu.findItem(R.id.action_ge_enrollment).setVisible(!GeDao.isRegisteredForGe(baseEntityId));
                     }
                     break;
             }
@@ -155,33 +161,29 @@ public class AllClientsMemberProfileActivity extends CoreAllClientsMemberProfile
             }
 
             if (ChwApplication.getApplicationFlavor().hasHIVST()) {
-                String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                int age = Utils.getAgeFromDate(dob);
                 menu.findItem(R.id.action_hivst_registration).setVisible(!HivstDao.isRegisteredForHivst(baseEntityId) && age >= 15);
             }
 
             if (ChwApplication.getApplicationFlavor().hasAGYW()) {
-                String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                int age = Utils.getAgeFromDate(dob);
                 if (gender.equalsIgnoreCase("Female") && age >= 10 && age <= 24 && !AGYWDao.isRegisteredForAgyw(baseEntityId)) {
                     menu.findItem(R.id.action_agyw_screening).setVisible(true);
                 }
             }
 
             if (ChwApplication.getApplicationFlavor().hasKvp()) {
-                String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                int age = Utils.getAgeFromDate(dob);
                 menu.findItem(R.id.action_kvp_prep_registration).setVisible(!KvpDao.isRegisteredForKvpPrEP(baseEntityId) && age >= 15);
             }
 
             if (ChwApplication.getApplicationFlavor().hasSbc()) {
-                String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-                int age = Utils.getAgeFromDate(dob);
                 menu.findItem(R.id.action_sbc_registration).setVisible(!SbcDao.isRegisteredForSbc(baseEntityId) && age >= 10);
             }
 
             if (ChwApplication.getApplicationFlavor().hasGbv()) {
                 menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
+            }
+
+            if (ChwApplication.getApplicationFlavor().hasGe() && age >= 15) {
+                menu.findItem(R.id.action_ge_enrollment).setVisible(!GeDao.isRegisteredForGe(baseEntityId));
             }
         }
 
@@ -292,7 +294,7 @@ public class AllClientsMemberProfileActivity extends CoreAllClientsMemberProfile
 
     @Override
     protected void startGeEnrollment() {
-
+        GeRegisterActivity.startRegistration(AllClientsMemberProfileActivity.this,baseEntityId, org.smartregister.chw.ge.util.Constants.FORMS.GE_ENROLLMENT);
     }
 
     @Override

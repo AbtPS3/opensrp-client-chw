@@ -1,0 +1,6 @@
+---
+name: step1_date_of_enrollment
+description: only when GE consent is has been selected
+condition: "step1_ge_consent_form == 'yes'"
+actions:
+  - "isRelevant = true"

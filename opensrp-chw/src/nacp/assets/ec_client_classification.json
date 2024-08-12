@@ -795,6 +795,13 @@
               "ec_mvc_child_services",
               "ec_ovc_register"
             ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "GE Enrollment",
+            "creates_case": [
+              "ec_gender_equality"
+            ]
           }
         ]
       }
