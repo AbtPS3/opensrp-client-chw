@@ -261,12 +261,12 @@
         }
       },
       {
-        "key": "is_the_child_in_conflict_and_contact_with_the_law",
+        "key": "is_the_child_in_conflict_with_the_law",
         "type": "native_radio",
-        "label": "Is the child in conflict and contact with the law?",
+        "label": "Is the child in conflict with the law?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "is_the_child_in_conflict_and_contact_with_the_law",
+        "openmrs_entity_id": "is_the_child_in_conflict_with_the_law",
         "options": [
           {
             "key": "yes",
@@ -282,7 +282,39 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
           }
-        ]
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        }
+      },
+      {
+        "key": "is_the_child_in_contact_with_the_law",
+        "type": "native_radio",
+        "label": "Is the child in contact with the law?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "is_the_child_in_contact_with_the_law",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        }
       }
     ]
   }

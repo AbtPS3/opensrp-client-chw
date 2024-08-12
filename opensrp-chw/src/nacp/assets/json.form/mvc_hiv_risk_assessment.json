@@ -238,7 +238,7 @@
       {
         "key": "is_the_adolescent_sexually_active",
         "type": "native_radio",
-        "label": "Is the adolescent sexually active??",
+        "label": "Is the adolescent sexually active?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "is_the_adolescent_sexually_active",

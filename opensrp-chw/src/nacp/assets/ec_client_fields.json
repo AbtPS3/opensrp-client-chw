@@ -6388,11 +6388,19 @@
           }
         },
         {
-          "column_name": "is_the_child_in_conflict_and_contact_with_the_law",
+          "column_name": "is_the_child_in_conflict_with_the_law",
           "type": "Event",
           "json_mapping": {
             "field": "obs.fieldCode",
-            "concept": "is_the_child_in_conflict_and_contact_with_the_law"
+            "concept": "is_the_child_in_conflict_with_the_law"
+          }
+        },
+        {
+          "column_name": "is_the_child_in_contact_with_the_law",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "is_the_child_in_contact_with_the_law"
           }
         },
         {

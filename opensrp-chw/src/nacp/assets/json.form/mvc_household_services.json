@@ -57,36 +57,36 @@
         "openmrs_entity_id": "parenting_caregivers_with_children",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Parenting (for Caregivers with Children of less than 5 years Old)",
+        "label": "Parenting (for Parents/Caregivers with Children of less than 5 years Old)",
         "exclusive": ["not_applicable"],
         "options": [
           {
             "key": "ecd_education_during_chw_home_visit",
-            "text": "Caregivers received care for child development (ECD) education during a CHW home visit",
+            "text": "Parents/Caregivers received care for child development (ECD) education during a CHW home visit",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "ecd_education_during_chw_home_visit"
           },
           {
             "key": "ecd_education_at_children_conner",
-            "text": "Caregivers received ECD education at children's corners in Health Facility",
+            "text": "Parents/Caregivers received ECD education at children's corners in Health Facility",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "ecd_education_at_children_conner"
           },
           {
             "key": "community_parenting_groups",
-            "text": "Caregivers linked to community parenting groups",
+            "text": "Parents/Caregivers linked to community parenting groups",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "community_parenting_groups"
           },
           {
             "key": "parenting_messages",
-            "text": "Caregivers received parenting messages",
+            "text": "Parents/Caregivers received parenting messages",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "parenting_messages"
           },
           {
             "key": "infant_feeding_counseling",
-            "text": "Caregivers received infant and young child feeding counseling",
+            "text": "Parents/Caregivers received infant and young child feeding counseling",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "infant_feeding_counseling"
           },
@@ -144,7 +144,7 @@
         "options": [
           {
             "key": "nutrition_counseling",
-            "text": "Caregiver received nutrition counseling",
+            "text": "Parent/Caregiver received nutrition counseling",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "nutrition_counseling"
           },
@@ -156,7 +156,7 @@
           },
           {
             "key": "services_linkage",
-            "text": "Caregivers linked to other services",
+            "text": "Parents/Caregivers linked to other services",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "services_linkage"
           }
@@ -226,7 +226,7 @@
         "options": [
           {
             "key": "primary_caregivers_who_are_active_slg_members",
-            "text": "Primary caregivers who are active SLG members HIV risk assessment",
+            "text": "Parents/Primary caregivers who are active SLG members HIV risk assessment",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "primary_caregivers_who_are_active_slg_members"
           },
@@ -244,13 +244,13 @@
           },
           {
             "key": "caregivers_linked_to_entrepreneurship_trainings",
-            "text": "Caregivers supported to entrepreneurship trainings",
+            "text": "Parents/Caregivers supported to entrepreneurship trainings",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "caregivers_linked_to_entrepreneurship_trainings"
           },
           {
             "key": "caregivers_supported_to_establish_income_generating_activity_iga",
-            "text": "Caregivers supported to establish income generating activity (IGA)",
+            "text": "Parents/Caregivers supported to establish income generating activity (IGA)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "caregivers_supported_to_establish_income_generating_activity_iga"
           },
@@ -268,7 +268,7 @@
           },
           {
             "key": "primary_caregivers_linked_to_agricultural_extension_support",
-            "text": "Primary caregivers linked to agricultural extension support",
+            "text": "Parents/Primary caregivers linked to agricultural extension support",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "primary_caregivers_linked_to_agricultural_extension_support"
           }

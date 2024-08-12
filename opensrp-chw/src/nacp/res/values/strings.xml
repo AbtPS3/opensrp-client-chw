@@ -758,7 +758,8 @@
     <string name="mvc_other_client_needs">Specify other Client Needs:</string>
     <string name="mvc_has_risk_assessment_been_conducted">Has Risk Assessment been conducted:</string>
     <string name="mvc_has_the_child_experienced_vac">Has the child experienced VAC:</string>
-    <string name="mvc_is_the_child_in_conflict_and_contact_with_the_law">Is the child in conflict and contact with the law:</string>
+    <string name="mvc_is_the_child_in_conflict_with_the_law">Is the child in conflict with the law:</string>
+    <string name="mvc_is_the_child_in_contact_with_the_law">Is the child in contact with the law:</string>
     <string name="mvc_yes">Yes</string>
     <string name="mvc_no">No</string>
     <string name="mvc_health_and_nutrition">Health and Nutrition</string>
@@ -784,6 +785,7 @@
     <string name="mvc_economic_strengthening">Economic Strengthening:</string>
     <string name="mvc_referrals">Referrals:</string>
     <string name="mvc_support_provided_to_caregiver_on_referrals">Support given to caregiver on referrals:</string>
+    <string name="mvc_caregiver_referrals_completed">Caregiver referrals completed:</string>
     <string name="mvc_shelter_and_hygiene">Shelter and hygiene:</string>
 
     <string name="mvc_ecd_education_during_chw_home_visit">Caregivers received care for child development (ECD) education during a CHW home visit</string>
@@ -844,8 +846,20 @@
     <string name="mvc_children_attended_teen_clubs">Children attended teen clubs.</string>
     <string name="mvc_select_ecd_psychosocial_support_greater_than_5">Selecting at least one option for ECD &amp; Psychosocial Support is required</string>
 
-    <string name="select_ecd_psychosocial_support_greater_than_5_children_attended_childrens_clubs">Children attended children\'s clubs.</string>
-    <string name="select_ecd_psychosocial_support_greater_than_5_children_attended_teen_clubs">Children attended teen clubs.</string>
+    <string name="mvc_select_ecd_psychosocial_support_greater_than_5_children_attended_childrens_clubs">Children attended children\'s clubs.</string>
+    <string name="mvc_select_ecd_psychosocial_support_greater_than_5_children_attended_teen_clubs">Children attended teen clubs.</string>
+    <string name="mvc_child_ever_tested_for_hiv">Has the child ever tested for HIV:</string>
+    <string name="mvc_hiv_results">HIV Results:</string>
+    <string name="mvc_enrolled_to_clinic">Client enrolled into care:</string>
+    <string name="mvc_ctc_number">CTC Number:</string>
+    <string name="mvc_when_was_the_last_test_result">When was the last test result:</string>
+    <string name="mvc_is_the_adolescent_sexually_active">Is the adolescent sexually active:</string>
+    <string name="mvc_unknown">Unknown</string>
+    <string name="mvc_prefer_not_to_answer">Prefers not to answer</string>
+    <string name="mvc_positive">Positive</string>
+    <string name="mvc_negative">Negative</string>
+    <string name="mvc_within_the_last_twelve_months">Within the last twelve months</string>
+    <string name="mvc_more_than_twelve_months_ago">More than twelve months ago</string>
 
 
 

@@ -128,6 +128,9 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_ecd_psychosocial_support_less_than_5",
+        "exclusive": [
+          "none"
+        ],
         "options": [
           {
             "key": "attended_ecd_centre",
@@ -138,20 +141,11 @@
             "value": "false"
           },
           {
-            "key": "children_attended_childrens_clubs",
-            "text": "Children attended children's clubs.",
+            "key": "none",
+            "text": "None",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "children_attended_childrens_clubs",
-            "value": "false"
-          },
-          {
-            "key": "children_attended_teen_clubs",
-            "text": "Children attended teen clubs.",
-            "openmrs_entity_parent": "",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "children_attended_teen_clubs",
-            "value": "false"
+            "openmrs_entity_id": "none"
           }
         ],
         "relevance": {
@@ -174,6 +168,9 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_ecd_psychosocial_support_greater_than_5",
+        "exclusive": [
+          "none"
+        ],
         "options": [
           {
             "key": "children_attended_childrens_clubs",
@@ -190,6 +187,13 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "children_attended_teen_clubs",
             "value": "false"
+          },
+          {
+            "key": "none",
+            "text": "None",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
           }
         ],
         "relevance": {
