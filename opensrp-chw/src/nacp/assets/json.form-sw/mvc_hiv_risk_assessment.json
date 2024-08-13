@@ -1,0 +1,291 @@
+{
+  "count": "1",
+  "encounter_type": "HIV Risk Assessment",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "global": {},
+  "step1": {
+    "title": "Tathmini ya Hatari ya VVU",
+    "fields": [
+      {
+        "key": "child_ever_tested_for_hiv",
+        "type": "native_radio",
+        "label": "Je mtoto au kijana amewahi kupima VVU?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "child_ever_tested_for_hiv",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          },
+          {
+            "key": "unknown",
+            "text": "Sijui",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "unknown"
+          },
+          {
+            "key": "prefer_not_to_answer",
+            "text": "Anapendelea kutokujibu",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "prefer_not_to_answer"
+          }
+        ],
+        "v_required": {
+          "value": true,
+          "err": "Tafadhali jaza jibu la swali hili"
+        }
+      },
+      {
+        "key": "hiv_results",
+        "type": "native_radio",
+        "label": "Je, majibu yalikuwaje?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "hiv_results",
+        "options": [
+          {
+            "key": "positive",
+            "text": "Ameambukizwa",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "positive"
+          },
+          {
+            "key": "negative",
+            "text": "Hajaambukizwa",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "negative"
+          },
+          {
+            "key": "unknown",
+            "text": "Sijui",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "unknown"
+          },
+          {
+            "key": "do_not_want_to_answer",
+            "text": "Sitaki kujibu",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "do_not_want_to_answer"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_hiv_risk_assessment_relevance_rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "enrolled_to_clinic",
+        "type": "native_radio",
+        "label": "Ameandikishwa kwenye huduma?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "enrolled_to_clinic",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "step1:hiv_results": {
+            "type": "string",
+            "ex": "equalTo(., \"positive\")"
+          }
+        }
+      },
+      {
+        "key": "ctc_number",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ctc_number",
+        "type": "mask_edit_text",
+        "mask": "##-##-####-######",
+        "mask_hint": "12345678912345",
+        "allowed_chars": "0123456789",
+        "hint": "Namba ya CTC",
+        "edit_type": "number",
+        "v_regex": {
+          "value": "(\\d{2}-\\d{2}-\\d{4}-\\d{6})?",
+          "err": "Namba ya CTC iwe kwenye mfumo wa (XXXX-XX-XX-XXX)"
+        },
+        "v_max_length": {
+          "value": "17",
+          "is_fixed_size": "true",
+          "err": "Please enter a valid CTC Number"
+        },
+        "v_required": {
+          "value": true,
+          "err": "Tafadhali jaza namba ya CTC"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_hiv_risk_assessment_relevance_rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "when_was_the_last_test_result",
+        "type": "native_radio",
+        "label": "Mara ya mwisho ni lini mtoto/kijana kupima VVU",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "when_was_the_last_test_result",
+        "options": [
+          {
+            "key": "within_the_last_twelve_months",
+            "text": "Ndani ya miezi kumi na mbili (12) iliyopita",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "within_the_last_twelve_months"
+          },
+          {
+            "key": "more_than_twelve_months_ago",
+            "text": "Zaidi ya miezi kumi na mbili (12) iliyopita",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "more_than_twelve_months_ago"
+          }
+        ],
+        "v_required": {
+          "value": true,
+          "err": "Tafadhali jaza jibu la swali hili"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_hiv_risk_assessment_relevance_rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "is_the_adolescent_sexually_active",
+        "type": "native_radio",
+        "label": "Je, kijana huyu anajihusisha na ngono?",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "is_the_adolescent_sexually_active",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "v_required": {
+          "value": true,
+          "err": "Tafadhali jaza jibu la swali hili"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_hiv_risk_assessment_relevance_rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "refer_for_hiv_testing_toaster",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Mpe mteja rufaa kwenda kupata huduma za unasii na upimaji  wa VVU",
+        "text_color": "#CF0800",
+        "toaster_type": "problem",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_hiv_risk_assessment_relevance_rules.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
