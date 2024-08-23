@@ -1,0 +1,203 @@
+{
+  "count": "1",
+  "global": {},
+  "encounter_type": "Health Care & Nutrition",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Hali ya lishe",
+    "fields": [
+      {
+        "key": "child_received_vaccinations",
+        "type": "native_radio",
+        "label": "Je watoto wamepatiwa chanjo zote zinazotakiwa",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "child_received_vaccinations",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndio",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          },
+          {
+            "key": "unknown_vaccinated",
+            "text": "Haijulikani",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "unknown_vaccinated"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_healthcare_and_nutrition.yml"
+            }
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jiibu swali hili"
+        }
+      },
+      {
+        "key": "child_nutritional_status",
+        "type": "native_radio",
+        "label": "Tathmini ya hali ya lishe (MUAC)",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "child_nutritional_status",
+        "options": [
+          {
+            "key": "severe_malnutrition",
+            "text": "Utapiamlo mkali",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "severe_malnutrition"
+          },
+          {
+            "key": "moderate_malnutrition",
+            "text": "Utapiamlo wa wastani",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "moderate_malnutrition"
+          },
+          {
+            "key": "not_malnourished",
+            "text": "Hana utapiamlo",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_malnourished"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jibu swali hili"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_healthcare_and_nutrition.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "health_care_service_provided",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Huduma za Afya zilizotolewa",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "health_care_service_provided",
+        "options": [
+          {
+            "key": "supported_to_join_chf_tika",
+            "text": "Mtoto amesaidiwa kujiunga na mfuko wa afya (CHF/TIKA au zinginezo)",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "supported_to_join_chf_tika"
+          },
+          {
+            "key": "hiv_prevention_counseling_service",
+            "text": "Mtoto amepokea unasihi wa kujikinga na maambukizi ya VVU",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_prevention_counseling_service"
+          },
+          {
+            "key": "disclosure_support",
+            "text": "Mtoto amepata msaada wa kuweka wazi hali yake ya maambukizi ya VVU",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "disclosure_support"
+          },
+          {
+            "key": "hiv_support_group",
+            "text": "Mtoto ameunganishwa na vikundi vya kusaidia walio na maambukizi ya VVU",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_support_group"
+          },
+          {
+            "key": "art_adherence_counseling",
+            "text": "Mtoto amepokea unasihi kuhusu ufuasi wa dawa za ARV",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "art_adherence_counseling"
+          },
+          {
+            "key": "hiv_risk_assessment",
+            "text": "Mtoto amepewa elimu ya kuzuia maambukizi ya VVU",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_risk_assessment"
+          },
+          {
+            "key": "hiv_prevention_education",
+            "text": "Mtoto amefanyiwa tathmini ya hatari ya maambukizi ya VVU",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "hiv_prevention_education"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza jibu swali hili"
+        }
+      }
+    ]
+  }
+}
