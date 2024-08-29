@@ -66,6 +66,7 @@ import org.smartregister.chw.core.utils.FormUtils;
 import org.smartregister.chw.custom_view.NavigationMenuFlv;
 import org.smartregister.chw.fp.FpLibrary;
 import org.smartregister.chw.gbv.GbvLibrary;
+import org.smartregister.chw.ge.GeLibrary;
 import org.smartregister.chw.hiv.HivLibrary;
 import org.smartregister.chw.hivst.HivstLibrary;
 import org.smartregister.chw.job.ChwJobCreator;
@@ -309,6 +310,10 @@ public class ChwApplication extends CoreChwApplication {
 
         if (flavor.hasMvc()) {
             OvcLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
+        }
+
+        if (flavor.hasGe()) {
+            GeLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
         }
 
         OpdLibrary.init(context, getRepository(),

@@ -8,18 +8,18 @@ import androidx.fragment.app.Fragment;
 import com.vijay.jsonwizard.domain.Form;
 
 import org.smartregister.chw.R;
+import org.smartregister.chw.core.activity.CoreGeRegisterActivity;
 import org.smartregister.chw.fragment.GeRegisterFragment;
-import org.smartregister.chw.ge.activity.BaseGeRegisterActivity;
-import org.smartregister.chw.ovc.util.Constants;
+import org.smartregister.chw.ge.util.Constants;
 import org.smartregister.view.fragment.BaseRegisterFragment;
 
-public class GeRegisterActivity extends BaseGeRegisterActivity {
+public class GeRegisterActivity extends CoreGeRegisterActivity {
 
     public static void startRegistration(Activity activity, String baseEntityId, String formName) {
         Intent intent = new Intent(activity, MvcRegisterActivity.class);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.BASE_ENTITY_ID, baseEntityId);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.ACTION, Constants.ACTIVITY_PAYLOAD_TYPE.REGISTRATION);
-        intent.putExtra(Constants.ACTIVITY_PAYLOAD.OVC_FORM_NAME, formName);
+        intent.putExtra(Constants.ACTIVITY_PAYLOAD.GE_FORM_NAME, formName);
 
         activity.startActivity(intent);
     }

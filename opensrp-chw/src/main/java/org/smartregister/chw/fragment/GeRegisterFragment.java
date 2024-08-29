@@ -3,6 +3,7 @@ package org.smartregister.chw.fragment;
 import android.content.Intent;
 
 import org.smartregister.chw.activity.MvcFamilyProfileActivity;
+import org.smartregister.chw.core.fragment.CoreGeRegisterFragment;
 import org.smartregister.chw.core.provider.CoreRegisterProvider;
 import org.smartregister.chw.ge.fragment.BaseGeRegisterFragment;
 import org.smartregister.chw.ge.presenter.BaseGeRegisterFragmentPresenter;
@@ -16,7 +17,7 @@ import org.smartregister.family.util.Utils;
 
 import java.util.Set;
 
-public class GeRegisterFragment extends BaseGeRegisterFragment {
+public class GeRegisterFragment extends CoreGeRegisterFragment {
 
     @Override
     public void initializeAdapter(Set<org.smartregister.configurableviews.model.View> visibleColumns) {

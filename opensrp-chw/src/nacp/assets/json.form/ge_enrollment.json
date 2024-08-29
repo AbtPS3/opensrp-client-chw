@@ -57,12 +57,12 @@
     "title": "GE Enrollment",
     "fields": [
       {
-        "key": "ge_consent_form",
+        "key": "ge_consent",
         "openmrs_entity_parent": "",
         "openmrs_entity": "",
-        "openmrs_entity_id": "ge_consent_form",
+        "openmrs_entity_id": "ge_consent",
         "type": "native_radio",
-        "label": "Has the client provide consent for GE_Enrollment?",
+        "label": "Has the client provided consent for enrollment into Gender Equality Services?",
         "options": [
           {
             "key": "yes",

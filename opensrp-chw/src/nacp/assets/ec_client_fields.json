@@ -6533,7 +6533,7 @@
       ]
     },
     {
-      "name": "ec_gender_equality",
+      "name": "ec_ge_register",
       "columns": [
         {
           "column_name": "base_entity_id",
@@ -6547,7 +6547,7 @@
           "type": "Event",
           "json_mapping": {
             "field": "obs.fieldCode",
-            "concept": "ge_consent_form"
+            "concept": "ge_consent"
           }
         },
         {
