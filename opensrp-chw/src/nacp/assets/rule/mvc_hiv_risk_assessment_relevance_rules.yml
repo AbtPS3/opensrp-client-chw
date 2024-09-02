@@ -1,0 +1,46 @@
+---
+name: step1_hiv_results
+description: Show HIV results if tests were taken
+priority: 1
+condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('yes')"
+actions:
+  - "isRelevant = true"
+---
+name: step1_when_was_the_last_test_result
+description: Show when tests where taken if tests where taken
+priority: 1
+condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('yes')"
+actions:
+  - "isRelevant = true"
+---
+name: step1_is_the_adolescent_sexually_active
+description: Show when tests where not taken for clients above 15
+priority: 1
+condition: "(step1_child_ever_tested_for_hiv.equalsIgnoreCase('no') || step1_child_ever_tested_for_hiv.equalsIgnoreCase('unknown')) && global_age >= 15 "
+actions:
+  - "isRelevant = true"
+
+---
+name: step1_ctc_number
+description: shown when hiv result is positive
+priority: 1
+condition: "step1_enrolled_to_clinic.equalsIgnoreCase('yes')"
+actions:
+  - "isRelevant = true"
+
+---
+name: step1_refer_for_hiv_testing_toaster
+description: refer_for_hiv_testing_toaster
+priority: 1
+condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('no') || step1_child_ever_tested_for_hiv.equalsIgnoreCase('unknown')"
+actions:
+  - "isRelevant = true"
+
+---
+name: step1_refer_for_hiv_testing_toaster
+description: refer_for_hiv_testing_toaster
+priority: 1
+condition: "step1_child_ever_tested_for_hiv.equalsIgnoreCase('no') || step1_child_ever_tested_for_hiv.equalsIgnoreCase('unknown')"
+actions:
+  - "isRelevant = true"
+

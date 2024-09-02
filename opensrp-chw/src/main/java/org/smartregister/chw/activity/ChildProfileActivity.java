@@ -34,9 +34,10 @@ import org.smartregister.chw.core.utils.ChwNotificationUtil;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.CoreConstants.JSON_FORM;
 import org.smartregister.chw.custom_view.FamilyMemberFloatingMenu;
-import org.smartregister.chw.malaria.dao.IccmDao;
 import org.smartregister.chw.gbv.dao.GbvDao;
+import org.smartregister.chw.malaria.dao.IccmDao;
 import org.smartregister.chw.model.ReferralTypeModel;
+import org.smartregister.chw.ovc.dao.OvcDao;
 import org.smartregister.chw.presenter.ChildProfilePresenter;
 import org.smartregister.chw.schedulers.ChwScheduleTaskExecutor;
 import org.smartregister.chw.util.UtilsFlv;
@@ -46,6 +47,8 @@ import org.smartregister.family.util.Constants;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import timber.log.Timber;
 
 public class ChildProfileActivity extends CoreChildProfileActivity implements OnRetrieveNotifications {
     public FamilyMemberFloatingMenu familyFloatingMenu;
@@ -166,12 +169,19 @@ public class ChildProfileActivity extends CoreChildProfileActivity implements On
 
                 return true;
             case R.id.action_iccm_registration:
-                    startIntegratedCommunityCaseManagementEnrollment();
+                startIntegratedCommunityCaseManagementEnrollment();
+                return true;
+            case R.id.action_ovc_registration:
+                startOvcRegistration();
                 return true;
             default:
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void startOvcRegistration() {
+            MvcRegisterActivity.startRegistration(ChildProfileActivity.this, memberObject.getBaseEntityId(), org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);
     }
 
     protected void startIntegratedCommunityCaseManagementEnrollment() {
@@ -191,12 +201,20 @@ public class ChildProfileActivity extends CoreChildProfileActivity implements On
         if (ChwApplication.getApplicationFlavor().hasMalaria())
             UtilsFlv.updateMalariaMenuItems(memberObject.getBaseEntityId(), menu);
 
-        if (ChwApplication.getApplicationFlavor().hasICCM() && !IccmDao.isRegisteredForIccm(memberObject.getBaseEntityId())) {
-            menu.findItem(R.id.action_iccm_registration).setVisible(true);
+        try {
+            if (ChwApplication.getApplicationFlavor().hasICCM() && !IccmDao.isRegisteredForIccm(memberObject.getBaseEntityId())) {
+                menu.findItem(R.id.action_iccm_registration).setVisible(true);
+            }
+        } catch (Exception e) {
+            Timber.e(e);
         }
 
         if (ChwApplication.getApplicationFlavor().hasGbv()) {
             menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(memberObject.getBaseEntityId()));
+        }
+
+        if (ChwApplication.getApplicationFlavor().hasMvc()) {
+            menu.findItem(R.id.action_ovc_registration).setVisible(!OvcDao.isRegisteredForOvc(memberObject.getBaseEntityId()));
         }
 
         return true;

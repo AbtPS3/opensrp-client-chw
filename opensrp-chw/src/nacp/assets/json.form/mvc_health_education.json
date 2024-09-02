@@ -1,0 +1,114 @@
+{
+  "count": "1",
+  "encounter_type": "Health Education",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Health Education",
+    "fields": [
+      {
+        "key": "education_and_vocational_training",
+        "type": "native_radio",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "education_and_vocational_training",
+        "label": "Education and Vocational Training",
+        "options": [
+          {
+            "key": "child_enrolled_in_school",
+            "text": "Child enrolled in school"
+          },
+          {
+            "key": "child_missed_school",
+            "text": "Child missed school for three or more days consecutively in a month"
+          },
+          {
+            "key": "child_linked_to_education_support",
+            "text": "Child linked to education support"
+          },
+          {
+            "key": "child_supported_to_attend_vocational_training",
+            "text": "Child supported to attend vocational training"
+          },
+          {
+            "key": "child_received_business_start_up_kit",
+            "text": "Child received business start-up kit"
+          },
+          {
+            "key": "children_linked_to_memkwa",
+            "text": "Children linked to mainstreamed education program (MEMKWA)"
+          },
+          {
+            "key": "none_education",
+            "text": "None"
+          }
+        ]
+      },
+      {
+        "key": "ecd_psychosocial_support",
+        "type": "native_radio",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ecd_psychosocial_support",
+        "label": "ECD & Psychosocial Support",
+        "options": [
+          {
+            "key": "child_attended_ecd_centre",
+            "text": "Child (<5 years) attended ECD centre"
+          },
+          {
+            "key": "child_attended_childrens_clubs",
+            "text": "Child attended children's clubs"
+          },
+          {
+            "key": "child_attended_teen_clubs",
+            "text": "Child attended teen clubs"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "count": "1",
+  "encounter_type": "Education & Psychosocial",
+  "entity_id": "",
+  "relational_id": "",
+  "global": {},
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Elimu na mafunzo ya ufundi stadi",
+    "fields": [
+      {
+        "key": "education_vocational_training",
+        "type": "native_radio",
+        "label": "Elimu na mafunzo ya ufundi stadi",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "education_vocational_training",
+        "options": [
+          {
+            "key": "children_enrolled_in_school",
+            "text": "Mtoto ameandikishwa shule",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_enrolled_in_school"
+          },
+          {
+            "key": "missed_school_three_days",
+            "text": "Mtoto hakuhudhuria shule kwa siku 3 mfululizo au zaidi katika mwezi",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "missed_school_three_days"
+          },
+          {
+            "key": "linked_to_education_support",
+            "text": "Mtoto ameunganishwa na msaada wa kielimu",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "linked_to_education_support"
+          },
+          {
+            "key": "supported_attend_vocational_training",
+            "text": "Mtoto amesaidiwa kuhudhuria mafunzo ya ufundi stadi",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "supported_attend_vocational_training"
+          },
+          {
+            "key": "received_business_start_up_kit",
+            "text": "Mtoto amepokea zana za kuanzisha biashara",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "received_business_start_up_kit"
+          },
+          {
+            "key": "linked_mainstreamed_education_program",
+            "text": "Mtoto ameunganishwa na Mpango wa Elimu ya Msingi kwa watoto waliokosa (MEMKWA)",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "linked_mainstreamed_education_program"
+          },
+          {
+            "key": "none",
+            "text": "Hakuna",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Chagua elimu na mafunzo ya ufundi stadi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "select_ecd_psychosocial_support_less_than_5",
+        "type": "check_box",
+        "label": "Msaada wa maendeleo ya awali ya mtoto na kisaikolojia",
+        "combine_checkbox_option_values": "true",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_ecd_psychosocial_support_less_than_5",
+        "exclusive": [
+          "none"
+        ],
+        "options": [
+          {
+            "key": "attended_ecd_centre",
+            "text": "Mtoto chini ya miaka 5 anahudhuria kituo cha Maendeleo ya Awali ya Watoto",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "attended_ecd_centre",
+            "value": "false"
+          },
+          {
+            "key": "none",
+            "text": "Hakuna msaada uliotolewa",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chgua msaada wa maendeleo ya awali ya mtoto na kisaikolojia"
+        }
+      },
+      {
+        "key": "select_ecd_psychosocial_support_greater_than_5",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Msaada wa maendeleo ya awali ya mtoto na kisaikolojia",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_ecd_psychosocial_support_greater_than_5",
+        "exclusive": [
+          "none"
+        ],
+        "options": [
+          {
+            "key": "children_attended_childrens_clubs",
+            "text": "Mtoto amehudhuria klabu za watoto",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_attended_childrens_clubs",
+            "value": "false"
+          },
+          {
+            "key": "children_attended_teen_clubs",
+            "text": "Mtoto amehudhuria klabu za vijana",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_attended_teen_clubs",
+            "value": "false"
+          },
+          {
+            "key": "none",
+            "text": "Hakuna msaada uliotolewa",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chgua msaada wa maendeleo ya awali ya mtoto na kisaikolojia"
+        }
+      },
+      {
+        "key": "ecd_psychosocial_support",
+        "type": "hidden",
+        "editable": false,
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ecd_psychosocial_support",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

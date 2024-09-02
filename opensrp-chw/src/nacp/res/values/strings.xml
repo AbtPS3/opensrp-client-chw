@@ -747,6 +747,119 @@
     <string name="gbv_reports_subtitle">View GBV Report</string>
 
 
+    <string name="mvc_reports_title">MVC Report</string>
+    <string name="mvc_reports_subtitle">View MVC Report</string>
+
+    <string name="ovc_edit_home_visit">Edit OVC Visit</string>
+
+    <string name="mvc_has_need_assessment_been_conducted">Has Need Assessment been conducted:</string>
+    <string name="mvc_visit_type">Visit type:</string>
+    <string name="mvc_client_needs">Select the client\'s need:</string>
+    <string name="mvc_other_client_needs">Specify other Client Needs:</string>
+    <string name="mvc_has_risk_assessment_been_conducted">Has Risk Assessment been conducted:</string>
+    <string name="mvc_has_the_child_experienced_vac">Has the child experienced VAC:</string>
+    <string name="mvc_is_the_child_in_conflict_with_the_law">Is the child in conflict with the law:</string>
+    <string name="mvc_is_the_child_in_contact_with_the_law">Is the child in contact with the law:</string>
+    <string name="mvc_yes">Yes</string>
+    <string name="mvc_no">No</string>
+    <string name="mvc_health_and_nutrition">Health and Nutrition</string>
+    <string name="mvc_housing_and_care">Housing and Care</string>
+    <string name="mvc_security_and_safety">Security and Safety</string>
+    <string name="mvc_psychological_and_emotional_support">Psychological and Emotional Support</string>
+    <string name="mvc_education_and_life_skills">Education and Life Skills</string>
+    <string name="mvc_household_and_economic_strengthening">Household and Economic Strengthening</string>
+    <string name="mvc_physical">Physical</string>
+    <string name="mvc_sexual">Sexual</string>
+    <string name="mvc_neglect">Neglect</string>
+    <string name="mvc_exploitation">Exploitation</string>
+    <string name="mvc_new_client">New client</string>
+    <string name="mvc_active_continuing_with_services">Active/ continuing with services</string>
+    <string name="mvc_graduated">Graduated</string>
+    <string name="mvc_transferred">Transferred</string>
+    <string name="mvc_exited_without_graduation">Exited Without Graduation</string>
+
+    <string name="mvc_parenting_caregivers_with_children">Parenting (for Caregivers with Children of less than 5 years Old):</string>
+    <string name="mvc_nutritional_status_assessment">Nutritional Status Assessment (MUAC):</string>
+    <string name="mvc_food_and_nutrition">Food and Nutrition:</string>
+    <string name="mvc_health_care_provided">Health Care provided:</string>
+    <string name="mvc_economic_strengthening">Economic Strengthening:</string>
+    <string name="mvc_referrals">Referrals:</string>
+    <string name="mvc_support_provided_to_caregiver_on_referrals">Support given to caregiver on referrals:</string>
+    <string name="mvc_caregiver_referrals_completed">Caregiver referrals completed:</string>
+    <string name="mvc_shelter_and_hygiene">Shelter and hygiene:</string>
+
+    <string name="mvc_ecd_education_during_chw_home_visit">Caregivers received care for child development (ECD) education during a CHW home visit</string>
+    <string name="mvc_ecd_education_at_children_conner">Caregivers received ECD education at children\'s corners in Health Facility</string>
+    <string name="mvc_community_parenting_groups">Caregivers linked to community parenting groups</string>
+    <string name="mvc_parenting_messages">Caregivers received parenting messages</string>
+    <string name="mvc_infant_feeding_counseling">Caregivers received infant and young child feeding counseling</string>
+    <string name="mvc_not_applicable">Not applicable</string>
+    <string name="mvc_severe_malnutrition">Severe malnutrition</string>
+    <string name="mvc_moderate_malnutrition">Moderate malnutrition</string>
+    <string name="mvc_not_malnourished">Not malnourished</string>
+    <string name="mvc_nutrition_counseling">Caregiver received nutrition counseling</string>
+    <string name="mvc_food_support">Households linked to external food support &amp; nutritional supplements</string>
+    <string name="mvc_services_linkage">Caregivers linked to other services</string>
+    <string name="mvc_hiv_risk_assessment">Received HIV risk assessment</string>
+    <string name="mvc_hiv_prevention_counseling">Received HIV prevention counseling service</string>
+    <string name="mvc_disclosure_support">Received disclosure support</string>
+    <string name="mvc_linked_to_an_hiv_support_group">Linked to an HIV support group</string>
+    <string name="mvc_received_art_adherence_counseling">Received ART adherence counseling</string>
+    <string name="mvc_supported_to_join_CHF_or_TIKA">Supported to join CHF/TIKA</string>
+    <string name="mvc_received_support_for_gbv">Received support for GBV</string>
+    <string name="mvc_primary_caregivers_who_are_active_slg_members">Primary caregivers who are active SLG members HIV risk assessment</string>
+    <string name="mvc_households_linked_to_temporary_consumption_support">Households linked to temporary consumption support (e.g. SLG &amp; OVC funds)</string>
+    <string name="mvc_households_linked_to_cash_transfer">Households linked to temporary consumption linked to cash transfer e.g. TASAF</string>
+    <string name="mvc_caregivers_linked_to_entrepreneurship_trainings">Caregivers supported to entrepreneurship trainings</string>
+    <string name="mvc_caregivers_supported_to_establish_income_generating_activity_iga">Caregivers supported to establish income generating activity (IGA)</string>
+    <string name="mvc_households_linked_to_market">Households linked to market</string>
+    <string name="mvc_households_supported_to_prepare_succession_plan">Households supported to prepare succession plan</string>
+    <string name="mvc_primary_caregivers_linked_to_agricultural_extension_support">Primary caregivers linked to agricultural extension support</string>
+    <string name="mvc_health_related_services">Health related services</string>
+    <string name="mvc_nutrition">Nutrition</string>
+    <string name="mvc_education">Education</string>
+    <string name="mvc_child_protection">Child Protection</string>
+    <string name="mvc_psychosocial_support">Psychosocial Support</string>
+    <string name="mvc_other">Other</string>
+    <string name="mvc_no_referrals_sent">No referrals sent</string>
+    <string name="mvc_accompanied_to_service">Accompanied to service</string>
+    <string name="mvc_assisted_with_transport">Assisted with transport</string>
+    <string name="mvc_no_support_provided">No support provided</string>
+    <string name="mvc_none">None</string>
+    <string name="mvc_households_linked_to_house_renovation_support">Households linked to house renovation support</string>
+    <string name="mvc_households_linked_to_house_construction_support">Households linked to house construction support</string>
+    <string name="mvc_households_received_water_sanitation_and_hygiene_wash_support">Households received water sanitation and hygiene (WASH) support</string>
+    <string name="mvc_households_received_clothing_support">Households received clothing support</string>
+
+
+    <string name="mvc_education_vocational_training">Clients Education and Vocational Training:</string>
+    <string name="mvc_children_enrolled_in_school">Children enrolled in school</string>
+    <string name="mvc_missed_school_three_days">Missed school for three or more days consecutively in a month</string>
+    <string name="mvc_linked_to_education_support">Linked to education support</string>
+    <string name="mvc_supported_attend_vocational_training">Supported to attend vocational training</string>
+    <string name="mvc_received_business_start_up_kit">Received business start-up kit</string>
+    <string name="mvc_linked_mainstreamed_education_program">Linked to mainstreamed education program (MEMKWA)</string>
+
+    <string name="mvc_select_ecd_psychosocial_support_less_than_5">Select ECD &amp; Psychosocial Support provided</string>
+    <string name="mvc_attended_ecd_centre">Children (&lt;5 years) attended ECD centre.</string>
+    <string name="mvc_children_attended_childrens_clubs">Children attended children\'s clubs.</string>
+    <string name="mvc_children_attended_teen_clubs">Children attended teen clubs.</string>
+    <string name="mvc_select_ecd_psychosocial_support_greater_than_5">Selecting at least one option for ECD &amp; Psychosocial Support is required</string>
+
+    <string name="mvc_select_ecd_psychosocial_support_greater_than_5_children_attended_childrens_clubs">Children attended children\'s clubs.</string>
+    <string name="mvc_select_ecd_psychosocial_support_greater_than_5_children_attended_teen_clubs">Children attended teen clubs.</string>
+    <string name="mvc_child_ever_tested_for_hiv">Has the child ever tested for HIV:</string>
+    <string name="mvc_hiv_results">HIV Results:</string>
+    <string name="mvc_enrolled_to_clinic">Client enrolled into care:</string>
+    <string name="mvc_ctc_number">CTC Number:</string>
+    <string name="mvc_when_was_the_last_test_result">When was the last test result:</string>
+    <string name="mvc_is_the_adolescent_sexually_active">Is the adolescent sexually active:</string>
+    <string name="mvc_unknown">Unknown</string>
+    <string name="mvc_prefer_not_to_answer">Prefers not to answer</string>
+    <string name="mvc_positive">Positive</string>
+    <string name="mvc_negative">Negative</string>
+    <string name="mvc_within_the_last_twelve_months">Within the last twelve months</string>
+    <string name="mvc_more_than_twelve_months_ago">More than twelve months ago</string>
 
 
 

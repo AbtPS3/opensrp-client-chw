@@ -89,6 +89,8 @@ public class ChwClientProcessor extends CoreClientProcessor {
                 case org.smartregister.chw.sbc.util.Constants.EVENT_TYPE.SBC_MONTHLY_SOCIAL_MEDIA_REPORT:
                 case FamilyPlanningConstants.EVENT_TYPE.FP_CBD_FOLLOW_UP_VISIT:
                 case org.smartregister.chw.gbv.util.Constants.EVENT_TYPE.GBV_HOME_VISIT:
+                case org.smartregister.chw.ovc.util.Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT:
+                case org.smartregister.chw.ovc.util.Constants.EVENT_TYPE.MVC_CHILD_SERVICES_VISIT:
                     if (eventClient.getEvent() == null) {
                         return;
                     }

@@ -1,0 +1,110 @@
+{
+  "count": "1",
+  "encounter_type": "Visit Type",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Visit Type",
+    "fields": [
+      {
+        "key": "visit_type",
+        "type": "native_radio",
+        "label": "Visit type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "visit_type",
+        "options": [
+          {
+            "key": "new_client",
+            "text": "New client",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "new_client"
+          },
+          {
+            "key": "active_continuing_with_services",
+            "text": "Active/ continuing with services",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "active_continuing_with_services"
+          },
+          {
+            "key": "graduated",
+            "text": "Graduated",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "graduated"
+          },
+          {
+            "key": "transferred",
+            "text": "Transferred",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "transferred"
+          },
+          {
+            "key": "exited_without_graduation",
+            "text": "Exited Without Graduation",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "exited_without_graduation"
+          },
+          {
+            "key": "died",
+            "text": "Died",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "died"
+          }
+        ],
+        "v_required": {
+          "value": true,
+          "err": "Please select the visit type"
+        }
+      }
+    ]
+  }
+}

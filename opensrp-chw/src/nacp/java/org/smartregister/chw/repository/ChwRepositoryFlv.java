@@ -118,6 +118,9 @@ public class ChwRepositoryFlv {
                 case 28:
                     upgradeToVersion28(db);
                     break;
+                case 29:
+                    upgradeToVersion29(db);
+                    break;
                 default:
                     break;
             }
@@ -479,6 +482,30 @@ public class ChwRepositoryFlv {
                     new HashSet<>(Arrays.asList("ec_gbv_register", "ec_gbv_home_visit")),
                     ChwApplication.createCommonFtsObject());
 
+        } catch (Exception e) {
+            Timber.e(e, "upgradeToVersion28");
+        }
+    }
+
+    private static void upgradeToVersion29(SQLiteDatabase db) {
+        try {
+            // setup reporting
+            ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
+            String mvcReportIndicatorConfigFile = "config/mvc-head_of_household_registration-report.yml";
+            String mvcReportIndicatorConfigFile2 = "config/mvc-children-registration-details.yml";
+            String mvcReportIndicatorConfigFile3 = "config/mvc-services-provided-to-children-in-the-reporting-period.yml";
+            String mvcReportIndicatorConfigFile4 = "config/mvc-services-provided-to-households-in-the-reporting-period.yml";
+            for (String configFile : Arrays.asList(mvcReportIndicatorConfigFile, mvcReportIndicatorConfigFile2, mvcReportIndicatorConfigFile3, mvcReportIndicatorConfigFile4)) {
+                reportingLibrary.readConfigFile(configFile, db);
+            }
+        } catch (Exception e) {
+            Timber.e(e, "upgradeToVersion28");
+        }
+
+        try {
+            DatabaseMigrationUtils.createAddedECTables(db,
+                    new HashSet<>(Arrays.asList("ec_ovc_register", "ec_mvc_household_services", "ec_mvc_child_services")),
+                    ChwApplication.createCommonFtsObject());
         } catch (Exception e) {
             Timber.e(e, "upgradeToVersion28");
         }
