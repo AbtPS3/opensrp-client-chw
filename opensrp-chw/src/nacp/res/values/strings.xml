@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">WAJA</string>
-    <string name="login_title">Ministry of Health  \n WAJA app</string>
-    <string name="nav_logo">Ministry of Health Community App</string>
+    <string name="login_title">Government of Tanzania  \n WAJA app</string>
+    <string name="nav_logo">Government of Tanzania WAJA App</string>
     <string name="menu_anc">ANC</string>
     <string name="menu_pnc">PNC</string>
     <string name="sick_child_title">SICK CHILD FORM</string>
@@ -24,6 +24,8 @@
     <string name="any_changes_you_make">Any Changes You Made Will Be Discarded</string>
     <string name="menu_independent">Independent</string>
     <string name="action_received_anc_partner_followup_referrals">Partner Followup</string>
+
+    <string name="menu_mvc">MVC</string>
 
 
     <!-- Reports View Strings   -->

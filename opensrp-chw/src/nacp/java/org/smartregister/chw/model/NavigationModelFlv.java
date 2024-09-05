@@ -5,7 +5,6 @@ import static org.smartregister.AllConstants.TEAM_ROLE_IDENTIFIER;
 import android.content.SharedPreferences;
 
 import org.smartregister.chw.R;
-import org.smartregister.chw.application.ChwApplication;
 import org.smartregister.chw.core.model.NavigationModel;
 import org.smartregister.chw.core.model.NavigationOption;
 import org.smartregister.chw.core.utils.CoreConstants;
@@ -58,70 +57,72 @@ public class NavigationModelFlv implements NavigationModel.Flavor {
                 teamRoleIdentifier = preferences.getString(TEAM_ROLE_IDENTIFIER, "");
             }
 
-            if (!teamRoleIdentifier.isEmpty()) {
-                switch (teamRoleIdentifier) {
-                    case "mother_champion":
-                        navigationOptions.addAll(Arrays.asList(op10, op13, op8));
-                        break;
-                    case "cbhs_provider":
-                        navigationOptions.addAll(Arrays.asList(op10, op11, op12, op8, op15));
-                        break;
-                    case "iccm_provider":
-                        navigationOptions.addAll(Arrays.asList(op10, op20, op8));
-                        break;
-                    default:
-                        navigationOptions.addAll(Arrays.asList(op10, op1, op11, op12, op3, op5, op2, op13));
-                        if (ChwApplication.getApplicationFlavor().hasHIVST()) {
-                            navigationOptions.add(op16);
-                        }
-                        if (ChwApplication.getApplicationFlavor().hasCdp()) {
-                            navigationOptions.add(op17);
-                        }
-                        if (ChwApplication.getApplicationFlavor().hasAGYW()) {
-                            navigationOptions.add(op19);
-                        }
-                        if (ChwApplication.getApplicationFlavor().hasKvp()) {
-                            navigationOptions.add(op18);
-                        }
-                        if (ChwApplication.getApplicationFlavor().hasMalaria()) {
-                            navigationOptions.add(op7);
-                        }
-                        if (ChwApplication.getApplicationFlavor().hasSbc()) {
-                            navigationOptions.add(op22);
-                            navigationOptions.add(op21);
-                        }
-                        navigationOptions.addAll(Arrays.asList(op8, op15));
-                        break;
-                }
-            } else {
-                navigationOptions.addAll(Arrays.asList(op10, op1, op11, op12, op3, op5, op2, op13));
-                if (ChwApplication.getApplicationFlavor().hasHIVST()) {
-                    navigationOptions.add(op16);
-                }
-                if (ChwApplication.getApplicationFlavor().hasCdp()) {
-                    navigationOptions.add(op17);
-                }
-                if (ChwApplication.getApplicationFlavor().hasAGYW()) {
-                    navigationOptions.add(op19);
-                }
-                if (ChwApplication.getApplicationFlavor().hasKvp()) {
-                    navigationOptions.add(op18);
-                }
-                if (ChwApplication.getApplicationFlavor().hasMalaria()) {
-                    navigationOptions.add(op7);
-                }
-                if (ChwApplication.getApplicationFlavor().hasSbc()) {
-                    navigationOptions.add(op22);
-                    navigationOptions.add(op21);
-                }
-                if (ChwApplication.getApplicationFlavor().hasGbv()) {
-                    navigationOptions.add(op23);
-                }
-                if (ChwApplication.getApplicationFlavor().hasMvc()) {
-                    navigationOptions.add(op24);
-                }
-                navigationOptions.addAll(Arrays.asList(op8, op15));
-            }
+            navigationOptions.addAll(Arrays.asList(op10, op1, op24, op8));
+
+//            if (!teamRoleIdentifier.isEmpty()) {
+//                switch (teamRoleIdentifier) {
+//                    case "mother_champion":
+//                        navigationOptions.addAll(Arrays.asList(op10, op13, op8));
+//                        break;
+//                    case "cbhs_provider":
+//                        navigationOptions.addAll(Arrays.asList(op10, op11, op12, op8, op15));
+//                        break;
+//                    case "iccm_provider":
+//                        navigationOptions.addAll(Arrays.asList(op10, op20, op8));
+//                        break;
+//                    default:
+//                        navigationOptions.addAll(Arrays.asList(op10, op1, op11, op12, op3, op5, op2, op13));
+//                        if (ChwApplication.getApplicationFlavor().hasHIVST()) {
+//                            navigationOptions.add(op16);
+//                        }
+//                        if (ChwApplication.getApplicationFlavor().hasCdp()) {
+//                            navigationOptions.add(op17);
+//                        }
+//                        if (ChwApplication.getApplicationFlavor().hasAGYW()) {
+//                            navigationOptions.add(op19);
+//                        }
+//                        if (ChwApplication.getApplicationFlavor().hasKvp()) {
+//                            navigationOptions.add(op18);
+//                        }
+//                        if (ChwApplication.getApplicationFlavor().hasMalaria()) {
+//                            navigationOptions.add(op7);
+//                        }
+//                        if (ChwApplication.getApplicationFlavor().hasSbc()) {
+//                            navigationOptions.add(op22);
+//                            navigationOptions.add(op21);
+//                        }
+//                        navigationOptions.addAll(Arrays.asList(op8, op15));
+//                        break;
+//                }
+//            } else {
+//                navigationOptions.addAll(Arrays.asList(op10, op1, op11, op12, op3, op5, op2, op13));
+//                if (ChwApplication.getApplicationFlavor().hasHIVST()) {
+//                    navigationOptions.add(op16);
+//                }
+//                if (ChwApplication.getApplicationFlavor().hasCdp()) {
+//                    navigationOptions.add(op17);
+//                }
+//                if (ChwApplication.getApplicationFlavor().hasAGYW()) {
+//                    navigationOptions.add(op19);
+//                }
+//                if (ChwApplication.getApplicationFlavor().hasKvp()) {
+//                    navigationOptions.add(op18);
+//                }
+//                if (ChwApplication.getApplicationFlavor().hasMalaria()) {
+//                    navigationOptions.add(op7);
+//                }
+//                if (ChwApplication.getApplicationFlavor().hasSbc()) {
+//                    navigationOptions.add(op22);
+//                    navigationOptions.add(op21);
+//                }
+//                if (ChwApplication.getApplicationFlavor().hasGbv()) {
+//                    navigationOptions.add(op23);
+//                }
+//                if (ChwApplication.getApplicationFlavor().hasMvc()) {
+//                    navigationOptions.add(op24);
+//                }
+//                navigationOptions.addAll(Arrays.asList(op8, op15));
+//            }
         }
 
         return navigationOptions;

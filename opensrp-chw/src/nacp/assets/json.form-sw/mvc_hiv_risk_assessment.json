@@ -74,7 +74,7 @@
           },
           {
             "key": "unknown",
-            "text": "Sijui",
+            "text": "Hajui",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "unknown"
@@ -116,14 +116,14 @@
           },
           {
             "key": "unknown",
-            "text": "Sijui",
+            "text": "Hajui",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "unknown"
           },
           {
             "key": "do_not_want_to_answer",
-            "text": "Sitaki kujibu",
+            "text": "Anapendelea kutokujibu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "do_not_want_to_answer"

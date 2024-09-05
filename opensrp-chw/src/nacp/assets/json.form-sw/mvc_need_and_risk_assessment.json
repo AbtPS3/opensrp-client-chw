@@ -238,29 +238,6 @@
         }
       },
       {
-        "key": "refer_to_dcms",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Mpe rufaa Mtoto kwenda kwa DCMS",
-        "toaster_type": "problem",
-        "relevance": {
-          "step1:has_the_child_experienced_vac": {
-            "ex-checkbox": [
-              {
-                "or": [
-                  "physical",
-                  "sexual",
-                  "neglect",
-                  "exploitation"
-                ]
-              }
-            ]
-          }
-        }
-      },
-      {
         "key": "is_the_child_in_conflict_with_the_law",
         "type": "native_radio",
         "label": "Je mtoto amekinzana na sheria?",
@@ -314,6 +291,22 @@
         "v_required": {
           "value": "true",
           "err": "Tafadhali jaza taarifa hizi"
+        }
+      },
+      {
+        "key": "refer_to_dcms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Mpe rufaa Mtoto kwenda kwa DCMS",
+        "toaster_type": "problem",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_need_and_risk_assessment_rules.yml"
+            }
+          }
         }
       }
     ]

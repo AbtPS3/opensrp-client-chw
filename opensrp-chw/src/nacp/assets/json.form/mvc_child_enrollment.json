@@ -373,7 +373,7 @@
           },
           {
             "key": "secondary_school",
-            "text": "Secondary school (Specify the class)",
+            "text": "Secondary school (Specify the form)",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "secondary_school"
@@ -397,6 +397,129 @@
           "step1:is_child_in_school": {
             "type": "string",
             "ex": "equalTo(., \"yes\")"
+          }
+        }
+      },
+      {
+        "key": "primary_school_class",
+        "type": "native_radio",
+        "label": "Select the Class",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "primary_school_class",
+        "options": [
+          {
+            "key": "standard_1",
+            "text": "Standard 1",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "standard_1"
+          },
+          {
+            "key": "standard_2",
+            "text": "Standard 2",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "standard_2"
+          },
+          {
+            "key": "standard_3",
+            "text": "Standard 3",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "standard_3"
+          },
+          {
+            "key": "standard_4",
+            "text": "Standard 4",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "standard_4"
+          },
+          {
+            "key": "standard_5",
+            "text": "Standard 5",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "standard_5"
+          },
+          {
+            "key": "standard_6",
+            "text": "Standard 6",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "standard_6"
+          },
+          {
+            "key": "standard_7",
+            "text": "Standard 7",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "standard_7"
+          }
+        ],
+        "relevance": {
+          "step1:level_of_education": {
+            "type": "string",
+            "ex": "equalTo(., \"primary_school\")"
+          }
+        }
+      },
+      {
+        "key": "secondary_school_form",
+        "type": "native_radio",
+        "label": "Select the Form",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "secondary_school_form",
+        "options": [
+          {
+            "key": "form_1",
+            "text": "Form 1",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "form_1"
+          },
+          {
+            "key": "form_2",
+            "text": "Form 2",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "form_2"
+          },
+          {
+            "key": "form_3",
+            "text": "Form 3",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "form_3"
+          },
+          {
+            "key": "form_4",
+            "text": "Form 4",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "form_4"
+          },
+          {
+            "key": "form_5",
+            "text": "Form 5",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "form_5"
+          },
+          {
+            "key": "form_6",
+            "text": "Form 6",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "form_6"
+          }
+        ],
+        "relevance": {
+          "step1:level_of_education": {
+            "type": "string",
+            "ex": "equalTo(., \"secondary_school\")"
           }
         }
       },

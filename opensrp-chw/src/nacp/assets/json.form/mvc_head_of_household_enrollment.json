@@ -172,12 +172,12 @@
         ]
       },
       {
-        "key": "enrolled_to_clinic",
+        "key": "is_the_client_enrolled_into_care",
         "type": "native_radio",
         "label": "Is the Client enrolled into care?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "enrolled_to_clinic",
+        "openmrs_entity_id": "is_the_client_enrolled_into_care",
         "options": [
           {
             "key": "yes",

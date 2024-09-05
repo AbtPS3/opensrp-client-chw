@@ -68,7 +68,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         String gender = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.GENDER, false);
-        menu.findItem(R.id.action_location_info).setVisible(true);
+        menu.findItem(R.id.action_location_info).setVisible(false);
         menu.findItem(R.id.action_tb_registration).setVisible(false);
         menu.findItem(R.id.action_sick_child_follow_up).setVisible(false);
         menu.findItem(R.id.action_malaria_diagnosis).setVisible(false);

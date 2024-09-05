@@ -156,7 +156,7 @@
           "err": "Number must be a total of 10 digits in length"
         },
         "v_regex": {
-          "value": "(0[6-7][1-9][0-9][0-9]{6})|\\s*",
+          "value": "(0[6-7][0-9][0-9][0-9]{6})|\\s*",
           "err": "Number must be 10 digits and must start with 06 or 07."
         }
       },
@@ -182,7 +182,7 @@
           "err": "Number must be a total of 10 digits in length"
         },
         "v_regex": {
-          "value": "(0[6-7][1-9][0-9][0-9]{6})|\\s*",
+          "value": "(0[6-7][0-9][0-9][0-9]{6})|\\s*",
           "err": "Number must be 10 digits and must start with 06 or 07."
         }
       },
@@ -398,8 +398,8 @@
           "err": "Please enter a valid age"
         },
         "v_min": {
-          "value": "15",
-          "err": "Age must be equal or greater than 15"
+          "value": "5",
+          "err": "Age must be equal or greater than 5"
         },
         "v_max": {
           "value": "120",
@@ -489,8 +489,13 @@
           "err": "Number must be a total of 10 digits in length"
         },
         "v_regex": {
-          "value": "(0[6-7][1-9][0-9][0-9]{6})|\\s*",
+          "value": "(0[6-7][0-9][0-9][0-9]{6})|\\s*",
           "err": "Number must be 10 digits and must start with 06 or 07."
+        },
+        "v_max_length": {
+          "value": "10",
+          "is_fixed_size": "true",
+          "err": "Number must be a total of 10 digits in length"
         }
       },
       {
@@ -505,8 +510,13 @@
           "err": "Number must be a total of 10 digits in length"
         },
         "v_regex": {
-          "value": "(0[6-7][1-9][0-9][0-9]{6})|\\s*",
+          "value": "(0[6-7][0-9][0-9][0-9]{6})|\\s*",
           "err": "Number must be 10 digits and must start with 06 or 07."
+        },
+        "v_max_length": {
+          "value": "10",
+          "is_fixed_size": "true",
+          "err": "Number must be a total of 10 digits in length"
         }
       },
       {
@@ -953,6 +963,13 @@
         "v_required": {
           "value": "true",
           "err": "Please pick at least one"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_register_relevance.yml"
+            }
+          }
         }
       },
       {
@@ -1009,6 +1026,13 @@
         "v_required": {
           "value": "true",
           "err": "Please pick at least one"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_register_relevance.yml"
+            }
+          }
         }
       },
       {

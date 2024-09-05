@@ -123,7 +123,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_type_of_vulnerability",
         "type": "edit_text",
-        "hint": "Specify other type of vulnerability",
+        "hint": "Taja aina nyingine ya mazingira hatarishi ya mlezi mkuu",
         "v_required": {
           "value": "true",
           "err": "Required"
@@ -143,28 +143,28 @@
       {
         "key": "hiv_results",
         "type": "native_radio",
-        "label": "HIV Status",
+        "label": "Hali ya maambukizi ya VVU",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "hiv_results",
         "options": [
           {
             "key": "positive",
-            "text": "Positive",
+            "text": "Ana Maambukizi (+)",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "positive"
           },
           {
             "key": "negative",
-            "text": "Negative",
+            "text": "Hana Maambukizi (-)",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "negative"
           },
           {
             "key": "unknown",
-            "text": "Do not know",
+            "text": "Haijulikani",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "unknown"
@@ -174,21 +174,21 @@
       {
         "key": "enrolled_to_clinic",
         "type": "native_radio",
-        "label": "Is the Client enrolled into care?",
+        "label": "Je mteja ameandikishwa CTC?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "enrolled_to_clinic",
+        "openmrs_entity_id": "is_the_client_enrolled_into_care",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndiyo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
@@ -210,7 +210,7 @@
         "mask": "##-##-####-######",
         "mask_hint": "12345678912345",
         "allowed_chars": "0123456789",
-        "hint": "CTC Number",
+        "hint": "Namba ya CTC mfano: 12-34-5678-912345",
         "edit_type": "number",
         "v_regex": {
           "value": "(\\d{2}-\\d{2}-\\d{4}-\\d{6})?",
@@ -238,7 +238,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Refer the client for HTS services.",
+        "text": "Mpe mteja rufaa kwenda huduma za upimaji wa VVU",
         "text_color": "#CF0800",
         "toaster_type": "problem",
         "relevance": {

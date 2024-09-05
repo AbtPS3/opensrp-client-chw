@@ -79,6 +79,8 @@ public class OpdRegisterProvider extends org.smartregister.opd.provider.OpdRegis
             return context.getString(R.string.menu_malaria);
         } else if (registerType.equalsIgnoreCase(CoreConstants.REGISTER_TYPE.INDEPENDENT)) {
             return context.getString(R.string.menu_independent);
+        } else if (registerType.equalsIgnoreCase(CoreConstants.REGISTER_TYPE.OVC)) {
+            return context.getString(R.string.menu_mvc);
         }
         return registerType;
     }

@@ -52,7 +52,7 @@
       {
         "key": "visit_type",
         "type": "native_radio",
-        "label": "Visit type",
+        "label": "Hatua aliyofikia katika mpango WWKMH",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "visit_type",
