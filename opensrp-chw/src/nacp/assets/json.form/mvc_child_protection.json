@@ -57,6 +57,9 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "child_protection_service",
+        "exclusive": [
+          "none"
+        ],
         "options": [
           {
             "key": "supported_to_get_birth_certificates",
@@ -97,6 +100,13 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "provided_with_general_child_protection_awareness_creation",
             "value": "false"
+          },
+          {
+            "key": "none",
+            "text": "Hakuna",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
           }
         ],
         "v_required": {

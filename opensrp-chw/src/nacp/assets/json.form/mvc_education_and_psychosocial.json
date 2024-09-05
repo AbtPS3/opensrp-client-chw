@@ -181,6 +181,38 @@
             "value": "false"
           },
           {
+            "key": "none",
+            "text": "None",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Selecting at least one option for ECD & Psychosocial Support is required"
+        }
+      },
+      {
+        "key": "select_ecd_psychosocial_support_greater_than_12",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Select ECD & Psychosocial Support provided",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_ecd_psychosocial_support_greater_than_12",
+        "exclusive": [
+          "none"
+        ],
+        "options": [
+          {
             "key": "children_attended_teen_clubs",
             "text": "Children attended teen clubs.",
             "openmrs_entity_parent": "",

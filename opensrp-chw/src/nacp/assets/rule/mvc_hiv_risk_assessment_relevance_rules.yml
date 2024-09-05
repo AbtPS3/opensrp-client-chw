@@ -24,7 +24,7 @@ actions:
 name: step1_ctc_number
 description: shown when hiv result is positive
 priority: 1
-condition: "step1_enrolled_to_clinic.equalsIgnoreCase('yes')"
+condition: "step1_hiv_results.equals('positive') && step1_enrolled_to_clinic.equalsIgnoreCase('yes')"
 actions:
   - "isRelevant = true"
 

@@ -54,27 +54,29 @@ public class MvcVisitUtils extends VisitUtils {
             boolean isVisitTypeComplete = computeCompletionStatus(obs, "visit_type");
             checks.add(isVisitTypeComplete);
 
-            boolean isNeedAssessmentComplete = computeCompletionStatus(obs, "has_need_assessment_been_conducted");
-            checks.add(isNeedAssessmentComplete);
+            if (shouldProceedWithOtherChecks(v)) {
+                boolean isNeedAssessmentComplete = computeCompletionStatus(obs, "has_need_assessment_been_conducted");
+                checks.add(isNeedAssessmentComplete);
 
 
-            boolean isPsychosocialSupportComplete = computeCompletionStatus(obs, "ecd_psychosocial_support");
-            checks.add(isPsychosocialSupportComplete);
+                boolean isPsychosocialSupportComplete = computeCompletionStatus(obs, "ecd_psychosocial_support");
+                checks.add(isPsychosocialSupportComplete);
 
-            boolean isHealthCareServiceProvidedComplete = computeCompletionStatus(obs, "health_care_service_provided");
-            checks.add(isHealthCareServiceProvidedComplete);
-
-
-            boolean isChildProtectionServiceComplete = computeCompletionStatus(obs, "child_protection_service");
-            checks.add(isChildProtectionServiceComplete);
+                boolean isHealthCareServiceProvidedComplete = computeCompletionStatus(obs, "health_care_service_provided");
+                checks.add(isHealthCareServiceProvidedComplete);
 
 
-            boolean isReferralsProvidedComplete = computeCompletionStatus(obs, "referrals_provided");
-            checks.add(isReferralsProvidedComplete);
+                boolean isChildProtectionServiceComplete = computeCompletionStatus(obs, "child_protection_service");
+                checks.add(isChildProtectionServiceComplete);
 
-            if (hasHivRiskAssessment(v)) {
-                boolean isHivRiskAssessmentComplete = computeCompletionStatus(obs, "child_ever_tested_for_hiv");
-                checks.add(isHivRiskAssessmentComplete);
+
+                boolean isReferralsProvidedComplete = computeCompletionStatus(obs, "referrals_provided");
+                checks.add(isReferralsProvidedComplete);
+
+                if (hasHivRiskAssessment(v)) {
+                    boolean isHivRiskAssessmentComplete = computeCompletionStatus(obs, "child_ever_tested_for_hiv");
+                    checks.add(isHivRiskAssessmentComplete);
+                }
             }
 
             if (!checks.contains(false)) {
@@ -116,31 +118,9 @@ public class MvcVisitUtils extends VisitUtils {
             int size = obs.length();
             for (int i = 0; i < size; i++) {
                 JSONObject checkObj = obs.getJSONObject(i);
-                if (checkObj.getString("fieldCode").equalsIgnoreCase("client_consent_after_counseling")) {
+                if (checkObj.getString("fieldCode").equalsIgnoreCase("visit_type")) {
                     JSONArray values = checkObj.getJSONArray("values");
-                    if ((values.getString(0).equalsIgnoreCase("yes"))) {
-                        canManageCase = true;
-                        break;
-                    }
-                }
-            }
-        } catch (Exception e) {
-            Timber.e(e);
-        }
-        return canManageCase;
-    }
-
-    public static boolean shouldProvideLabInvestigation(Visit visit) {
-        boolean canManageCase = false;
-        try {
-            JSONObject jsonObject = new JSONObject(visit.getJson());
-            JSONArray obs = jsonObject.getJSONArray("obs");
-            int size = obs.length();
-            for (int i = 0; i < size; i++) {
-                JSONObject checkObj = obs.getJSONObject(i);
-                if (checkObj.getString("fieldCode").equalsIgnoreCase("does_the_client_need_lab_investigation")) {
-                    JSONArray values = checkObj.getJSONArray("values");
-                    if ((values.getString(0).equalsIgnoreCase("yes"))) {
+                    if ((values.getString(0).equalsIgnoreCase("new_client")) || (values.getString(0).equalsIgnoreCase("active_continuing_with_services"))) {
                         canManageCase = true;
                         break;
                     }

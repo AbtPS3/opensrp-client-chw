@@ -48,7 +48,7 @@
     }
   },
   "step1": {
-    "title": "Hali ya lishe",
+    "title": "Huduma za Afya na lishe",
     "fields": [
       {
         "key": "child_received_vaccinations",
@@ -183,14 +183,14 @@
           },
           {
             "key": "hiv_risk_assessment",
-            "text": "Mtoto amepewa elimu ya kuzuia maambukizi ya VVU",
+            "text": "Mtoto amefanyiwa tathmini ya hatari ya maambukizi ya VVU ",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_risk_assessment"
           },
           {
             "key": "hiv_prevention_education",
-            "text": "Mtoto amefanyiwa tathmini ya hatari ya maambukizi ya VVU",
+            "text": "Mtoto amepewa elimu ya kuzuia maambukizi ya VVU",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_prevention_education"

@@ -172,7 +172,7 @@
         ]
       },
       {
-        "key": "enrolled_to_clinic",
+        "key": "is_the_client_enrolled_into_care",
         "type": "native_radio",
         "label": "Je mteja ameandikishwa CTC?",
         "openmrs_entity_parent": "",

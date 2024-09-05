@@ -181,14 +181,6 @@
             "value": "false"
           },
           {
-            "key": "children_attended_teen_clubs",
-            "text": "Mtoto amehudhuria klabu za vijana",
-            "openmrs_entity_parent": "",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "children_attended_teen_clubs",
-            "value": "false"
-          },
-          {
             "key": "none",
             "text": "Hakuna msaada uliotolewa",
             "openmrs_entity_parent": "",
@@ -206,6 +198,46 @@
         "v_required": {
           "value": "true",
           "err": "Tafadhali chgua msaada wa maendeleo ya awali ya mtoto na kisaikolojia"
+        }
+      },
+      {
+        "key": "select_ecd_psychosocial_support_greater_than_12",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Msaada wa maendeleo ya awali ya mtoto na kisaikolojia",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_ecd_psychosocial_support_greater_than_12",
+        "exclusive": [
+          "none"
+        ],
+        "options": [
+          {
+            "key": "children_attended_teen_clubs",
+            "text": "Mtoto amehudhuria klabu za vijana",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "children_attended_teen_clubs",
+            "value": "false"
+          },
+          {
+            "key": "none",
+            "text": "None",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "none"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "mvc_education_and_psychosocial_rules.yml"
+            }
+          }
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Selecting at least one option for ECD & Psychosocial Support is required"
         }
       },
       {
