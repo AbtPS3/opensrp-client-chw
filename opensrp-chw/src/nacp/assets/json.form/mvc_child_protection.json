@@ -52,7 +52,7 @@
       {
         "key": "child_protection_service",
         "type": "check_box",
-        "combine_checkbox_option_values": "true",
+        "combine_checkbox_option_values": true,
         "label": "Select child protection service provided",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
@@ -66,44 +66,39 @@
             "text": "Supported to get birth certificates",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "supported_to_get_birth_certificates",
-            "value": "false"
+            "openmrs_entity_id": "supported_to_get_birth_certificates"
           },
           {
             "key": "provided_with_emergency_care_and_support_services",
             "text": "Provided with emergency care and support services",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "provided_with_emergency_care_and_support_services",
-            "value": "false"
+            "openmrs_entity_id": "provided_with_emergency_care_and_support_services"
           },
           {
             "key": "linked_with_social_welfare_office",
             "text": "Linked with social welfare office",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "linked_with_social_welfare_office",
-            "value": "false"
+            "openmrs_entity_id": "linked_with_social_welfare_office"
           },
           {
             "key": "linked_with_mvcc_child_protection_team",
             "text": "Linked with MVCC/Child protection team",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "linked_with_mvcc_child_protection_team",
-            "value": "false"
+            "openmrs_entity_id": "linked_with_mvcc_child_protection_team"
           },
           {
             "key": "provided_with_general_child_protection_awareness_creation",
             "text": "Provided with general child protection awareness creation",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "provided_with_general_child_protection_awareness_creation",
-            "value": "false"
+            "openmrs_entity_id": "provided_with_general_child_protection_awareness_creation"
           },
           {
             "key": "none",
-            "text": "Hakuna",
+            "text": "None",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none"

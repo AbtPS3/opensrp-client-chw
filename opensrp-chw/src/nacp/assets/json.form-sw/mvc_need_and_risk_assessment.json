@@ -104,7 +104,7 @@
           },
           {
             "key": "psychological_and_emotional_support",
-            "text": "Msaada wa kisaikolojia na kijamii ",
+            "text": "Msaada wa kisaikolojia na kijamii",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "psychological_and_emotional_support"
           },

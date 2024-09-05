@@ -680,5 +680,116 @@
     <string name="mvc_services_provided_to_the_households_report_title">Huduma zilizotolewa kwenye Kaya</string>
     <string name="mvc_services_provided_to_the_children_report_title">Huduma zilizotolewa kwa Mtoto</string>
 
+    <string name="ovc_edit_home_visit">Hariri tembeleo</string>
+
+    <string name="mvc_has_need_assessment_been_conducted">Je, tathmini ya mahitaji imefanyika:</string>
+    <string name="mvc_visit_type">Hatua aliyofikia katika mpango WWKMH:</string>
+    <string name="mvc_client_needs">Chagua mahitaji yaliopatikana baada ya tathmini:</string>
+    <string name="mvc_other_client_needs">Taja mahitaji mengineyo:</string>
+    <string name="mvc_has_risk_assessment_been_conducted">Je, tathmini ya Hatari imefanyika:</string>
+    <string name="mvc_has_the_child_experienced_vac">Je mtoto amefanyiwa kitendo cha Ukatili:</string>
+    <string name="mvc_is_the_child_in_conflict_with_the_law">Je mtoto amekinzana na sheria:</string>
+    <string name="mvc_is_the_child_in_contact_with_the_law">Je, mtoto yuko kwenye mawasiliano na sheria:</string>
+    <string name="mvc_yes">Ndiyo</string>
+    <string name="mvc_no">Hapana</string>
+    <string name="mvc_health_and_nutrition">Afya na Lishe</string>
+    <string name="mvc_housing_and_care">Malazi na Matunzo</string>
+    <string name="mvc_security_and_safety">Ulinzi na Usalama</string>
+    <string name="mvc_psychological_and_emotional_support">Msaada wa kisaikolojia na kijamii</string>
+    <string name="mvc_education_and_life_skills">Elimu na stadi za maisha</string>
+    <string name="mvc_household_and_economic_strengthening">Uimarishaji uchumi wa kaya</string>
+    <string name="mvc_physical">Kimwili</string>
+    <string name="mvc_sexual">Kingono</string>
+    <string name="mvc_neglect">Kutelekezwa</string>
+    <string name="mvc_exploitation">Unyonywaji</string>
+    <string name="mvc_new_client">Mpya</string>
+    <string name="mvc_active_continuing_with_services">Anaendelea</string>
+    <string name="mvc_graduated">Amehitimu</string>
+    <string name="mvc_transferred">Amehamishwa</string>
+    <string name="mvc_exited_without_graduation">Ametoka bila kuhitimu</string>
+
+    <string name="mvc_parenting_caregivers_with_children">Malezi (Kwa walezi wenye watoto chini ya miaka 5):</string>
+    <string name="mvc_nutritional_status_assessment">Tathmini ya hali ya lishe (MUAC):</string>
+    <string name="mvc_food_and_nutrition">Chakula na lishe:</string>
+    <string name="mvc_health_care_provided">Huduma za afya:</string>
+    <string name="mvc_economic_strengthening">Kuboresha hali ya uchumi:</string>
+    <string name="mvc_referrals">Rufaa:</string>
+    <string name="mvc_support_provided_to_caregiver_on_referrals">Msaada unaoambatana na rufaa alizopatiwa mlezi:</string>
+    <string name="mvc_caregiver_referrals_completed">Rufaa za walezi zilizokamilika:</string>
+    <string name="mvc_shelter_and_hygiene">Makazi na usafi:</string>
+
+    <string name="mvc_ecd_education_during_chw_home_visit">Amepokea elimu ya Malezi kwa Maendeleo ya Awali ya Mtoto (CCD) alipotembelewa na mhudumu wa afya ya jamii</string>
+    <string name="mvc_ecd_education_at_children_conner">Amepokea elimu ya makuzi ya awali ya mtoto kutoka kituo cha makuzi ya watoto kwenye kituo cha afya</string>
+    <string name="mvc_community_parenting_groups">Mlezi kaunganishwa na vikundi vya malezi katika jamii</string>
+    <string name="mvc_parenting_messages">Amepokea ujumbe mfupi kuhusu malezi</string>
+    <string name="mvc_infant_feeding_counseling">Amepokea unasihi wa lishe ya mtoto mdogo</string>
+    <string name="mvc_not_applicable">Haihusiki</string>
+    <string name="mvc_severe_malnutrition">Utapiamlo mkali</string>
+    <string name="mvc_moderate_malnutrition">Utapiamlo wa wastani</string>
+    <string name="mvc_not_malnourished">Hana utapiamlo</string>
+    <string name="mvc_nutrition_counseling">Mlezi amepokea unasihi wa lishe</string>
+    <string name="mvc_food_support">Kaya imeunganishwa na misaada ya chakula &amp; nyongeza za lishe</string>
+    <string name="mvc_services_linkage">Huduma nyingine</string>
+    <string name="mvc_hiv_risk_assessment">Amefanyiwa tathmini ya hatari ya maambukizo ya VVU</string>
+    <string name="mvc_hiv_prevention_counseling">Amepokea unasihi wa kuzuia maambukizo ya VVU</string>
+    <string name="mvc_disclosure_support">Mtoto amepata msaada wa kuweka wazi hali yake ya maambukizi ya VVU</string>
+    <string name="mvc_linked_to_an_hiv_support_group">Ameunganishwa na vikundi vya kusaidia walio na maambukizi ya VVU</string>
+    <string name="mvc_received_art_adherence_counseling">Amepokea unasihi kuhusu ufuasi wa dawa za ARV</string>
+    <string name="mvc_supported_to_join_CHF_or_TIKA">Amesaidiwa kujiunga na bima ya afya jamii (CHF/TIKA)</string>
+    <string name="mvc_received_support_for_gbv">Mlezi amepokea msaada kuhusiana na ukatili wa kijinsia</string>
+    <string name="mvc_primary_caregivers_who_are_active_slg_members">Mlezi mkuu ni mjumbe hai wa kikundi cha jamii cha kuweka akiba na kukopa</string>
+    <string name="mvc_households_linked_to_temporary_consumption_support">Kaya imeunganishwa na msaada wa matumizi wa muda mfupi (mf. Vikundi vya kuweka akiba na kukopa &amp; Mfuko wa WWKMH)</string>
+    <string name="mvc_households_linked_to_cash_transfer">Kaya imeunganishwa na ruzuku (mf. TASAF)</string>
+    <string name="mvc_caregivers_linked_to_entrepreneurship_trainings">Kaya imeunganishwa na mafunzo ya ujasiriamali</string>
+    <string name="mvc_caregivers_supported_to_establish_income_generating_activity_iga">Mlezi mkuu amewezeshwa kujipatia kipato (IGA)</string>
+    <string name="mvc_households_linked_to_market">Kaya imeunganishwa na masoko</string>
+    <string name="mvc_households_supported_to_prepare_succession_plan">aya imesaidiwa kuandaa mpango wa mfululizo wa kuboresha uchumi wa kaya</string>
+    <string name="mvc_primary_caregivers_linked_to_agricultural_extension_support">Mlezi mkuu ameunganishwa na msaada wa mafunzo na taarifa za kilimo</string>
+    <string name="mvc_health_related_services">Huduma za kiafya</string>
+    <string name="mvc_nutrition">Lishe</string>
+    <string name="mvc_education">Elimu</string>
+    <string name="mvc_child_protection">Ulinzi na usalama wa watoto</string>
+    <string name="mvc_psychosocial_support">Msaada wa kisaikolojia na kijamii</string>
+    <string name="mvc_other">Nyinginezo</string>
+    <string name="mvc_no_referrals_sent">Hakuna rufaa iliyotolewa</string>
+    <string name="mvc_accompanied_to_service">Alisindikizwa kupata huduma</string>
+    <string name="mvc_assisted_with_transport">Alipatiwa msaada wa usafiri</string>
+    <string name="mvc_no_support_provided">Hakuna</string>
+    <string name="mvc_none">Hakuna</string>
+    <string name="mvc_households_linked_to_house_renovation_support">Kaya imeunganishwa na msaada wa kukarabati nyumba</string>
+    <string name="mvc_households_linked_to_house_construction_support">Kaya imeunganishwa na msaada wa ujenzi</string>
+    <string name="mvc_households_received_water_sanitation_and_hygiene_wash_support">Kaya imepokea elimu ya maji safi na maji taka na usafi (WASH)</string>
+    <string name="mvc_households_received_clothing_support">Kaya imepata msaada wa mavazi</string>
+
+
+    <string name="mvc_education_vocational_training">Elimu na mafunzo ya ufundi stadi:</string>
+    <string name="mvc_children_enrolled_in_school">Mtoto ameandikishwa shule</string>
+    <string name="mvc_missed_school_three_days">Mtoto hakuhudhuria shule kwa siku 3 mfululizo au zaidi katika mwezi</string>
+    <string name="mvc_linked_to_education_support">Mtoto ameunganishwa na msaada wa kielimu</string>
+    <string name="mvc_supported_attend_vocational_training">Mtoto amesaidiwa kuhudhuria mafunzo ya ufundi stadi</string>
+    <string name="mvc_received_business_start_up_kit">Mtoto amepokea zana za kuanzisha biashara</string>
+    <string name="mvc_linked_mainstreamed_education_program">Mtoto ameunganishwa na Mpango wa Elimu ya Msingi kwa watoto waliokosa (MEMKWA)</string>
+
+    <string name="mvc_select_ecd_psychosocial_support_less_than_5">Msaada wa maendeleo ya awali ya mtoto na kisaikolojia</string>
+    <string name="mvc_attended_ecd_centre">Mtoto chini ya miaka 5 anahudhuria kituo cha Maendeleo ya Awali ya Watoto</string>
+    <string name="mvc_children_attended_childrens_clubs">Mtoto amehudhuria klabu za watoto.</string>
+    <string name="mvc_children_attended_teen_clubs">Mtoto amehudhuria klabu za vijana</string>
+    <string name="mvc_select_ecd_psychosocial_support_greater_than_5">Msaada wa maendeleo ya awali ya mtoto na kisaikolojia</string>
+
+    <string name="mvc_select_ecd_psychosocial_support_greater_than_5_children_attended_childrens_clubs">Children attended children\'s clubs.</string>
+    <string name="mvc_select_ecd_psychosocial_support_greater_than_5_children_attended_teen_clubs">Children attended teen clubs.</string>
+    <string name="mvc_child_ever_tested_for_hiv">Je mtoto au kijana amewahi kupima VVU:</string>
+    <string name="mvc_hiv_results">Majibu ya VVU:</string>
+    <string name="mvc_enrolled_to_clinic">Ameandikishwa kwenye huduma:</string>
+    <string name="mvc_ctc_number">Namba ya CTC:</string>
+    <string name="mvc_when_was_the_last_test_result">Mara ya mwisho ni lini mtoto/kijana kupima VVU:</string>
+    <string name="mvc_is_the_adolescent_sexually_active">Je, kijana huyu anajihusisha na ngono:</string>
+    <string name="mvc_unknown">Hajui</string>
+    <string name="mvc_prefer_not_to_answer">Anapendelea kutokujibu</string>
+    <string name="mvc_positive">Ameambukizwa</string>
+    <string name="mvc_negative">Hajaambukizwa</string>
+    <string name="mvc_within_the_last_twelve_months">Ndani ya miezi kumi na mbili (12) iliyopita</string>
+    <string name="mvc_more_than_twelve_months_ago">Zaidi ya miezi kumi na mbili (12) iliyopita</string>
+
 
 </resources>
