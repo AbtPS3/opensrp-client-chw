@@ -424,7 +424,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
         int age = Utils.getAgeFromDate(dob);
 
-        if (familyHead.equals(baseEntityId))
+        if (primaryCaregiver.equals(baseEntityId))
             MvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_HEAD_OF_HOUSEHOLD_ENROLLMENT);
         else if (age < 18) {
             MvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);

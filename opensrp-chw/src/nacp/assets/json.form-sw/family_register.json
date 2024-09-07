@@ -924,7 +924,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "service_provider",
         "type": "native_radio",
-        "label": "Kazi ya kichwa cha familia",
+        "label": "Kazi ya mkuu wa Kaya",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
