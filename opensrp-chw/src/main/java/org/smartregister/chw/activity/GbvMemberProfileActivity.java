@@ -454,6 +454,7 @@ public class GbvMemberProfileActivity extends BaseGbvProfileActivity {
         int age = org.smartregister.chw.util.Utils.getAgeFromDate(dob);
         KvpPrEPRegisterActivity.startRegistration(GbvMemberProfileActivity.this, memberObject.getBaseEntityId(), gender, age);
     }
+
     public void startFormForEdit(Integer title_resource, String formName) {
         try {
             JSONObject form = null;

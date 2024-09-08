@@ -6258,7 +6258,8 @@
             "field": "obs.fieldCode",
             "concept": "nutritional_status_assessment"
           }
-        },{
+        },
+        {
           "column_name": "food_and_nutrition",
           "type": "Event",
           "json_mapping": {
@@ -6355,7 +6356,8 @@
             "field": "obs.fieldCode",
             "concept": "has_need_assessment_been_conducted"
           }
-        },{
+        },
+        {
           "column_name": "client_needs",
           "type": "Event",
           "json_mapping": {
@@ -6556,6 +6558,83 @@
           "json_mapping": {
             "field": "obs.fieldCode",
             "concept": "date_of_enrollment"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ec_ge_follow_up_visit",
+      "columns": [
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "formSubmissionId"
+          }
+        },
+        {
+          "column_name": "entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "last_interacted_with",
+          "type": "Event",
+          "json_mapping": {
+            "field": "version"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ec_ge_mobilization_session",
+      "columns": [
+        {
+          "column_name": "base_entity_id",
+          "type": "Event",
+          "json_mapping": {
+            "field": "baseEntityId"
+          }
+        },
+        {
+          "column_name": "event_start_date",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "event_start_date"
+          }
+        },
+        {
+          "column_name": "event_end_date",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "event_end_date"
+          }
+        },
+        {
+          "column_name": "event_type",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "event_type"
+          }
+        },
+        {
+          "column_name": "event_supporter",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "event_supporter"
           }
         },
         {

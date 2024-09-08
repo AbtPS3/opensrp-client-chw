@@ -21,6 +21,7 @@ import org.smartregister.chw.activity.ChildProfileActivity;
 import org.smartregister.chw.activity.FamilyOtherMemberProfileActivity;
 import org.smartregister.chw.activity.FPMemberProfileActivity;
 import org.smartregister.chw.activity.GbvMemberProfileActivity;
+import org.smartregister.chw.activity.GeProfileActivity;
 import org.smartregister.chw.activity.HivProfileActivity;
 import org.smartregister.chw.activity.IccmProfileActivity;
 import org.smartregister.chw.activity.KvpPrEPProfileActivity;
@@ -111,6 +112,10 @@ public class AllClientsUtils {
 
     public static void goToGbvProfile(Activity activity, CommonPersonObjectClient client) {
         GbvMemberProfileActivity.startMe(activity, client.getCaseId());
+    }
+
+    public static void goToGeProfile(Activity activity, CommonPersonObjectClient client) {
+        GeProfileActivity.startMe(activity, client.getCaseId());
     }
 
     private static Intent initProfileActivityIntent(Activity activity, CommonPersonObjectClient patient, Bundle bundle, Class clazz) {

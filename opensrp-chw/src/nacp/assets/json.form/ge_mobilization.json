@@ -1,0 +1,1836 @@
+{
+  "count": "1",
+  "encounter_type": "GE Mobilization Session",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "GE Mobilization Session",
+    "fields": [
+      {
+        "key": "event_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "event_start_date",
+        "type": "date_picker",
+        "hint": "Event Start Date",
+        "max_date": "today",
+        "min_date": "today-3d",
+        "v_required": {
+          "value": "true",
+          "err": "please enter the date"
+        }
+      },
+      {
+        "key": "event_end_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "event_end_date",
+        "type": "date_picker",
+        "hint": "Event End Date",
+        "max_date": "today",
+        "v_required": {
+          "value": "true",
+          "err": "please enter the end date"
+        }
+      },
+      {
+        "key": "event_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "event_type",
+        "type": "native_radio",
+        "label": "Select Event Type",
+        "options": [
+          {
+            "key": "leadership_awareness_campaign",
+            "text": "Leadership Awareness Campaign",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "leadership_awareness_campaign"
+          },
+          {
+            "key": "ge_awareness_campaign",
+            "text": "Gender Equality Awareness Campaign",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ge_awareness_campaign"
+          },
+          {
+            "key": "economic_empowerment_program",
+            "text": "Economic Empowerment Program",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_empowerment_program"
+          },
+          {
+            "key": "legal_aid_campaigns",
+            "text": "Legal Aid Campaigns",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "legal_aid_campaigns"
+          },
+          {
+            "key": "soft_loan_beneficiary_registration",
+            "text": "Soft Loan Beneficiary Registration",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "soft_loan_beneficiary_registration"
+          },
+          {
+            "key": "ge_norms_values_awareness_campaigns",
+            "text": "GE Norms and Values Awareness Campaigns",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ge_norms_values_awareness_campaigns"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "please select the gender"
+        }
+      },
+      {
+        "key": "select_campaign_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "Select Campaign Type",
+        "type": "native_radio",
+        "label": "Select Campaign Type",
+        "options": [
+          {
+            "key": "duties_and_responsibilities",
+            "text": "Duties and Responsibilities",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "duties_and_responsibilities"
+          },
+          {
+            "key": "good_governance",
+            "text": "Good Governance",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "good_governance"
+          },
+          {
+            "key": "decision_making",
+            "text": "Decision Making",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "decision_making"
+          },
+          {
+            "key": "planning_and_budgeting",
+            "text": "Planning and Budgeting",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "planning_and_budgeting"
+          },
+          {
+            "key": "conflict_resolution",
+            "text": "Conflict Resolution",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "conflict_resolution"
+          },
+          {
+            "key": "communication_skills",
+            "text": "Communication Skills",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "communication_skills"
+          },
+          {
+            "key": "others",
+            "text": "Others",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "please select the gender"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "edit_text",
+        "hint": "Specify",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_participants",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_participants",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male participants",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_participants",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_participants",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female participants",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "select_campaign_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "select_campaign_name",
+        "type": "native_radio",
+        "label": "Select Campaign Name",
+        "options": [
+          {
+            "key": "zijue_fursa_imarisha_uchumi_kataa_ukatili_kazi_iendelee",
+            "text": "Zijue Fursa Imarisha Uchumi kataa Ukatili kazi iendelee - ZIFIUKUKI",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "zijue_fursa_imarisha_uchumi_kataa_ukatili_kazi_iendelee"
+          },
+          {
+            "key": "mama_samia_legal_aid_campaign",
+            "text": "Mama Samia Legal Aid Campaign",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "mama_samia_legal_aid_campaign"
+          },
+          {
+            "key": "stand_for_her_and",
+            "text": "Stand for Her Land",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "stand_for_her_and"
+          },
+          {
+            "key": "other",
+            "text": "Others",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "please select the gender"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "edit_text",
+        "hint": "Specify",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_participants_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_participants_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male participants",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_participants_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_participants_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of Female participants",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "select_the_program_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "select_the_program_name",
+        "type": "native_radio",
+        "label": "Select The Program Name",
+        "options": [
+          {
+            "key": "enterpreneurship_program",
+            "text": "Enterpreneurship Program",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "enterpreneurship_program"
+          },
+          {
+            "key": "viccoba",
+            "text": "Viccoba",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "viccoba"
+          },
+          {
+            "key": "platform_creation",
+            "text": "Platform Creation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "platform_creation"
+          },
+          {
+            "key": "online_business",
+            "text": "Online Business",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "online_business"
+          },
+          {
+            "key": "others",
+            "text": "Others",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "please select the gender"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_program",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "edit_text",
+        "hint": "Specify",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_participants_program",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_participants",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of Male participants",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_participants_program",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_participants",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of Female participants",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ward_executive_officer_first_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "ward_executive_officer_first_name",
+        "type": "edit_text",
+        "hint": "Ward Executive Officer First name",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ward_executive_officer_middle_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "ward_executive_officer_middle_name",
+        "type": "edit_text",
+        "hint": "Ward Executive Officer Middle name",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ward_executive_officer_surname",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "ward_executive_officer_surname",
+        "type": "edit_text",
+        "hint": "Ward Executive Officer Surname",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "village",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "label": "Location(Select Village)",
+        "type": "tree",
+        "tree": [
+          {
+            "key": "tanzania",
+            "level": "",
+            "name": "Tanzania",
+            "nodes": [
+              {
+                "key": "kilimanjaro",
+                "level": "",
+                "name": "Kilimanjaro",
+                "nodes": [
+                  {
+                    "key": "moshi",
+                    "level": "",
+                    "name": "Moshi",
+                    "nodes": [
+                      {
+                        "key": "Kibosho",
+                        "level": "",
+                        "name": "Kibosho",
+                        "nodes": [
+                          {
+                            "key": "kirima_juu",
+                            "level": "",
+                            "name": "Kirima Juu"
+                          },
+                          {
+                            "key": "kirima_chini",
+                            "level": "",
+                            "name": "Kirima Chini"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hint": "Select Village",
+        "v_required": {
+          "value": false,
+          "err": "Please enter the Woman's Village"
+        },
+        "default": "[\"tanzania\",\"kilimanjaro\",\"moshi\",\"kibosho\"]",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_male_citizens_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Male Citizens Reached by the campaign",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_female_citizens_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Female Citizens Reached by the campaign",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of cases on ownership of property by male clients received after the campaign",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of cases on ownership of property by female clients received after the campaign",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of referrals cases after receiving cases on ownership of property",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of closed cases after receiving cases on ownership of property",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of on-going cases after receiving cases on ownership of property",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_ward_land_and_housing_tribunal",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_referral_to_ward_land_and_housing_tribunal",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Referral to Ward Land and Housing Tribunal",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_district_land_and_housing_tribunal",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_referral_to_district_land_and_housing_tribunal",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Referral to District Land and Housing Tribunal",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_court",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_referral_to_court",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Referral to Court",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_police",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_referral_to_police",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Referral to Police",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_rganization_Institution",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_referral_to_rganization_Institution",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Referral to Organization/Institution",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_social_welfare",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_referral_to_social_welfare",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Referral to Social Welfare",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_others_referral",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_referral_to_others_referral",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total Number of Referral to Others referral",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_who_own_land",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_male_citizens_who_own_land",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of male citizens who own the Land",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_who_own_land",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_female_citizens_who_own_land",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of Female citizens who own the Land",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_who_own_buildings",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_male_citizens_who_own_bulidings",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of Male citizens who own the Buildings",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_who_own_buildings",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_female_citizens_who_own_buildings",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of Female citizens who own the Buildings",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_who_own_vehicles",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_male_citizens_who_own_vehicles",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of Male citizens who own the Vehicles",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_who_own_vehicles",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_female_citizens_who_own_vehicles",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of Female citizens who own the Vehicles",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_who_own_livestock",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_male_citizens_who_own_livestock",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of Male citizens who own the Livestock",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_who_own_livestock",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "total_number_of_female_citizens_who_own_livestock",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Total number of Female citizens who own the Livestock",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_differences_in_ratio_of_ownership_between_male_and_female",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_differences_in_ratio_of_ownership_between_male_and_female",
+        "type": "check_box",
+        "label": "Reasons for differences in ratio of ownership between Male and Female.",
+        "options": [
+          {
+            "key": "tradition",
+            "text": "Tradition",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "tradition"
+          },
+          {
+            "key": "religion",
+            "text": "Religion",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "religion"
+          },
+          {
+            "key": "customs",
+            "text": "Customs",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "customs"
+          },
+          {
+            "key": "economic_status",
+            "text": "Economic Status",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_status"
+          },
+          {
+            "key": "other",
+            "text": "Others",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "please select the gender"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_reason",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "edit_text",
+        "hint": "Specify",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_individual_loan_recepient",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_individual_loan_recepient",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of individual loan recepient",
+        "v_required": {
+          "value": "true",
+          "err": "Please Enter the Loan Recepient"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_group_loan_recepient",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_group_loan_recepient",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of group loan recepient",
+        "v_required": {
+          "value": "true",
+          "err": "Please Enter the Loan Recepient"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "registration_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "registration_date",
+        "type": "date_picker",
+        "hint": "Registration Date",
+        "max_date": "today",
+        "min_date": "today-1y",
+        "v_required": {
+          "value": "true",
+          "err": "please enter the date"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "group_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "group_type",
+        "type": "native_radio",
+        "label": "Group Type",
+        "options": [
+          {
+            "key": "women",
+            "text": "Women",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "women"
+          },
+          {
+            "key": "youth",
+            "text": "Youth",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "youth"
+          },
+          {
+            "key": "disability",
+            "text": "Disability",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "disability"
+          },
+          {
+            "key": "individual",
+            "text": "Individual",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "individual"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please Enter the Loan Recepient"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "village_loan",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "label": "Location(Select Village)",
+        "type": "tree",
+        "tree": [
+          {
+            "key": "tanzania",
+            "level": "",
+            "name": "Tanzania",
+            "nodes": [
+              {
+                "key": "kilimanjaro",
+                "level": "",
+                "name": "Kilimanjaro",
+                "nodes": [
+                  {
+                    "key": "moshi",
+                    "level": "",
+                    "name": "Moshi",
+                    "nodes": [
+                      {
+                        "key": "Kibosho",
+                        "level": "",
+                        "name": "Kibosho",
+                        "nodes": [
+                          {
+                            "key": "kirima_juu",
+                            "level": "",
+                            "name": "Kirima Juu"
+                          },
+                          {
+                            "key": "kirima_chini",
+                            "level": "",
+                            "name": "Kirima Chini"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hint": "Select Village",
+        "v_required": {
+          "value": false,
+          "err": "Please enter the Woman's Village"
+        },
+        "default": "[\"tanzania\",\"kilimanjaro\",\"moshi\",\"kibosho\"]",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_members_loan",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_members_loan",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of Male Members",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_members_loan",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_members_loan",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female Members",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_the_group_been_accredited",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "has_the_group_been_accredited",
+        "type": "native_radio",
+        "label": "Has the group been accredited?",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_the_group_individual_received_the_loan",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "has_the_group/individual_received_the_loan?",
+        "type": "native_radio",
+        "label": "Has the group/individual received the loan?",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "loan_receiving_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "loan_receiving_date",
+        "type": "date_picker",
+        "hint": "Loan Receiving Date",
+        "max_date": "today",
+        "min_date": "today-1y",
+        "v_required": {
+          "value": "true",
+          "err": "please enter the date"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "loan_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "loan_type",
+        "type": "native_radio",
+        "label": "Loan Type",
+        "options": [
+          {
+            "key": "10%",
+            "text": "10%",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "10%"
+          },
+          {
+            "key": "women_development_forum",
+            "text": "Women Development Forum (WDF)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "women_development_forum"
+          },
+          {
+            "key": "youth_development_forum",
+            "text": "Youth Development Forum (YDF)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "youth_development_forum"
+          },
+          {
+            "key": "other",
+            "text": "Others (Specify)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please Enter the Loan Type"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "loan_deadline_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "loan_deadline_date",
+        "type": "date_picker",
+        "hint": "Loan Deadline Date",
+        "max_date": "today",
+        "min_date": "today-1y",
+        "v_required": {
+          "value": "true",
+          "err": "please enter the date"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "loan_amount",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "loan_amount",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Loan Amount",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "received_financial_training",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "received_financial_training",
+        "type": "native_radio",
+        "label": "Received Financial Training?",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "No",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "training_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "training_type",
+        "type": "native_radio",
+        "label": "Training Type",
+        "options": [
+          {
+            "key": "business",
+            "text": "Business",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "business"
+          },
+          {
+            "key": "expenditure",
+            "text": "Expenditure",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "expenditure"
+          },
+          {
+            "key": "financial_management",
+            "text": "Financial Management",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "financial_management"
+          },
+          {
+            "key": "leadership",
+            "text": "Leadership",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "leadership"
+          },
+          {
+            "key": "other",
+            "text": "Others",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "please select the gender"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_training",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "edit_text",
+        "hint": "Specify",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "training_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "training_date",
+        "type": "date_picker",
+        "hint": "Training Date",
+        "max_date": "today",
+        "v_required": {
+          "value": "true",
+          "err": "please enter the end date"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "select_campaign_topic",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "select_campaign_topic",
+        "type": "check_box",
+        "label": "Select Campaign Topic",
+        "options": [
+          {
+            "key": "bias_and_discrimination",
+            "text": "Bias and discrimination",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "bias_and_discrimination"
+          },
+          {
+            "key": "gender_based_violence",
+            "text": "Gender-based violence",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "gender_based_violence"
+          },
+          {
+            "key": "managing_household_finances",
+            "text": "Managing Household Finances",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "managing_household_finances"
+          },
+          {
+            "key": "planning_spacing_pregnancies",
+            "text": "Planning & Spacing Pregnancies",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "planning_spacing_pregnancies"
+          },
+          {
+            "key": "early_marriage_teen_pregnancy",
+            "text": "Early marriage & teen pregnancy",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "early_marriage_teen_pregnancy"
+          },
+          {
+            "key": "cultural_resistance_to_women_leadership",
+            "text": "Cultural resistance to women's leadership",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "cultural_resistance_to_women_leadership"
+          },
+          {
+            "key": "differentiated_treatment_of_girls_over_child_rights",
+            "text": "Differentiated treatment of girls over child rights",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "differentiated_treatment_of_girls_over_child_rights"
+          },
+          {
+            "key": "unequal_distribution_of_roles",
+            "text": "Unequal distribution of roles",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "unequal_distribution_of_roles"
+          },
+          {
+            "key": "preventing_negotiating_resolving_conflict",
+            "text": "Preventing, Negotiating, & Resolving Conflict",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "preventing_negotiating_resolving_conflict"
+          },
+          {
+            "key": "religious_beliefs",
+            "text": "Religious beliefs",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "religious_beliefs"
+          },
+          {
+            "key": "others",
+            "text": "Others(Specify)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "please select the gender"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_less_25_years_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_less_25_years_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male <25 years reached by the campaign",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_less_25_years_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_less_25_years_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female <25 years reached by the campaign",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_25_plus_years_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_25_plus_years_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male 25+ years reached by the campaign",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_25_plus_years_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_25_plus_years_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female 25+ years reached by the campaign",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_less_25_years_screened_for_harmful_norms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_less_25_years_screened_for_harmful_norms",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male <25 years screened for harmful norms",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_less_25_years_screened_for_harmful_norms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_less_25_years_screened_for_harmful_norms",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female <25 years screened for harmful norms",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_25_plus_years_screened_for_harmful_norms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_25_plus_years_screened_for_harmful_norms",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male 25+ years screened for harmful norms",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_25_plus_years_screened_for_harmful_norms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_25_plus_years_screened_for_harmful_norms",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female 25+ years screened for harmful norms",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_less_25_years_screened_positive",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_less_25_years_screened_positive",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male <25 years screened positive",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_less_25_years_screened_positive",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_less_25_years_screened_positive",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female <25 years screened positive",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_25_plus_years_screened_positive",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_25_plus_years_screened_positive",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male 25+ years screened positive",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_25_plus_years_screened_positive",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_25_plus_years_screened_positive",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female 25+ years screened positive",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_less_25_years_who_received_services_based_on_issues_raised",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_less_25_years_who_received_services_based_on_issues_raised",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male <25 years who received services based on issues raised",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_less_25_years_who_received_services_based_on_issues_raised",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_less_25_years_who_received_services_based_on_issues_raised",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female <25 years who received services based on issues raised",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_25_plus_years_who_received_services_based_on_issues_raised",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_male_25_plus_years_who_received_services_based_on_issues_raised",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of male 25+ years who received services based on issues raised",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_25_plus_years_who_received_services_based_on_issues_raised",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "number_of_female_25_plus_years_who_received_services_based_on_issues_raised",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Number of female 25+ years who received services based on issues raised",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "event_supporter",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "event_supporter",
+        "type": "native_radio",
+        "label": "Select Event Supporter",
+        "options": [
+          {
+            "key": "government",
+            "text": "Government",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "government"
+          },
+          {
+            "key": "development_partners",
+            "text": "Development Partners",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "development_partners"
+          },
+          {
+            "key": "ngo",
+            "text": "NGO",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ngo"
+          },
+          {
+            "key": "fbo",
+            "text": "FBO",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "fbo"
+          },
+          {
+            "key": "other",
+            "text": "Others",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "please select the gender"
+        }
+      },
+      {
+        "key": "specify_supporter",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_supporter",
+        "type": "edit_text",
+        "hint": "Specify",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

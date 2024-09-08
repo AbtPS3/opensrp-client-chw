@@ -456,7 +456,6 @@
     <string name="none">None</string>
 
 
-
     <!--    KVP Community-->
     <string name="kvp_visit">KVP Visits</string>
     <string name="kvp_visit_type">Visit Type:</string>
@@ -540,8 +539,6 @@
     <string name="back_to_all_mobilization_sessions">Back to All Mobilization Sessions</string>
     <string name="mobilization_sessions">Mobilization Session</string>
     <string name="mobilization_session_details">Mobilization Session Details</string>
-
-
 
 
     <!--    SBC -->
@@ -847,6 +844,82 @@
 
     <string name="select_ecd_psychosocial_support_greater_than_5_children_attended_childrens_clubs">Children attended children\'s clubs.</string>
     <string name="select_ecd_psychosocial_support_greater_than_5_children_attended_teen_clubs">Children attended teen clubs.</string>
+
+    <!--    GE-->
+    <string name="ge_service_type">GE Service Type:</string>
+    <string name="ge_date_of_support">Date of Support Provision:</string>
+    <string name="ge_gbv_elements">Are there elements of GBV in the case?</string>
+    <string name="ge_legal_services">Type of Legal services provided</string>
+    <string name="ge_other_legal_services">Other Type of Legal services provided</string>
+    <string name="ge_action_taken_after_provision_of_legal_services">Action Taken After Provision of Legal Services</string>
+    <string name="ge_referral_destination">Referral destination:</string>
+    <string name="ge_other_referrals_destinations">Other referral destination:</string>
+    <string name="ge_property_ownership">Does the client own property:</string>
+    <string name="ge_type_of_property_owned">Type of property that the client owns:</string>
+    <string name="ge_other_property">Other types of properties owned by the client:</string>
+    <string name="ge_gender_equality_sensitization">Gender equality sensitization provided to a household:</string>
+    <string name="ge_other_ge_sensitization_provided">Other Sensitization provided:</string>
+    <string name="ge_sensitization_session_complete">Is the sensitization session complete:</string>
+    <string name="ge_followup_visit_date">Next follow-up visit date:</string>
+    <string name="ge_has_the_client_been_registered">Has the client been registered:</string>
+    <string name="ge_registration_area">Registration area:</string>
+    <string name="ge_registration_date">Registration Date:</string>
+    <string name="ge_challenges_faced">Challenges faced:</string>
+    <string name="ge_client_counselling">Did the client receive counselling:</string>
+
+    <string name="ge_legal_aid_support">Legal Aid Support</string>
+    <string name="ge_small_scale_entrepreneur">Small Scale Entrepreneur Registration</string>
+    <string name="ge_Household_Sensitized_on_GE_Issues">Household Sensitized on GE Issues</string>
+    <string name="ge_yes">Yes</string>
+    <string name="ge_no">No</string>
+    <string name="ge_matrimonial_issues">Matrimonial issues</string>
+    <string name="ge_probate_issues">Probate issues</string>
+    <string name="ge_land_issues">Land issues</string>
+    <string name="ge_economic_issues">Economic issues</string>
+    <string name="ge_labor_issues">Labor issues</string>
+    <string name="ge_criminal_issues">Criminal issues</string>
+    <string name="ge_child_maintenance_issues">Child maintenance issues</string>
+    <string name="ge_Custody_of_children_issues">Custody of children issues</string>
+    <string name="ge_General_civil">General civil</string>
+    <string name="ge_other">Others (specify)</string>
+    <string name="ge_referral">Referral</string>
+    <string name="ge_closed">Closed</string>
+    <string name="ge_ongoing">Ongoing</string>
+    <string name="ge_ward_land_and_housing">Ward Land and Housing Tribunal</string>
+    <string name="ge_district_land_and_housing_tribunal">District Land and Housing Tribunal</string>
+    <string name="ge_court">Court</string>
+    <string name="ge_police">Police</string>
+    <string name="ge_organization">Organization/Institution</string>
+    <string name="ge_social_welfare">Social-welfare</string>
+    <string name="ge_land">Land</string>
+    <string name="ge_housing">Housing</string>
+    <string name="ge_vehicles">Vehicles</string>
+    <string name="ge_livestock">Livestock</string>
+    <string name="ge_others">Others(specify)</string>
+    <string name="ge_women_participation_in_leadership">Women participation in Leadership and participation</string>
+    <string name="ge_women_economic_empowerment">Women Economic Empowerment</string>
+    <string name="ge_women_safety_and_security">Women Safety and Security</string>
+    <string name="ge_gender_issues_empowerment">Gender Issues Empowerment</string>
+    <string name="ge_gender_and_good_leadership">Gender and good leadership</string>
+    <string name="ge_norms_and_values">Norms and Values</string>
+    <string name="ge_parenting_family_support_and_relationships">Parenting Family Support and Relationships</string>
+    <string name="ge_not_being_recognized_by_authorities">Not being recognized by authorities</string>
+    <string name="ge_missing_loans_opportunities">Missing loans opportunities</string>
+    <string name="ge_lack_of_business_operating_freedom">Lack of Business Operating Freedom</string>
+    <string name="ge_cannot_join_business_cooperatives">Cannot join Business Cooperatives</string>
+    <string name="ge_missing_business_training">Missing Business Training</string>
+    <string name="ge_edit_individual_visit">Edit GE Individual Services</string>
+    <string name="ge_government">Government</string>
+    <string name="ge_development_partners">Development Partners</string>
+    <string name="ge_ngo">NGO</string>
+    <string name="ge_fbo">FBO</string>
+    <string name="ge_leadership_awareness_campaign">Leadership Awareness Campaign</string>
+    <string name="ge_ge_awareness_campaign">Gender Equality Awareness Campaign</string>
+    <string name="ge_economic_empowerment_program">Economic Empowerment Program</string>
+    <string name="ge_legal_aid_campaigns">Legal Aid Campaigns</string>
+    <string name="ge_soft_loan_beneficiary_registration">Soft Loan Beneficiary Registration</string>
+    <string name="ge_ge_norms_values_awareness_campaigns">GE Norms and Values Awareness Campaigns</string>
+
 
 
 

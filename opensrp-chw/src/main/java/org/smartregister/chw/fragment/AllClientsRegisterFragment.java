@@ -82,6 +82,9 @@ public class AllClientsRegisterFragment extends CoreAllClientsRegisterFragment {
                 case CoreConstants.REGISTER_TYPE.GBV:
                     AllClientsUtils.goToGbvProfile(this.getActivity(), commonPersonObjectClient);
                     break;
+                case CoreConstants.REGISTER_TYPE.GE:
+                    AllClientsUtils.goToGeProfile(this.getActivity(), commonPersonObjectClient);
+                    break;
                 default:
                     AllClientsUtils.goToOtherMemberProfile(this.getActivity(), commonPersonObjectClient, bundle,
                             familyDetailsModel.getFamilyHead(), familyDetailsModel.getPrimaryCareGiver());

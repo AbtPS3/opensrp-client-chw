@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlSbccSession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_sbcc_session"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/sidemenu_updates_active"
+            android:contentDescription="sbcc session"/>
+
+
+        <LinearLayout
+            android:id="@+id/sbcc_session_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/session_end_date"
+            android:layout_toEndOf="@id/iv_sbcc_session">
+
+            <org.smartregister.view.customcontrols.CustomFontTextView
+                android:id="@+id/sbc_activity_provided"
+                style="@style/CustomFontTextViewStyle.ListView.Normal.MultipleLines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:scrollHorizontally="false"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:visibility="visible"/>
+
+
+
+        </LinearLayout>
+
+        <org.smartregister.view.customcontrols.CustomFontTextView
+            android:id="@+id/session_start_date"
+            android:layout_toEndOf="@id/iv_sbcc_session"
+            style="@style/CustomFontTextViewStyle.ListView.Normal.MultipleLines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_below="@id/event_type"
+            android:layout_marginTop="5dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:visibility="visible"
+            tools:text="@string/ge_session_start_date" />
+
+        <org.smartregister.view.customcontrols.CustomFontTextView
+            android:id="@+id/session_end_date"
+            android:layout_toEndOf="@id/iv_sbcc_session"
+            style="@style/CustomFontTextViewStyle.ListView.Normal.MultipleLines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_below="@id/session_start_date"
+            android:layout_marginTop="5dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:visibility="visible"
+            tools:text="@string/ge_session_end_date" />
+
+        <org.smartregister.view.customcontrols.CustomFontTextView
+            android:id="@+id/event_supporter"
+            android:layout_toEndOf="@id/iv_sbcc_session"
+            style="@style/CustomFontTextViewStyle.ListView.Normal.MultipleLines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_below="@id/session_end_date"
+            android:layout_marginTop="5dp"
+            android:ellipsize="none"
+            android:scrollHorizontally="false"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:visibility="visible"
+            tools:text="@string/ge_event_supporter" />
+
+        <org.smartregister.view.customcontrols.CustomFontTextView
+            android:id="@+id/event_type"
+            style="@style/CustomFontTextViewStyle.ListView.Normal.MultipleLines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/iv_sbcc_session"
+            android:gravity="center_horizontal"
+            android:text="@string/sbcc_session_title"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_child_followup_row"
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:layout_below="@id/rlSbccSession"
+        android:layout_marginTop="6dp"
+        android:background="@color/light_grey"
+        android:visibility="visible" />
+</RelativeLayout>

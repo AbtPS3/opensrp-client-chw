@@ -1,0 +1,456 @@
+---
+name: step1_loan_receiving_date
+description: show loan receiving date when group/individual has received loan
+condition: "step1_has_the_group_individual_received_the_loan == 'yes'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_select_campaign_type
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'leadership_awareness_campaign'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_participants
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'leadership_awareness_campaign'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_participants
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'leadership_awareness_campaign'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_specify
+description: show loan receiving date when group/individual has received loan
+condition: "step1_select_campaign_type == 'others'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_select_campaign_name
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_awareness_campaign'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_specify_name
+description: show loan receiving date when group/individual has received loan
+condition: "step1_select_campaign_name == 'others_name'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_participants_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_awareness_campaign'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_participants_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_awareness_campaign'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_select_the_program_name
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'economic_empowerment_program'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_specify_program
+description: show loan receiving date when group/individual has received loan
+condition: "step1_select_the_program_name == 'others_program'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_participants_program
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'economic_empowerment_program'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_participants_program
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'economic_empowerment_program'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_ward_executive_officer_first_name
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_ward_executive_officer_middle_name
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_ward_executive_officer_surname
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_village
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_male_citizens_reached_by_the_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_female_citizens_reached_by_the_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_referral_to_ward_land_and_housing_tribunal
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_referral_to_district_land_and_housing_tribunal
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_referral_to_court
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_referral_to_police
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_referral_to_rganization_Institution
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_referral_to_social_welfare
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_referral_to_others_referral
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_male_citizens_who_own_land
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_female_citizens_who_own_land
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_male_citizens_who_own_buildings
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_female_citizens_who_own_buildings
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_male_citizens_who_own_vehicles
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_female_citizens_who_own_vehicles
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_male_citizens_who_own_livestock
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_total_number_of_female_citizens_who_own_livestock
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_reasons_for_differences_in_ratio_of_ownership_between_male_and_female
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'legal_aid_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_specify_reason
+description: show loan receiving date when group/individual has received loan
+condition: "step1_reasons_for_differences_in_ratio_of_ownership_between_male_and_female.contains('others_reason')"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_individual_loan_recepient
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_group_loan_recepient
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_registration_date
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_group_type
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_village_loan
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_members_loan
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_members_loan
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_has_the_group_been_accredited
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_has_the_group_individual_received_the_loan
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_loan_receiving_date
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration' && step1_has_the_group_individual_received_the_loan == 'yes'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_loan_type
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'  && step1_has_the_group_individual_received_the_loan == 'yes'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_loan_deadline_date
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'  && step1_has_the_group_individual_received_the_loan == 'yes'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_loan_amount
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'  && step1_has_the_group_individual_received_the_loan == 'yes'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_received_financial_training
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_training_type
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration' && step1_received_financial_training == 'yes'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_specify_training
+description: show loan receiving date when group/individual has received loan
+condition: "step1_training_type == 'others_training'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_training_date
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'soft_loan_beneficiary_registration'  && step1_received_financial_training == 'yes'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_select_campaign_topic
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_less_25_years_reached_by_the_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_less_25_years_reached_by_the_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_25_plus_years_reached_by_the_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_25_plus_years_reached_by_the_campaign
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_less_25_years_screened_for_harmful_norms
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_less_25_years_screened_for_harmful_norms
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_25_plus_years_screened_for_harmful_norms
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_25_plus_years_screened_for_harmful_norms
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_less_25_years_screened_positive
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_less_25_years_screened_positive
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_25_plus_years_screened_positive
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_25_plus_years_screened_positive
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_less_25_years_who_received_services_based_on_issues_raised
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_less_25_years_who_received_services_based_on_issues_raised
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_male_25_plus_years_who_received_services_based_on_issues_raised
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_number_of_female_25_plus_years_who_received_services_based_on_issues_raised
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_specify_supporter
+description: show loan receiving date when group/individual has received loan
+condition: "step1_event_supporter == 'others_supporter'"
+actions:
+    - "isRelevant = true"

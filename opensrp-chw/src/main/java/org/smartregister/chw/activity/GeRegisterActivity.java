@@ -9,6 +9,7 @@ import com.vijay.jsonwizard.domain.Form;
 
 import org.smartregister.chw.R;
 import org.smartregister.chw.core.activity.CoreGeRegisterActivity;
+import org.smartregister.chw.fragment.GeMobilizationRegisterFragment;
 import org.smartregister.chw.fragment.GeRegisterFragment;
 import org.smartregister.chw.ge.util.Constants;
 import org.smartregister.view.fragment.BaseRegisterFragment;
@@ -16,7 +17,7 @@ import org.smartregister.view.fragment.BaseRegisterFragment;
 public class GeRegisterActivity extends CoreGeRegisterActivity {
 
     public static void startRegistration(Activity activity, String baseEntityId, String formName) {
-        Intent intent = new Intent(activity, MvcRegisterActivity.class);
+        Intent intent = new Intent(activity, GeRegisterActivity.class);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.BASE_ENTITY_ID, baseEntityId);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.ACTION, Constants.ACTIVITY_PAYLOAD_TYPE.REGISTRATION);
         intent.putExtra(Constants.ACTIVITY_PAYLOAD.GE_FORM_NAME, formName);
@@ -44,6 +45,6 @@ public class GeRegisterActivity extends CoreGeRegisterActivity {
 
     @Override
     protected Fragment[] getOtherFragments() {
-        return new Fragment[]{};
+        return new Fragment[]{new GeMobilizationRegisterFragment()};
     }
 }

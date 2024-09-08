@@ -802,6 +802,20 @@
             "creates_case": [
               "ec_ge_register"
             ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "GE Follow-up Visit",
+            "creates_case": [
+              "ec_ge_follow_up_visit"
+            ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "GE Mobilization Session",
+            "creates_case":[
+              "ec_ge_mobilization_session"
+            ]
           }
         ]
       }
