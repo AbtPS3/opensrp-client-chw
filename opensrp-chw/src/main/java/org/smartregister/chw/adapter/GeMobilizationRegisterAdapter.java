@@ -1,5 +1,6 @@
 package org.smartregister.chw.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.text.Spannable;
@@ -15,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.smartregister.chw.R;
+import org.smartregister.chw.activity.GeMobilizationSessionDetailsActivity;
 import org.smartregister.chw.ge.dao.GeDao;
 
 import java.util.List;
@@ -104,7 +106,7 @@ public class GeMobilizationRegisterAdapter extends RecyclerView.Adapter<GeMobili
             event_type.setText(geMobilization.getMobilizationEventType());
 
             evaluateView(event_type, context, geMobilization.getMobilizationEventType());
-//            itemView.setOnClickListener(view -> SbcMobilizationSessionDetailsActivity.startMe(((Activity) context), geMobilization.getBaseEntityID()));
+            itemView.setOnClickListener(view -> GeMobilizationSessionDetailsActivity.startMe(((Activity) context), geMobilization.getBaseEntityID()));
         }
     }
 }

@@ -92,6 +92,7 @@ public class ChwClientProcessor extends CoreClientProcessor {
                 case org.smartregister.chw.ovc.util.Constants.EVENT_TYPE.MVC_HOUSEHOLD_SERVICES_VISIT:
                 case org.smartregister.chw.ovc.util.Constants.EVENT_TYPE.MVC_CHILD_SERVICES_VISIT:
                 case org.smartregister.chw.ge.util.Constants.EVENT_TYPE.GE_FOLLOW_UP_VISIT:
+                case org.smartregister.chw.ge.util.Constants.EVENT_TYPE.GE_MOBILIZATION:
                     if (eventClient.getEvent() == null) {
                         return;
                     }

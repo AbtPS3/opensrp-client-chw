@@ -71,7 +71,7 @@ actions:
 ---
 name: step1_other_legal_services
 description: only clients that have been registered
-condition: "step1_legal_services == 'other'"
+condition: "step1_legal_services.contains('other')"
 actions:
   - "isRelevant = true"
 
@@ -154,7 +154,7 @@ actions:
 ---
 name: step1_referral_destination
 description: choose referral
-condition: "step1_legal_services_provided.equals('referral')"
+condition: "step1_action_taken_after_provision_of_legal_services.equals('referral')"
 actions:
   - "isRelevant = true"
 
@@ -182,7 +182,7 @@ actions:
 ---
 name: step1_other_challenges
 description: choose others
-condition: "step1_challenges_faced.equals('other')"
+condition: "step1_challenges_faced.contains('other')"
 actions:
   - "isRelevant = true"
 

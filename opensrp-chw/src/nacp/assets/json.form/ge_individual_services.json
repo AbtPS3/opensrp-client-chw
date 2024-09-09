@@ -137,7 +137,7 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "legal_services",
-        "type": "native_radio",
+        "type": "check_box",
         "label": "Select Type of Legal services provided",
         "options": [
           {
@@ -687,10 +687,10 @@
       {
         "key": "other_challenges",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_challenges",
         "type": "edit_text",
-        "hint": "Others answer to specify type of property owned",
+        "hint": "Specify others challenges",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
