@@ -597,9 +597,23 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "registration_area",
-        "openmrs_data_type": "text",
-        "type": "edit_text",
-        "hint": "Enter registration area",
+        "type": "native_radio",
+        "label": "Registration area",
+        "hint": "Registration area",
+        "options": [
+          {
+            "key": "weo",
+            "text": "WEO",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "weo"
+          },
+          {
+            "key": "council",
+            "text": "Council",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "council"
+          }
+        ],
         "relevance": {
           "rules-engine": {
             "ex-rules": {
