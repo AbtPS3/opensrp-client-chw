@@ -61,7 +61,7 @@
         "type": "date_picker",
         "hint": "Event Start Date",
         "max_date": "today",
-        "min_date": "today-3d",
+        "min_date": "today-3m",
         "v_required": {
           "value": "true",
           "err": "please enter the date"

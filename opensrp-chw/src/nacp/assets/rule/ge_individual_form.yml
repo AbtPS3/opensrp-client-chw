@@ -113,7 +113,7 @@ actions:
 ---
 name: step1_other_property
 description: choose others
-condition: "step1_type_of_property_owned.contains('others_specify')"
+condition: "step1_type_of_property_owned.contains('others')"
 actions:
   - "isRelevant = true"
 ---

@@ -4,6 +4,7 @@ import org.smartregister.chw.activity.GeProfileActivity;
 import org.smartregister.chw.core.fragment.CoreGeRegisterFragment;
 import org.smartregister.chw.ge.presenter.BaseGeRegisterFragmentPresenter;
 import org.smartregister.chw.model.GeRegisterFragmentModel;
+import org.smartregister.chw.presenter.GeRegisterFragmentPresenter;
 
 public class GeRegisterFragment extends CoreGeRegisterFragment {
     @Override
@@ -11,7 +12,7 @@ public class GeRegisterFragment extends CoreGeRegisterFragment {
         if (getActivity() == null) {
             return;
         }
-        presenter = new BaseGeRegisterFragmentPresenter(this, new GeRegisterFragmentModel(), null);
+        presenter = new GeRegisterFragmentPresenter(this, new GeRegisterFragmentModel(), null);
     }
 
     @Override
