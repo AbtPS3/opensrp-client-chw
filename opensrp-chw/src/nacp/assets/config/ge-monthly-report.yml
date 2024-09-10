@@ -39,14 +39,12 @@ indicators:
   - key: "ge-2-female"
     grouping: "GE"
     description: "Idadi ya wanufaika wa mikopo ya masharti nafuu"
-    indicatorQuery: " SELECT SUM(number_of_female_members_loan) as count FROM ec_ge_follow_up_visit egms
+    indicatorQuery: " SELECT SUM(number_of_female_members_loan) as count FROM ec_ge_mobilization_session egms
       WHERE
       number_of_female_members_loan IS NOT NULL
       AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
         date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
         substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
-
-
 
   #  GE 3
   - key: "ge-3-male"
@@ -120,8 +118,6 @@ indicators:
       AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
         date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
         substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
-
-
 
   - key: "ge-10"
     grouping: "GE"

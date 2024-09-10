@@ -139,8 +139,8 @@
       {
         "key": "select_campaign_type",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "Select Campaign Type",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_campaign_type",
         "type": "native_radio",
         "label": "Select Campaign Type",
         "options": [
@@ -202,8 +202,8 @@
       {
         "key": "specify",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify",
         "type": "edit_text",
         "hint": "Specify",
         "relevance": {
@@ -217,7 +217,7 @@
       {
         "key": "number_of_male_participants",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_participants",
         "type": "edit_text",
         "edit_type": "number",
@@ -233,7 +233,7 @@
       {
         "key": "number_of_female_participants",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_participants",
         "type": "edit_text",
         "edit_type": "number",
@@ -249,7 +249,7 @@
       {
         "key": "select_campaign_name",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "select_campaign_name",
         "type": "native_radio",
         "label": "Select Campaign Name",
@@ -294,8 +294,8 @@
       {
         "key": "specify_name",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_name",
         "type": "edit_text",
         "hint": "Specify",
         "relevance": {
@@ -309,7 +309,7 @@
       {
         "key": "number_of_male_participants_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_participants_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -325,7 +325,7 @@
       {
         "key": "number_of_female_participants_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_participants_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -341,7 +341,7 @@
       {
         "key": "select_the_program_name",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "select_the_program_name",
         "type": "native_radio",
         "label": "Select The Program Name",
@@ -392,8 +392,8 @@
       {
         "key": "specify_program",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_program",
         "type": "edit_text",
         "hint": "Specify",
         "relevance": {
@@ -407,8 +407,8 @@
       {
         "key": "number_of_male_participants_program",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "number_of_male_participants",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_participants_program",
         "type": "edit_text",
         "edit_type": "number",
         "hint": "Number of Male participants",
@@ -423,8 +423,8 @@
       {
         "key": "number_of_female_participants_program",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "number_of_female_participants",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_participants_program",
         "type": "edit_text",
         "edit_type": "number",
         "hint": "Number of Female participants",
@@ -439,7 +439,7 @@
       {
         "key": "ward_executive_officer_first_name",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "ward_executive_officer_first_name",
         "type": "edit_text",
         "hint": "Ward Executive Officer First name",
@@ -454,7 +454,7 @@
       {
         "key": "ward_executive_officer_middle_name",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "ward_executive_officer_middle_name",
         "type": "edit_text",
         "hint": "Ward Executive Officer Middle name",
@@ -469,7 +469,7 @@
       {
         "key": "ward_executive_officer_surname",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "ward_executive_officer_surname",
         "type": "edit_text",
         "hint": "Ward Executive Officer Surname",
@@ -484,8 +484,8 @@
       {
         "key": "village",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "village",
         "label": "Location(Select Village)",
         "type": "tree",
         "tree": [
@@ -577,7 +577,7 @@
       {
         "key": "total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -593,7 +593,7 @@
       {
         "key": "total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -609,7 +609,7 @@
       {
         "key": "total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property",
         "type": "edit_text",
         "edit_type": "number",
@@ -625,7 +625,7 @@
       {
         "key": "total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property",
         "type": "edit_text",
         "edit_type": "number",
@@ -641,7 +641,7 @@
       {
         "key": "total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property",
         "type": "edit_text",
         "edit_type": "number",
@@ -657,7 +657,7 @@
       {
         "key": "total_number_of_referral_to_ward_land_and_housing_tribunal",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_referral_to_ward_land_and_housing_tribunal",
         "type": "edit_text",
         "edit_type": "number",
@@ -673,7 +673,7 @@
       {
         "key": "total_number_of_referral_to_district_land_and_housing_tribunal",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_referral_to_district_land_and_housing_tribunal",
         "type": "edit_text",
         "edit_type": "number",
@@ -689,7 +689,7 @@
       {
         "key": "total_number_of_referral_to_court",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_referral_to_court",
         "type": "edit_text",
         "edit_type": "number",
@@ -705,7 +705,7 @@
       {
         "key": "total_number_of_referral_to_police",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_referral_to_police",
         "type": "edit_text",
         "edit_type": "number",
@@ -721,7 +721,7 @@
       {
         "key": "total_number_of_referral_to_rganization_Institution",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_referral_to_rganization_Institution",
         "type": "edit_text",
         "edit_type": "number",
@@ -737,7 +737,7 @@
       {
         "key": "total_number_of_referral_to_social_welfare",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_referral_to_social_welfare",
         "type": "edit_text",
         "edit_type": "number",
@@ -753,7 +753,7 @@
       {
         "key": "total_number_of_referral_to_others_referral",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_referral_to_others_referral",
         "type": "edit_text",
         "edit_type": "number",
@@ -769,7 +769,7 @@
       {
         "key": "total_number_of_male_citizens_who_own_land",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_male_citizens_who_own_land",
         "type": "edit_text",
         "edit_type": "number",
@@ -785,7 +785,7 @@
       {
         "key": "total_number_of_female_citizens_who_own_land",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_female_citizens_who_own_land",
         "type": "edit_text",
         "edit_type": "number",
@@ -801,7 +801,7 @@
       {
         "key": "total_number_of_male_citizens_who_own_buildings",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_male_citizens_who_own_bulidings",
         "type": "edit_text",
         "edit_type": "number",
@@ -817,7 +817,7 @@
       {
         "key": "total_number_of_female_citizens_who_own_buildings",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_female_citizens_who_own_buildings",
         "type": "edit_text",
         "edit_type": "number",
@@ -833,7 +833,7 @@
       {
         "key": "total_number_of_male_citizens_who_own_vehicles",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_male_citizens_who_own_vehicles",
         "type": "edit_text",
         "edit_type": "number",
@@ -849,7 +849,7 @@
       {
         "key": "total_number_of_female_citizens_who_own_vehicles",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_female_citizens_who_own_vehicles",
         "type": "edit_text",
         "edit_type": "number",
@@ -865,7 +865,7 @@
       {
         "key": "total_number_of_male_citizens_who_own_livestock",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_male_citizens_who_own_livestock",
         "type": "edit_text",
         "edit_type": "number",
@@ -881,7 +881,7 @@
       {
         "key": "total_number_of_female_citizens_who_own_livestock",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_female_citizens_who_own_livestock",
         "type": "edit_text",
         "edit_type": "number",
@@ -948,8 +948,8 @@
       {
         "key": "specify_reason",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_reason",
         "type": "edit_text",
         "hint": "Specify",
         "relevance": {
@@ -963,7 +963,7 @@
       {
         "key": "name_of_loan_recipient",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "console",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "name_of_loan_recipient",
         "type": "edit_text",
         "hint": "Name of the loan recipient",
@@ -982,7 +982,7 @@
       {
         "key": "registration_date",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "registration_date",
         "type": "date_picker",
         "hint": "Registration Date",
@@ -1003,7 +1003,7 @@
       {
         "key": "group_type",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "group_type",
         "type": "native_radio",
         "label": "Group Type",
@@ -1048,8 +1048,8 @@
       {
         "key": "village_loan",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "village_loan",
         "label": "Location(Select Village)",
         "type": "tree",
         "tree": [
@@ -1141,7 +1141,7 @@
       {
         "key": "has_the_group_been_accredited",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "has_the_group_been_accredited",
         "type": "native_radio",
         "label": "Has the group been accredited?",
@@ -1170,7 +1170,7 @@
       {
         "key": "has_the_group_individual_received_the_loan",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "has_the_group/individual_received_the_loan?",
         "type": "native_radio",
         "label": "Has the group/individual received the loan?",
@@ -1199,7 +1199,7 @@
       {
         "key": "loan_receiving_date",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "loan_receiving_date",
         "type": "date_picker",
         "hint": "Loan Receiving Date",
@@ -1220,7 +1220,7 @@
       {
         "key": "loan_type",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "loan_type",
         "type": "native_radio",
         "label": "Loan Type",
@@ -1265,7 +1265,7 @@
       {
         "key": "loan_deadline_date",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "loan_deadline_date",
         "type": "date_picker",
         "hint": "Loan Deadline Date",
@@ -1286,7 +1286,7 @@
       {
         "key": "loan_amount",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "loan_amount",
         "type": "edit_text",
         "edit_type": "number",
@@ -1302,7 +1302,7 @@
       {
         "key": "received_financial_training",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "received_financial_training",
         "type": "native_radio",
         "label": "Received Financial Training?",
@@ -1331,7 +1331,7 @@
       {
         "key": "training_type",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "training_type",
         "type": "native_radio",
         "label": "Training Type",
@@ -1382,8 +1382,8 @@
       {
         "key": "specify_training",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_training",
         "type": "edit_text",
         "hint": "Specify",
         "relevance": {
@@ -1397,7 +1397,7 @@
       {
         "key": "training_date",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "training_date",
         "type": "date_picker",
         "hint": "Training Date",
@@ -1417,7 +1417,7 @@
       {
         "key": "select_campaign_topic",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "select_campaign_topic",
         "type": "check_box",
         "label": "Select Campaign Topic",
@@ -1504,7 +1504,7 @@
       {
         "key": "number_of_male_less_25_years_reached_by_the_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_less_25_years_reached_by_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -1520,7 +1520,7 @@
       {
         "key": "number_of_female_less_25_years_reached_by_the_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_less_25_years_reached_by_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -1536,7 +1536,7 @@
       {
         "key": "number_of_male_25_plus_years_reached_by_the_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_25_plus_years_reached_by_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -1552,7 +1552,7 @@
       {
         "key": "number_of_female_25_plus_years_reached_by_the_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_25_plus_years_reached_by_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -1568,7 +1568,7 @@
       {
         "key": "number_of_male_less_25_years_screened_for_harmful_norms",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_less_25_years_screened_for_harmful_norms",
         "type": "edit_text",
         "edit_type": "number",
@@ -1584,7 +1584,7 @@
       {
         "key": "number_of_female_less_25_years_screened_for_harmful_norms",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_less_25_years_screened_for_harmful_norms",
         "type": "edit_text",
         "edit_type": "number",
@@ -1600,7 +1600,7 @@
       {
         "key": "number_of_male_25_plus_years_screened_for_harmful_norms",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_25_plus_years_screened_for_harmful_norms",
         "type": "edit_text",
         "edit_type": "number",
@@ -1616,7 +1616,7 @@
       {
         "key": "number_of_female_25_plus_years_screened_for_harmful_norms",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_25_plus_years_screened_for_harmful_norms",
         "type": "edit_text",
         "edit_type": "number",
@@ -1632,7 +1632,7 @@
       {
         "key": "number_of_male_less_25_years_screened_positive",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_less_25_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
@@ -1648,7 +1648,7 @@
       {
         "key": "number_of_female_less_25_years_screened_positive",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_less_25_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
@@ -1664,7 +1664,7 @@
       {
         "key": "number_of_male_25_plus_years_screened_positive",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_25_plus_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
@@ -1680,7 +1680,7 @@
       {
         "key": "number_of_female_25_plus_years_screened_positive",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_25_plus_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
@@ -1696,7 +1696,7 @@
       {
         "key": "number_of_male_less_25_years_who_received_services_based_on_issues_raised",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_less_25_years_who_received_services_based_on_issues_raised",
         "type": "edit_text",
         "edit_type": "number",
@@ -1712,7 +1712,7 @@
       {
         "key": "number_of_female_less_25_years_who_received_services_based_on_issues_raised",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_less_25_years_who_received_services_based_on_issues_raised",
         "type": "edit_text",
         "edit_type": "number",
@@ -1728,7 +1728,7 @@
       {
         "key": "number_of_male_25_plus_years_who_received_services_based_on_issues_raised",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_25_plus_years_who_received_services_based_on_issues_raised",
         "type": "edit_text",
         "edit_type": "number",
@@ -1744,7 +1744,7 @@
       {
         "key": "number_of_female_25_plus_years_who_received_services_based_on_issues_raised",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_25_plus_years_who_received_services_based_on_issues_raised",
         "type": "edit_text",
         "edit_type": "number",
