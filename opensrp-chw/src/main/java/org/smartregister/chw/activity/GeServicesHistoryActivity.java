@@ -206,7 +206,7 @@ public class GeServicesHistoryActivity extends CoreAncMedicalHistoryActivity {
                     List<VisitDetail> details = sourceVisits.get(iteration).getVisitDetails().get(param);
                     map.put(param, getTexts(context, details));
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    Timber.e(e);
                 }
 
             }
@@ -232,12 +232,13 @@ public class GeServicesHistoryActivity extends CoreAncMedicalHistoryActivity {
 
 
         protected void processVisit(List<LinkedHashMap<String, String>> community_visits, Context context, List<Visit> visits) {
-            if (community_visits != null && community_visits.size() > 0) {
+            if (community_visits != null && !community_visits.isEmpty()) {
                 linearLayoutHealthFacilityVisit.setVisibility(View.VISIBLE);
 
                 int x = 0;
                 for (LinkedHashMap<String, String> vals : community_visits) {
                     View view = inflater.inflate(R.layout.medical_history_visit, null);
+                    view.findViewById(R.id.type_of_service).setVisibility(View.GONE);
                     TextView tvTitle = view.findViewById(R.id.title);
                     View edit = view.findViewById(R.id.textview_edit);
                     LinearLayout visitDetailsLayout = view.findViewById(R.id.visit_details_layout);
