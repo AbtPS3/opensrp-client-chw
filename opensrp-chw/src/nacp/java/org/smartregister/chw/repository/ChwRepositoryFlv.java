@@ -121,6 +121,9 @@ public class ChwRepositoryFlv {
                 case 29:
                     upgradeToVersion29(db);
                     break;
+                case 30:
+                    upgradeToVersion30(db);
+                    break;
                 default:
                     break;
             }
@@ -508,6 +511,24 @@ public class ChwRepositoryFlv {
                     ChwApplication.createCommonFtsObject());
         } catch (Exception e) {
             Timber.e(e, "upgradeToVersion28");
+        }
+    }
+
+    private static void upgradeToVersion30(SQLiteDatabase db) {
+        try {
+            // setup reporting
+            ReportingLibrary reportingLibrary = ReportingLibrary.getInstance();
+            String geReportIndicatorConfigFile = "config/ge-monthly-report.yml";
+            for (String configFile : Collections.singletonList(geReportIndicatorConfigFile)) {
+                reportingLibrary.readConfigFile(configFile, db);
+            }
+
+            DatabaseMigrationUtils.createAddedECTables(db,
+                    new HashSet<>(Arrays.asList("ec_ge_register", "ec_ge_follow_up_visit", "ec_ge_mobilization_session")),
+                    ChwApplication.createCommonFtsObject());
+
+        } catch (Exception e) {
+            Timber.e(e, "upgradeToVersion30");
         }
     }
 }

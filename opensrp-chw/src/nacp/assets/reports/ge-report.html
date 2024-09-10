@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="./report-script.js"></script>
+
+    <style>
+    *{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.show-on-print {
+  display: none;
+}
+
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+/* Table Styles */
+
+.table-wrapper{
+    margin: 10px;
+    margin-right: 10px;
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: normal;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    padding: 5px;
+}
+
+
+ul {
+    width: 100%;
+}
+ul li {
+    width: 49%;
+    display: inline-block;
+}
+
+ul li > * {
+    width: 30%;
+    margin-bottom: 5px;
+}
+
+.no-data {
+  background: #ccc;
+}
+
+
+
+    </style>
+</head>
+
+<body onload="loadData('monthly', 'ge')">
+
+<div class="table-wrapper">
+    <table  class="fl-table">
+        <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Indicator</th>
+            <th>Value</th>
+            <th>Grand Total (M+F)</th>
+            <th>Male (M)</th>
+            <th>Female (F)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Idadi ya wananchi waliopata huduma za msaada wa kisheria</td>
+            <td class="no-data"></td>
+            <td id="ge-1-grandTotal"></td>
+            <td id="ge-1-male"></td>
+            <td id="ge-1-female"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Idadi ya wanufaika wa mikopo ya masharti nafuu</td>
+            <td class="no-data"></td>
+            <td id="ge-2-grandTotal"></td>
+            <td id="ge-2-male"></td>
+            <td id="ge-2-female"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Idadi ya watu waliofikiwa na hamasa kuhusu mila na desturi katika jamii</td>
+            <td class="no-data"></td>
+            <td id="ge-3-grandTotal"></td>
+            <td id="ge-3-male"></td>
+            <td id="ge-3-female"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Idadi ya wafanyabiashara ndogo ndogo walioasiliwa</td>
+            <td class="no-data"></td>
+            <td id="ge-4-grandTotal"></td>
+            <td id="ge-4-male"></td>
+            <td id="ge-4-female"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Idadi ya kaya zilizopewa elimu kuhusu masuala ya jinsia</td>
+            <td class="no-data"></td>
+            <td id="ge-5-grandTotal"></td>
+            <td id="ge-5-male"></td>
+            <td id="ge-5-female"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Idadi ya watu waliofikiwa na kampeni kuhusu haki za kisheria kwenye umiliki wa mali</td>
+            <td id="ge-6"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Uwiano wa nafasi za uongozi kwa jinsia katika jamii</td>
+            <td id="ge-7"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Asilimia ya wanufaika wa mikopo ya masharti nafuu waliopata elimu ya ujasiriamali</td>
+            <td id="ge-8"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Uwiano wanawake kwa wanaume kwenye umiliki wa mali</td>
+            <td id="ge-9"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Idadi ya kaya zilizopewa elimu kuhusu masuala ya usawa wa kijinsia</td>
+            <td id="ge-10"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Idadi ya kampeni za uhamasishaji usawa wa kijinsia zilizotekelezwa</td>
+            <td id="ge-11"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Idadi ya programu za uwezeshaji wanawake kiuchumi zilizotekelezwa</td>
+            <td id="ge-12"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Idadi ya majukwaa ya uwezeshaji wanawake kiuchumi yaliyoanzishwa</td>
+            <td id="ge-13"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Idadi ya mikutano ya uhamasishaji iliyofanyika kuhusu mila na desturi katika jamii</td>
+            <td id="ge-14"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+            <td  class="no-data"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    function loadData(reportKey, reportType) {
+        const data = JSON.parse(Android.getData(reportKey));
+        const keys = Object.keys(data.nameValuePairs);
+        const reportPeriod = document.getElementById("report_period");
+        const reportingFacility = document.getElementById("reporting_facility");
+        keys.forEach((key) => {
+            let element;
+            element = document.getElementById(key);
+            if (element !== null && typeof element !== "undefined") {
+                element.innerHTML = data.nameValuePairs[key];
+            }
+        });
+        reportPeriod.innerHTML = Android.getDataPeriod();
+        reportingFacility.innerHTML = Android.getReportingFacility();
+    }
+</script>
+
+</body>
+</html>

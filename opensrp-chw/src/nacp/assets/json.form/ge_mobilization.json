@@ -107,6 +107,12 @@
             "openmrs_entity_id": "economic_empowerment_program"
           },
           {
+            "key": "economic_empowerment_platform",
+            "text": "Establishment of Women Economic Empowerment Platform",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_empowerment_platform"
+          },
+          {
             "key": "legal_aid_campaigns",
             "text": "Legal Aid Campaigns",
             "openmrs_entity": "concept",
@@ -127,7 +133,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "please select the gender"
+          "err": "Required"
         }
       },
       {
@@ -183,7 +189,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "please select the gender"
+          "err": "Required"
         },
         "relevance": {
           "rules-engine": {
@@ -275,7 +281,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "please select the gender"
+          "err": "Required"
         },
         "relevance": {
           "rules-engine": {
@@ -373,7 +379,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "please select the gender"
+          "err": "Required"
         },
         "relevance": {
           "rules-engine": {
@@ -539,7 +545,7 @@
       {
         "key": "total_number_of_male_citizens_reached_by_the_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_male_citizens_reached_by_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -555,7 +561,7 @@
       {
         "key": "total_number_of_female_citizens_reached_by_the_campaign",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "total_number_of_female_citizens_reached_by_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
@@ -929,7 +935,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "please select the gender"
+          "err": "Required"
         },
         "relevance": {
           "rules-engine": {
@@ -955,36 +961,15 @@
         }
       },
       {
-        "key": "number_of_individual_loan_recepient",
+        "key": "name_of_loan_recipient",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "number_individual_loan_recepient",
+        "openmrs_entity": "console",
+        "openmrs_entity_id": "name_of_loan_recipient",
         "type": "edit_text",
-        "edit_type": "number",
-        "hint": "Number of individual loan recepient",
+        "hint": "Name of the loan recipient",
         "v_required": {
           "value": "true",
-          "err": "Please Enter the Loan Recepient"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "ge_mobilization_session_rule.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "number_of_group_loan_recepient",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "number_group_loan_recepient",
-        "type": "edit_text",
-        "edit_type": "number",
-        "hint": "Number of group loan recepient",
-        "v_required": {
-          "value": "true",
-          "err": "Please Enter the Loan Recepient"
+          "err": "Please Enter the Loan Recipient"
         },
         "relevance": {
           "rules-engine": {
@@ -1124,7 +1109,7 @@
       {
         "key": "number_of_male_members_loan",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_male_members_loan",
         "type": "edit_text",
         "edit_type": "number",
@@ -1140,7 +1125,7 @@
       {
         "key": "number_of_female_members_loan",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "number_of_female_members_loan",
         "type": "edit_text",
         "edit_type": "number",
@@ -1384,7 +1369,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "please select the gender"
+          "err": "Required"
         },
         "relevance": {
           "rules-engine": {
@@ -1506,7 +1491,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "please select the gender"
+          "err": "Required"
         },
         "relevance": {
           "rules-engine": {
@@ -1773,6 +1758,44 @@
         }
       },
       {
+        "key": "platform_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "platform_name",
+        "type": "edit_text",
+        "hint": "Platform Name",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "platform_purpose",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "platform_purpose",
+        "type": "edit_text",
+        "hint": "Platform Purpose",
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "event_supporter",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
@@ -1813,7 +1836,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "please select the gender"
+          "err": "Required"
         }
       },
       {

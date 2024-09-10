@@ -245,13 +245,7 @@ condition: "step1_reasons_for_differences_in_ratio_of_ownership_between_male_and
 actions:
     - "isRelevant = true"
 ---
-name: step1_number_of_individual_loan_recepient
-description: show loan receiving date when group/individual has received loan
-condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
-actions:
-    - "isRelevant = true"
----
-name: step1_number_of_group_loan_recepient
+name: step1_name_of_loan_recipient
 description: show loan receiving date when group/individual has received loan
 condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
 actions:
@@ -440,6 +434,18 @@ actions:
 name: step1_number_of_male_25_plus_years_who_received_services_based_on_issues_raised
 description: show loan receiving date when group/individual has received loan
 condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_platform_name
+description: show platform_name
+condition: "step1_event_type == 'economic_empowerment_platform'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_platform_purpose
+description: show platform_purpose
+condition: "step1_event_type == 'economic_empowerment_platform'"
 actions:
     - "isRelevant = true"
 ---

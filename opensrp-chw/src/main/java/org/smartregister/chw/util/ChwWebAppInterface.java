@@ -75,6 +75,11 @@ public class ChwWebAppInterface {
             return ReportUtils.GbvReports.computeClientsReports(ReportUtils.getReportDate());
         }
 
+        if (reportType.equalsIgnoreCase(Constants.ReportConstants.ReportTypes.GE_REPORT)) {
+            ReportUtils.setPrintJobName("GE_report_ya_mwezi-" + ReportUtils.getReportPeriod() + ".pdf");
+            return ReportUtils.GeReports.computeClientsReports(ReportUtils.getReportDate());
+        }
+
         if (reportType.equalsIgnoreCase(Constants.ReportConstants.ReportTypes.MVC_REPORT)){
             switch (key) {
                 case Constants.ReportConstants.MvcReportKeys.HOUSEHOLD_REGISTRATION_DETAILS_REPORT:

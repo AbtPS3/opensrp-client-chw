@@ -92,7 +92,7 @@ actions:
 ---
 name: step1_other_referrals_destinations
 description: only clients that have been registered
-condition: "step1_referral_destination == 'others'"
+condition: "step1_referral_destination.contains('others')"
 actions:
   - "isRelevant = true"
 
@@ -114,12 +114,6 @@ actions:
 name: step1_other_property
 description: choose others
 condition: "step1_type_of_property_owned.contains('others')"
-actions:
-  - "isRelevant = true"
----
-name: step1_other_referrals
-description: choose others
-condition: "step1_referral_destination.equals('Others (Total)')"
 actions:
   - "isRelevant = true"
 
@@ -148,13 +142,6 @@ actions:
 name: step1_followup_visit_date
 description: only clients that have been registered
 condition: "step1_sensitization_session_complete == 'no'"
-actions:
-  - "isRelevant = true"
-
----
-name: step1_referral_destination
-description: choose referral
-condition: "step1_action_taken_after_provision_of_legal_services.equals('referral')"
 actions:
   - "isRelevant = true"
 

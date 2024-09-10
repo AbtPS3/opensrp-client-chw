@@ -1,0 +1,183 @@
+indicators:
+  #  GE 1
+  - key: "ge-1-male"
+    grouping: "GE"
+    description: "Idadi ya wananchi waliopata huduma za msaada wa kisheria"
+    indicatorQuery: " SELECT count(DISTINCT egfv.entity_id) as count FROM ec_ge_follow_up_visit egfv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
+      WHERE
+      service_type = 'legal_aid_support'
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+  - key: "ge-1-female"
+    grouping: "GE"
+    description: "Idadi ya wananchi waliopata huduma za msaada wa kisheria"
+    indicatorQuery: " SELECT count(DISTINCT egfv.entity_id) as count FROM ec_ge_follow_up_visit egfv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
+      WHERE
+      service_type = 'legal_aid_support'
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+  #  GE 2
+  - key: "ge-2-male"
+    grouping: "GE"
+    description: "Idadi ya wanufaika wa mikopo ya masharti nafuu"
+    indicatorQuery: " SELECT SUM(number_of_male_members_loan) as count FROM ec_ge_mobilization_session egms
+      WHERE
+      number_of_male_members_loan IS NOT NULL
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+  - key: "ge-2-female"
+    grouping: "GE"
+    description: "Idadi ya wanufaika wa mikopo ya masharti nafuu"
+    indicatorQuery: " SELECT SUM(number_of_female_members_loan) as count FROM ec_ge_follow_up_visit egms
+      WHERE
+      number_of_female_members_loan IS NOT NULL
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+
+  #  GE 3
+  - key: "ge-3-male"
+    grouping: "GE"
+    description: "Idadi ya watu waliofikiwa na hamasa kuhusu mila na desturi katika jamii"
+    indicatorQuery: " SELECT count(DISTINCT egfv.entity_id) as count FROM ec_ge_follow_up_visit egfv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
+      WHERE
+      service_type = 'Household_Sensitized_on_GE_Issues'
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+  - key: "ge-3-female"
+    grouping: "GE"
+    description: "Idadi ya watu waliofikiwa na hamasa kuhusu mila na desturi katika jamii"
+    indicatorQuery: " SELECT count(DISTINCT egfv.entity_id) as count FROM ec_ge_follow_up_visit egfv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
+      WHERE
+      service_type = 'Household_Sensitized_on_GE_Issues'
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+  #  GE 4
+  - key: "ge-4-male"
+    grouping: "GE"
+    description: "Idadi ya wafanyabiashara ndogo ndogo walioasiliwa"
+    indicatorQuery: " SELECT count(DISTINCT egfv.entity_id) as count FROM ec_ge_follow_up_visit egfv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
+      WHERE
+      has_the_client_been_registered = 'yes'
+      AND (efm.gender='Male')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+  - key: "ge-4-female"
+    grouping: "GE"
+    description: "Idadi ya wafanyabiashara ndogo ndogo walioasiliwa"
+    indicatorQuery: " SELECT count(DISTINCT egfv.entity_id) as count FROM ec_ge_follow_up_visit egfv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
+      WHERE
+      has_the_client_been_registered = 'yes'
+      AND (efm.gender='Female')
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+  #  GE 5
+  - key: "ge-5-male"
+    grouping: "GE"
+    description: "Idadi ya kaya zilizopewa elimu kuhusu masuala ya jinsia"
+    indicatorQuery: " SELECT SUM(total_number_of_male_citizens_reached_by_the_campaign) as count FROM ec_ge_mobilization_session egms
+      WHERE
+      total_number_of_male_citizens_reached_by_the_campaign IS NOT NULL
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+  - key: "ge-5-female"
+    grouping: "GE"
+    description: "Idadi ya kaya zilizopewa elimu kuhusu masuala ya jinsia"
+    indicatorQuery: " SELECT SUM(total_number_of_female_citizens_reached_by_the_campaign) as count FROM ec_ge_follow_up_visit egms
+      WHERE
+      total_number_of_female_citizens_reached_by_the_campaign IS NOT NULL
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+
+  - key: "ge-10"
+    grouping: "GE"
+    description: "Idadi ya kaya zilizopewa elimu kuhusu masuala ya usawa wa kijinsia"
+    indicatorQuery: " SELECT count(DISTINCT ef.base_entity_id) as count FROM ec_ge_follow_up_visit egfv
+      INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
+      INNER JOIN ec_family ef on ef.base_entity_id = efm.relational_id 
+      WHERE
+      date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egfv.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+  #  GE 11
+  - key: "ge-11"
+    grouping: "GE"
+    description: "Idadi ya kampeni za uhamasishaji usawa wa kijinsia zilizotekelezwa"
+    indicatorQuery: " SELECT COUNT(DISTINCT base_entity_id) as count FROM ec_ge_mobilization_session egms
+      WHERE
+      event_type = 'ge_awareness_campaign'
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+  #  GE 12
+  - key: "ge-12"
+    grouping: "GE"
+    description: "Idadi ya programu za uwezeshaji wanawake kiuchumi zilizotekelezwa"
+    indicatorQuery: " SELECT COUNT(DISTINCT base_entity_id) as count FROM ec_ge_mobilization_session egms
+      WHERE
+      event_type = 'economic_empowerment_program'
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+  #  GE 13
+  - key: "ge-13"
+    grouping: "GE"
+    description: "Idadi ya programu za uwezeshaji wanawake kiuchumi zilizotekelezwa"
+    indicatorQuery: " SELECT COUNT(DISTINCT base_entity_id) as count FROM ec_ge_mobilization_session egms
+      WHERE
+      event_type = 'economic_empowerment_platform'
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"
+
+
+  #  GE 14
+  - key: "ge-14"
+    grouping: "GE"
+    description: "Idadi ya mikutano ya uhamasishaji iliyofanyika kuhusu mila na desturi katika jamii"
+    indicatorQuery: " SELECT COUNT(DISTINCT base_entity_id) as count FROM ec_ge_mobilization_session egms
+      WHERE
+      event_type = 'ge_norms_values_awareness_campaigns'
+      AND date((substr('%s', 1, 4) || '-' || substr('%s', 6, 2) || '-' || '01')) =
+        date(substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 1, 4) ||'-' ||
+        substr(strftime('%Y-%m-%d', datetime(egms.last_interacted_with / 1000, 'unixepoch', 'localtime')), 6, 2) ||'-' || '01')"

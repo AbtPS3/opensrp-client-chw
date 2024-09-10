@@ -1051,5 +1051,10 @@
     <string name="ge_preventing_negotiating_resolving_conflict">Preventing, Negotiating, &amp; Resolving Conflict</string>
     <string name="ge_religious_beliefs">Religious Beliefs</string>
 
+    <string name="ge_edit_home_visit">Edit GE Home Visit</string>
+    <string name="ge_reports_title">GE Report</string>
+    <string name="ge_main_reports_screen_title">GE Reports</string>
+    <string name="ge_reports_subtitle">View GE Report</string>
+
 
 </resources>

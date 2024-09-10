@@ -474,6 +474,10 @@
             android:exported="false"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
+            android:name=".activity.GeReportsActivity"
+            android:exported="false"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
             android:name=".activity.MvcRegisterActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
@@ -496,6 +500,10 @@
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
             android:name=".activity.MvcReportsViewActivity"
+            android:exported="false"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.GeReportsViewActivity"
             android:exported="false"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity

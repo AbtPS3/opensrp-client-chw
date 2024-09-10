@@ -43,6 +43,8 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
 
     protected ConstraintLayout mvcReports;
 
+    protected ConstraintLayout geReports;
+
     @Override
     protected void onCreation() {
         ChwIndicatorGeneratingJob.scheduleJobImmediately(ChwIndicatorGeneratingJob.TAG);
@@ -66,6 +68,7 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
         sbcReports = findViewById(R.id.sbc_reports);
         gbvReports = findViewById(R.id.gbv_reports);
         mvcReports = findViewById(R.id.mvc_reports);
+        geReports = findViewById(R.id.ge_reports);
 
         AllSharedPreferences allSharedPreferences = Utils.getAllSharedPreferences();
         SharedPreferences preferences = allSharedPreferences.getPreferences();
@@ -111,6 +114,9 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
                     if (ChwApplication.getApplicationFlavor().hasMvc()) {
                         mvcReports.setVisibility(View.VISIBLE);
                     }
+                    if (ChwApplication.getApplicationFlavor().hasGe()) {
+                        geReports.setVisibility(View.VISIBLE);
+                    }
                     break;
             }
         } else {
@@ -145,6 +151,10 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
             if (ChwApplication.getApplicationFlavor().hasMvc()) {
                 mvcReports.setVisibility(View.VISIBLE);
             }
+
+            if (ChwApplication.getApplicationFlavor().hasGe()) {
+                geReports.setVisibility(View.VISIBLE);
+            }
         }
 
 
@@ -156,6 +166,7 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
         sbcReports.setOnClickListener(this);
         gbvReports.setOnClickListener(this);
         mvcReports.setOnClickListener(this);
+        geReports.setOnClickListener(this);
     }
 
     public void setUpToolbar() {
@@ -216,6 +227,10 @@ public class InAppReportsActivity extends SecuredActivity implements View.OnClic
         }
         if (id == R.id.mvc_reports) {
             Intent intent = new Intent(this, MvcReportsActivity.class);
+            startActivity(intent);
+        }
+        if (id == R.id.ge_reports) {
+            Intent intent = new Intent(this, GeReportsActivity.class);
             startActivity(intent);
         }
     }

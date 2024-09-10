@@ -440,4 +440,10 @@ public class GeProfileActivity extends BaseGeProfileActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        profilePresenter.refreshProfileBottom();
+    }
+
 }

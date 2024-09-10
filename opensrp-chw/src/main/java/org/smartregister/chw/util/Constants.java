@@ -231,6 +231,8 @@ public class Constants extends CoreConstants {
            String GBV_REPORT = "gbv_report";
 
            String MVC_REPORT = "mvc_report";
+
+           String GE_REPORT = "ge_report";
         }
 
         public interface CDPReportKeys {
@@ -262,6 +264,8 @@ public class Constants extends CoreConstants {
             String MALARIA_MONTHLY_REPORT_PATH = "iccm_reports/iccm-malaria-monthly-report";
             String SBC_REPORT_PATH = "sbc-report";
             String GBV_REPORT_PATH = "gbv-report";
+
+            String GE_REPORT_PATH = "ge-report";
 
             String MVC_HOUSEHOLD_REGISTRATION_DETAILS_REPORT_PATH = "mvc_reports/mvc-household-registration-details";
 
