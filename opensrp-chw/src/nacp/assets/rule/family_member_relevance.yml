@@ -32,7 +32,7 @@ actions:
 name: step1_marital_status
 description: marital_status relevance
 priority: 1
-condition: "(step1_dob != '' && helper.formatDate(step1_dob,'y') > 10) || (step1_age != '' && step1_age > 10)"
+condition: "(step1_dob != '' && helper.formatDate(step1_dob,'y') > 14) || (step1_age != '' && step1_age > 14)"
 actions:
   - "isRelevant = true"
 ---
@@ -71,5 +71,33 @@ name: step1_preg_1yr
 description: pregnance 1yr relevance
 priority: 1
 condition: "step1_wra == 1"
+actions:
+  - "isRelevant = true"
+---
+name: step1_phone_number
+description: phone_number relevance
+priority: 1
+condition: "(step1_dob != '' && helper.formatDate(step1_dob,'y') >= 10) || (step1_age != '' && step1_age >= 10)"
+actions:
+  - "isRelevant = true"
+---
+name: step1_other_phone_number
+description: other_phone_number relevance
+priority: 1
+condition: "(step1_dob != '' && helper.formatDate(step1_dob,'y') >= 10) || (step1_age != '' && step1_age >= 10)"
+actions:
+  - "isRelevant = true"
+---
+name: step1_service_provider
+description: service provider relevance
+priority: 1
+condition: "(step1_dob != '' && helper.formatDate(step1_dob,'y') >= 15) || (step1_age != '' && step1_age >= 15)"
+actions:
+  - "isRelevant = true"
+---
+name: step1_leader
+description: leadership role relevance
+priority: 1
+condition: "(step1_dob != '' && helper.formatDate(step1_dob,'y') >= 15) || (step1_age != '' && step1_age >= 15)"
 actions:
   - "isRelevant = true"

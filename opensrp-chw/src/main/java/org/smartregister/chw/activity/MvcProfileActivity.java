@@ -265,7 +265,7 @@ public class MvcProfileActivity extends BaseOvcProfileActivity {
         int age = org.smartregister.chw.util.Utils.getAgeFromDate(dob);
 
         String gender = memberObject.getGender();
-        menu.findItem(R.id.action_location_info).setVisible(true);
+        menu.findItem(R.id.action_location_info).setVisible(false);
         if (ChwApplication.getApplicationFlavor().hasHIV()) {
             menu.findItem(R.id.action_cbhs_registration).setVisible(true);
         }

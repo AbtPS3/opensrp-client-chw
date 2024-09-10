@@ -48,61 +48,61 @@
     }
   },
   "step1": {
-    "title": "Education & Psychosocial",
+    "title": "Elimu na mafunzo ya ufundi stadi",
     "fields": [
       {
         "key": "education_vocational_training",
         "type": "native_radio",
-        "label": "Select clients Education and Vocational Training",
+        "label": "Elimu na mafunzo ya ufundi stadi",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "education_vocational_training",
         "options": [
           {
             "key": "children_enrolled_in_school",
-            "text": "Children enrolled in school",
+            "text": "Mtoto ameandikishwa shule",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "children_enrolled_in_school"
           },
           {
             "key": "missed_school_three_days",
-            "text": "Missed school for three or more days consecutively in a month",
+            "text": "Mtoto hakuhudhuria shule kwa siku 3 mfululizo au zaidi katika mwezi",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "missed_school_three_days"
           },
           {
             "key": "linked_to_education_support",
-            "text": "Linked to education support",
+            "text": "Mtoto ameunganishwa na msaada wa kielimu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "linked_to_education_support"
           },
           {
             "key": "supported_attend_vocational_training",
-            "text": "Supported to attend vocational training",
+            "text": "Mtoto amesaidiwa kuhudhuria mafunzo ya ufundi stadi",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "supported_attend_vocational_training"
           },
           {
             "key": "received_business_start_up_kit",
-            "text": "Received business start-up kit",
+            "text": "Mtoto amepokea zana za kuanzisha biashara",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "received_business_start_up_kit"
           },
           {
             "key": "linked_mainstreamed_education_program",
-            "text": "Linked to mainstreamed education program (MEMKWA)",
+            "text": "Mtoto ameunganishwa na Mpango wa Elimu ya Msingi kwa watoto waliokosa (MEMKWA)",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "linked_mainstreamed_education_program"
           },
           {
             "key": "none",
-            "text": "None",
+            "text": "Hakuna",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none"
@@ -110,7 +110,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Selecting the clients Education and Vocational Training"
+          "err": "Chagua elimu na mafunzo ya ufundi stadi"
         },
         "relevance": {
           "rules-engine": {
@@ -123,7 +123,7 @@
       {
         "key": "select_ecd_psychosocial_support_less_than_5",
         "type": "check_box",
-        "label": "Select ECD & Psychosocial Support provided",
+        "label": "Msaada wa maendeleo ya awali ya mtoto na kisaikolojia",
         "combine_checkbox_option_values": "true",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
@@ -134,7 +134,7 @@
         "options": [
           {
             "key": "attended_ecd_centre",
-            "text": "Children (<5 years) attended ECD centre.",
+            "text": "Mtoto chini ya miaka 5 anahudhuria kituo cha Maendeleo ya Awali ya Watoto",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "attended_ecd_centre",
@@ -142,7 +142,7 @@
           },
           {
             "key": "none",
-            "text": "None",
+            "text": "Hakuna msaada uliotolewa",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none"
@@ -157,14 +157,14 @@
         },
         "v_required": {
           "value": "true",
-          "err": "Selecting at least one option for ECD & Psychosocial Support is required"
+          "err": "Tafadhali chgua msaada wa maendeleo ya awali ya mtoto na kisaikolojia"
         }
       },
       {
         "key": "select_ecd_psychosocial_support_greater_than_5",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
-        "label": "Select ECD & Psychosocial Support provided",
+        "label": "Msaada wa maendeleo ya awali ya mtoto na kisaikolojia",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_ecd_psychosocial_support_greater_than_5",
@@ -174,7 +174,7 @@
         "options": [
           {
             "key": "children_attended_childrens_clubs",
-            "text": "Children attended children's clubs.",
+            "text": "Mtoto amehudhuria klabu za watoto",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "children_attended_childrens_clubs",
@@ -182,7 +182,7 @@
           },
           {
             "key": "none",
-            "text": "None",
+            "text": "Hakuna msaada uliotolewa",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none"
@@ -197,14 +197,14 @@
         },
         "v_required": {
           "value": "true",
-          "err": "Selecting at least one option for ECD & Psychosocial Support is required"
+          "err": "Tafadhali chgua msaada wa maendeleo ya awali ya mtoto na kisaikolojia"
         }
       },
       {
         "key": "select_ecd_psychosocial_support_greater_than_12",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
-        "label": "Select ECD & Psychosocial Support provided",
+        "label": "Msaada wa maendeleo ya awali ya mtoto na kisaikolojia",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_ecd_psychosocial_support_greater_than_12",
@@ -214,7 +214,7 @@
         "options": [
           {
             "key": "children_attended_teen_clubs",
-            "text": "Children attended teen clubs.",
+            "text": "Mtoto amehudhuria klabu za vijana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "children_attended_teen_clubs",

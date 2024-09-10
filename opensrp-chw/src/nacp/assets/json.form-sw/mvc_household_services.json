@@ -1,7 +1,6 @@
 {
   "count": "1",
-  "global": {
-  },
+  "global": {},
   "encounter_type": "MVC Household Services",
   "entity_id": "",
   "metadata": {
@@ -48,7 +47,7 @@
     }
   },
   "step1": {
-    "title": "Household Services",
+    "title": "Huduma za kaya",
     "fields": [
       {
         "key": "parenting_caregivers_with_children",
@@ -57,42 +56,44 @@
         "openmrs_entity_id": "parenting_caregivers_with_children",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Parenting (for Parents/Caregivers with Children of less than 5 years Old)",
-        "exclusive": ["not_applicable"],
+        "label": "Malezi (Kwa walezi wenye watoto chini ya miaka 5)",
+        "exclusive": [
+          "not_applicable"
+        ],
         "options": [
           {
             "key": "ecd_education_during_chw_home_visit",
-            "text": "Parents/Caregivers received care for child development (ECD) education during a CHW home visit",
+            "text": "Amepokea elimu ya Malezi kwa Maendeleo ya Awali ya Mtoto (CCD) alipotembelewa na mhudumu wa afya ya jamii",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "ecd_education_during_chw_home_visit"
           },
           {
             "key": "ecd_education_at_children_conner",
-            "text": "Parents/Caregivers received ECD education at children's corners in Health Facility",
+            "text": "Amepokea elimu ya makuzi ya awali ya mtoto kutoka kituo cha makuzi ya watoto kwenye kituo cha afya",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "ecd_education_at_children_conner"
           },
           {
             "key": "community_parenting_groups",
-            "text": "Parents/Caregivers linked to community parenting groups",
+            "text": "Mlezi kaunganishwa na vikundi vya malezi katika jamii",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "community_parenting_groups"
           },
           {
             "key": "parenting_messages",
-            "text": "Parents/Caregivers received parenting messages",
+            "text": "Amepokea ujumbe mfupi kuhusu malezi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "parenting_messages"
           },
           {
             "key": "infant_feeding_counseling",
-            "text": "Parents/Caregivers received infant and young child feeding counseling",
+            "text": "Amepokea unasihi wa lishe ya mtoto mdogo",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "infant_feeding_counseling"
           },
           {
             "key": "not_applicable",
-            "text": "Not applicable",
+            "text": "Haihusiki",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "not_applicable"
           }
@@ -111,23 +112,23 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "nutritional_status_assessment",
         "type": "native_radio",
-        "label": "Nutritional Status Assessment (MUAC)",
+        "label": "Tathmini ya hali ya lishe (MUAC)",
         "options": [
           {
             "key": "severe_malnutrition",
-            "text": "Severe malnutrition",
+            "text": "Utapiamlo mkali",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "severe_malnutrition"
           },
           {
             "key": "moderate_malnutrition",
-            "text": "Moderate malnutrition",
+            "text": "Utapiamlo wa wastani",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "moderate_malnutrition"
           },
           {
             "key": "not_malnourished",
-            "text": "Not malnourished",
+            "text": "Hana utapiamlo",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "not_malnourished"
           }
@@ -140,23 +141,23 @@
         "openmrs_entity_id": "food_and_nutrition",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Food and Nutrition",
+        "label": "Chakula na lishe",
         "options": [
           {
             "key": "nutrition_counseling",
-            "text": "Parent/Caregiver received nutrition counseling",
+            "text": "Mlezi amepokea unasihi wa lishe",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "nutrition_counseling"
           },
           {
             "key": "food_support",
-            "text": "Households linked to external food support & nutritional supplements",
+            "text": "Kaya imeunganishwa na misaada ya chakula & nyongeza za lishe",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "food_support"
           },
           {
             "key": "services_linkage",
-            "text": "Parents/Caregivers linked to other services",
+            "text": "Huduma nyingine",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "services_linkage"
           }
@@ -169,47 +170,47 @@
         "openmrs_entity_id": "health_care_provided",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Health Care provided",
+        "label": "Huduma za afya",
         "options": [
           {
             "key": "hiv_risk_assessment",
-            "text": "Received HIV risk assessment",
+            "text": "Amefanyiwa tathmini ya hatari ya maambukizo ya VVU",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_risk_assessment"
           },
           {
             "key": "hiv_prevention_counseling",
-            "text": "Received HIV prevention counseling service",
+            "text": "Amepokea unasihi wa kuzuia maambukizo ya VVU",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_prevention_counseling"
           },
           {
             "key": "disclosure_support",
-            "text": "Received disclosure support",
+            "text": "Amepata msaada wa kuweka wazi hali yake ya maambukizo ya VVU",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "disclosure_support"
           },
           {
             "key": "linked_to_an_hiv_support_group",
-            "text": "Linked to an HIV support group",
+            "text": "Ameunganishwa na vikundi vya kusaidia walio na maambukizi ya VVU",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "linked_to_an_hiv_support_group"
           },
           {
             "key": "received_art_adherence_counseling",
-            "text": "Received ART adherence counseling",
+            "text": "Amepokea unasihi kuhusu ufuasi wa dawa za ARV",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "received_art_adherence_counseling"
           },
           {
             "key": "supported_to_join_CHF_or_TIKA",
-            "text": "Supported to join CHF/TIKA",
+            "text": "Amesaidiwa kujiunga na bima ya afya jamii (CHF/TIKA)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "supported_to_join_CHF_or_TIKA"
           },
           {
             "key": "received_support_for_gbv",
-            "text": "Received support for GBV",
+            "text": "Mlezi amepokea msaada kuhusiana na ukatili wa kijinsia",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "received_support_for_gbv"
           }
@@ -222,53 +223,53 @@
         "openmrs_entity_id": "economic_strengthening",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Economic Strengthening",
+        "label": "Kuboresha hali ya uchumi",
         "options": [
           {
             "key": "primary_caregivers_who_are_active_slg_members",
-            "text": "Parents/Primary caregivers who are active SLG members HIV risk assessment",
+            "text": "Mlezi mkuu ni mjumbe hai wa kikundi cha jamii cha kuweka akiba na kukopa",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "primary_caregivers_who_are_active_slg_members"
           },
           {
             "key": "households_linked_to_temporary_consumption_support",
-            "text": "Households linked to temporary consumption support (e.g. SLG & OVC funds)",
+            "text": "Kaya imeunganishwa na msaada wa matumizi wa muda mfupi (mf. Vikundi vya kuweka akiba na kukopa & Mfuko wa WWKMH)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "households_linked_to_temporary_consumption_support"
           },
           {
             "key": "households_linked_to_cash_transfer",
-            "text": "Households linked to temporary consumption linked to cash transfer e.g. TASAF",
+            "text": "Kaya imeunganishwa na ruzuku (mf. TASAF)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "households_linked_to_cash_transfer"
           },
           {
             "key": "caregivers_linked_to_entrepreneurship_trainings",
-            "text": "Parents/Caregivers supported to entrepreneurship trainings",
+            "text": "Kaya imeunganishwa na mafunzo ya ujasiriamali",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "caregivers_linked_to_entrepreneurship_trainings"
           },
           {
             "key": "caregivers_supported_to_establish_income_generating_activity_iga",
-            "text": "Parents/Caregivers supported to establish income generating activity (IGA)",
+            "text": "Mlezi mkuu amewezeshwa kujipatia kipato (IGA)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "caregivers_supported_to_establish_income_generating_activity_iga"
           },
           {
             "key": "households_linked_to_market",
-            "text": "Households linked to market",
+            "text": "Kaya imeunganishwa na masoko",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "households_linked_to_market"
           },
           {
             "key": "households_supported_to_prepare_succession_plan",
-            "text": "Households supported to prepare succession plan",
+            "text": "Kaya imesaidiwa kuandaa mpango wa mfululizo wa kuboresha uchumi wa kaya",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "households_supported_to_prepare_succession_plan"
           },
           {
             "key": "primary_caregivers_linked_to_agricultural_extension_support",
-            "text": "Parents/Primary caregivers linked to agricultural extension support",
+            "text": "Mlezi mkuu ameunganishwa na msaada wa mafunzo na taarifa za kilimo",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "primary_caregivers_linked_to_agricultural_extension_support"
           }
@@ -281,54 +282,56 @@
         "openmrs_entity_id": "referrals",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Referrals",
-        "exclusive": ["no_referrals_sent"],
+        "label": "Rufaa",
+        "exclusive": [
+          "no_referrals_sent"
+        ],
         "options": [
           {
             "key": "health_related_services",
-            "text": "Health related services",
+            "text": "Huduma za kiafya",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "health_related_services"
           },
           {
             "key": "nutrition",
-            "text": "Nutrition",
+            "text": "Lishe",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "nutrition"
           },
           {
             "key": "education",
-            "text": "Education",
+            "text": "Elimu",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "education"
           },
           {
             "key": "child_protection",
-            "text": "Child Protection",
+            "text": "Ulinzi na usalama wa watoto",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "child_protection"
           },
           {
             "key": "psychosocial_support",
-            "text": "Psychosocial Support",
+            "text": "Msaada wa kisaikolojia na kijamii",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "psychosocial_support"
           },
           {
             "key": "economic_strengthening",
-            "text": "Economic Strengthening",
+            "text": "Kuboresha uchumi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "economic_strengthening"
           },
           {
             "key": "other",
-            "text": "Other",
+            "text": "Mengineyo",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "other"
           },
           {
             "key": "no_referrals_sent",
-            "text": "No referrals sent",
+            "text": "Hakuna rufaa iliyotolewa",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no_referrals_sent"
           }
@@ -340,7 +343,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_referrals",
         "type": "edit_text",
-        "hint": "Please specify referrals completed",
+        "hint": "Tafadhali jaza rufaa zilizokamilika",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -356,24 +359,26 @@
         "openmrs_entity_id": "support_provided_to_caregiver_on_referrals",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "exclusive": ["no_support_provided"],
-        "label": "Support given to caregiver on referrals",
+        "exclusive": [
+          "no_support_provided"
+        ],
+        "label": "Msaada unaoambatana na rufaa alizopatiwa mlezi",
         "options": [
           {
             "key": "accompanied_to_service",
-            "text": "Accompanied to service",
+            "text": "Alisindikizwa kupata huduma",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "accompanied_to_service"
           },
           {
             "key": "assisted_with_transport",
-            "text": "Assisted with transport",
+            "text": "Alipatiwa msaada wa usafiri",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "assisted_with_transport"
           },
           {
             "key": "no_support_provided",
-            "text": "No support provided",
+            "text": "Hakuna",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no_support_provided"
           }
@@ -386,54 +391,56 @@
         "openmrs_entity_id": "caregiver_referrals_completed",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "exclusive": ["none"],
-        "label": "Caregiver referrals completed",
+        "exclusive": [
+          "none"
+        ],
+        "label": "Rufaa za walezi zilizokamilika",
         "options": [
           {
             "key": "health_related_services",
-            "text": "Health related services",
+            "text": "Huduma za kiafya",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "health_related_services"
           },
           {
             "key": "nutrition",
-            "text": "Nutrition",
+            "text": "Lishe",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "nutrition"
           },
           {
             "key": "education",
-            "text": "Education",
+            "text": "Elimu",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "education"
           },
           {
             "key": "child_protection",
-            "text": "Child Protection",
+            "text": "Ulinzi na usalama wa watoto",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "child_protection"
           },
           {
             "key": "psychosocial_support",
-            "text": "Psychosocial Support",
+            "text": "Msaada wa kisaikolojia na kijamii",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "psychosocial_support"
           },
           {
             "key": "economic_strengthening",
-            "text": "Economic Strengthening",
+            "text": "Kuboresha uchumi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "economic_strengthening"
           },
           {
             "key": "other",
-            "text": "Other",
+            "text": "Mengineyo",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "other"
           },
           {
             "key": "none",
-            "text": "None",
+            "text": "Hakuna",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none"
           }
@@ -445,7 +452,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_caregiver_referrals_completed",
         "type": "edit_text",
-        "hint": "Please specify other caregiver referrals completed",
+        "hint": "Tafadhali jaza rufaa nyingine zilizokamilika",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -461,36 +468,38 @@
         "openmrs_entity_id": "shelter_and_hygiene",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Shelter and hygiene",
-        "exclusive": ["none"],
+        "label": "Makazi na usafi",
+        "exclusive": [
+          "none"
+        ],
         "options": [
           {
             "key": "households_linked_to_house_renovation_support",
-            "text": "Households linked to house renovation support",
+            "text": "Kaya imeunganishwa na msaada wa kukarabati nyumba",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "households_linked_to_house_renovation_support"
           },
           {
             "key": "households_linked_to_house_construction_support",
-            "text": "Households linked to house construction support",
+            "text": "Kaya imeunganishwa na msaada wa ujenzi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "households_linked_to_house_construction_support"
           },
           {
             "key": "households_received_water_sanitation_and_hygiene_wash_support",
-            "text": "Households received water sanitation and hygiene (WASH) support",
+            "text": "Kaya imepokea elimu ya maji safi na maji taka na usafi (WASH)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "households_received_water_sanitation_and_hygiene_wash_support"
           },
           {
             "key": "households_received_clothing_support",
-            "text": "Households received clothing support",
+            "text": "Kaya imepata msaada wa mavazi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "households_received_clothing_support"
           },
           {
             "key": "none",
-            "text": "None",
+            "text": "Hakuna",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none"
           }

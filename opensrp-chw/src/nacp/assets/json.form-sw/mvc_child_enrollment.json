@@ -47,12 +47,12 @@
     }
   },
   "step1": {
-    "title": "MVC Registration",
+    "title": "Usajili wa Watoto Walio Katika Mazingira Hatarishi",
     "fields": [
       {
         "key": "registration_number_of_mvc",
         "type": "edit_text",
-        "hint": "Registration number of MVC",
+        "hint": "Namba ya utambulisho ya mtoto",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "registration_number_of_mvc",
@@ -64,21 +64,21 @@
       {
         "key": "mvc_has_birth_certificate",
         "type": "native_radio",
-        "label": "Does the MVC have a birth certificate?",
+        "label": "Je mtoto ana cheti cha kuzaliwa?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "mvc_has_birth_certificate",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndiyo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
@@ -92,7 +92,7 @@
       {
         "key": "birth_certificate_number",
         "type": "edit_text",
-        "hint": "Provide Birth Certificate Number",
+        "hint": "Namba ya cheti cha kuzaliwa",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "birth_certificate_number",
@@ -107,91 +107,91 @@
         "key": "reasons_of_vulnerability",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
-        "label": "Reason(s) of vulnerability",
+        "label": "Sababu ya/za kuwa katika mazingira hatarishi",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_of_vulnerability",
         "options": [
           {
             "key": "disability",
-            "text": "Disability",
+            "text": "Ana ulemavu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "disability"
           },
           {
             "key": "orphan_due_to_hiv",
-            "text": "Orphan due to HIV",
+            "text": "Ni yatima kutokana na VVU",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "orphan_due_to_hiv"
           },
           {
             "key": "orphaned_due_to_other_causes",
-            "text": "Orphaned due to other causes",
+            "text": "Ni yatima kutokana na sababu nyingine",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "orphaned_due_to_other_causes"
           },
           {
             "key": "living_with_hiv",
-            "text": "Living with HIV",
+            "text": "Anaishi na VVU",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "living_with_hiv"
           },
           {
             "key": "malnourished",
-            "text": "Malnourished",
+            "text": "Ana utapiamlo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "malnourished"
           },
           {
             "key": "in_conflict_with_law",
-            "text": "In conflict with law",
+            "text": "Mtoto amekinzana na sheria",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "in_conflict_with_law"
           },
           {
             "key": "living_or_working_on_the_street",
-            "text": "Living/working on the street",
+            "text": "Anaishi/Anafanya kazi mtaani",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "living_or_working_on_the_street"
           },
           {
             "key": "living_in_institutional_care",
-            "text": "Living in institutional care",
+            "text": "Mtoto anaishi kwenye kituo cha malezi",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "living_in_institutional_care"
           },
           {
             "key": "worst_form_of_child_labor",
-            "text": "Worst form of child labor",
+            "text": "Aina mbaya kabisa ya ajira ya watoto",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "worst_form_of_child_labor"
           },
           {
             "key": "children_at_risk_or_suffering_from_violence_abuse_and_neglect",
-            "text": "Children at risk or suffering from violence, abuse and neglect",
+            "text": "Mtoto yuko hatarini kukumbana na ukatili, unyanyasaji na utelekezaji",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "children_at_risk_or_suffering_from_violence_abuse_and_neglect"
           },
           {
             "key": "is_a_child_of_whr",
-            "text": "Is a child of a Woman in High Risk",
+            "text": "Ni mtoto wa mzazi anayefanya biashara ya ngono",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "is_a_child_of_whr"
           },
           {
             "key": "other",
-            "text": "Other",
+            "text": "Mengineyo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "other"
@@ -204,7 +204,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_reasons_of_vulnerability",
         "type": "edit_text",
-        "hint": "Specify other reasons of vulnerability",
+        "hint": "Taja sababu nyinginezo ya/za kuwa katika mazingira hatarishi",
         "v_required": {
           "value": "true",
           "err": "Required"
@@ -234,43 +234,43 @@
         "options": [
           {
             "key": "albinism",
-            "text": "Albinism",
+            "text": "Ualbino",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "albinism"
           },
           {
             "key": "mental_disability",
-            "text": "Mental disability",
+            "text": "Wa akili",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "mental_disability"
           },
           {
             "key": "deaf",
-            "text": "Deaf",
+            "text": "Kiziwi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "deaf"
           },
           {
             "key": "blind",
-            "text": "Blind",
+            "text": "Wa kuona",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "blind"
           },
           {
             "key": "physical_disability",
-            "text": "Physical disability",
+            "text": "Wa viungo",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "physical_disability"
           },
           {
             "key": "impairment_of_speech",
-            "text": "Speech impairment",
+            "text": "Wa kuongea",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "impairment_of_speech"
           },
           {
             "key": "other",
-            "text": "Other",
+            "text": "Aina nyingine",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "other"
           }
@@ -297,7 +297,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_type_of_disability",
         "type": "edit_text",
-        "hint": "Specify other Type of Disability",
+        "hint": "Taja aina nyingine za ulemavu",
         "v_required": {
           "value": "true",
           "err": "Required"
@@ -317,21 +317,21 @@
       {
         "key": "is_child_in_school",
         "type": "native_radio",
-        "label": "Is the child in school?",
+        "label": "Je, mtoto yuko shule?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "is_child_in_school",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndiyo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
@@ -345,49 +345,49 @@
       {
         "key": "level_of_education",
         "type": "native_radio",
-        "label": "Level of education",
+        "label": "Kiwango cha elimu",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "level_of_education",
         "options": [
           {
             "key": "ecd",
-            "text": "Early childhood development",
+            "text": "Elimu ya awali ya mtoto",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "ecd"
           },
           {
             "key": "pre_primary_school",
-            "text": "Pre-primary school",
+            "text": "Chekechea",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "pre_primary_school"
           },
           {
             "key": "primary_school",
-            "text": "Primary school (Specify the class)",
+            "text": "Elimu ya msingi (Chagua Darasa)",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "primary_school"
           },
           {
             "key": "secondary_school",
-            "text": "Secondary school (Specify the form)",
+            "text": "Sekondari (Chagua Kidato)",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "secondary_school"
           },
           {
             "key": "vocational_trainings",
-            "text": "Vocational trainings",
+            "text": "Mafunzo ya ufundi stadi",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "vocational_trainings"
           },
           {
             "key": "colleges",
-            "text": "Colleges",
+            "text": "Chuo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "colleges"
@@ -403,56 +403,56 @@
       {
         "key": "primary_school_class",
         "type": "native_radio",
-        "label": "Select the Class",
+        "label": "Chagua Darasa",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "primary_school_class",
         "options": [
           {
             "key": "standard_1",
-            "text": "Standard 1",
+            "text": "Darasa la kwanza",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "standard_1"
           },
           {
             "key": "standard_2",
-            "text": "Standard 2",
+            "text": "Darasa la pili",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "standard_2"
           },
           {
             "key": "standard_3",
-            "text": "Standard 3",
+            "text": "Darasa la tatu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "standard_3"
           },
           {
             "key": "standard_4",
-            "text": "Standard 4",
+            "text": "Darasa la nne",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "standard_4"
           },
           {
             "key": "standard_5",
-            "text": "Standard 5",
+            "text": "Darasa la tano",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "standard_5"
           },
           {
             "key": "standard_6",
-            "text": "Standard 6",
+            "text": "Darasa la sita",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "standard_6"
           },
           {
             "key": "standard_7",
-            "text": "Standard 7",
+            "text": "Darasa la saba",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "standard_7"
@@ -468,49 +468,49 @@
       {
         "key": "secondary_school_form",
         "type": "native_radio",
-        "label": "Select the Form",
+        "label": "Chagua Kidato",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "secondary_school_form",
         "options": [
           {
             "key": "form_1",
-            "text": "Form 1",
+            "text": "Kidato cha kwanza",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "form_1"
           },
           {
             "key": "form_2",
-            "text": "Form 2",
+            "text": "Kidato cha pili",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "form_2"
           },
           {
             "key": "form_3",
-            "text": "Form 3",
+            "text": "Kidato cha tatu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "form_3"
           },
           {
             "key": "form_4",
-            "text": "Form 4",
+            "text": "Kidato cha nne",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "form_4"
           },
           {
             "key": "form_5",
-            "text": "Form 5",
+            "text": "Kidato cha tano",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "form_5"
           },
           {
             "key": "form_6",
-            "text": "Form 6",
+            "text": "Kidato cha sita",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "form_6"
@@ -526,7 +526,7 @@
       {
         "key": "reason_for_not_being_in_school",
         "type": "native_radio",
-        "label": "Reason for not in school",
+        "label": "Sababu za mtoto kutokuwa shule",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reason_for_not_being_in_school",
@@ -563,119 +563,119 @@
       {
         "key": "care_of_household",
         "type": "native_radio",
-        "label": "Care of Household",
+        "label": "Mlezi mkuu wa mtoto",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "care_of_household",
         "options": [
           {
             "key": "father",
-            "text": "Father",
+            "text": "Baba",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "father"
           },
           {
             "key": "mother",
-            "text": "Mother",
+            "text": "Mama",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "mother"
           },
           {
             "key": "grandfather",
-            "text": "Grandfather",
+            "text": "Babu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "grandfather"
           },
           {
             "key": "grandmother",
-            "text": "Grandmother",
+            "text": "Bibi",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "grandmother"
           },
           {
             "key": "aunt",
-            "text": "Aunt",
+            "text": "Shangazi",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "aunt"
           },
           {
             "key": "uncle",
-            "text": "Uncle",
+            "text": "Mjomba",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "uncle"
           },
           {
             "key": "stepfather",
-            "text": "Stepfather",
+            "text": "Baba wa kambo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "stepfather"
           },
           {
             "key": "stepmother",
-            "text": "Stepmother",
+            "text": "Mama wa kambo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "stepmother"
           },
           {
             "key": "sister",
-            "text": "Sister",
+            "text": "Dada",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "sister"
           },
           {
             "key": "brother",
-            "text": "Brother",
+            "text": "Kaka",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "brother"
           },
           {
             "key": "institutional",
-            "text": "Institutional",
+            "text": "Kituo cha malezi",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "institutional"
           },
           {
             "key": "cousin",
-            "text": "Cousin",
+            "text": "Binamu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "cousin"
           },
           {
             "key": "family_friend",
-            "text": "Family friend",
+            "text": "Rafiki wa familia",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "family_friend"
           },
           {
             "key": "foster_parent",
-            "text": "Foster parent",
+            "text": "Mlezi wa kambo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "foster_parent"
           },
           {
             "key": "adoptive_parent",
-            "text": "Adoptive parent",
+            "text": "Mzazi wa kuasili",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "adoptive_parent"
           },
           {
             "key": "other",
-            "text": "Other",
+            "text": "Mwingine",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "other"
@@ -692,7 +692,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_care_of_household",
         "type": "edit_text",
-        "hint": "Specify other Care of Household",
+        "hint": "Taja mlezi wingine mkuu wa mtoto",
         "v_required": {
           "value": "true",
           "err": "Required"
@@ -712,21 +712,21 @@
       {
         "key": "case_opened",
         "type": "native_radio",
-        "label": "Case opened",
+        "label": "Shauri limefunguliwa",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "case_opened",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndiyo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"

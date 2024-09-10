@@ -46,26 +46,26 @@
     }
   },
   "step1": {
-    "title": "Need & Risk Assessment",
+    "title": "Tathmini ya Mahitaji na Hatari",
     "fields": [
       {
         "key": "has_need_assessment_been_conducted",
         "type": "native_radio",
-        "label": "Has Need Assessment been conducted?",
+        "label": "Je, tathmini ya mahitaji imefanyika?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_need_assessment_been_conducted",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndio",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
@@ -79,50 +79,50 @@
         "openmrs_entity_id": "client_needs",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Select the client's need",
+        "label": "Chagua mahitaji yaliopatikana baada ya tathmini",
         "exclusive": [
           "none"
         ],
         "options": [
           {
             "key": "health_and_nutrition",
-            "text": "Health and Nutrition",
+            "text": "Afya na Lishe",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "health_and_nutrition"
           },
           {
             "key": "housing_and_care",
-            "text": "Housing and Care",
+            "text": "Malazi na Matunzo",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "housing_and_care"
           },
           {
             "key": "security_and_safety",
-            "text": "Security and Safety",
+            "text": "Ulinzi na Usalama",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "security_and_safety"
           },
           {
             "key": "psychological_and_emotional_support",
-            "text": "Psychological and Emotional Support",
+            "text": "Msaada wa kisaikolojia na kijamii",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "psychological_and_emotional_support"
           },
           {
             "key": "education_and_life_skills",
-            "text": "Education and Life Skills",
+            "text": "Elimu na stadi za maisha",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "education_and_life_skills"
           },
           {
             "key": "household_and_economic_strengthening",
-            "text": "Household and Economic Strengthening",
+            "text": "Uimarishaji uchumi wa kaya",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "household_and_economic_strengthening"
           },
           {
             "key": "other",
-            "text": "Other",
+            "text": "Mengineyo (taja)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "other"
           },
@@ -130,7 +130,7 @@
             "key": "none",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none",
-            "text": "None"
+            "text": "Hakuna"
           }
         ],
         "relevance": {
@@ -146,10 +146,10 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_client_needs",
         "type": "edit_text",
-        "hint": "Specify other Client Needs",
+        "hint": "Taja mahitaji mengineyo",
         "v_required": {
           "value": "true",
-          "err": "Required"
+          "err": "Tafadhali jibu swali hili"
         },
         "relevance": {
           "step1:client_needs": {
@@ -166,21 +166,21 @@
       {
         "key": "has_risk_assessment_been_conducted",
         "type": "native_radio",
-        "label": "Has Risk Assessment been conducted?",
+        "label": "Je, tathmini ya Hatari imefanyika",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_risk_assessment_been_conducted",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndio",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
@@ -194,38 +194,38 @@
         "openmrs_entity_id": "has_the_child_experienced_vac",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Has the child experienced VAC?",
+        "label": "Je mtoto amefanyiwa kitendo cha Ukatili?",
         "exclusive": [
           "none"
         ],
         "options": [
           {
             "key": "physical",
-            "text": "Physical",
+            "text": "Kimwili",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "physical"
           },
           {
             "key": "sexual",
-            "text": "Sexual",
+            "text": "Kingono",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "sexual"
           },
           {
             "key": "neglect",
-            "text": "Neglect",
+            "text": "Kutelekezwa",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "neglect"
           },
           {
             "key": "exploitation",
-            "text": "Exploitation",
+            "text": "Unyonywaji",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "exploitation"
           },
           {
             "key": "none",
-            "text": "None",
+            "text": "Hakuna",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "none"
           }
@@ -240,21 +240,21 @@
       {
         "key": "is_the_child_in_conflict_with_the_law",
         "type": "native_radio",
-        "label": "Is the child in conflict with the law?",
+        "label": "Je mtoto amekinzana na sheria?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "is_the_child_in_conflict_with_the_law",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndio",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
@@ -262,27 +262,27 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Required"
+          "err": "Tafadhali jaza taarifa hizi"
         }
       },
       {
         "key": "is_the_child_in_contact_with_the_law",
         "type": "native_radio",
-        "label": "Is the child in contact with the law?",
+        "label": "Je, mtoto yuko kwenye mawasiliano na sheria?",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "is_the_child_in_contact_with_the_law",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndio",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
@@ -290,7 +290,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Required"
+          "err": "Tafadhali jaza taarifa hizi"
         }
       },
       {
@@ -299,7 +299,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Refer the Child to DCMS",
+        "text": "Mpe rufaa Mtoto kwenda kwa DCMS",
         "toaster_type": "problem",
         "relevance": {
           "rules-engine": {

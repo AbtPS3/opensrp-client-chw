@@ -156,7 +156,7 @@
           "err": "Namba lazima iwe jumla ya tarakimu 10 kwa urefu"
         },
         "v_regex": {
-          "value": "(0[6-7][1-9][0-9][0-9]{6})|\\s*",
+          "value": "(0[6-7][0-9][0-9][0-9]{6})|\\s*",
           "err": "Namba lazima iwe na tarakimu 10 na lazima ianze na 06 au 07."
         }
       },
@@ -182,7 +182,7 @@
           "err": "Number must be a total of 10 digits in length"
         },
         "v_regex": {
-          "value": "(0[6-7][1-9][0-9][0-9]{6})|\\s*",
+          "value": "(0[6-7][0-9][0-9][0-9]{6})|\\s*",
           "err": "Namba lazima iwe na tarakimu 10 na lazima ianze na 06 au 07."
         }
       },
@@ -334,7 +334,7 @@
           "label": "Umri"
         },
         "min_date": "today-120y",
-        "max_date": "today-15y",
+        "max_date": "today-5y",
         "v_required": {
           "value": "true",
           "err": "Tafadhali jaza tarehe ya kuzaliwa"
@@ -398,8 +398,8 @@
           "err": "Lazima iwe number kamili"
         },
         "v_min": {
-          "value": "15",
-          "err": "Umri lazima uwe sawa au zaidi ya 15"
+          "value": "5",
+          "err": "Umri lazima uwe sawa au zaidi ya 5"
         },
         "v_max": {
           "value": "120",
@@ -489,8 +489,13 @@
           "err": "Nambari lazima iwe jumla ya tarakimu 10 kwa urefu"
         },
         "v_regex": {
-          "value": "(0[6-7][1-9][0-9][0-9]{6})|\\s*",
+          "value": "(0[6-7][0-9][0-9][0-9]{6})|\\s*",
           "err": "Nambari lazima iwe na tarakimu 10 na lazima ianze na 06 au 07."
+        },
+        "v_max_length": {
+          "value": "10",
+          "is_fixed_size": "true",
+          "err": "Nambari lazima iwe jumla ya tarakimu 10 kwa urefu"
         }
       },
       {
@@ -504,8 +509,13 @@
           "value": "true",
           "err": "Nambari lazima iwe jumla ya tarakimu 10 kwa urefu"
         },
+        "v_max_length": {
+          "value": "10",
+          "is_fixed_size": "true",
+          "err": "Nambari lazima iwe jumla ya tarakimu 10 kwa urefu"
+        },
         "v_regex": {
-          "value": "(0[6-7][1-9][0-9][0-9]{6})|\\s*",
+          "value": "(0[6-7][0-9][0-9][0-9]{6})|\\s*",
           "err": "Nambari lazima iwe na tarakimu 10 na lazima ianze na 06 au 07."
         }
       },
@@ -883,7 +893,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "service_provider",
         "type": "native_radio",
-        "label": "Kazi ya kichwa cha familia",
+        "label": "Kazi ya mkuu wa Kaya",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
@@ -922,6 +932,13 @@
         "v_required": {
           "value": "true",
           "err": "Tafadhali chagua angalau moja"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_register_relevance.yml"
+            }
+          }
         }
       },
       {
@@ -978,6 +995,13 @@
         "v_required": {
           "value": "true",
           "err": "Tafadhali chagua angalau moja"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_register_relevance.yml"
+            }
+          }
         }
       },
       {

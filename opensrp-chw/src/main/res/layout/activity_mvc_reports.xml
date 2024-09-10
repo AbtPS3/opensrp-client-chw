@@ -37,7 +37,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical|start"
                 android:paddingEnd="0dp"
-                android:text="MVC Reports"
+                android:text="@string/mvc_reports_title"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
         </androidx.appcompat.widget.Toolbar>

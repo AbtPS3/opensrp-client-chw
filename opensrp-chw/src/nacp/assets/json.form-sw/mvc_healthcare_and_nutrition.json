@@ -1,7 +1,6 @@
 {
   "count": "1",
-  "global": {
-  },
+  "global": {},
   "encounter_type": "Health Care & Nutrition",
   "entity_id": "",
   "relational_id": "",
@@ -49,33 +48,33 @@
     }
   },
   "step1": {
-    "title": "Health Care & Nutrition",
+    "title": "Huduma za Afya na lishe",
     "fields": [
       {
         "key": "child_received_vaccinations",
         "type": "native_radio",
-        "label": "Has the child received all the required vaccinations?",
+        "label": "Je watoto wamepatiwa chanjo zote zinazotakiwa",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "child_received_vaccinations",
         "options": [
           {
             "key": "yes",
-            "text": "Yes",
+            "text": "Ndio",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes"
           },
           {
             "key": "no",
-            "text": "No",
+            "text": "Hapana",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no"
           },
           {
             "key": "unknown_vaccinated",
-            "text": "Unknown",
+            "text": "Haijulikani",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "unknown_vaccinated"
@@ -90,34 +89,34 @@
         },
         "v_required": {
           "value": "true",
-          "err": "Please indicate if the child has received all the required vaccinations"
+          "err": "Tafadhali jiibu swali hili"
         }
       },
       {
         "key": "child_nutritional_status",
         "type": "native_radio",
-        "label": "Select the child nutritional status",
+        "label": "Tathmini ya hali ya lishe (MUAC)",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "child_nutritional_status",
         "options": [
           {
             "key": "severe_malnutrition",
-            "text": "Severe Malnutrition",
+            "text": "Utapiamlo mkali",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "severe_malnutrition"
           },
           {
             "key": "moderate_malnutrition",
-            "text": "Moderate Malnutrition",
+            "text": "Utapiamlo wa wastani",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "moderate_malnutrition"
           },
           {
             "key": "not_malnourished",
-            "text": "Not malnourished",
+            "text": "Hana utapiamlo",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "not_malnourished"
@@ -125,7 +124,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Please select the child's nutritional status"
+          "err": "Tafadhali jibu swali hili"
         },
         "relevance": {
           "rules-engine": {
@@ -139,7 +138,7 @@
         "key": "health_care_service_provided",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
-        "label": "Select the health services provided",
+        "label": "Huduma za Afya zilizotolewa",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "health_care_service_provided",
@@ -149,64 +148,63 @@
         "options": [
           {
             "key": "supported_to_join_chf_tika",
-            "text": "Supported to join CHF/TIKA",
+            "text": "Mtoto amesaidiwa kujiunga na mfuko wa afya (CHF/TIKA au zinginezo)",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "supported_to_join_chf_tika"
           },
           {
             "key": "hiv_prevention_counseling_service",
-            "text": "HIV prevention counseling service",
+            "text": "Mtoto amepokea unasihi wa kujikinga na maambukizi ya VVU",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_prevention_counseling_service"
           },
           {
             "key": "disclosure_support",
-            "text": "Disclosure Support",
+            "text": "Mtoto amepata msaada wa kuweka wazi hali yake ya maambukizi ya VVU",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "disclosure_support"
           },
           {
             "key": "hiv_support_group",
-            "text": "HIV support group",
+            "text": "Mtoto ameunganishwa na vikundi vya kusaidia walio na maambukizi ya VVU",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_support_group"
           },
           {
             "key": "art_adherence_counseling",
-            "text": "HIV adherence counseling",
+            "text": "Mtoto amepokea unasihi kuhusu ufuasi wa dawa za ARV",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "art_adherence_counseling"
           },
           {
             "key": "hiv_risk_assessment",
-            "text": "HIV risk assessment",
+            "text": "Mtoto amefanyiwa tathmini ya hatari ya maambukizi ya VVU ",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_risk_assessment"
           },
           {
             "key": "hiv_prevention_education",
-            "text": "HIV prevention education",
+            "text": "Mtoto amepewa elimu ya kuzuia maambukizi ya VVU",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "hiv_prevention_education"
           },
           {
             "key": "none",
-            "text": "None",
-            "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "none"
+            "openmrs_entity_id": "none",
+            "text": "Hakuna"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Please select the healthcare service provided"
+          "err": "Tafadhali jaza jibu swali hili"
         }
       }
     ]

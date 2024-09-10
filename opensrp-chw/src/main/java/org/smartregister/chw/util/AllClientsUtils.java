@@ -26,6 +26,7 @@ import org.smartregister.chw.activity.HivProfileActivity;
 import org.smartregister.chw.activity.IccmProfileActivity;
 import org.smartregister.chw.activity.KvpPrEPProfileActivity;
 import org.smartregister.chw.activity.MalariaProfileActivity;
+import org.smartregister.chw.activity.MvcProfileActivity;
 import org.smartregister.chw.activity.PncMemberProfileActivity;
 import org.smartregister.chw.activity.SbcMemberProfileActivity;
 import org.smartregister.chw.activity.TbProfileActivity;
@@ -112,6 +113,10 @@ public class AllClientsUtils {
 
     public static void goToGbvProfile(Activity activity, CommonPersonObjectClient client) {
         GbvMemberProfileActivity.startMe(activity, client.getCaseId());
+    }
+
+    public static void goToMvcProfile(Activity activity, CommonPersonObjectClient client) {
+        MvcProfileActivity.startMe(activity, client.getCaseId());
     }
 
     public static void goToGeProfile(Activity activity, CommonPersonObjectClient client) {

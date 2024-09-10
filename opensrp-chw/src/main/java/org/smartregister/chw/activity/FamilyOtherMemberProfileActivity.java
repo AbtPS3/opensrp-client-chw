@@ -73,6 +73,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         int age = Utils.getAgeFromDate(dob);
 
         menu.findItem(R.id.action_location_info).setVisible(true);
+        menu.findItem(R.id.action_location_info).setVisible(false);
         menu.findItem(R.id.action_tb_registration).setVisible(false);
         menu.findItem(R.id.action_sick_child_follow_up).setVisible(false);
         menu.findItem(R.id.action_malaria_diagnosis).setVisible(false);
@@ -425,7 +426,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         String dob = Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
         int age = Utils.getAgeFromDate(dob);
 
-        if (familyHead.equals(baseEntityId))
+        if (primaryCaregiver.equals(baseEntityId))
             MvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_HEAD_OF_HOUSEHOLD_ENROLLMENT);
         else if (age < 18) {
             MvcRegisterActivity.startRegistration(FamilyOtherMemberProfileActivity.this, baseEntityId, org.smartregister.chw.ovc.util.Constants.FORMS.MVC_CHILD_ENROLLMENT);

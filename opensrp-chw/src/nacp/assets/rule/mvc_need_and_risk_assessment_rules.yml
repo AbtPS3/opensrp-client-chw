@@ -1,0 +1,7 @@
+---
+name: step1_refer_to_dcms
+description: refer_to_dcms relevance
+priority: 1
+condition: "(!step1_has_the_child_experienced_vac.isEmpty() && !step1_has_the_child_experienced_vac.contains('none')) || step1_is_the_child_in_conflict_with_the_law.equals('yes')  || step1_is_the_child_in_contact_with_the_law.equals('yes') "
+actions:
+  - "isRelevant = true"

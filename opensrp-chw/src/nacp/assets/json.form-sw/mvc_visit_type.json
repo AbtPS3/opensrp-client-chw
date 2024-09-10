@@ -1,6 +1,6 @@
 {
   "count": "1",
-  "encounter_type": "Child Protection",
+  "encounter_type": "Visit Type",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -47,66 +47,62 @@
     }
   },
   "step1": {
-    "title": "Child Protection",
+    "title": "Hatua aliyofikia katika mpango WWKMH",
     "fields": [
       {
-        "key": "child_protection_service",
-        "type": "check_box",
-        "combine_checkbox_option_values": true,
-        "label": "Select child protection service provided",
+        "key": "visit_type",
+        "type": "native_radio",
+        "label": "Hatua aliyofikia katika mpango WWKMH",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "child_protection_service",
-        "exclusive": [
-          "none"
-        ],
+        "openmrs_entity_id": "visit_type",
         "options": [
           {
-            "key": "supported_to_get_birth_certificates",
-            "text": "Supported to get birth certificates",
+            "key": "new_client",
+            "text": "Mpya",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "supported_to_get_birth_certificates"
+            "openmrs_entity_id": "new_client"
           },
           {
-            "key": "provided_with_emergency_care_and_support_services",
-            "text": "Provided with emergency care and support services",
+            "key": "active_continuing_with_services",
+            "text": "Anaendelea",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "provided_with_emergency_care_and_support_services"
+            "openmrs_entity_id": "active_continuing_with_services"
           },
           {
-            "key": "linked_with_social_welfare_office",
-            "text": "Linked with social welfare office",
+            "key": "graduated",
+            "text": "Amehitimu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "linked_with_social_welfare_office"
+            "openmrs_entity_id": "graduated"
           },
           {
-            "key": "linked_with_mvcc_child_protection_team",
-            "text": "Linked with MVCC/Child protection team",
+            "key": "transferred",
+            "text": "Amehamishwa",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "linked_with_mvcc_child_protection_team"
+            "openmrs_entity_id": "transferred"
           },
           {
-            "key": "provided_with_general_child_protection_awareness_creation",
-            "text": "Provided with general child protection awareness creation",
+            "key": "exited_without_graduation",
+            "text": "Ametoka bila kuhitimu",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "provided_with_general_child_protection_awareness_creation"
+            "openmrs_entity_id": "exited_without_graduation"
           },
           {
-            "key": "none",
-            "text": "None",
+            "key": "died",
+            "text": "Amefariki",
             "openmrs_entity_parent": "",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "none"
+            "openmrs_entity_id": "died"
           }
         ],
         "v_required": {
-          "value": "true",
-          "err": "Please select at least one child protection service"
+          "value": true,
+          "err": "Tafadhali jibu swali hili"
         }
       }
     ]

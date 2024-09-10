@@ -1,0 +1,294 @@
+{
+  "count": "1",
+  "encounter_type": "Referral",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "165000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "165001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "165003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "165004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "165005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "165006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Rufaa",
+    "fields": [
+      {
+        "key": "referrals_provided",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
+        "label": "Chagua Rufaa iliyotolewa",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referrals_provided",
+        "exclusive": [
+          "no_referrals_provided"
+        ],
+        "options": [
+          {
+            "key": "health_related_services_provided",
+            "text": "Huduma za kiafya",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "health_related_services_provided"
+          },
+          {
+            "key": "nutrition_provided",
+            "text": "Lishe",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "nutrition_provided"
+          },
+          {
+            "key": "education_provided",
+            "text": "Elimu",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "education_provided"
+          },
+          {
+            "key": "child_protection_provided",
+            "text": "Ulinzi na usalama wa watoto",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "child_protection_provided"
+          },
+          {
+            "key": "psychosocial_support_provided",
+            "text": "Msaada wa kisaikolojia na kijamii",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "psychosocial_support_provided"
+          },
+          {
+            "key": "economic_strengthening_provided",
+            "text": "Kuboresha uchumi",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_strengthening_provided"
+          },
+          {
+            "key": "other",
+            "text": "Mengineyo",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          },
+          {
+            "key": "no_referrals_provided",
+            "text": "Hakuna rufaa iliyotolewa",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_referrals_provided"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jibu swali hili"
+        }
+      },
+      {
+        "key": "other_referral_provided",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_referral_provided",
+        "type": "edit_text",
+        "hint": "Taja rufaa nyingine iliyotolewa",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jibu swali hili"
+        },
+        "relevance": {
+          "step1:referrals_provided": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "key": "support_provided_on_referrals",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
+        "label": "Msaada unaoambatana na rufaa alizopatiwa mtoto",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "support_provided_on_referrals",
+        "exclusive": [
+          "no_support_provided"
+        ],
+        "options": [
+          {
+            "key": "accompanied_to_service",
+            "text": "Alisindikizwa kupata huduma",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "accompanied_to_service"
+          },
+          {
+            "key": "assisted_with_transport",
+            "text": "Alipatiwa msaada wa usafiri",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "assisted_with_transport"
+          },
+          {
+            "key": "no_support_provided",
+            "text": "Hakuna",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_support_provided"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jibu swali hili"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "referral_rules.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "referrals_completed_by_client",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
+        "label": "Rufaa za watoto zilizokamilika",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referrals_completed_by_client",
+        "exclusive": [
+          "no_referrals_sent_completed"
+        ],
+        "options": [
+          {
+            "key": "health_related_services_completed",
+            "text": "Huduma za kiafya",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "health_related_services_completed"
+          },
+          {
+            "key": "nutrition_completed",
+            "text": "Lishe",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "nutrition_completed"
+          },
+          {
+            "key": "education_completed",
+            "text": "Elimu",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "education_completed"
+          },
+          {
+            "key": "child_protection_completed",
+            "text": "Ulinzi na usalama wa watoto",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "child_protection_completed"
+          },
+          {
+            "key": "psychosocial_support_completed",
+            "text": "Msaada wa kisaikolojia na kijamii",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "psychosocial_support_completed"
+          },
+          {
+            "key": "economic_strengthening_completed",
+            "text": "Kuboresha uchumi",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_strengthening_completed"
+          },
+          {
+            "key": "other",
+            "text": "Mengineyo",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          },
+          {
+            "key": "no_referrals_sent_completed",
+            "text": "Hakuna rufaa zilizokamilika",
+            "openmrs_entity_parent": "",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_referrals_sent_completed"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jibu swali hili"
+        }
+      },
+      {
+        "key": "other_referrals_completed_by_client",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_referrals_completed_by_client",
+        "type": "edit_text",
+        "hint": "Taja rufaa nyinginezo zilizokamilika",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jibu swali hili"
+        },
+        "relevance": {
+          "step1:referrals_completed_by_client": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "other"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

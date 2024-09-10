@@ -16,7 +16,14 @@ actions:
 name: step1_select_ecd_psychosocial_support_greater_than_5
 description: Remove the option "Children (<5 years) attended ECD center" if the child is more than 5 years old.
 priority: 1
-condition: "global_age >= 5"
+condition: "global_age >= 5 && global_age < 13"
+actions:
+  - "isRelevant = true"
+---
+name: step1_select_ecd_psychosocial_support_greater_than_12
+description: Remove the option "children_attended_childrens_clubs" if the child is more than 12 years old.
+priority: 1
+condition: "global_age >= 13"
 actions:
   - "isRelevant = true"
 ---
@@ -25,4 +32,5 @@ description: ecd psychosocial support calculation based on age
 priority: 1
 condition: "true"
 actions:
-  - "calculation = global_age < 5 ? step1_select_ecd_psychosocial_support_less_than_5 : step1_select_ecd_psychosocial_support_greater_than_5"
+  - "calculation = global_age < 5 ? step1_select_ecd_psychosocial_support_less_than_5 : 
+  global_age < 13 ? step1_select_ecd_psychosocial_support_greater_than_5 : select_ecd_psychosocial_support_greater_than_12"
