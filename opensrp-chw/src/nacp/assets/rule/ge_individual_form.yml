@@ -155,7 +155,7 @@ actions:
 ---
 name: step1_challenges_faced
 description: only clients that have been registered
-condition: "step1_service_type == 'small_scale_entrepreneur'"
+condition: "step1_service_type == 'small_scale_entrepreneur' && step1_has_the_client_been_registered == 'no' "
 actions:
   - "isRelevant = true"
 
