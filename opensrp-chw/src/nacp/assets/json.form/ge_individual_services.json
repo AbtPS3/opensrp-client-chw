@@ -652,7 +652,7 @@
         "openmrs_entity_id": "challenges_faced",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
-        "label": "Select challenges faced",
+        "label": "Select challenges faced as a result of not being registered",
         "options": [
           {
             "key": "not_being_recognized_by_authorities",
