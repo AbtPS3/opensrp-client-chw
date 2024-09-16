@@ -25,7 +25,7 @@ actions:
 ---
 name: step1_specify
 description: show loan receiving date when group/individual has received loan
-condition: "step1_select_campaign_type == 'others'"
+condition: "step1_select_campaign_type.contains('others')"
 actions:
     - "isRelevant = true"
 ---
@@ -271,7 +271,7 @@ actions:
 ---
 name: step1_number_of_male_members_loan
 description: show loan receiving date when group/individual has received loan
-condition: "step1_event_type == 'soft_loan_beneficiary_registration'"
+condition: "step1_event_type == 'soft_loan_beneficiary_registration' && (step1_group_type == 'youth' || step1_group_type == 'disability'  || step1_group_type == 'individual' )"
 actions:
     - "isRelevant = true"
 ---
@@ -344,6 +344,12 @@ actions:
 name: step1_select_campaign_topic
 description: show loan receiving date when group/individual has received loan
 condition: "step1_event_type == 'ge_norms_values_awareness_campaigns'"
+actions:
+    - "isRelevant = true"
+---
+name: step1_specify_other_campaign_topic
+description: specify_other_campaign_topic
+condition: "step1_select_campaign_topic.contains('others')"
 actions:
     - "isRelevant = true"
 ---

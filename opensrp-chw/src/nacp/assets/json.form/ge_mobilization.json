@@ -141,7 +141,8 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_campaign_type",
-        "type": "native_radio",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
         "label": "Select Campaign Type",
         "options": [
           {
@@ -900,6 +901,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_for_differences_in_ratio_of_ownership_between_male_and_female",
         "type": "check_box",
+        "combine_checkbox_option_values": true,
         "label": "Reasons for differences in ratio of ownership between Male and Female.",
         "options": [
           {
@@ -1420,6 +1422,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_campaign_topic",
         "type": "check_box",
+        "combine_checkbox_option_values": true,
         "label": "Select Campaign Topic",
         "options": [
           {
@@ -1493,6 +1496,21 @@
           "value": "true",
           "err": "Required"
         },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_other_campaign_topic",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_other_campaign_topic",
+        "type": "edit_text",
+        "hint": "Specify Other Campaign Topics",
         "relevance": {
           "rules-engine": {
             "ex-rules": {

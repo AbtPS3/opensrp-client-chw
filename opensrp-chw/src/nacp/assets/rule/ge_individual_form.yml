@@ -190,7 +190,7 @@ actions:
 ---
 name: step1_followup_visit_date
 description: only clients that have been registered
-condition: "step1_sensitization_session_complete.equals('no')"
+condition: "step1_sensitization_session_complete.equals('no') || step1_action_taken_after_provision_of_legal_services.equals('ongoing')"
 actions:
   - "isRelevant = true"
 
