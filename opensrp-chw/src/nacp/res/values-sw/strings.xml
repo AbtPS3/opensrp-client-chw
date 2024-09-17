@@ -983,8 +983,9 @@
     <string name="ge_preventing_negotiating_resolving_conflict">Kuzuia, Kujadiliana, &amp; Kutatua Migogoro</string>
     <string name="ge_religious_beliefs">Imani za Dini</string>
 
-    <string name="ge_edit_home_visit">Hariri Ziara ya Nyumbani ya GE</string>
-    <string name="ge_reports_title">Ripoti ya GE</string>
-    <string name="ge_main_reports_screen_title">Ripoti za GE</string>
-    <string name="ge_reports_subtitle">Tazama Ripoti ya GE</string>
+    <string name="ge_edit_home_visit">Hariri Ziara za Nyumbani ya Usawa wa Kijinsia</string>
+    <string name="ge_reports_title">Ripoti za Usawa wa Kijinsia</string>
+    <string name="ge_main_reports_screen_title">Ripoti za Usawa wa Kijinsia</string>
+    <string name="ge_reports_subtitle">Tazama Ripoti za Usawa wa Kijinsia</string>
+    <string name="menu_ge">Usawa wa Kijinsia</string>
 </resources>
