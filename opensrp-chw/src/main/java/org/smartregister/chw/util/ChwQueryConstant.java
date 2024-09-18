@@ -792,6 +792,10 @@ public interface ChwQueryConstant {
             "  AND (ec_family.entity_type = 'ec_family' OR ec_family.entity_type is null)\n" +
             "  AND ec_family_member.base_entity_id IN (%s)\n" +
             "  AND ec_family_member.base_entity_id NOT IN (\n" +
+            "    SELECT ec_ge_register.base_entity_id AS base_entity_id\n" +
+            "    FROM ec_ge_register\n" +
+            "    WHERE is_closed is 0 AND  consent_given = 'yes' " +
+            "    UNION ALL \n" +
             "    SELECT ec_iccm_enrollment.entity_id AS base_entity_id\n" +
             "    FROM ec_iccm_enrollment\n" +
             "    WHERE date('now') <= date(strftime('%Y-%m-%d', ec_iccm_enrollment.last_interacted_with / 1000, 'unixepoch', 'localtime'))\n" +
