@@ -119,7 +119,7 @@ condition: "step1_event_type == 'legal_aid_campaigns'"
 actions:
     - "isRelevant = true"
 ---
-name: step1_total_total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign
+name: step1_total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign
 description: show loan receiving date when group/individual has received loan
 condition: "step1_event_type == 'legal_aid_campaigns'"
 actions:
@@ -331,7 +331,7 @@ actions:
 ---
 name: step1_specify_training
 description: show loan receiving date when group/individual has received loan
-condition: "step1_training_type == 'others_training'"
+condition: "step1_training_type.contains('other')"
 actions:
     - "isRelevant = true"
 ---

@@ -355,7 +355,7 @@
           },
           {
             "key": "viccoba",
-            "text": "Viccoba",
+            "text": "VICOBA",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "viccoba"
           },
@@ -614,7 +614,7 @@
         "openmrs_entity_id": "total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Total number of referrals cases after receiving cases on ownership of property",
+        "hint": "Total number of referrals after receiving cases on ownership of property",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1335,7 +1335,8 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "training_type",
-        "type": "native_radio",
+        "combine_checkbox_option_values": true,
+        "type": "check_box",
         "label": "Training Type",
         "options": [
           {
@@ -1343,12 +1344,6 @@
             "text": "Business",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "business"
-          },
-          {
-            "key": "expenditure",
-            "text": "Expenditure",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "expenditure"
           },
           {
             "key": "financial_management",

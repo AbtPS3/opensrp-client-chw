@@ -102,13 +102,13 @@
           },
           {
             "key": "economic_empowerment_program",
-            "text": "Mpango wa Uwezeshaji Kiuchumi",
+            "text": "Programu za Uwezeshaji wanawake Kiuchumi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "economic_empowerment_program"
           },
           {
             "key": "economic_empowerment_platform",
-            "text": "Kuanzishwa kwa Jukwaa la Uwezeshaji Kiuchumi kwa Wanawake",
+            "text": "Kuanzishwa kwa Jukwaa la Uwezeshaji wanawake Kiuchumi",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "economic_empowerment_platform"
           },
@@ -120,13 +120,13 @@
           },
           {
             "key": "soft_loan_beneficiary_registration",
-            "text": "Usajili wa Walengwa wa Mikopo Nafuu",
+            "text": "Usajili wa Walengwa wa Mikopo yenye masharti nafuu",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "soft_loan_beneficiary_registration"
           },
           {
             "key": "ge_norms_values_awareness_campaigns",
-            "text": "Kampeni za Uhamasishaji wa Kanuni na Maadili ya Usawa wa Kijinsia",
+            "text": "Kampeni za Uhamasishaji wa mila na desturi za usawa wa Kijinsia",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "ge_norms_values_awareness_campaigns"
           }
@@ -171,7 +171,7 @@
           },
           {
             "key": "conflict_resolution",
-            "text": "Usuluishi wa mogogoro",
+            "text": "Usuluhishi wa migogoro",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "conflict_resolution"
           },
@@ -257,7 +257,7 @@
         "options": [
           {
             "key": "zijue_fursa_imarisha_uchumi_kataa_ukatili_kazi_iendelee",
-            "text": "Zijue Fursa Imarisha Uchumi kataa Ukatili kazi iendelee - ZIFIUKUKI",
+            "text": "Zijue Fursa, Imarisha Uchumi, Kataa Ukatili, Kazi Iendelee - ZIFIUKUKI",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "zijue_fursa_imarisha_uchumi_kataa_ukatili_kazi_iendelee"
           },
@@ -345,11 +345,11 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "select_the_program_name",
         "type": "native_radio",
-        "label": "Chagua jina la mpango",
+        "label": "Chagua jina la programu",
         "options": [
           {
             "key": "enterpreneurship_program",
-            "text": "Mpango wa Ujasiriamali",
+            "text": "Programu ya Ujasiriamali",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "enterpreneurship_program"
           },
@@ -361,7 +361,7 @@
           },
           {
             "key": "platform_creation",
-            "text": "Uundaji wa Jukwaa",
+            "text": "Uundwaji wa Jukwaa",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "platform_creation"
           },
@@ -529,7 +529,7 @@
             ]
           }
         ],
-        "hint": "Tafadhali taja kijiji",
+        "hint": "Kijiji",
         "v_required": {
           "value": false,
           "err": "Tafadhali taja jina la kijiji"
@@ -550,7 +550,7 @@
         "openmrs_entity_id": "total_number_of_male_citizens_reached_by_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya Idadi ya Raia wa Kiume Waliofikiwa na Kampeni",
+        "hint": "Jumla ya Wananchi wa Kiume Waliofikiwa na Kampeni",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -566,7 +566,7 @@
         "openmrs_entity_id": "total_number_of_female_citizens_reached_by_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya Idadi ya Raia wa Kike Waliofikiwa na Kampeni",
+        "hint": "Jumla ya wanawake Waliofikiwa na Kampeni",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -582,7 +582,7 @@
         "openmrs_entity_id": "total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya kesi za umiliki wa mali na wateja wa kiume zilizopokelewa baada ya kampeni",
+        "hint": "Jumla ya kesi za umiliki wa mali zilizopokelewa kutoka kwa wanaume baada ya kampeni",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -598,7 +598,7 @@
         "openmrs_entity_id": "total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya kesi za umiliki wa mali na wateja wa kike zilizopokelewa baada ya kampeni",
+        "hint": "Jumla ya kesi za umiliki wa mali zilizopokelewa kutoka kwa wanawake baada ya kampeni",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -614,7 +614,7 @@
         "openmrs_entity_id": "total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya kesi zilizorejeshwa baada ya kupokea kesi za umiliki wa mali",
+        "hint": "Jumla ya kesi za umiliki wa mali zilizopewa rufaa",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -630,7 +630,7 @@
         "openmrs_entity_id": "total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya kesi zilizofungwa baada ya kupokea kesi za umiliki wa mali",
+        "hint": "Jumla ya kesi za umiliki wa mali zilizofungwa",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -646,7 +646,7 @@
         "openmrs_entity_id": "total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya kesi zinazoendelea baada ya kupokea kesi za umiliki wa mali",
+        "hint": "Jumla ya kesi za umiliki wa mali zinazoendelea",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -662,7 +662,7 @@
         "openmrs_entity_id": "total_number_of_referral_to_ward_land_and_housing_tribunal",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya marejeo kwa Baraza la Ardhi na Nyumba la Kata",
+        "hint": "Jumla ya rufaa zilizopelekwa baraza la usuluhishi la ardhi na nyumba la Kata",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -678,7 +678,7 @@
         "openmrs_entity_id": "total_number_of_referral_to_district_land_and_housing_tribunal",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya marejeo kwa baraza la ardhi na nyumba la wilaya",
+        "hint": "Jumla ya rufaa zilizopelekwa baraza la usuluhishi la ardhi na nyumba la wilaya",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -694,7 +694,7 @@
         "openmrs_entity_id": "total_number_of_referral_to_court",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya rufaa zilizopelekwa mahakamani",
+        "hint": "Jumla ya rufaa zilizopelekwa mahakamani",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -710,7 +710,7 @@
         "openmrs_entity_id": "total_number_of_referral_to_police",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya rufaa zilizopelekwa polisi",
+        "hint": "Jumla ya rufaa zilizopelekwa polisi",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -726,7 +726,7 @@
         "openmrs_entity_id": "total_number_of_referral_to_rganization_Institution",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya rufaa zilizopelekwa kwenye taasisi",
+        "hint": "Jumla ya rufaa zilizopelekwa kwenye taasisi",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -742,7 +742,7 @@
         "openmrs_entity_id": "total_number_of_referral_to_social_welfare",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya rufaa kwa ustawi wa jamii",
+        "hint": "Jumla ya rufaa zilizopelekwa kwa ustawi wa jamii",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -758,7 +758,7 @@
         "openmrs_entity_id": "total_number_of_referral_to_others_referral",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya rufaa zilizotumwa kwingineko",
+        "hint": "Jumla ya rufaa zilizopelekwa kwingineko",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -774,7 +774,7 @@
         "openmrs_entity_id": "total_number_of_male_citizens_who_own_land",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya raia wa kiume wanaomiliki ardhi",
+        "hint": "Jumla ya wanaume wanaomiliki ardhi",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -790,7 +790,7 @@
         "openmrs_entity_id": "total_number_of_female_citizens_who_own_land",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya raia wa kike wanaomiliki ardhi",
+        "hint": "Jumla ya wanawake wanaomiliki ardhi",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -806,7 +806,7 @@
         "openmrs_entity_id": "total_number_of_male_citizens_who_own_bulidings",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya raia wa kiume wanaomiliki majengo",
+        "hint": "Jumla ya wanaume wanaomiliki majengo",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -822,7 +822,7 @@
         "openmrs_entity_id": "total_number_of_female_citizens_who_own_buildings",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya raia wa kike wanaomiliki majengo",
+        "hint": "Jumla ya wanawake wanaomiliki majengo",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -838,7 +838,7 @@
         "openmrs_entity_id": "total_number_of_male_citizens_who_own_vehicles",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya raia wa kiume wanaomiliki magari",
+        "hint": "Jumla ya wanaume wanaomiliki vyombo vya moto vya usafiri",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -854,7 +854,7 @@
         "openmrs_entity_id": "total_number_of_female_citizens_who_own_vehicles",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya raia wa kike wanaomiliki magari",
+        "hint": "Jumla ya wanawake wanaomiliki vyombo vya moto vya usafiri",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -870,7 +870,7 @@
         "openmrs_entity_id": "total_number_of_male_citizens_who_own_livestock",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya raia wa kiume wanaomiliki mifugo",
+        "hint": "Jumla ya wanaume wanaomiliki mifugo",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -886,7 +886,7 @@
         "openmrs_entity_id": "total_number_of_female_citizens_who_own_livestock",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Jumla ya idadi ya raia wa kike wanaomiliki mifugo",
+        "hint": "Jumla ya wanawake wanaomiliki mifugo",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -902,7 +902,7 @@
         "openmrs_entity_id": "reasons_for_differences_in_ratio_of_ownership_between_male_and_female",
         "type": "check_box",
         "combine_checkbox_option_values": true,
-        "label": "Sababu za tofauti katika uwiano wa umiliki kati ya wanaume na wanawake zinajumuisha",
+        "label": "Sababu za utofauti wa uwiano katika umiliki wa mali kati ya wanaume na wanawake",
         "options": [
           {
             "key": "tradition",
@@ -1008,7 +1008,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "group_type",
         "type": "native_radio",
-        "label": "Aina ya kundi",
+        "label": "Aina ya vikundi",
         "options": [
           {
             "key": "women",
@@ -1094,7 +1094,7 @@
             ]
           }
         ],
-        "hint": "Taja kijiji",
+        "hint": "Jina la Kijiji",
         "v_required": {
           "value": false,
           "err": "Tafadhali taja jina la kijiji"
@@ -1146,7 +1146,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_the_group_been_accredited",
         "type": "native_radio",
-        "label": "Je, kikundi kimepata ithibati?",
+        "label": "Je, kikundi kinatambulika rasmi (Ithibati)?",
         "options": [
           {
             "key": "yes",
@@ -1241,13 +1241,13 @@
           },
           {
             "key": "youth_development_forum",
-            "text": "Mfuko wa maendeleo ya vijana",
+            "text": "Mfuko wa maendeleo ya vijana (YDF)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "youth_development_forum"
           },
           {
             "key": "other",
-            "text": "Mkopo Mwingineo (Taja)",
+            "text": "Mkopo Mwingine (Taja)",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "other"
           }
@@ -1270,7 +1270,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "loan_deadline_date",
         "type": "date_picker",
-        "hint": "Tarehe ya Mwisho wa Mkopo",
+        "hint": "Tarehe ya mwisho ya kurejesha mkopo",
         "max_date": "today",
         "min_date": "today-1y",
         "v_required": {
@@ -1335,20 +1335,15 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "training_type",
-        "type": "native_radio",
+        "combine_checkbox_option_values": true,
+        "type": "check_box",
         "label": "Aina ya mafunzo",
         "options": [
           {
             "key": "business",
-            "text": "Biashara",
+            "text": "Elimu ya Biashara",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "business"
-          },
-          {
-            "key": "expenditure",
-            "text": "Matumizi",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "expenditure"
           },
           {
             "key": "financial_management",
@@ -1387,7 +1382,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "specify_training",
         "type": "edit_text",
-        "hint": "Tafadhali taja aina ya mafunzo",
+        "hint": "Tafadhali taja aina ya mafunzo mengineyo",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1445,31 +1440,31 @@
           },
           {
             "key": "planning_spacing_pregnancies",
-            "text": "Upangaji na Kupangilia Mimba",
+            "text": "Uzazi wa mpango",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "planning_spacing_pregnancies"
           },
           {
             "key": "early_marriage_teen_pregnancy",
-            "text": "Ndoa za Utotoni na Mimba za Mapema",
+            "text": "Ndoa na Mimba za Utotoni",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "early_marriage_teen_pregnancy"
           },
           {
             "key": "cultural_resistance_to_women_leadership",
-            "text": "Upinzani wa Kitamaduni dhidi ya Uongozi wa Wanawake",
+            "text": "Tamaduni pinzani dhidi ya uongozi kwa wanawake",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "cultural_resistance_to_women_leadership"
           },
           {
             "key": "differentiated_treatment_of_girls_over_child_rights",
-            "text": "Matibabu Tofauti kwa Wasichana Kuhusu Haki za Watoto",
+            "text": "Ukandamizaji wa mtoto wa kike dhidi ya haki za watoto",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "differentiated_treatment_of_girls_over_child_rights"
           },
           {
             "key": "unequal_distribution_of_roles",
-            "text": "Mgawanyo Usio Sawa wa Majukumu",
+            "text": "Mgawanyo wa majukumu usio sawa",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "unequal_distribution_of_roles"
           },
@@ -1590,7 +1585,7 @@
         "openmrs_entity_id": "number_of_male_less_25_years_screened_for_harmful_norms",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliopimwa kwa ajili ya mila hatarishi",
+        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliofanyiwa uchunguzi dhidi ya matendo ya mila na desturi zenye kuleta madhara",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1606,7 +1601,7 @@
         "openmrs_entity_id": "number_of_female_less_25_years_screened_for_harmful_norms",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliopimwa kwa ajili ya mila hatarishi",
+        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliofanyiwa uchunguzi dhidi ya matendo ya mila na desturi zenye kuleta madhara",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1622,7 +1617,7 @@
         "openmrs_entity_id": "number_of_male_25_plus_years_screened_for_harmful_norms",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi",
+        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliofanyiwa uchunguzi dhidi ya matendo ya mila na desturi zenye kuleta madhara",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1638,7 +1633,7 @@
         "openmrs_entity_id": "number_of_female_25_plus_years_screened_for_harmful_norms",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi",
+        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliofanyiwa uchunguzi dhidi ya matendo ya mila na desturi zenye kuleta madhara",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1654,7 +1649,7 @@
         "openmrs_entity_id": "number_of_male_less_25_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliopimwa na kupata matokeo chanya",
+        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliofanyiwa uchunguzi dhidi ya matendo ya mila na desturi zenye kuleta madhara na kubainika kuwa wanafanya",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1670,7 +1665,7 @@
         "openmrs_entity_id": "number_of_female_less_25_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliopimwa kwa ajili ya mila hatarishi na kupata matokeo chanya",
+        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliofanyiwa uchunguzi dhidi ya matendo ya mila na desturi zenye kuleta madhara na kubainika kuwa wanafanya",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1686,7 +1681,7 @@
         "openmrs_entity_id": "number_of_male_25_plus_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi na kupata matokeo chanya",
+        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliofanyiwa uchunguzi dhidi ya matendo ya mila na desturi zenye kuleta madhara na kubainika kuwa wanafanya",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1702,7 +1697,7 @@
         "openmrs_entity_id": "number_of_female_25_plus_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi na kupata matokeo chanya",
+        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliofanyiwa uchunguzi dhidi ya matendo ya mila na desturi zenye kuleta madhara na kubainika kuwa wanafanya",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1718,7 +1713,7 @@
         "openmrs_entity_id": "number_of_male_less_25_years_who_received_services_based_on_issues_raised",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliopokea huduma kulingana na masuala yaliyoibuliwa",
+        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliopewa huduma kulingana na masuala yaliyoibuliwa",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1734,7 +1729,7 @@
         "openmrs_entity_id": "number_of_female_less_25_years_who_received_services_based_on_issues_raised",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliopokea huduma kulingana na masuala yaliyoibuliwa",
+        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliopewa huduma kulingana na masuala yaliyoibuliwa",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1750,7 +1745,7 @@
         "openmrs_entity_id": "number_of_male_25_plus_years_who_received_services_based_on_issues_raised",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopokea huduma kulingana na masuala yaliyoibuliwa",
+        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopewa huduma kulingana na masuala yaliyoibuliwa",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1766,7 +1761,7 @@
         "openmrs_entity_id": "number_of_female_25_plus_years_who_received_services_based_on_issues_raised",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopokea huduma kulingana na masuala yaliyoibuliwa",
+        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopewa huduma kulingana na masuala yaliyoibuliwa",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1819,7 +1814,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "event_supporter",
         "type": "native_radio",
-        "label": "Chagua msaidizi wa tukio",
+        "label": "Chagua mfadhili wa tukio",
         "options": [
           {
             "key": "government",
