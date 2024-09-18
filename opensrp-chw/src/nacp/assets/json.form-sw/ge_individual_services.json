@@ -52,7 +52,7 @@
     }
   },
   "step1": {
-    "title": "GE Individual Services",
+    "title": "Huduma binafsi za usawa wa kijinsia (GE)",
     "fields": [
       {
         "key": "service_type",
@@ -453,7 +453,7 @@
           },
           {
             "key": "vehicles",
-            "text": "Gari",
+            "text": "Chombo cha moto",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "vehicles"
           },
@@ -610,7 +610,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "followup_visit_date",
         "type": "date_picker",
-        "hint": "Tafadhali chagua tarehe",
+        "hint": "Chagua tarehe ya hudhurio linalofuata",
         "edit_type": "number",
         "min_date": "today+1d",
         "max_date": "today+2m",

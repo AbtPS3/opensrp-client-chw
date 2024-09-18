@@ -853,7 +853,7 @@
     <string name="ge_lack_of_business_operating_freedom">Ukosefu wa Uhuru wa Kuendesha Biashara</string>
     <string name="ge_cannot_join_business_cooperatives">Haiwezi Kujiunga na Ushirika wa Biashara</string>
     <string name="ge_missing_business_training">Kukosa Mafunzo ya Biashara</string>
-    <string name="ge_edit_individual_visit">Hariri Huduma za GE Binafsi</string>
+    <string name="ge_edit_individual_visit">Hariri huduma binfasi za Usawa wa kijinsia (GE)</string>
     <string name="ge_government">Serikali</string>
     <string name="ge_development_partners">Washirika wa Maendeleo</string>
     <string name="ge_ngo">NGO</string>
