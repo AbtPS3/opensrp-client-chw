@@ -264,10 +264,10 @@
         }
       },
       {
-        "key": "referral_destination",
+        "key": "referral_destination_with_land",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "referral_destination",
+        "openmrs_entity_id": "referral_destination_with_land",
         "type": "check_box",
         "combine_checkbox_option_values": "true",
         "label": "Select referral destination",
@@ -316,6 +316,68 @@
           }
         ],
         "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "referral_destination_without_land",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referral_destination_without_land",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Select referral destination",
+        "options": [
+          {
+            "key": "court",
+            "text": "Court",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "court"
+          },
+          {
+            "key": "police",
+            "text": "Police",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "police"
+          },
+          {
+            "key": "organization",
+            "text": "Organization/Institution",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "organization"
+          },
+          {
+            "key": "social_welfare",
+            "text": "Social-welfare",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "social_welfare"
+          },
+          {
+            "key": "others",
+            "text": "Others",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "referral_destination",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referral_destination",
+        "type": "hidden",
+        "calculation": {
           "rules-engine": {
             "ex-rules": {
               "rules-file": "ge_individual_form.yml"

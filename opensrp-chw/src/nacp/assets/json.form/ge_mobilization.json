@@ -1654,7 +1654,7 @@
         "openmrs_entity_id": "number_of_male_less_25_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Number of male <25 years screened positive",
+        "hint": "Number of male <25 years screened positive for harmful norms",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1670,7 +1670,7 @@
         "openmrs_entity_id": "number_of_female_less_25_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Number of female <25 years screened positive",
+        "hint": "Number of female <25 years screened positive for harmful norms",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1686,7 +1686,7 @@
         "openmrs_entity_id": "number_of_male_25_plus_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Number of male 25+ years screened positive",
+        "hint": "Number of male 25+ years screened positive for harmful norms",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -1702,7 +1702,7 @@
         "openmrs_entity_id": "number_of_female_25_plus_years_screened_positive",
         "type": "edit_text",
         "edit_type": "number",
-        "hint": "Number of female 25+ years screened positive",
+        "hint": "Number of female 25+ years screened positive for harmful norms",
         "relevance": {
           "rules-engine": {
             "ex-rules": {

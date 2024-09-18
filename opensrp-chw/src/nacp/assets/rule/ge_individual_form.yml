@@ -64,7 +64,7 @@ actions:
 ---
 name: step1_legal_services
 description: only clients that have been registered
-condition: "step1_service_type=='legal_aid_support'"
+condition: "step1_service_type == 'legal_aid_support'"
 actions:
   - "isRelevant = true"
 
@@ -92,7 +92,7 @@ actions:
 ---
 name: step1_other_referrals_destinations
 description: only clients that have been registered
-condition: "step1_referral_destination.contains('others')"
+condition: "step1_referral_destination_with_land.contains('others') || step1_referral_destination_without_land.contains('others')"
 actions:
   - "isRelevant = true"
 
@@ -106,7 +106,7 @@ actions:
 ---
 name: step1_type_of_property_owned
 description: choose referral
-condition: "step1_property_ownership== 'yes'"
+condition: "step1_property_ownership == 'yes'"
 actions:
   - "isRelevant = true"
 
@@ -141,7 +141,7 @@ actions:
 ---
 name: step1_followup_visit_date
 description: only clients that have been registered
-condition: "step1_sensitization_session_complete == 'no'"
+condition: "step1_sensitization_session_complete == 'no' || step1_action_taken_after_provision_of_legal_services.equals('ongoing')"
 actions:
   - "isRelevant = true"
 
@@ -188,12 +188,25 @@ actions:
   - "isRelevant = true"
 
 ---
-name: step1_followup_visit_date
+name: step1_referral_destination_with_land
 description: only clients that have been registered
-condition: "step1_sensitization_session_complete.equals('no') || step1_action_taken_after_provision_of_legal_services.equals('ongoing')"
+condition: "(step1_service_type == 'legal_aid_support' && step1_action_taken_after_provision_of_legal_services == 'referral') && (step1_legal_services.contains('land_issues'))"
 actions:
   - "isRelevant = true"
 
+---
+name: step1_referral_destination_without_land
+description: only clients that have been registered
+condition: "(step1_service_type == 'legal_aid_support' && step1_action_taken_after_provision_of_legal_services == 'referral') && !(step1_legal_services.contains('land_issues'))"
+actions:
+  - "isRelevant = true"
+
+---
+name: step1_referral_destination
+description: only clients that have been registered
+condition: "true"
+actions:
+  - "calculation = step1_legal_services.contains('land_issues')"
 
 
 

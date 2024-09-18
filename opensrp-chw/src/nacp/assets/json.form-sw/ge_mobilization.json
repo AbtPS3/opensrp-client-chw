@@ -1,1 +1,1877 @@
-{"count":"1","encounter_type":"GE Mobilization Session","relational_id":"","metadata":{"start":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"start","openmrs_entity_id":"163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"end":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"end","openmrs_entity_id":"163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"today":{"openmrs_entity_parent":"","openmrs_entity":"encounter","openmrs_entity_id":"encounter_date"},"deviceid":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"deviceid","openmrs_entity_id":"163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"subscriberid":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"subscriberid","openmrs_entity_id":"163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"simserial":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"simserial","openmrs_entity_id":"163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"phonenumber":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"phonenumber","openmrs_entity_id":"163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"encounter_location":"","look_up":{"entity_id":"","value":""}},"step1":{"title":"GE Mobilization Session","fields":[{"key":"event_start_date","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"event_start_date","type":"date_picker","hint":"Tarehe ya kuanza kwa tukio","max_date":"today","min_date":"today-3m","v_required":{"value":"true","err":"Tafadhali chagua tarehe"}},{"key":"event_end_date","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"event_end_date","type":"date_picker","hint":"Tarehe ya kumalizika kwa tukio","max_date":"today","v_required":{"value":"true","err":"Tafadhali chagua tarehe"}},{"key":"event_type","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"event_type","type":"native_radio","label":"Aina ya tukio","options":[{"key":"leadership_awareness_campaign","text":"Kampeni ya Uhamasishaji wa Uongozi","openmrs_entity":"concept","openmrs_entity_id":"leadership_awareness_campaign"},{"key":"ge_awareness_campaign","text":"Kampeni ya Uhamasishaji wa Usawa wa Kijinsia","openmrs_entity":"concept","openmrs_entity_id":"ge_awareness_campaign"},{"key":"economic_empowerment_program","text":"Mpango wa Uwezeshaji Kiuchumi","openmrs_entity":"concept","openmrs_entity_id":"economic_empowerment_program"},{"key":"economic_empowerment_platform","text":"Kuanzishwa kwa Jukwaa la Uwezeshaji Kiuchumi kwa Wanawake","openmrs_entity":"concept","openmrs_entity_id":"economic_empowerment_platform"},{"key":"legal_aid_campaigns","text":"Kampeni za Msaada wa Kisheria","openmrs_entity":"concept","openmrs_entity_id":"legal_aid_campaigns"},{"key":"soft_loan_beneficiary_registration","text":"Usajili wa Walengwa wa Mikopo Nafuu","openmrs_entity":"concept","openmrs_entity_id":"soft_loan_beneficiary_registration"},{"key":"ge_norms_values_awareness_campaigns","text":"Kampeni za Uhamasishaji wa Kanuni na Maadili ya Usawa wa Kijinsia","openmrs_entity":"concept","openmrs_entity_id":"ge_norms_values_awareness_campaigns"}],"v_required":{"value":"true","err":"Tafadhali taja aina ya tukio"}},{"key":"select_campaign_type","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"select_campaign_type","type":"check_box","combine_checkbox_option_values":true,"label":"Aina ya kampeni","options":[{"key":"duties_and_responsibilities","text":"Wajibu na Majukumu","openmrs_entity":"concept","openmrs_entity_id":"duties_and_responsibilities"},{"key":"good_governance","text":"Utawala bora","openmrs_entity":"concept","openmrs_entity_id":"good_governance"},{"key":"decision_making","text":"Ufanyaji wa maamuzi","openmrs_entity":"concept","openmrs_entity_id":"decision_making"},{"key":"planning_and_budgeting","text":"Upangaji na Uandaaji wa Bajeti","openmrs_entity":"concept","openmrs_entity_id":"planning_and_budgeting"},{"key":"conflict_resolution","text":"Usuluishi wa mogogoro","openmrs_entity":"concept","openmrs_entity_id":"conflict_resolution"},{"key":"communication_skills","text":"Ujuzi wa Mawasiliano","openmrs_entity":"concept","openmrs_entity_id":"communication_skills"},{"key":"others","text":"Nyinginezo (Taja)","openmrs_entity":"concept","openmrs_entity_id":"others"}],"v_required":{"value":"true","err":"Tafadhali chagua aina ya kampeni"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"specify","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"specify","type":"edit_text","hint":"Taja","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_participants","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_participants","type":"edit_text","edit_type":"number","hint":"Idadi ya washiriki wa Kiume","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_participants","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_participants","type":"edit_text","edit_type":"number","hint":"Idadi ya washiriki wa kike","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"select_campaign_name","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"select_campaign_name","type":"native_radio","label":"Jina la kampeni","options":[{"key":"zijue_fursa_imarisha_uchumi_kataa_ukatili_kazi_iendelee","text":"Zijue Fursa Imarisha Uchumi kataa Ukatili kazi iendelee - ZIFIUKUKI","openmrs_entity":"concept","openmrs_entity_id":"zijue_fursa_imarisha_uchumi_kataa_ukatili_kazi_iendelee"},{"key":"mama_samia_legal_aid_campaign","text":"Kampeni ya Msaada wa Kisheria ya Mama Samia","openmrs_entity":"concept","openmrs_entity_id":"mama_samia_legal_aid_campaign"},{"key":"stand_for_her_and","text":"Stand for Her Land","openmrs_entity":"concept","openmrs_entity_id":"stand_for_her_and"},{"key":"other","text":"Nyinginezo (Taja)","openmrs_entity":"concept","openmrs_entity_id":"other"}],"v_required":{"value":"true","err":"Tafadhali taja jina la kampeni"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"specify_name","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"specify_name","type":"edit_text","hint":"Tafadhali taja jina","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_participants_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_participants_campaign","type":"edit_text","edit_type":"number","hint":"Idadi ya washiriki wa kiume","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_participants_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_participants_campaign","type":"edit_text","edit_type":"number","hint":"Idadi ya washiriki wa kike","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"select_the_program_name","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"select_the_program_name","type":"native_radio","label":"Chagua jina la mpango","options":[{"key":"enterpreneurship_program","text":"Mpango wa Ujasiriamali","openmrs_entity":"concept","openmrs_entity_id":"enterpreneurship_program"},{"key":"viccoba","text":"VICOBA","openmrs_entity":"concept","openmrs_entity_id":"viccoba"},{"key":"platform_creation","text":"Uundaji wa Jukwaa","openmrs_entity":"concept","openmrs_entity_id":"platform_creation"},{"key":"online_business","text":"Biashara ya Mtandaoni","openmrs_entity":"concept","openmrs_entity_id":"online_business"},{"key":"others","text":"Nyinginezo (Taja)","openmrs_entity":"concept","openmrs_entity_id":"others"}],"v_required":{"value":"true","err":"Tafadhali taja jina"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"specify_program","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"specify_program","type":"edit_text","hint":"Tafadhali taja jina la mpango","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_participants_program","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_participants_program","type":"edit_text","edit_type":"number","hint":"Idadi ya washiriki wa kiume","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_participants_program","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_participants_program","type":"edit_text","edit_type":"number","hint":"Idadi ya washiriki wa kike","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"ward_executive_officer_first_name","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"ward_executive_officer_first_name","type":"edit_text","hint":"Jina la kwanza la mtendaji wa kata","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"ward_executive_officer_middle_name","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"ward_executive_officer_middle_name","type":"edit_text","hint":"Jina la kati la mtendaji wa kata","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"ward_executive_officer_surname","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"ward_executive_officer_surname","type":"edit_text","hint":"Jina la ukoo la mtendaji wa kata","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"village","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"village","label":"Location(Select Village)","type":"tree","tree":[{"key":"tanzania","level":"","name":"Tanzania","nodes":[{"key":"kilimanjaro","level":"","name":"Kilimanjaro","nodes":[{"key":"moshi","level":"","name":"Moshi","nodes":[{"key":"Kibosho","level":"","name":"Kibosho","nodes":[{"key":"kirima_juu","level":"","name":"Kirima Juu"},{"key":"kirima_chini","level":"","name":"Kirima Chini"}]}]}]}]}],"hint":"Tafadhali taja kijiji","v_required":{"value":false,"err":"Tafadhali taja jina la kijiji"},"default":"[\"tanzania\",\"kilimanjaro\",\"moshi\",\"kibosho\"]","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_male_citizens_reached_by_the_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_male_citizens_reached_by_the_campaign","type":"edit_text","edit_type":"number","hint":"Jumla ya Idadi ya Raia wa Kiume Waliofikiwa na Kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_female_citizens_reached_by_the_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_female_citizens_reached_by_the_campaign","type":"edit_text","edit_type":"number","hint":"Jumla ya Idadi ya Raia wa Kike Waliofikiwa na Kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya kesi za umiliki wa mali na wateja wa kiume zilizopokelewa baada ya kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya kesi za umiliki wa mali na wateja wa kike zilizopokelewa baada ya kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya kesi zilizorejeshwa baada ya kupokea kesi za umiliki wa mali","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya kesi zilizofungwa baada ya kupokea kesi za umiliki wa mali","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya kesi zinazoendelea baada ya kupokea kesi za umiliki wa mali","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_referral_to_ward_land_and_housing_tribunal","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_referral_to_ward_land_and_housing_tribunal","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya marejeo kwa Baraza la Ardhi na Nyumba la Kata","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_referral_to_district_land_and_housing_tribunal","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_referral_to_district_land_and_housing_tribunal","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya marejeo kwa baraza la ardhi na nyumba la wilaya","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_referral_to_court","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_referral_to_court","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya rufaa zilizopelekwa mahakamani","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_referral_to_police","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_referral_to_police","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya rufaa zilizopelekwa polisi","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_referral_to_rganization_Institution","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_referral_to_rganization_Institution","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya rufaa zilizopelekwa kwenye taasisi","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_referral_to_social_welfare","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_referral_to_social_welfare","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya rufaa kwa ustawi wa jamii","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_referral_to_others_referral","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_referral_to_others_referral","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya rufaa zilizotumwa kwingineko","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_male_citizens_who_own_land","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_male_citizens_who_own_land","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya raia wa kiume wanaomiliki ardhi","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_female_citizens_who_own_land","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_female_citizens_who_own_land","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya raia wa kike wanaomiliki ardhi","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_male_citizens_who_own_buildings","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_male_citizens_who_own_bulidings","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya raia wa kiume wanaomiliki majengo","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_female_citizens_who_own_buildings","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_female_citizens_who_own_buildings","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya raia wa kike wanaomiliki majengo","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_male_citizens_who_own_vehicles","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_male_citizens_who_own_vehicles","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya raia wa kiume wanaomiliki magari","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_female_citizens_who_own_vehicles","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_female_citizens_who_own_vehicles","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya raia wa kike wanaomiliki magari","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_male_citizens_who_own_livestock","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_male_citizens_who_own_livestock","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya raia wa kiume wanaomiliki mifugo","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"total_number_of_female_citizens_who_own_livestock","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"total_number_of_female_citizens_who_own_livestock","type":"edit_text","edit_type":"number","hint":"Jumla ya idadi ya raia wa kike wanaomiliki mifugo","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"reasons_for_differences_in_ratio_of_ownership_between_male_and_female","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"reasons_for_differences_in_ratio_of_ownership_between_male_and_female","type":"check_box","combine_checkbox_option_values":true,"label":"Sababu za tofauti katika uwiano wa umiliki kati ya wanaume na wanawake zinajumuisha","options":[{"key":"tradition","text":"Tamaduni","openmrs_entity":"concept","openmrs_entity_id":"tradition"},{"key":"religion","text":"Dini","openmrs_entity":"concept","openmrs_entity_id":"religion"},{"key":"customs","text":"Desturi","openmrs_entity":"concept","openmrs_entity_id":"customs"},{"key":"economic_status","text":"Hali ya kiuchumi","openmrs_entity":"concept","openmrs_entity_id":"economic_status"},{"key":"other","text":"Sababu Nyinginezo","openmrs_entity":"concept","openmrs_entity_id":"other"}],"v_required":{"value":"true","err":"Tafadhali taja sababu za tofauti katika uwiano wa umiliki kati ya wanaume na wanawake zinajumuisha"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"specify_reason","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"specify_reason","type":"edit_text","hint":"Tafadhali taja sababu","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"name_of_loan_recipient","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"name_of_loan_recipient","type":"edit_text","hint":"Jina la mnufaika wa mkopo","v_required":{"value":"true","err":"Jina la mnufaika wa mkopo"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"registration_date","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"registration_date","type":"date_picker","hint":"Tarehe ya usajili","max_date":"today","min_date":"today-1y","v_required":{"value":"true","err":"Tafadhali taja tarehe ya usajili"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"group_type","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"group_type","type":"native_radio","label":"Aina ya kundi","options":[{"key":"women","text":"Wanawake","openmrs_entity":"concept","openmrs_entity_id":"women"},{"key":"youth","text":"Vijana","openmrs_entity":"concept","openmrs_entity_id":"youth"},{"key":"disability","text":"Walemavu","openmrs_entity":"concept","openmrs_entity_id":"disability"},{"key":"individual","text":"Binafsi","openmrs_entity":"concept","openmrs_entity_id":"individual"}],"v_required":{"value":"true","err":"Tafadhali ingiza mnufaika wa mkopo"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"village_loan","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"village_loan","label":"Location(Select Village)","type":"tree","tree":[{"key":"tanzania","level":"","name":"Tanzania","nodes":[{"key":"kilimanjaro","level":"","name":"Kilimanjaro","nodes":[{"key":"moshi","level":"","name":"Moshi","nodes":[{"key":"Kibosho","level":"","name":"Kibosho","nodes":[{"key":"kirima_juu","level":"","name":"Kirima Juu"},{"key":"kirima_chini","level":"","name":"Kirima Chini"}]}]}]}]}],"hint":"Taja kijiji","v_required":{"value":false,"err":"Tafadhali taja jina la kijiji"},"default":"[\"tanzania\",\"kilimanjaro\",\"moshi\",\"kibosho\"]","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_members_loan","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_members_loan","type":"edit_text","edit_type":"number","hint":"Idadi ya Wanachama wa Kiume","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_members_loan","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_members_loan","type":"edit_text","edit_type":"number","hint":"Idadi ya wanachama wa kike","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"has_the_group_been_accredited","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"has_the_group_been_accredited","type":"native_radio","label":"Je, kikundi kimepata ithibati?","options":[{"key":"yes","text":"Ndiyo","openmrs_entity":"concept","openmrs_entity_id":"yes"},{"key":"no","text":"Hapana","openmrs_entity":"concept","openmrs_entity_id":"no"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"has_the_group_individual_received_the_loan","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"has_the_group/individual_received_the_loan?","type":"native_radio","label":"Je, kikundi/mhusika amepokea mkopo?","options":[{"key":"yes","text":"Ndiyo","openmrs_entity":"concept","openmrs_entity_id":"yes"},{"key":"no","text":"Hapana","openmrs_entity":"concept","openmrs_entity_id":"no"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"loan_receiving_date","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"loan_receiving_date","type":"date_picker","hint":"Tarehe ya Upokeaji wa Mkopo","max_date":"today","min_date":"today-1y","v_required":{"value":"true","err":"Tafadhali ingiza tarehe"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"loan_type","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"loan_type","type":"native_radio","label":"Aina ya mkopo","options":[{"key":"10%","text":"10%","openmrs_entity":"concept","openmrs_entity_id":"10%"},{"key":"women_development_forum","text":"Mfuko wa maendeleo ya Wanawake (WDF)","openmrs_entity":"concept","openmrs_entity_id":"women_development_forum"},{"key":"youth_development_forum","text":"Mfuko wa maendeleo ya vijana","openmrs_entity":"concept","openmrs_entity_id":"youth_development_forum"},{"key":"other","text":"Mkopo Mwingineo (Taja)","openmrs_entity":"concept","openmrs_entity_id":"other"}],"v_required":{"value":"true","err":"Tafadhali ingiza aina ya mkopo"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"loan_deadline_date","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"loan_deadline_date","type":"date_picker","hint":"Tarehe ya Mwisho wa Mkopo","max_date":"today","min_date":"today-1y","v_required":{"value":"true","err":"Tafadhali ingiza tarehe"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"loan_amount","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"loan_amount","type":"edit_text","edit_type":"number","hint":"Kiasi cha mkopo","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"received_financial_training","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"received_financial_training","type":"native_radio","label":"Je, amepokea mafunzo ya kifedha?","options":[{"key":"yes","text":"Ndiyo","openmrs_entity":"concept","openmrs_entity_id":"yes"},{"key":"no","text":"Hapana","openmrs_entity":"concept","openmrs_entity_id":"no"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"training_type","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"training_type","type":"native_radio","label":"Aina ya mafunzo","options":[{"key":"business","text":"Biashara","openmrs_entity":"concept","openmrs_entity_id":"business"},{"key":"expenditure","text":"Matumizi","openmrs_entity":"concept","openmrs_entity_id":"expenditure"},{"key":"financial_management","text":"Usimamizi wa fedha","openmrs_entity":"concept","openmrs_entity_id":"financial_management"},{"key":"leadership","text":"Uongozi","openmrs_entity":"concept","openmrs_entity_id":"leadership"},{"key":"other","text":"Mengineyo","openmrs_entity":"concept","openmrs_entity_id":"other"}],"v_required":{"value":"true","err":"Tafadhali taja aina ya mafunzo"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"specify_training","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"specify_training","type":"edit_text","hint":"Tafadhali taja aina ya mafunzo","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"training_date","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"training_date","type":"date_picker","hint":"Tarehe ya mafunzo","max_date":"today","v_required":{"value":"true","err":"Tafadhali taja tarehe ya mafunzo"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"select_campaign_topic","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"select_campaign_topic","type":"check_box","combine_checkbox_option_values":true,"label":"Chagua mada","options":[{"key":"bias_and_discrimination","text":"Upendeleo na ubaguzi","openmrs_entity":"concept","openmrs_entity_id":"bias_and_discrimination"},{"key":"gender_based_violence","text":"Ukatili wa kijinsia","openmrs_entity":"concept","openmrs_entity_id":"gender_based_violence"},{"key":"managing_household_finances","text":"Usimamizi wa Fedha za Kaya","openmrs_entity":"concept","openmrs_entity_id":"managing_household_finances"},{"key":"planning_spacing_pregnancies","text":"Upangaji na Kupangilia Mimba","openmrs_entity":"concept","openmrs_entity_id":"planning_spacing_pregnancies"},{"key":"early_marriage_teen_pregnancy","text":"Ndoa za Utotoni na Mimba za Mapema","openmrs_entity":"concept","openmrs_entity_id":"early_marriage_teen_pregnancy"},{"key":"cultural_resistance_to_women_leadership","text":"Upinzani wa Kitamaduni dhidi ya Uongozi wa Wanawake","openmrs_entity":"concept","openmrs_entity_id":"cultural_resistance_to_women_leadership"},{"key":"differentiated_treatment_of_girls_over_child_rights","text":"Matibabu Tofauti kwa Wasichana Kuhusu Haki za Watoto","openmrs_entity":"concept","openmrs_entity_id":"differentiated_treatment_of_girls_over_child_rights"},{"key":"unequal_distribution_of_roles","text":"Mgawanyo Usio Sawa wa Majukumu","openmrs_entity":"concept","openmrs_entity_id":"unequal_distribution_of_roles"},{"key":"preventing_negotiating_resolving_conflict","text":"Kuzuia, Kujadiliana, na Kutatua Migogoro","openmrs_entity":"concept","openmrs_entity_id":"preventing_negotiating_resolving_conflict"},{"key":"religious_beliefs","text":"Imani za Kidini","openmrs_entity":"concept","openmrs_entity_id":"religious_beliefs"},{"key":"others","text":"Mengineyo (Taja)","openmrs_entity":"concept","openmrs_entity_id":"others"}],"v_required":{"value":"true","err":"Tafadhali chagua"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"specify_other_campaign_topic","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"specify_other_campaign_topic","type":"edit_text","hint":"Taja Mada Nyingine za Kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_less_25_years_reached_by_the_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_less_25_years_reached_by_the_campaign","type":"edit_text","edit_type":"number","hint":"Idadi ya wanaume walio chini ya miaka 25 waliofikiwa na kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_less_25_years_reached_by_the_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_less_25_years_reached_by_the_campaign","type":"edit_text","edit_type":"number","hint":"Idadi ya wanawake walio chini ya miaka 25 waliofikiwa na kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_25_plus_years_reached_by_the_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_25_plus_years_reached_by_the_campaign","type":"edit_text","edit_type":"number","hint":"Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliofikiwa na kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_25_plus_years_reached_by_the_campaign","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_25_plus_years_reached_by_the_campaign","type":"edit_text","edit_type":"number","hint":"Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliofikiwa na kampeni","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_less_25_years_screened_for_harmful_norms","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_less_25_years_screened_for_harmful_norms","type":"edit_text","edit_type":"number","hint":"Idadi ya wanaume walio chini ya miaka 25 waliopimwa kwa ajili ya mila hatarishi","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_less_25_years_screened_for_harmful_norms","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_less_25_years_screened_for_harmful_norms","type":"edit_text","edit_type":"number","hint":"Idadi ya wanawake walio chini ya miaka 25 waliopimwa kwa ajili ya mila hatarishi","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_25_plus_years_screened_for_harmful_norms","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_25_plus_years_screened_for_harmful_norms","type":"edit_text","edit_type":"number","hint":"Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_25_plus_years_screened_for_harmful_norms","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_25_plus_years_screened_for_harmful_norms","type":"edit_text","edit_type":"number","hint":"Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_less_25_years_screened_positive","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_less_25_years_screened_positive","type":"edit_text","edit_type":"number","hint":"Idadi ya wanaume walio chini ya miaka 25 waliopimwa na kupata matokeo chanya","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_less_25_years_screened_positive","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_less_25_years_screened_positive","type":"edit_text","edit_type":"number","hint":"Idadi ya wanawake walio chini ya miaka 25 waliopimwa na kupata matokeo chanya","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_25_plus_years_screened_positive","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_25_plus_years_screened_positive","type":"edit_text","edit_type":"number","hint":"Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopimwa na kupata matokeo chanya","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_25_plus_years_screened_positive","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_25_plus_years_screened_positive","type":"edit_text","edit_type":"number","hint":"Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopimwa na kupata matokeo chanya","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_less_25_years_who_received_services_based_on_issues_raised","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_less_25_years_who_received_services_based_on_issues_raised","type":"edit_text","edit_type":"number","hint":"Idadi ya wanaume walio chini ya miaka 25 waliopokea huduma kulingana na masuala yaliyoibuliwa","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_less_25_years_who_received_services_based_on_issues_raised","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_less_25_years_who_received_services_based_on_issues_raised","type":"edit_text","edit_type":"number","hint":"Idadi ya wanawake walio chini ya miaka 25 waliopokea huduma kulingana na masuala yaliyoibuliwa","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_male_25_plus_years_who_received_services_based_on_issues_raised","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_male_25_plus_years_who_received_services_based_on_issues_raised","type":"edit_text","edit_type":"number","hint":"Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopokea huduma kulingana na masuala yaliyoibuliwa","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"number_of_female_25_plus_years_who_received_services_based_on_issues_raised","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"number_of_female_25_plus_years_who_received_services_based_on_issues_raised","type":"edit_text","edit_type":"number","hint":"Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopokea huduma kulingana na masuala yaliyoibuliwa","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"platform_name","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"platform_name","type":"edit_text","hint":"Jina la jukwaa","v_required":{"value":"true","err":"Tafadhali taja jina la Jukwaa "},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"platform_purpose","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"platform_purpose","type":"edit_text","hint":"Lengo la Jukwaa","v_required":{"value":"true","err":"Tafadhali taja lengo la Jukwaa "},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}},{"key":"event_supporter","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"event_supporter","type":"native_radio","label":"Chagua msaidizi wa tukio","options":[{"key":"government","text":"Serikali","openmrs_entity":"concept","openmrs_entity_id":"government"},{"key":"development_partners","text":"Wadau wa maendeleo","openmrs_entity":"concept","openmrs_entity_id":"development_partners"},{"key":"ngo","text":"Mashirika/Asasi siziso za kiserikali","openmrs_entity":"concept","openmrs_entity_id":"ngo"},{"key":"fbo","text":"Asasi za Kidini","openmrs_entity":"concept","openmrs_entity_id":"fbo"},{"key":"other","text":"Nyinginezo","openmrs_entity":"concept","openmrs_entity_id":"other"}],"v_required":{"value":"true","err":"Tafadhali chagua msaidizi wa tukio"}},{"key":"specify_supporter","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"specify_supporter","type":"edit_text","hint":"Tafadhali taja","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_mobilization_session_rule.yml"}}}}]}}
+{
+  "count": "1",
+  "encounter_type": "GE Mobilization Session",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "GE Mobilization Session",
+    "fields": [
+      {
+        "key": "event_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "event_start_date",
+        "type": "date_picker",
+        "hint": "Tarehe ya kuanza kwa tukio",
+        "max_date": "today",
+        "min_date": "today-3m",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua tarehe"
+        }
+      },
+      {
+        "key": "event_end_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "event_end_date",
+        "type": "date_picker",
+        "hint": "Tarehe ya kumalizika kwa tukio",
+        "max_date": "today",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua tarehe"
+        }
+      },
+      {
+        "key": "event_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "event_type",
+        "type": "native_radio",
+        "label": "Aina ya tukio",
+        "options": [
+          {
+            "key": "leadership_awareness_campaign",
+            "text": "Kampeni ya Uhamasishaji wa Uongozi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "leadership_awareness_campaign"
+          },
+          {
+            "key": "ge_awareness_campaign",
+            "text": "Kampeni ya Uhamasishaji wa Usawa wa Kijinsia",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ge_awareness_campaign"
+          },
+          {
+            "key": "economic_empowerment_program",
+            "text": "Mpango wa Uwezeshaji Kiuchumi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_empowerment_program"
+          },
+          {
+            "key": "economic_empowerment_platform",
+            "text": "Kuanzishwa kwa Jukwaa la Uwezeshaji Kiuchumi kwa Wanawake",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_empowerment_platform"
+          },
+          {
+            "key": "legal_aid_campaigns",
+            "text": "Kampeni za Msaada wa Kisheria",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "legal_aid_campaigns"
+          },
+          {
+            "key": "soft_loan_beneficiary_registration",
+            "text": "Usajili wa Walengwa wa Mikopo Nafuu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "soft_loan_beneficiary_registration"
+          },
+          {
+            "key": "ge_norms_values_awareness_campaigns",
+            "text": "Kampeni za Uhamasishaji wa Kanuni na Maadili ya Usawa wa Kijinsia",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ge_norms_values_awareness_campaigns"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja aina ya tukio"
+        }
+      },
+      {
+        "key": "select_campaign_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_campaign_type",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
+        "label": "Aina ya kampeni",
+        "options": [
+          {
+            "key": "duties_and_responsibilities",
+            "text": "Wajibu na Majukumu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "duties_and_responsibilities"
+          },
+          {
+            "key": "good_governance",
+            "text": "Utawala bora",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "good_governance"
+          },
+          {
+            "key": "decision_making",
+            "text": "Ufanyaji wa maamuzi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "decision_making"
+          },
+          {
+            "key": "planning_and_budgeting",
+            "text": "Upangaji na Uandaaji wa Bajeti",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "planning_and_budgeting"
+          },
+          {
+            "key": "conflict_resolution",
+            "text": "Usuluishi wa mogogoro",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "conflict_resolution"
+          },
+          {
+            "key": "communication_skills",
+            "text": "Ujuzi wa Mawasiliano",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "communication_skills"
+          },
+          {
+            "key": "others",
+            "text": "Nyinginezo (Taja)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua aina ya kampeni"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify",
+        "type": "edit_text",
+        "hint": "Taja",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_participants",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_participants",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya washiriki wa Kiume",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_participants",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_participants",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya washiriki wa kike",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "select_campaign_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_campaign_name",
+        "type": "native_radio",
+        "label": "Jina la kampeni",
+        "options": [
+          {
+            "key": "zijue_fursa_imarisha_uchumi_kataa_ukatili_kazi_iendelee",
+            "text": "Zijue Fursa Imarisha Uchumi kataa Ukatili kazi iendelee - ZIFIUKUKI",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "zijue_fursa_imarisha_uchumi_kataa_ukatili_kazi_iendelee"
+          },
+          {
+            "key": "mama_samia_legal_aid_campaign",
+            "text": "Kampeni ya Msaada wa Kisheria ya Mama Samia",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "mama_samia_legal_aid_campaign"
+          },
+          {
+            "key": "stand_for_her_and",
+            "text": "Stand for Her Land",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "stand_for_her_and"
+          },
+          {
+            "key": "other",
+            "text": "Nyinginezo (Taja)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja jina la kampeni"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_name",
+        "type": "edit_text",
+        "hint": "Tafadhali taja jina",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_participants_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_participants_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya washiriki wa kiume",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_participants_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_participants_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya washiriki wa kike",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "select_the_program_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_the_program_name",
+        "type": "native_radio",
+        "label": "Chagua jina la mpango",
+        "options": [
+          {
+            "key": "enterpreneurship_program",
+            "text": "Mpango wa Ujasiriamali",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "enterpreneurship_program"
+          },
+          {
+            "key": "viccoba",
+            "text": "VICOBA",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "viccoba"
+          },
+          {
+            "key": "platform_creation",
+            "text": "Uundaji wa Jukwaa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "platform_creation"
+          },
+          {
+            "key": "online_business",
+            "text": "Biashara ya Mtandaoni",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "online_business"
+          },
+          {
+            "key": "others",
+            "text": "Nyinginezo (Taja)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja jina"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_program",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_program",
+        "type": "edit_text",
+        "hint": "Tafadhali taja jina la mpango",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_participants_program",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_participants_program",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya washiriki wa kiume",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_participants_program",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_participants_program",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya washiriki wa kike",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ward_executive_officer_first_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ward_executive_officer_first_name",
+        "type": "edit_text",
+        "hint": "Jina la kwanza la mtendaji wa kata",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ward_executive_officer_middle_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ward_executive_officer_middle_name",
+        "type": "edit_text",
+        "hint": "Jina la kati la mtendaji wa kata",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ward_executive_officer_surname",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ward_executive_officer_surname",
+        "type": "edit_text",
+        "hint": "Jina la ukoo la mtendaji wa kata",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "village",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "village",
+        "label": "Location(Select Village)",
+        "type": "tree",
+        "tree": [
+          {
+            "key": "tanzania",
+            "level": "",
+            "name": "Tanzania",
+            "nodes": [
+              {
+                "key": "kilimanjaro",
+                "level": "",
+                "name": "Kilimanjaro",
+                "nodes": [
+                  {
+                    "key": "moshi",
+                    "level": "",
+                    "name": "Moshi",
+                    "nodes": [
+                      {
+                        "key": "Kibosho",
+                        "level": "",
+                        "name": "Kibosho",
+                        "nodes": [
+                          {
+                            "key": "kirima_juu",
+                            "level": "",
+                            "name": "Kirima Juu"
+                          },
+                          {
+                            "key": "kirima_chini",
+                            "level": "",
+                            "name": "Kirima Chini"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hint": "Tafadhali taja kijiji",
+        "v_required": {
+          "value": false,
+          "err": "Tafadhali taja jina la kijiji"
+        },
+        "default": "[\"tanzania\",\"kilimanjaro\",\"moshi\",\"kibosho\"]",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_male_citizens_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya Idadi ya Raia wa Kiume Waliofikiwa na Kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_female_citizens_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya Idadi ya Raia wa Kike Waliofikiwa na Kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_cases_on_ownership_of_property_by_male_clients_received_after_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya kesi za umiliki wa mali na wateja wa kiume zilizopokelewa baada ya kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_cases_on_ownership_of_property_by_female_clients_received_after_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya kesi za umiliki wa mali na wateja wa kike zilizopokelewa baada ya kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_referrals_cases_after_receiving_cases_on_ownership_of_property",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya kesi zilizorejeshwa baada ya kupokea kesi za umiliki wa mali",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_closed_cases_after_receiving_cases_on_ownership_of_property",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya kesi zilizofungwa baada ya kupokea kesi za umiliki wa mali",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_on-going_cases_after_receiving_cases_on_ownership_of_property",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya kesi zinazoendelea baada ya kupokea kesi za umiliki wa mali",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_ward_land_and_housing_tribunal",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_referral_to_ward_land_and_housing_tribunal",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya marejeo kwa Baraza la Ardhi na Nyumba la Kata",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_district_land_and_housing_tribunal",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_referral_to_district_land_and_housing_tribunal",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya marejeo kwa baraza la ardhi na nyumba la wilaya",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_court",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_referral_to_court",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya rufaa zilizopelekwa mahakamani",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_police",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_referral_to_police",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya rufaa zilizopelekwa polisi",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_rganization_Institution",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_referral_to_rganization_Institution",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya rufaa zilizopelekwa kwenye taasisi",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_social_welfare",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_referral_to_social_welfare",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya rufaa kwa ustawi wa jamii",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_referral_to_others_referral",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_referral_to_others_referral",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya rufaa zilizotumwa kwingineko",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_who_own_land",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_male_citizens_who_own_land",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya raia wa kiume wanaomiliki ardhi",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_who_own_land",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_female_citizens_who_own_land",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya raia wa kike wanaomiliki ardhi",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_who_own_buildings",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_male_citizens_who_own_bulidings",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya raia wa kiume wanaomiliki majengo",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_who_own_buildings",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_female_citizens_who_own_buildings",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya raia wa kike wanaomiliki majengo",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_who_own_vehicles",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_male_citizens_who_own_vehicles",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya raia wa kiume wanaomiliki magari",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_who_own_vehicles",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_female_citizens_who_own_vehicles",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya raia wa kike wanaomiliki magari",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_male_citizens_who_own_livestock",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_male_citizens_who_own_livestock",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya raia wa kiume wanaomiliki mifugo",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "total_number_of_female_citizens_who_own_livestock",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "total_number_of_female_citizens_who_own_livestock",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Jumla ya idadi ya raia wa kike wanaomiliki mifugo",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_differences_in_ratio_of_ownership_between_male_and_female",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_differences_in_ratio_of_ownership_between_male_and_female",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
+        "label": "Sababu za tofauti katika uwiano wa umiliki kati ya wanaume na wanawake zinajumuisha",
+        "options": [
+          {
+            "key": "tradition",
+            "text": "Tamaduni",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "tradition"
+          },
+          {
+            "key": "religion",
+            "text": "Dini",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "religion"
+          },
+          {
+            "key": "customs",
+            "text": "Desturi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "customs"
+          },
+          {
+            "key": "economic_status",
+            "text": "Hali ya kiuchumi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_status"
+          },
+          {
+            "key": "other",
+            "text": "Sababu Nyinginezo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja sababu za tofauti katika uwiano wa umiliki kati ya wanaume na wanawake zinajumuisha"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_reason",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_reason",
+        "type": "edit_text",
+        "hint": "Tafadhali taja sababu",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "name_of_loan_recipient",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "name_of_loan_recipient",
+        "type": "edit_text",
+        "hint": "Jina la mnufaika wa mkopo",
+        "v_required": {
+          "value": "true",
+          "err": "Jina la mnufaika wa mkopo"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "registration_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "registration_date",
+        "type": "date_picker",
+        "hint": "Tarehe ya usajili",
+        "max_date": "today",
+        "min_date": "today-1y",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja tarehe ya usajili"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "group_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "group_type",
+        "type": "native_radio",
+        "label": "Aina ya kundi",
+        "options": [
+          {
+            "key": "women",
+            "text": "Wanawake",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "women"
+          },
+          {
+            "key": "youth",
+            "text": "Vijana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "youth"
+          },
+          {
+            "key": "disability",
+            "text": "Walemavu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "disability"
+          },
+          {
+            "key": "individual",
+            "text": "Binafsi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "individual"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali ingiza mnufaika wa mkopo"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "village_loan",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "village_loan",
+        "label": "Location(Select Village)",
+        "type": "tree",
+        "tree": [
+          {
+            "key": "tanzania",
+            "level": "",
+            "name": "Tanzania",
+            "nodes": [
+              {
+                "key": "kilimanjaro",
+                "level": "",
+                "name": "Kilimanjaro",
+                "nodes": [
+                  {
+                    "key": "moshi",
+                    "level": "",
+                    "name": "Moshi",
+                    "nodes": [
+                      {
+                        "key": "Kibosho",
+                        "level": "",
+                        "name": "Kibosho",
+                        "nodes": [
+                          {
+                            "key": "kirima_juu",
+                            "level": "",
+                            "name": "Kirima Juu"
+                          },
+                          {
+                            "key": "kirima_chini",
+                            "level": "",
+                            "name": "Kirima Chini"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "hint": "Taja kijiji",
+        "v_required": {
+          "value": false,
+          "err": "Tafadhali taja jina la kijiji"
+        },
+        "default": "[\"tanzania\",\"kilimanjaro\",\"moshi\",\"kibosho\"]",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_members_loan",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_members_loan",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya Wanachama wa Kiume",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_members_loan",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_members_loan",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanachama wa kike",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_the_group_been_accredited",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_the_group_been_accredited",
+        "type": "native_radio",
+        "label": "Je, kikundi kimepata ithibati?",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_the_group_individual_received_the_loan",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_the_group/individual_received_the_loan?",
+        "type": "native_radio",
+        "label": "Je, kikundi/mhusika amepokea mkopo?",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "loan_receiving_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "loan_receiving_date",
+        "type": "date_picker",
+        "hint": "Tarehe ya Upokeaji wa Mkopo",
+        "max_date": "today",
+        "min_date": "today-1y",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali ingiza tarehe"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "loan_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "loan_type",
+        "type": "native_radio",
+        "label": "Aina ya mkopo",
+        "options": [
+          {
+            "key": "10%",
+            "text": "10%",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "10%"
+          },
+          {
+            "key": "women_development_forum",
+            "text": "Mfuko wa maendeleo ya Wanawake (WDF)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "women_development_forum"
+          },
+          {
+            "key": "youth_development_forum",
+            "text": "Mfuko wa maendeleo ya vijana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "youth_development_forum"
+          },
+          {
+            "key": "other",
+            "text": "Mkopo Mwingineo (Taja)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali ingiza aina ya mkopo"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "loan_deadline_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "loan_deadline_date",
+        "type": "date_picker",
+        "hint": "Tarehe ya Mwisho wa Mkopo",
+        "max_date": "today",
+        "min_date": "today-1y",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali ingiza tarehe"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "loan_amount",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "loan_amount",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Kiasi cha mkopo",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "received_financial_training",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "received_financial_training",
+        "type": "native_radio",
+        "label": "Je, amepokea mafunzo ya kifedha?",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "training_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "training_type",
+        "type": "native_radio",
+        "label": "Aina ya mafunzo",
+        "options": [
+          {
+            "key": "business",
+            "text": "Biashara",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "business"
+          },
+          {
+            "key": "expenditure",
+            "text": "Matumizi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "expenditure"
+          },
+          {
+            "key": "financial_management",
+            "text": "Usimamizi wa fedha",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "financial_management"
+          },
+          {
+            "key": "leadership",
+            "text": "Uongozi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "leadership"
+          },
+          {
+            "key": "other",
+            "text": "Mengineyo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja aina ya mafunzo"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_training",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_training",
+        "type": "edit_text",
+        "hint": "Tafadhali taja aina ya mafunzo",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "training_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "training_date",
+        "type": "date_picker",
+        "hint": "Tarehe ya mafunzo",
+        "max_date": "today",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja tarehe ya mafunzo"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "select_campaign_topic",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "select_campaign_topic",
+        "type": "check_box",
+        "combine_checkbox_option_values": true,
+        "label": "Chagua mada",
+        "options": [
+          {
+            "key": "bias_and_discrimination",
+            "text": "Upendeleo na ubaguzi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "bias_and_discrimination"
+          },
+          {
+            "key": "gender_based_violence",
+            "text": "Ukatili wa kijinsia",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "gender_based_violence"
+          },
+          {
+            "key": "managing_household_finances",
+            "text": "Usimamizi wa Fedha za Kaya",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "managing_household_finances"
+          },
+          {
+            "key": "planning_spacing_pregnancies",
+            "text": "Upangaji na Kupangilia Mimba",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "planning_spacing_pregnancies"
+          },
+          {
+            "key": "early_marriage_teen_pregnancy",
+            "text": "Ndoa za Utotoni na Mimba za Mapema",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "early_marriage_teen_pregnancy"
+          },
+          {
+            "key": "cultural_resistance_to_women_leadership",
+            "text": "Upinzani wa Kitamaduni dhidi ya Uongozi wa Wanawake",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "cultural_resistance_to_women_leadership"
+          },
+          {
+            "key": "differentiated_treatment_of_girls_over_child_rights",
+            "text": "Matibabu Tofauti kwa Wasichana Kuhusu Haki za Watoto",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "differentiated_treatment_of_girls_over_child_rights"
+          },
+          {
+            "key": "unequal_distribution_of_roles",
+            "text": "Mgawanyo Usio Sawa wa Majukumu",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "unequal_distribution_of_roles"
+          },
+          {
+            "key": "preventing_negotiating_resolving_conflict",
+            "text": "Kuzuia, Kujadiliana, na Kutatua Migogoro",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "preventing_negotiating_resolving_conflict"
+          },
+          {
+            "key": "religious_beliefs",
+            "text": "Imani za Kidini",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "religious_beliefs"
+          },
+          {
+            "key": "others",
+            "text": "Mengineyo (Taja)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "specify_other_campaign_topic",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_other_campaign_topic",
+        "type": "edit_text",
+        "hint": "Taja Mada Nyingine za Kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_less_25_years_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_less_25_years_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliofikiwa na kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_less_25_years_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_less_25_years_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliofikiwa na kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_25_plus_years_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_25_plus_years_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliofikiwa na kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_25_plus_years_reached_by_the_campaign",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_25_plus_years_reached_by_the_campaign",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliofikiwa na kampeni",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_less_25_years_screened_for_harmful_norms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_less_25_years_screened_for_harmful_norms",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliopimwa kwa ajili ya mila hatarishi",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_less_25_years_screened_for_harmful_norms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_less_25_years_screened_for_harmful_norms",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliopimwa kwa ajili ya mila hatarishi",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_25_plus_years_screened_for_harmful_norms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_25_plus_years_screened_for_harmful_norms",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_25_plus_years_screened_for_harmful_norms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_25_plus_years_screened_for_harmful_norms",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_less_25_years_screened_positive",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_less_25_years_screened_positive",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliopimwa na kupata matokeo chanya",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_less_25_years_screened_positive",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_less_25_years_screened_positive",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliopimwa kwa ajili ya mila hatarishi na kupata matokeo chanya",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_25_plus_years_screened_positive",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_25_plus_years_screened_positive",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi na kupata matokeo chanya",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_25_plus_years_screened_positive",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_25_plus_years_screened_positive",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopimwa kwa ajili ya mila hatarishi na kupata matokeo chanya",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_less_25_years_who_received_services_based_on_issues_raised",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_less_25_years_who_received_services_based_on_issues_raised",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanaume walio chini ya miaka 25 waliopokea huduma kulingana na masuala yaliyoibuliwa",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_less_25_years_who_received_services_based_on_issues_raised",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_less_25_years_who_received_services_based_on_issues_raised",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanawake walio chini ya miaka 25 waliopokea huduma kulingana na masuala yaliyoibuliwa",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_male_25_plus_years_who_received_services_based_on_issues_raised",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_male_25_plus_years_who_received_services_based_on_issues_raised",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanaume wenye umri wa miaka 25 na zaidi waliopokea huduma kulingana na masuala yaliyoibuliwa",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_female_25_plus_years_who_received_services_based_on_issues_raised",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_female_25_plus_years_who_received_services_based_on_issues_raised",
+        "type": "edit_text",
+        "edit_type": "number",
+        "hint": "Idadi ya wanawake wenye umri wa miaka 25 na zaidi waliopokea huduma kulingana na masuala yaliyoibuliwa",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "platform_name",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "platform_name",
+        "type": "edit_text",
+        "hint": "Jina la jukwaa",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja jina la Jukwaa "
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "platform_purpose",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "platform_purpose",
+        "type": "edit_text",
+        "hint": "Lengo la Jukwaa",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja lengo la Jukwaa "
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "event_supporter",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "event_supporter",
+        "type": "native_radio",
+        "label": "Chagua msaidizi wa tukio",
+        "options": [
+          {
+            "key": "government",
+            "text": "Serikali",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "government"
+          },
+          {
+            "key": "development_partners",
+            "text": "Wadau wa maendeleo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "development_partners"
+          },
+          {
+            "key": "ngo",
+            "text": "Mashirika/Asasi siziso za kiserikali",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ngo"
+          },
+          {
+            "key": "fbo",
+            "text": "Asasi za Kidini",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "fbo"
+          },
+          {
+            "key": "other",
+            "text": "Nyinginezo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua msaidizi wa tukio"
+        }
+      },
+      {
+        "key": "specify_supporter",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "specify_supporter",
+        "type": "edit_text",
+        "hint": "Tafadhali taja",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_mobilization_session_rule.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -75,7 +75,7 @@ indicators:
   #  GE 4
   - key: "ge-4-male"
     grouping: "GE"
-    description: "Idadi ya wafanyabiashara ndogo ndogo walioasiliwa"
+    description: "Idadi ya wafanyabiashara ndogo ndogo waliosajiliwa"
     indicatorQuery: " SELECT count(DISTINCT egfv.entity_id) as count FROM ec_ge_follow_up_visit egfv
       INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
       WHERE
@@ -87,7 +87,7 @@ indicators:
 
   - key: "ge-4-female"
     grouping: "GE"
-    description: "Idadi ya wafanyabiashara ndogo ndogo walioasiliwa"
+    description: "Idadi ya wafanyabiashara ndogo ndogo waliosajiliwa"
     indicatorQuery: " SELECT count(DISTINCT egfv.entity_id) as count FROM ec_ge_follow_up_visit egfv
       INNER JOIN ec_family_member efm ON efm.base_entity_id = egfv.entity_id
       WHERE

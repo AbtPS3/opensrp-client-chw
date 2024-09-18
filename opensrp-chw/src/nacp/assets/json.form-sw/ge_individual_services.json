@@ -1,1 +1,811 @@
-{"count":"1","encounter_type":"GE Follow-up Visit","entity_id":"","relational_id":"","metadata":{"start":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"start","openmrs_entity_id":"163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"end":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"end","openmrs_entity_id":"163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"today":{"openmrs_entity_parent":"","openmrs_entity":"encounter","openmrs_entity_id":"encounter_date"},"deviceid":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"deviceid","openmrs_entity_id":"163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"subscriberid":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"subscriberid","openmrs_entity_id":"163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"simserial":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"simserial","openmrs_entity_id":"163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"phonenumber":{"openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_data_type":"phonenumber","openmrs_entity_id":"163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"encounter_location":"","look_up":{"entity_id":"","value":""}},"step1":{"title":"GE Individual Services","fields":[{"key":"service_type","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"service_type","type":"native_radio","label":"Aina ya msaada","options":[{"key":"legal_aid_support","text":"Msaada wa kisheria","openmrs_entity":"concept","openmrs_entity_id":"legal_aid_support"},{"key":"small_scale_entrepreneur","text":"Usajili wa wajasiriamali wadogo wadogo","openmrs_entity":"concept","openmrs_entity_id":"small_scale_entrepreneur"},{"key":"Household_Sensitized_on_GE_Issues","text":"Elimu juu ya usawa wa kijinsia","openmrs_entity":"concept","openmrs_entity_id":"Household_Sensitized_on_GE_Issues"}],"v_required":{"value":"true","err":"Tafadhali chagua aina ya msaada"}},{"key":"date_of_support","openmrs_entity_parent":"","openmrs_entity":"","openmrs_entity_id":"","type":"date_picker","hint":"Tarehe ya msaada uliotolewa","min_date":"today-2d","max_date":"today","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"gbv_elements","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"gbv_elements","type":"native_radio","label":"Je kuna viashiria vya ukatili wa kijinsia?","options":[{"key":"yes","openmrs_entity":"concept","openmrs_entity_id":"yes","text":"Ndio"},{"key":"no","openmrs_entity":"concept","openmrs_entity_id":"no","text":"Hapana"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"legal_services","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"legal_services","type":"check_box","label":"Chagua aina ya huduma iliyotolewa","options":[{"key":"matrimonial_issues","text":"Mambo ya ndoa","openmrs_entity":"concept","openmrs_entity_id":"matrimonial_issues"},{"key":"probate_issues","text":"Haki za mirathi","openmrs_entity":"concept","openmrs_entity_id":"probate_issues"},{"key":"land_issues","text":"Ardhi","openmrs_entity":"concept","openmrs_entity_id":"land_issues"},{"key":"economic_issues","text":"Biashara","openmrs_entity":"concept","openmrs_entity_id":"economic_issues"},{"key":"labor_issues","text":"Ajira","openmrs_entity":"concept","openmrs_entity_id":"labor_issues"},{"key":"criminal_issues","text":"Jinai","openmrs_entity":"concept","openmrs_entity_id":"criminal_issues"},{"key":"child_maintenance_issues","text":"Matunzo ya mtoto","openmrs_entity":"concept","openmrs_entity_id":"child_maintenance_issues"},{"key":"custody_of_children_issues","text":"Haki ya kuishi na  mtoto","openmrs_entity":"concept","openmrs_entity_id":"custody_of_children_issues"},{"key":"general_civil","text":"Madai","openmrs_entity":"concept","openmrs_entity_id":"general_civil"},{"key":"other","text":"Nyinginezo (Taja)","openmrs_entity":"concept","openmrs_entity_id":"other"}],"v_required":{"value":"true","err":"Tafadhali chagua huduma za msaada wa kisheria uliotolewa"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"other_legal_services","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"other_legal_services","type":"edit_text","hint":"Nyingine (Taja)","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"action_taken_after_provision_of_legal_services","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"action_taken_after_provision_of_legal_services","type":"native_radio","label":"Hatua iliyochukuliwa","options":[{"key":"referral","text":"Rufaa","openmrs_entity":"concept","openmrs_entity_id":"referral"},{"key":"closed","text":"Imefungwa","openmrs_entity":"concept","openmrs_entity_id":"closed"},{"key":"ongoing","text":"Inaendelea","openmrs_entity":"concept","openmrs_entity_id":"ongoing"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"referral_destination","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"referral_destination","type":"check_box","combine_checkbox_option_values":"true","label":"Chagua rufaa ilipoenda","options":[{"key":"ward_land_and_housing","text":"Kata","openmrs_entity":"concept","openmrs_entity_id":"ward_land_and_housing"},{"key":"district_land_and_housing_tribunal","text":"Wilaya","openmrs_entity":"concept","openmrs_entity_id":"district_land_and_housing_tribunal"},{"key":"court","text":"Mahakama","openmrs_entity":"concept","openmrs_entity_id":"court"},{"key":"police","text":"Polisi","openmrs_entity":"concept","openmrs_entity_id":"police"},{"key":"organization","text":"Taasisi","openmrs_entity":"concept","openmrs_entity_id":"organization"},{"key":"social_welfare","text":"Ustawi wa jamii","openmrs_entity":"concept","openmrs_entity_id":"social_welfare"},{"key":"others","text":"Nyinginezo","openmrs_entity":"concept","openmrs_entity_id":"others"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"other_referrals_destinations","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"other_referrals_destinations","type":"edit_text","hint":"Nyinginezo (Taja)","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"property_ownership","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"property_ownership","type":"native_radio","label":"Je mteja anamiliki mali? ","options":[{"key":"yes","openmrs_entity":"concept","openmrs_entity_id":"yes","text":"Ndiyo"},{"key":"no","openmrs_entity":"concept","openmrs_entity_id":"no","text":"Hapana"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"type_of_property_owned","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"type_of_property_owned","type":"check_box","combine_checkbox_option_values":"true","label":"Aina za Mali","hint":"Chagua aina za mali zinazomilikiwa na mteja","options":[{"key":"land","text":"Ardhi","openmrs_entity":"concept","openmrs_entity_id":"land"},{"key":"housing","text":"Nyumba","openmrs_entity":"concept","openmrs_entity_id":"housing"},{"key":"vehicles","text":"Gari","openmrs_entity":"concept","openmrs_entity_id":"vehicles"},{"key":"livestock","text":"Mifugo","openmrs_entity":"concept","openmrs_entity_id":"livestock"},{"key":"others","text":"Nyinginezo (Taja)","openmrs_entity":"concept","openmrs_entity_id":"others"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"other_property","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"other_property","type":"edit_text","hint":"Nyinginezo (Taja)","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"gender_equality_sensitization","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"gender_equality_sensitization","type":"check_box","combine_checkbox_option_values":"true","label":"Elimu iliyotolewa","hint":"Tafadhali chagua elimu iliyotolewa","options":[{"key":"women_participation_in_leadership","text":"Ushiriki wa wanawake katika ngazi za uongozi na maamuzi.","openmrs_entity":"concept","openmrs_entity_id":"women_participation_in_leadership"},{"key":"women_economic_empowerment","text":"Uwezeshaji wa wanawake kiuchumi.","openmrs_entity":"concept","openmrs_entity_id":"women_economic_empowerment"},{"key":"women_safety_and_security","text":"Ulinzi na usalama wa mwanamke (Dhidi ya unyanyasaji wa kijinsia).","openmrs_entity":"concept","openmrs_entity_id":"women_safety_and_security"},{"key":"gender_issues_empowerment","text":"Kujengewa uwezo wa masuala ya kijinsia.","openmrs_entity":"concept","openmrs_entity_id":"gender_issues_empowerment"},{"key":"gender_and_good_leadership","text":"Jinsia na utawala bora","openmrs_entity":"concept","openmrs_entity_id":"gender_and_good_leadership"},{"key":"norms_and_values","text":"Mila na desturi","openmrs_entity":"concept","openmrs_entity_id":"norms_and_values"},{"key":"parenting_family_support_and_relationships","text":"Malezi, msaada kwa familia na mahusiano","openmrs_entity":"concept","openmrs_entity_id":"parenting_family_support_and_relationships"},{"key":"others","text":"Elimu nyinginezo (Taja)","openmrs_entity":"concept","openmrs_entity_id":"others"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"other_ge_sensitization_provided","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"other_ge_sensitization_provided","type":"edit_text","hint":"Elimu Nyinginezo (Taja)","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"sensitization_session_complete","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"sensitization_session_complete","type":"native_radio","label":"Je utoaji wa elimu umekamilika?","options":[{"key":"yes","text":"Ndiyo","openmrs_entity":"concept","openmrs_entity_id":"yes"},{"key":"no","text":"Hapana","openmrs_entity":"concept","openmrs_entity_id":"no"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"followup_visit_date","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"followup_visit_date","type":"date_picker","hint":"Tafadhali chagua tarehe","edit_type":"number","min_date":"today+1d","max_date":"today+2m","v_required":{"value":"true","err":"Tafadhali taja tarehe ya hudhurio litakalofuata"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"has_the_client_been_registered","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"has_the_client_been_registered","type":"native_radio","label":"Je mteja amesajiliwa","options":[{"key":"yes","text":"Ndiyo","openmrs_entity":"concept","openmrs_entity_id":"yes"},{"key":"no","text":"Hapana","openmrs_entity":"concept","openmrs_entity_id":"no"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"registration_area","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"registration_area","type":"native_radio","label":"Eneo la usajili","hint":"Eneo la usajili","options":[{"key":"weo","text":"Kata","openmrs_entity":"concept","openmrs_entity_id":"weo"},{"key":"council","text":"Halmashauri","openmrs_entity":"concept","openmrs_entity_id":"council"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"registration_date","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"registration_date","type":"date_picker","hint":"Tarehe ya usajili","edit_type":"number","min_date":"today-5y","max_date":"today","v_required":{"value":"true","err":"Tafadhali chagua tarehe ya usajili"},"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"challenges_faced","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"challenges_faced","type":"check_box","combine_checkbox_option_values":"true","label":"Changamoto zitokanazo na kutokusajiliwa","options":[{"key":"not_being_recognized_by_authorities","text":"Kutotambulika na mamlaka husika","openmrs_entity":"concept","openmrs_entity_id":"not_being_recognized_by_authorities"},{"key":"missing_loans_opportunities","text":"Kukosa fursa za mikopo","openmrs_entity":"concept","openmrs_entity_id":"missing_loans_opportunities"},{"key":"lack_of_business_operating_freedom","text":"Kutofanya biashara kwa uhuru","openmrs_entity":"concept","openmrs_entity_id":"lack_of_business_operating_freedom"},{"key":"cannot_join_business_cooperatives","text":"Kushindwa kujiunga na mtandao wa wafanya biashara wenzake","openmrs_entity":"concept","openmrs_entity_id":"cannot_join_business_cooperatives"},{"key":"missing_business_training","text":"Kukosa fursa za mafunzo ya biashara","openmrs_entity":"concept","openmrs_entity_id":"missing_business_training"},{"key":"other","text":"Changamoto nyinginezo (Zitaje)","openmrs_entity":"concept","openmrs_entity_id":"other"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"other_challenges","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"other_challenges","type":"edit_text","hint":"Nyinginezo (Taja)","relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}},{"key":"client_counselling","openmrs_entity_parent":"","openmrs_entity":"concept","openmrs_entity_id":"client_counselling","type":"native_radio","label":"Je mteja alipewa ushauri?","hint":"Je mteja alipewa ushauri?","options":[{"key":"yes","text":"Ndiyo","openmrs_entity":"concept","openmrs_entity_id":"yes"},{"key":"no","text":"Hapana","openmrs_entity":"concept","openmrs_entity_id":"no"}],"relevance":{"rules-engine":{"ex-rules":{"rules-file":"ge_individual_form.yml"}}}}]}}
+{
+  "count": "1",
+  "encounter_type": "GE Follow-up Visit",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "GE Individual Services",
+    "fields": [
+      {
+        "key": "service_type",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "service_type",
+        "type": "native_radio",
+        "label": "Aina ya msaada",
+        "options": [
+          {
+            "key": "legal_aid_support",
+            "text": "Msaada wa kisheria",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "legal_aid_support"
+          },
+          {
+            "key": "small_scale_entrepreneur",
+            "text": "Usajili wa wajasiriamali wadogo wadogo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "small_scale_entrepreneur"
+          },
+          {
+            "key": "Household_Sensitized_on_GE_Issues",
+            "text": "Elimu juu ya usawa wa kijinsia",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "Household_Sensitized_on_GE_Issues"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua aina ya msaada"
+        }
+      },
+      {
+        "key": "date_of_support",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "date_picker",
+        "hint": "Tarehe ya msaada uliotolewa",
+        "min_date": "today-2d",
+        "max_date": "today",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "gbv_elements",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "gbv_elements",
+        "type": "native_radio",
+        "label": "Je kuna viashiria vya ukatili wa kijinsia?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "text": "Hapana"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "legal_services",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "legal_services",
+        "type": "check_box",
+        "label": "Chagua aina ya huduma iliyotolewa",
+        "options": [
+          {
+            "key": "matrimonial_issues",
+            "text": "Mambo ya ndoa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "matrimonial_issues"
+          },
+          {
+            "key": "probate_issues",
+            "text": "Haki za mirathi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "probate_issues"
+          },
+          {
+            "key": "land_issues",
+            "text": "Ardhi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "land_issues"
+          },
+          {
+            "key": "economic_issues",
+            "text": "Biashara",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "economic_issues"
+          },
+          {
+            "key": "labor_issues",
+            "text": "Ajira",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "labor_issues"
+          },
+          {
+            "key": "criminal_issues",
+            "text": "Jinai",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "criminal_issues"
+          },
+          {
+            "key": "child_maintenance_issues",
+            "text": "Matunzo ya mtoto",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "child_maintenance_issues"
+          },
+          {
+            "key": "custody_of_children_issues",
+            "text": "Haki ya kuishi na  mtoto",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "custody_of_children_issues"
+          },
+          {
+            "key": "general_civil",
+            "text": "Madai",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "general_civil"
+          },
+          {
+            "key": "other",
+            "text": "Nyinginezo (Taja)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua huduma za msaada wa kisheria uliotolewa"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "other_legal_services",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_legal_services",
+        "type": "edit_text",
+        "hint": "Nyingine (Taja)",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "action_taken_after_provision_of_legal_services",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "action_taken_after_provision_of_legal_services",
+        "type": "native_radio",
+        "label": "Hatua iliyochukuliwa",
+        "options": [
+          {
+            "key": "referral",
+            "text": "Rufaa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "referral"
+          },
+          {
+            "key": "closed",
+            "text": "Imefungwa",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "closed"
+          },
+          {
+            "key": "ongoing",
+            "text": "Inaendelea",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ongoing"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "referral_destination_with_land",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referral_destination_with_land",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Chagua rufaa ilipoenda",
+        "options": [
+          {
+            "key": "ward_land_and_housing",
+            "text": "Baraza la ardhi la Kata",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "ward_land_and_housing"
+          },
+          {
+            "key": "district_land_and_housing_tribunal",
+            "text": "Baraza la ardhi la Wilaya",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "district_land_and_housing_tribunal"
+          },
+          {
+            "key": "court",
+            "text": "Mahakama",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "court"
+          },
+          {
+            "key": "police",
+            "text": "Polisi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "police"
+          },
+          {
+            "key": "organization",
+            "text": "Taasisi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "organization"
+          },
+          {
+            "key": "social_welfare",
+            "text": "Ustawi wa jamii",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "social_welfare"
+          },
+          {
+            "key": "others",
+            "text": "Nyinginezo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "referral_destination_without_land",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referral_destination_without_land",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Chagua rufaa ilipoenda",
+        "options": [
+          {
+            "key": "court",
+            "text": "Mahakama",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "court"
+          },
+          {
+            "key": "police",
+            "text": "Polisi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "police"
+          },
+          {
+            "key": "organization",
+            "text": "Taasisi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "organization"
+          },
+          {
+            "key": "social_welfare",
+            "text": "Ustawi wa jamii",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "social_welfare"
+          },
+          {
+            "key": "others",
+            "text": "Nyinginezo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "referral_destination",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referral_destination",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "other_referrals_destinations",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_referrals_destinations",
+        "type": "edit_text",
+        "hint": "Nyinginezo (Taja)",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "property_ownership",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "property_ownership",
+        "type": "native_radio",
+        "label": "Je mteja anamiliki mali? ",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "text": "Ndiyo"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "text": "Hapana"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "type_of_property_owned",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "type_of_property_owned",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Aina za Mali",
+        "hint": "Chagua aina za mali zinazomilikiwa na mteja",
+        "options": [
+          {
+            "key": "land",
+            "text": "Ardhi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "land"
+          },
+          {
+            "key": "housing",
+            "text": "Nyumba",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "housing"
+          },
+          {
+            "key": "vehicles",
+            "text": "Gari",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "vehicles"
+          },
+          {
+            "key": "livestock",
+            "text": "Mifugo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "livestock"
+          },
+          {
+            "key": "others",
+            "text": "Nyinginezo (Taja)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "other_property",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_property",
+        "type": "edit_text",
+        "hint": "Nyinginezo (Taja)",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "gender_equality_sensitization",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "gender_equality_sensitization",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Elimu iliyotolewa",
+        "hint": "Tafadhali chagua elimu iliyotolewa",
+        "options": [
+          {
+            "key": "women_participation_in_leadership",
+            "text": "Ushiriki wa wanawake katika ngazi za uongozi na maamuzi.",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "women_participation_in_leadership"
+          },
+          {
+            "key": "women_economic_empowerment",
+            "text": "Uwezeshaji wa wanawake kiuchumi.",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "women_economic_empowerment"
+          },
+          {
+            "key": "women_safety_and_security",
+            "text": "Ulinzi na usalama wa mwanamke (Dhidi ya unyanyasaji wa kijinsia).",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "women_safety_and_security"
+          },
+          {
+            "key": "gender_issues_empowerment",
+            "text": "Kujengewa uwezo wa masuala ya kijinsia.",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "gender_issues_empowerment"
+          },
+          {
+            "key": "gender_and_good_leadership",
+            "text": "Jinsia na utawala bora",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "gender_and_good_leadership"
+          },
+          {
+            "key": "norms_and_values",
+            "text": "Mila na desturi",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "norms_and_values"
+          },
+          {
+            "key": "parenting_family_support_and_relationships",
+            "text": "Malezi, msaada kwa familia na mahusiano",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "parenting_family_support_and_relationships"
+          },
+          {
+            "key": "others",
+            "text": "Elimu nyinginezo (Taja)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "others"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "other_ge_sensitization_provided",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_ge_sensitization_provided",
+        "type": "edit_text",
+        "hint": "Elimu Nyinginezo (Taja)",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "sensitization_session_complete",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "sensitization_session_complete",
+        "type": "native_radio",
+        "label": "Je utoaji wa elimu umekamilika?",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "followup_visit_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "followup_visit_date",
+        "type": "date_picker",
+        "hint": "Tafadhali chagua tarehe",
+        "edit_type": "number",
+        "min_date": "today+1d",
+        "max_date": "today+2m",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali taja tarehe ya hudhurio litakalofuata"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_the_client_been_registered",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_the_client_been_registered",
+        "type": "native_radio",
+        "label": "Je mteja amesajiliwa",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "registration_area",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "registration_area",
+        "type": "native_radio",
+        "label": "Eneo la usajili",
+        "hint": "Eneo la usajili",
+        "options": [
+          {
+            "key": "weo",
+            "text": "Kata",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "weo"
+          },
+          {
+            "key": "council",
+            "text": "Halmashauri",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "council"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "registration_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "registration_date",
+        "type": "date_picker",
+        "hint": "Tarehe ya usajili",
+        "edit_type": "number",
+        "min_date": "today-5y",
+        "max_date": "today",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua tarehe ya usajili"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "challenges_faced",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "challenges_faced",
+        "type": "check_box",
+        "combine_checkbox_option_values": "true",
+        "label": "Changamoto zitokanazo na kutokusajiliwa",
+        "options": [
+          {
+            "key": "not_being_recognized_by_authorities",
+            "text": "Kutotambulika na mamlaka husika",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_being_recognized_by_authorities"
+          },
+          {
+            "key": "missing_loans_opportunities",
+            "text": "Kukosa fursa za mikopo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "missing_loans_opportunities"
+          },
+          {
+            "key": "lack_of_business_operating_freedom",
+            "text": "Kutofanya biashara kwa uhuru",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "lack_of_business_operating_freedom"
+          },
+          {
+            "key": "cannot_join_business_cooperatives",
+            "text": "Kushindwa kujiunga na mtandao wa wafanya biashara wenzake",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "cannot_join_business_cooperatives"
+          },
+          {
+            "key": "missing_business_training",
+            "text": "Kukosa fursa za mafunzo ya biashara",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "missing_business_training"
+          },
+          {
+            "key": "other",
+            "text": "Changamoto nyinginezo (Zitaje)",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "other_challenges",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_challenges",
+        "type": "edit_text",
+        "hint": "Nyinginezo (Taja)",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "client_counselling",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "client_counselling",
+        "type": "native_radio",
+        "label": "Je mteja alipewa ushauri?",
+        "hint": "Je mteja alipewa ushauri?",
+        "options": [
+          {
+            "key": "yes",
+            "text": "Ndiyo",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes"
+          },
+          {
+            "key": "no",
+            "text": "Hapana",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "ge_individual_form.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
