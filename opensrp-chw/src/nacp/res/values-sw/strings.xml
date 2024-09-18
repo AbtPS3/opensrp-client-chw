@@ -940,8 +940,11 @@
     <string name="ge_number_of_female_less_25_years_who_received_services_based_on_issues_raised">Idadi ya Wanawake (Chini ya Miaka 25) Waliopata Huduma Kutokana na Masuala Yaliyoibuliwa</string>
     <string name="ge_number_of_male_25_plus_years_who_received_services_based_on_issues_raised">Idadi ya Wanaume (Miaka 25+) Waliopata Huduma Kutokana na Masuala Yaliyoibuliwa</string>
     <string name="ge_number_of_female_25_plus_years_who_received_services_based_on_issues_raised">Idadi ya Wanawake (Miaka 25+) Waliopata Huduma Kutokana na Masuala Yaliyoibuliwa</string>
-    <string name="ge_event_supporter">Msaada wa Tukio</string>
+    <string name="ge_event_supporter">Msaada wa Tukio: %s</string>
     <string name="ge_specify_supporter">Msaada Mwingine wa Tukio</string>
+
+    <string name="ge_session_start_date">Tarehe ya kuanza tukio: %s</string>
+    <string name="ge_session_end_date">Tarehe ya kumaliza tukio: %s</string>
 
     <string name="ge_duties_and_responsibilities">Wajibu na Majukumu</string>
     <string name="ge_good_governance">Utawala Bora</string>

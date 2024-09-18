@@ -144,8 +144,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
                         menu.findItem(R.id.action_gbv_registration).setVisible(!GbvDao.isRegisteredForGbv(baseEntityId));
                     }
 
-                    if (ChwApplication.getApplicationFlavor().hasGe() &&
-                            gender.equalsIgnoreCase("female") && age >= 15) {
+                    if (ChwApplication.getApplicationFlavor().hasGe() && age >= 15) {
                         menu.findItem(R.id.action_ge_enrollment).setVisible(!GeDao.isRegisteredForGe(baseEntityId));
                     }
                     break;

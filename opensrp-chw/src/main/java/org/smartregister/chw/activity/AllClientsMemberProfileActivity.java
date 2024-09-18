@@ -133,8 +133,7 @@ public class AllClientsMemberProfileActivity extends CoreAllClientsMemberProfile
                     }
 
 
-                    if (ChwApplication.getApplicationFlavor().hasGe() &&
-                            gender.equalsIgnoreCase("female") && age >= 15) {
+                    if (ChwApplication.getApplicationFlavor().hasGe() && age >= 15) {
                         menu.findItem(R.id.action_ge_enrollment).setVisible(!GeDao.isRegisteredForGe(baseEntityId));
                     }
                     break;
