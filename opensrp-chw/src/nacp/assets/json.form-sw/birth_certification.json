@@ -58,7 +58,7 @@
         "type": "spinner",
         "hint": "Mtoto ana cheti cha kuzaliwa?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "openmrs_choice_ids": {
@@ -129,7 +129,7 @@
         "type": "spinner",
         "hint": "Je, arifa ya kuzaliwa ilifanywa?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "openmrs_choice_ids": {

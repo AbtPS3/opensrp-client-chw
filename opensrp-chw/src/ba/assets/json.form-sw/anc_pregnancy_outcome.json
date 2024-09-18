@@ -465,7 +465,7 @@
             "type": "spinner",
             "hint": "Ulemavu",
             "values": [
-              "Ndiyo",
+              "Ndio",
               "Hapana"
             ],
             "keys": [
@@ -505,7 +505,7 @@
             "type": "spinner",
             "hint": "Unyonyeshaji wa mtoto ndani ya saa moja baada ya kujifungua?",
             "values": [
-              "Ndiyo",
+              "Ndio",
               "Hapana"
             ],
             "keys": [

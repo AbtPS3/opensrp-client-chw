@@ -58,7 +58,7 @@
         "type": "spinner",
         "hint": "Ana chandarua chenye viuwatilifu vya muda mrefu?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [
@@ -83,7 +83,7 @@
         "type": "spinner",
         "hint": "Je, amelala kwenye chandarua chenye viuwatilifu vya muda mrefu usiku uliopita?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

@@ -58,7 +58,7 @@
         "type": "spinner",
         "hint": "Je, mama ameshauriwa kuhusu uzazi wa mpango alipohudhuria kituoni?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

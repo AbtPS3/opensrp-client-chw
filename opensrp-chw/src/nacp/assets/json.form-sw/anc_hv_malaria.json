@@ -58,7 +58,7 @@
         "type": "spinner",
         "hint": "Je, Mwanamke ana chandarua chenye dawa ya muda mrefu (LLIN)?",
         "values": [
-          "Ndiyo ",
+          "Ndio ",
           "Hapana"
         ],
         "keys": [
@@ -83,7 +83,7 @@
         "type": "spinner",
         "hint": "Je, alilala ndani ya chandarua jana usiku?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [
@@ -160,7 +160,7 @@
         "type": "spinner",
         "hint": "Je, mteja ametumia dawa ya kuzuia Malaria (SP)?",
         "values": [
-          "Ndiyo ",
+          "Ndio ",
           "Hapana"
         ],
         "keys": [

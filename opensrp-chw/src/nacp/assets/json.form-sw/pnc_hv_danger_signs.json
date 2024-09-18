@@ -168,7 +168,7 @@
         "label_info_text": "Did the mother receive counselling on danger signs at the health facility recently?",
         "hint": "Je, mama alipokea ushauri nasaha kuhusu dalili za hatari katika kituo cha afya hivi karibuni?",
         "values": [
-          "Ndiyo ",
+          "Ndio ",
           "Hapana"
         ],
         "openmrs_choice_ids": {

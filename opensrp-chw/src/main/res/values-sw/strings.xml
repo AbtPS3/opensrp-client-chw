@@ -148,7 +148,7 @@
 
     <string name="opv_0_not_included">OPV 0 haijajumuishwa</string>
 
-    <string name="yes_slice_label">Ndiyo</string>
+    <string name="yes_slice_label">Ndio</string>
     <string name="no_slice_label">Hapana</string>
 
     <string name="immunisation_and_services"><![CDATA[CHANJO na HUDUMA]]></string>
@@ -175,7 +175,7 @@
     <string name="counseled">Alishauriwa</string>
     <string name="not_counseled">Hakushauriwa</string>
 
-    <string name="yes">Ndiyo</string>
+    <string name="yes">Ndio</string>
     <string name="no">Hapana</string>
     <string name="device_to_device_sync">Device-to-device Sync</string>
 
