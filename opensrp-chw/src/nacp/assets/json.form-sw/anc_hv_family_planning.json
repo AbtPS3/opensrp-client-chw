@@ -58,7 +58,7 @@
         "type": "spinner",
         "hint": "Je, Mama alishauriwa kuhusu Uzazi wa Mpango alipohudhuria kliniki?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

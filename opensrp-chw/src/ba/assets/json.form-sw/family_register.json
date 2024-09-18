@@ -600,7 +600,7 @@
         "type": "spinner",
         "hint": "Je, amejifungua ndani ya mwaka 1?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [
@@ -631,7 +631,7 @@
         "type": "spinner",
         "hint": "Hali ya ulemavu",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

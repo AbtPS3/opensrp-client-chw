@@ -58,7 +58,7 @@
         "type": "spinner",
         "hint": "Je, mama amepata ushauri juu ya uzazi wa mpango katika kituo cha kutolea huduma za afya hivi karibuni?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

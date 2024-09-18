@@ -60,7 +60,7 @@
         "type": "spinner",
         "hint": "Je, mama  amehudhuria kliniki ya wajawazito hudhurio la {0} katika kituo cha kutolea huduma za afya?\n\nTarehe ya hudhurio lingine: {1}",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [
@@ -296,7 +296,7 @@
         "type": "spinner",
         "hint": "Je, mama alipata chandarua chenye viuwatilifu katika hudhurio la kwanza katika kituo cha kutolea huduma za afya?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

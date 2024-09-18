@@ -58,7 +58,7 @@
         "type": "spinner",
         "hint": "Je, mtoto ana chandarua chenye dawa inayodumu kwa muda mrefu (LLIN)?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [
@@ -83,7 +83,7 @@
         "type": "spinner",
         "hint": "Je, mtoto alilala kwenye chandarua chenye dawa inayodumu kwa muda mrefu (LLIN) jana usiku??",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

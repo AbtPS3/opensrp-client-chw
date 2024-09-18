@@ -58,7 +58,7 @@
         "type": "spinner",
         "hint": "Je, mama alishauriwa kuhusu upangaji uzazi katika kituo cha afya hivi karibuni??",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

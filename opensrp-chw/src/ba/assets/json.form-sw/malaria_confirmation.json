@@ -151,7 +151,7 @@
         "hint": "Kipimo cha malaria kimefanyika?",
         "values": [
           "Hapana",
-          "Ndiyo, kwa WAJA"
+          "Ndio, kwa WAJA"
         ],
         "keys": [
           "No",
@@ -324,7 +324,7 @@
         "type": "spinner",
         "hint": "Ana chandarua chenye viuwatilifu?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [
@@ -348,7 +348,7 @@
         "type": "spinner",
         "hint": "Je, amelala kwenye chandarua chenye viuwatilifu usiku uliopita?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

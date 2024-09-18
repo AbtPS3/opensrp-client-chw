@@ -274,7 +274,7 @@
         "type": "spinner",
         "hint": "Je, mteja ameshauri jinsi ya kutumia njia za uzazi wa mpango?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
           "keys": [
@@ -347,7 +347,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
             "openmrs_entity_parent": "",
-            "text": "Ndiyo"
+            "text": "Ndio"
           },
           {
             "key": "no",

@@ -372,7 +372,7 @@
         "type": "spinner",
         "hint": "Ulemavu wa kimwili",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [
@@ -468,7 +468,7 @@
         "type": "spinner",
         "hint": "Je, Mtoto amesajiliwa au ana cheti cha kuzaliwa",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [
@@ -510,7 +510,7 @@
         "type": "spinner",
         "hint": "Je, mtoto ana kadi ya RCH 1/kijitabu cha ukuaji wa mtoto?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "keys": [

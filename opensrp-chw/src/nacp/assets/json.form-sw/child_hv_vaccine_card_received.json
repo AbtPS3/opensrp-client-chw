@@ -59,7 +59,7 @@
         "image": "form_received_card",
         "hint": "Je, mtoto alipokea kadi yake ya chanjo?",
         "values": [
-          "Ndiyo",
+          "Ndio",
           "Hapana"
         ],
         "openmrs_choice_ids": {
