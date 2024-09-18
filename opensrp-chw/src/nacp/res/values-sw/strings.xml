@@ -83,7 +83,7 @@
     <string name="referral_problem_loss_of_consciousness">Kupoteza Fahamu</string>
     <string name="referral_problem_high_risk_client">Mteja mwenye hatari kubwa</string>
     <string name="referral_problem_optimistic_infections">Magonjwa nyemelezi</string>
-    <string name="referral_problem_confirmation_self_test">Uthibitisho Kipimo binfasi</string>
+    <string name="referral_problem_confirmation_self_test">Uthibitisho Kipimo binafsi</string>
     <string name="referral_problem_index_contact_testing">Upimaji wa washirika wa ngono/wakujidunga</string>
 
 
@@ -853,7 +853,7 @@
     <string name="ge_lack_of_business_operating_freedom">Ukosefu wa Uhuru wa Kuendesha Biashara</string>
     <string name="ge_cannot_join_business_cooperatives">Haiwezi Kujiunga na Ushirika wa Biashara</string>
     <string name="ge_missing_business_training">Kukosa Mafunzo ya Biashara</string>
-    <string name="ge_edit_individual_visit">Hariri huduma binfasi za Usawa wa kijinsia (GE)</string>
+    <string name="ge_edit_individual_visit">Hariri huduma binafsi za Usawa wa kijinsia (GE)</string>
     <string name="ge_government">Serikali</string>
     <string name="ge_development_partners">Washirika wa Maendeleo</string>
     <string name="ge_ngo">NGO</string>

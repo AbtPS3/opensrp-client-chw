@@ -274,13 +274,13 @@
         "options": [
           {
             "key": "ward_land_and_housing",
-            "text": "Baraza la ardhi la Kata",
+            "text": "Baraza la usuluhishi la ardhi na nyumba la kata",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "ward_land_and_housing"
           },
           {
             "key": "district_land_and_housing_tribunal",
-            "text": "Baraza la ardhi la Wilaya",
+            "text": "Baraza la usuluhishi la ardhi na nyumba la wilaya",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "district_land_and_housing_tribunal"
           },
