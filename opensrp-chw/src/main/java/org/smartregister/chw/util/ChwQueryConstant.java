@@ -139,6 +139,10 @@ public interface ChwQueryConstant {
             "  AND (ec_family.entity_type = 'ec_family' OR ec_family.entity_type is null)\n" +
             "  AND ec_family_member.base_entity_id IN (%s)\n" +
             "  AND ec_family_member.base_entity_id NOT IN (\n" +
+            "    SELECT ec_ge_register.base_entity_id AS base_entity_id\n" +
+            "    FROM ec_ge_register\n" +
+            "    WHERE is_closed is 0 AND  consent_given = 'yes' " +
+            "    UNION ALL\n" +
             "    SELECT ec_agyw_register.base_entity_id AS base_entity_id\n" +
             "    FROM ec_agyw_register where ec_agyw_register.is_closed is 0\n" +
             "    UNION ALL\n" +
